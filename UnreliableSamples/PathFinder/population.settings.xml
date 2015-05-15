@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<parameters type="multiObjective">
+  <mu value="5000000"/>
+  <nu value="1000"/>
+  <lambda value="10"/>
+  <inertia value="0.2"/>
+  <fitnessParameters value="2"/>
+  <sigma value="0.5"/>
+  <constraints value="PathFinder.constraints.xml"/>
+  <cloneScalingFactor value="0.0"/>
+  <eliteSize value="3"/>
+  <maximumAge value="50"/>
+  <maximumGenerations value="1000" />
+  <maximumFitness value="1000 1000" />
+  <selection type="tournamentWithFitnessHole" tau="2.5" tauMin="1" tauMax="50" fitnessHole="1.0"/>
+  <operatorsStatistics>
+    <operator ref="alterationMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <operator ref="singleParameterAlterationMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <operator ref="insertionMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <operator ref="removalMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <operator ref="onePointSafeCrossover">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <operator ref="onePointSafeSimpleCrossover">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <operator ref="twoPointSafeSimpleCrossover">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <operator ref="replacementMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <!--operator ref="scanMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator-->
+    <!--operator ref="randomWalkMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator-->
+    <!--operator ref="subGraphInsertionMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator-->
+    <!--operator ref="subGraphRemovalMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator-->
+  </operatorsStatistics>
+</parameters>

@@ -1,0 +1,15 @@
+TODO
+----
+- Dialog "Select number of macros" for the new individual creation should be resized appropriately
+- Dialog "Select a population" should be resized so that the title fits the window
+- Newly created individuals should have the birth=current generation (to avoid being slaughtered by ageìng).
+- When adding or modifying something inside a graph, it would be cool if the tree widget wouldn't collapse.
+
+Random notes on the development
+-------------------------------
+
+Sections are compulsory, and always appear in the same order exactly once. So, the ability of inserting them makes no sense. Still, they have to appear inside the tables, to select them and choose the subsections and the relative macros.
+
+Or maybe, everything could be chosen with right-clicks on the tree structure.
+
+Still, a dialogue to initialize the individual would be awesome.

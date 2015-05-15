@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<constraints id="constraints-example"
+ xmlns="http://www.cad.polito.it/ugp3/schemas/constraints"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+
+<!-- 	
+	ugp3 constraints library to evolve mathematical functions 
+	by Alberto Tonda, 2011
+	<alberto.tonda@gmail.com>
+-->
+
+<commentFormat><value /></commentFormat>
+<labelFormat><value/>:</labelFormat>
+<identifierFormat>node<value/></identifierFormat>
+<uniqueTagFormat><value/></uniqueTagFormat>
+
+<typeDefinitions>
+<item xsi:type="constant" name="variables">
+	<value>t</value>
+</item>
+<item xsi:type="constant" name="oneOperandOperator">
+	<value>cos</value>
+	<value>sin</value>
+</item>
+<item xsi:type="constant" name="twoOperandsOperator">
+	<value>*</value>
+	<value>/</value>
+	<value>+</value>
+	<value>-</value>
+</item>
+</typeDefinitions>
+
+<prologue id="prologue-example">
+<expression></expression>
+</prologue>
+
+<epilogue id="epilogue-example">
+<expression></expression>
+</epilogue>
+
+<!--
+	- Each node is a macro
+		- oneOperandOperator + 1 innerForwardLabel
+		- twoOperandsOperator + 2 innerForwardLabels
+		- real number
+		- parameter 
+-->
+
+<sections>
+<section id="section-function" prologueEpilogueCompulsory="true">
+
+<prologue id="section-prologue">
+<expression></expression>
+</prologue>
+<epilogue id="section-epilogue">
+<expression></expression>
+</epilogue>
+
+<subSections>
+<subSection id="subsection-function" minOccurs="1" maxOccurs="1" maxReferences="1">
+
+<prologue id="subSection-prologue">
+<expression># Root of the tree is
+<param ref="root-link"/>
+# End of subsection prologue
+</expression>
+<parameters>
+<item name="root-link" type="innerForwardLabel" itself="false" epilogue="false"/>
+</parameters>
+</prologue>
+<epilogue id="subSection-epilogue">
+<expression></expression>
+</epilogue>
+
+<macros  minOccurs="1" maxOccurs="10" averageOccurs="3" sigma="3">
+
+	<macro id="twoOperands" weight="2">
+	<expression><param ref="operand1"/> <param ref="operator"/> <param ref="operand2"/>
+</expression>
+	<parameters>
+		<item name="operand1" type="innerForwardLabel" epilogue="false" itself="false"/>
+		<item name="operand2" type="innerForwardLabel" epilogue="false" itself="false"/>
+		<item name="operator" type="definedType" ref="twoOperandsOperator"/> 
+	</parameters>
+	</macro>
+
+	<macro id="oneOperand" weight="2">
+	<expression><param ref="operator"/> <param ref="operand"/>
+</expression>
+	<parameters>
+		<item name="operator" type="definedType" ref="oneOperandOperator"/> 
+		<item name="operand" type="innerForwardLabel" epilogue="false" itself="false"/>
+	</parameters>	
+	</macro>
+
+	<macro id="constant" weight="1">
+	<expression><param ref="constant"/>
+</expression>
+	<parameters>
+		<item name="constant" type="float" minimum="-1" maximum="1"/>
+	</parameters>
+	</macro>
+
+	<macro id="variable" weight="2">
+	<expression><param ref="variable"/>
+</expression>
+	<parameters>
+		<item name="variable" type="definedType" ref="variables"/> 
+	</parameters>
+	</macro>
+
+</macros>
+
+</subSection>
+</subSections>
+
+</section>
+</sections>
+</constraints>

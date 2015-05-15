@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt"?>
+<constraints xmlns="http://www.cad.polito.it/ugp3/schemas/constraints" 
+  id="One-Max" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+
+<commentFormat><value/></commentFormat>
+<identifierFormat>label<value /></identifierFormat>
+<labelFormat><value/>: </labelFormat>
+<uniqueTagFormat><value /></uniqueTagFormat>
+
+<prologue id="globalPrologue">
+<expression>This is the global prologue: here, take a color: <param ref="constant1"/>
+</expression>
+<parameters>
+	<item name="constant1" type="constant">
+		<value>white</value>
+		<value>green</value>
+		<value>black</value>
+		<value>gold</value>
+		<value>blue</value>
+		<value>red</value>
+	</item>
+</parameters>
+</prologue>
+
+
+<epilogue id="globalEpilogue">
+<expression>This is the global epilogue: here, take an integer in [-10,100]: <param ref="integer1"/>
+</expression>
+<parameters>
+	<item name="integer1" type="integer" minimum="-10" maximum="100"/>
+</parameters>
+</epilogue>
+
+<!-- list of sections -->
+<sections>
+<section id="sectionA" prologueEpilogueCompulsory="true">
+
+<prologue id="sectionAPrologue">
+<expression> This is the prologue of Section A
+</expression>
+</prologue>
+
+<epilogue id="sectionAEpilogue">
+<expression> This is the epilogue of Section A
+</expression>
+</epilogue>
+
+<!-- list of subsections inside section1 -->
+<subSections>
+
+	<subSection id="subSection1" maxOccurs="3" minOccurs="1" maxReferences="0">
+	<prologue id="stringPrologue"><expression>  This is the prologue of an instance of subSection I
+</expression>
+	</prologue>
+
+	<epilogue id="stringEpilogue"><expression>  This is the epilogue of an instance of subSection I;  What about a nice cup of bitArray? <param ref="bitArray1"/>
+</expression>
+	<parameters>
+		<item name="bitArray1" type="bitArray" length="8" pattern="--------" base="hex"/>
+	</parameters>
+	</epilogue>
+	
+	<macros maxOccurs="15" minOccurs="10" averageOccurs="12" sigma="5">
+	
+	<!-- macro with a single constant parameter -->
+	<macro id="macroConstant" >
+<expression>   macro with a constant parameter: <param ref="constant1"/>
+</expression>
+	<parameters>
+		<item name="constant1" type="constant">
+			<value>value1</value>
+			<value>value2</value>
+		</item>
+	</parameters>
+	</macro>
+
+	<!-- macro with a float and an integer parameter -->
+	<macro id="macroFloatInteger" >
+<expression>   macro with a float = <param ref="float1"/> and an integer = <param ref="integer1"/>
+</expression>
+	<parameters>
+		<item name="float1" type="float" minimum="-1" maximum="1"/>
+		<item name="integer1" type="integer" minimum="-100" maximum="100"/>
+	</parameters>
+	</macro>
+
+	<!-- macro with an innerBackwardLabel parameter -->
+	<macro id="macroInnerBackwardLabel" weight="0.2">
+<expression>   macro with an innerBackwardLabel: <param ref="label1"/>
+</expression>
+	<parameters>
+		<item name="label1" type="innerBackwardLabel" itself="false" prologue="false"/>
+	</parameters>
+	</macro>
+	
+	</macros>
+	</subSection>
+
+	<subSection id="subSection2" maxOccurs="3" minOccurs="1" maxReferences="0">
+
+	<prologue id="subSection2Prologue">
+	<expression>  This is the prologue of subSection II
+</expression>	
+	</prologue>
+
+
+	<epilogue id="subSection2Epilogue">
+	<expression>  This is the epilogue of subSection II
+</expression>	
+	</epilogue>
+	
+	<macros maxOccurs="5" minOccurs="1" averageOccurs="2" sigma="5">
+	
+	<macro id="macroNoParameters" weight="1">
+	<expression>   macro with no parameters, on two lines...
+   you start to understand how this goes, right?
+</expression>
+	</macro>
+
+	<macro id="macroSelfRef" weight="1">
+	<expression>   Yeah, I have a reference to myself, so what? <param ref="selfRef1"/>
+</expression>
+	<parameters>
+		<item name="selfRef1" type="selfRef"/>
+	</parameters>
+	</macro>
+
+	<macro id="macroUniqueTag" weight="1">
+	<expression><param ref="uniqueTag1"/>:   Yeah, I have a reference to myself, so what? <param ref="uniqueTag1"/>
+</expression>
+	<parameters>
+		<item name="uniqueTag1" type="uniqueTag"/>
+	</parameters>
+	</macro>
+
+	</macros>
+	</subSection>
+
+</subSections>
+</section>
+</sections>
+</constraints>

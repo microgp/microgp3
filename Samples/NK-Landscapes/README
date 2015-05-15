@@ -1,0 +1,7 @@
+NK-Landscapes
+-------------
+NK-Landscapes (or NK-Models) is a problem highly exploited for the testing of optimization algorithms. Code of the evaluator largely based upon the C++ implementation of Wim Hordijk (2004).
+ 
+For more information, check http://en.wikipedia.org/wiki/NK_model
+
+The values used in this experiment are N=10, K=5; they can be changed by modifying the configuration file "nk-landscapes.population.settings.xml"

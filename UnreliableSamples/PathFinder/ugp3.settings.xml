@@ -1,0 +1,24 @@
+<settings>
+
+<context name="evolution">    <option name="randomSeed" value="5987579" type="integer" />
+    <option name="statisticsPathName" value="statistics.xml" type="string" />
+    <!--option name="population" value="population.settings.xml" type="string" /-->
+</context>
+
+
+<context name="evaluation">
+    <option name="concurrentEvaluations" value="50" type="integer" />
+    <option name="parametersCount" value="2" type="integer" />
+    <option name="evaluatorPathName" value="./evaluator" type="string" />
+    <option name="evaluatorInputPathName" value="individual.input" type="string" />
+    <option name="evaluatorOutputPathName" value="fitness.output" type="string" />
+    <option name="removeTempFiles" value="true" type="boolean" />
+</context>
+
+<context name="recovery">
+    <option name="recoveryOutput" value="Algorithm.xml" type="string" />
+    <option name="recoveryOverwriteOutput" value="true" type="boolean" />
+    <option name="recoveryDiscardFitness" value="true" type="boolean" />
+</context>
+
+</settings>

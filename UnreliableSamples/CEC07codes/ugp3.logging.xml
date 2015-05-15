@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<logger>
+  <handler type='console' level='INFO'>
+  <formatter type='brief'/>
+    <enableSmartWrap>false</enableSmartWrap>
+    <enableProgressbars>true</enableProgressbars>
+  </handler>
+  <handler type='file' level='INFO'>
+  <formatter type='brief'/>
+    <fileName>my_debug.log</fileName>
+    <recordsPerFile>500000000</recordsPerFile>
+  </handler>
+</logger>

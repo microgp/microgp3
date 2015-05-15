@@ -1,0 +1,5 @@
+SYMBOLIC REGRESSION
+-------------------
+Simple experiment on Symbolic Regression. Given a set of samples for the variable "x" and the variable "y" (in the csv file "data.txt"), MicroGP will find a formula "y=f(x)" that best fits the data. The function on which the data are sampled is "y=sin^2(x)", and since there is no "pow" function defined, the optimal individual will be "y=sin(x)*sin(x)".
+
+The experiment is very trivial, and intends to just hint at the different possible uses of MicroGP. If you are especially interested in the Symbolic Regression problem, the current state-of-the-art is the sophisticated GP-based software Eureqa, developed by researchers of the Cornell University (http://creativemachines.cornell.edu/eureqa_download).

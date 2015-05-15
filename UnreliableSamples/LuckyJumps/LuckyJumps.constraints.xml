@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt"?>
+<constraints
+  xmlns="http://www.cad.polito.it/ugp3/schemas/constraints" 
+  id="Lucky Jumps" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+  <commentFormat><value/></commentFormat>
+  <identifierFormat>#<value /></identifierFormat>
+  <labelFormat><value/>: </labelFormat>
+  <uniqueTagFormat><value /></uniqueTagFormat>
+  <prologue id="globalPrologue" />
+  <epilogue id="globalEpilogue" />
+  <sections>
+    <section id="jumpArray" prologueEpilogueCompulsory="false">
+      <prologue id="sectionPrologue" />
+      <epilogue id="sectionEpilogue" />
+      <subSections>
+        <subSection id="main" maxOccurs="1" minOccurs="1" maxReferences="0">
+          <prologue id="stringPrologue"/>
+          <epilogue id="stringEpilogue"/>
+          <macros  maxOccurs="100" minOccurs="100" averageOccurs="100" sigma="1">
+            <macro id="luckyCell" weight="1">
+              <expression>LUCKY! $<param ref="money"/>
+</expression>
+              <parameters>
+                <item name="money" xsi:type="integer" minimum="1" maximum="10" />
+              </parameters>
+            </macro>
+            <macro id="jumpCell" weight="1">
+              <expression>JUMP TO -> <param ref="jump"/>
+</expression>
+              <parameters>
+                <item name="jump"  xsi:type="innerForwardLabel"  prologue="false" epilogue="false" itself="false" />
+              </parameters>
+            </macro>
+          </macros>
+        </subSection>
+      </subSections>
+    </section>
+  </sections>
+</constraints>

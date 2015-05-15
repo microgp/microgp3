@@ -1,0 +1,182 @@
+test_files:
+  compat_eval.lua: "#!/usr/bin/env luajit\n-- \n-- Wrapper for Lua evaluators that\
+    \ makes Lua evaluation available to old\n-- versions of MicroGP (group evaluation\
+    \ only). Thus all versions of MicroGP in\n-- the benchmark will get the same fitness\
+    \ values.\n--\n\nif arg and arg[1] then\n  -- The script is run by an old version\
+    \ of MicroGP.\n  --\n  -- We emulate newer MicroGP Lua evaluation, by reading\
+    \ the individual files\n  -- from and calling the Lua evaluation function and\
+    \ writing the results to\n  -- the disk.\n  --\n  _G['ugp_environment'] = {\n\
+    \    ugp_version = os.getenv(\"UGP3_VERSION\"),\n    ugp_tagline = os.getenv(\"\
+    UGP3_TAGLINE\"),\n    tempdir = '.',\n    generation = os.getenv(\"UGP3_GENERATION\"\
+    ),\n    stop = false\n  }\nend\n\n-- Write here the name of the script that contains\
+    \ the evaluate() function\nrequire \"eval\"\n\n-- The rest of this file should\
+    \ be independent from the configuration of the\n-- sample, do not modify it.\n\
+    assert(evaluate, \"Lua compatibility evaluator: error: evaluate() function not\
+    \ found.\")\n\nif arg and arg[1] then\n  local fitness_file, msg = io.open(os.getenv(\"\
+    UGP3_FITNESS_FILE\"), \"w\")\n  if not fitness_file then\n    error(\"Error while\
+    \ opening fitness file for writing: \" .. msg)\n  end\n\n  function write_fitness(fitness)\n\
+    \    -- Write the fitness to the output file\n    for i, val in ipairs(fitness)\
+    \ do\n      if i == #fitness and type(val) == \"string\" then\n        -- If the\
+    \ last fitness component is a string, we consider it is the\n        -- description.\
+    \ We ditch it.\n      else\n        fitness_file:write(val, \" \")\n      end\n\
+    \    end\n  end\n\n  for group in string.gmatch(os.getenv(\"UGP3_OFFSPRING\"),\
+    \ \"%S+\") do\n    local groupfile, msg = io.open(group, \"r\")\n    if not groupfile\
+    \ then\n      error(\"Error while opening group file: \" .. msg)\n    end\n  \
+    \  local individuals = {}\n    for indfilename in groupfile:lines() do\n     \
+    \ local indfile, msg = io.open(indfilename, \"r\")\n      if not indfile then\n\
+    \        error(\"Error while opening individual file: \" .. msg)\n      end\n\
+    \      table.insert(individuals, indfile:read(\"*all\"))\n      indfile:close()\n\
+    \    end\n    groupfile:close()\n    local group_fitness = {evaluate(individuals)}\n\
+    \    write_fitness(group_fitness)\n    for k, individual in ipairs(individuals)\
+    \ do\n      local val = {evaluate({individual})}\n      write_fitness(val)\n \
+    \   end\n    fitness_file:write(\"\\n\")\n  end\n  if ugp_environment.stop then\n\
+    \    fitness_file:write(\"#stop\\n\")\n  end\n  fitness_file:close()\nend\n"
+  eval.lua: "-- PERL evaluator for the string coverage problem\n-- Alberto Tonda,\
+    \ 2012 <alberto.tonda@gmail.com>\n--\n-- Translated to Lua in september 2014 by\
+    \ Jany Belluz\n\n-- The original paper \"A Hierarchical Cooperative Evolutionary\
+    \ Algorithm\"\n-- by Wu and Banzhaf feature a multiplicative factor for individual\
+    \ fitness\n-- that depends on the test set.\nlocal file, msg = io.open(\"params.txt\"\
+    , \"r\")\nif not file then\n  error(\"Error while opening params.txt: \" .. msg)\n\
+    end\nlocal individual_factor = string.match(file:read(\"*all\"), \"individual_factor=(%d+)\"\
+    )\nassert(individual_factor, \"params.txt does not contain the line 'individual_factor=...'\"\
+    )\n\n-- Load the test set\nlocal file, msg = io.open(\"testSet.txt\", \"r\")\n\
+    if not file then\n  error(\"Error while opening testSet.txt: \" .. msg)\nend\n\
+    local test_set = {}\nfor line in file:lines() do\n  if line ~= \"\" then\n   \
+    \ table.insert(test_set, line)\n  end\nend\nfile:close()\nlocal pattern_length\
+    \ = #(test_set[1])\n\nfunction evaluate(individuals)\n  local global_fitness =\
+    \ 0\n  local global_covered = {}\n  for j = 1, #test_set do\n    global_covered[j]\
+    \ = 0\n  end\n  local global_nb_stars = 0\n  for i, template in pairs(individuals)\
+    \ do\n    -- Turn the template into a Lua pattern and count the stars\n    template\
+    \ = string.gsub(template, \"%s\", \"\")\n    local pattern, number_of_stars =\
+    \ string.gsub(template, \"%*\", \".\")\n    local fitness_ratio_ones = (#template\
+    \ - number_of_stars) / #template\n    global_nb_stars = global_nb_stars + number_of_stars\n\
+    \    -- Matching\n    local match_count = 0\n    for j, test_string in pairs(test_set)\
+    \ do\n      if test_string:match(pattern) then\n        match_count = match_count\
+    \ + 1\n        global_covered[j] = global_covered[j] + 1\n      end\n    end\n\
+    \    local fitness_matching = match_count / #test_set\n    local fitness_individual\
+    \ = individual_factor * fitness_matching * fitness_ratio_ones\n    global_fitness\
+    \ = global_fitness + fitness_individual\n  end\n  -- Count covered test strings\
+    \ and overlap\n  local nb_covered = 0\n  local nb_overlap = 0\n  for _, count\
+    \ in pairs(global_covered) do\n    if count > 0 then\n      nb_covered = nb_covered\
+    \ + 1\n    end\n    if count > 1 then\n      nb_overlap = nb_overlap + 1\n   \
+    \ end\n  end\n  -- Return a compromise between coverage and number of ones\n \
+    \ local avg_nb_stars = global_nb_stars / #individuals\n  local fitness = ((#test_set\
+    \ - nb_overlap) / #test_set) * (nb_covered / #test_set) * (global_fitness / #individuals)\n\
+    \  return fitness, (\"cov. %d/%d, ov. %d/%d, #ind %d, avg. #* %d\"):format(nb_covered,\
+    \ #test_set, nb_overlap, #test_set, #individuals, avg_nb_stars)\nend\n\n-- Test\n\
+    if not ugp_environment then\n  local _test_set = test_set\n  test_set = {\n  \
+    \  \"0000\",\n    \"1000\",\n    \"1100\",\n    \"1110\",\n    \"1111\",\n  }\n\
+    \  print('Scale test set: evaluate({\"1111\"}) = ', evaluate({\"1111\"}))\n  print('Scale\
+    \ test set: evaluate({\"111*\"}) = ', evaluate({\"111*\"}))\n  print('Scale test\
+    \ set: evaluate({\"11**\"}) = ', evaluate({\"11**\"}))\n  print('Scale test set:\
+    \ evaluate({\"1***\"}) = ', evaluate({\"1***\"}))\n  print('Scale test set: evaluate({\"\
+    ****\"}) = ', evaluate({\"****\"}))\n  test_set = {\n    \"1101\",\n    \"1100\"\
+    ,\n    \"1110\",\n    \"0011\",\n    \"0111\",\n    \"1011\",\n  }\n  print('Split\
+    \ test set: evaluate({\"11**\", \"**11\"}) = ', evaluate({\"11**\", \"**11\"}))\n\
+    \  test_set = _test_set\nend\n\n"
+  params.txt: 'individual_factor=4
+
+    '
+  string-coverage.constraints.xml: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<?xml-stylesheet\
+    \ type=\"text/xsl\" href=\"http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt\"\
+    ?>\n<constraints\n  xmlns=\"http://www.cad.polito.it/ugp3/schemas/constraints\"\
+    \ \n  id=\"One-Max\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \n\
+    \   xsi:schemaLocation=\"http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd\"\
+    >\n  <typeDefinitions>\n    <item type=\"constant\" name=\"bit_type\">\n     \
+    \ <value>*</value>\n      <value>1</value>\n    </item>\n  </typeDefinitions>\n\
+    \  <commentFormat><value/></commentFormat>\n  <identifierFormat>n<value /></identifierFormat>\n\
+    \  <labelFormat><value/>: </labelFormat>\n  <uniqueTagFormat><value /></uniqueTagFormat>\n\
+    \  <prologue id=\"globalPrologue\"/>\n  <epilogue id=\"globalEpilogue\"/>\n  <sections>\n\
+    \    <section id=\"bitString\" prologueEpilogueCompulsory=\"false\">\n      <prologue\
+    \ id=\"sectionPrologue\"/>\n      <epilogue id=\"sectionEpilogue\"/>\n      <subSections>\n\
+    \        <subSection id=\"main\" maxOccurs=\"1\" minOccurs=\"1\" maxReferences=\"\
+    0\">\n          <prologue id=\"stringPrologue\"/>\n          <epilogue id=\"stringEpilogue\"\
+    ><expression>\n</expression>\n         </epilogue>\n          <macros maxOccurs=\"\
+    64\" minOccurs=\"64\" averageOccurs=\"64\" sigma=\"0\">\n            <macro id=\"\
+    bitString\" >\n              <expression><param ref=\"bit\"/></expression>\n \
+    \               <parameters>\n                  <item type=\"definedType\" ref=\"\
+    bit_type\" name=\"bit\" />\n                </parameters>\n            </macro>\n\
+    \          </macros>\n        </subSection>\n      </subSections>\n    </section>\n\
+    \  </sections>\n</constraints>\n"
+  string-coverage.generator.pl: "# PERL script to generate a given number of strings\
+    \ from a set of templates\n# Alberto Tonda, 2012 <alberto.tonda@gmail.com>\n\n\
+    use strict;\n\nmy $DEBUG = 1;\n\nmy $outputFile = \"testSet.txt\";\nmy @numberOfStrings\
+    \ = ( 200, 20 );\nmy @templates = (\n  \"1111111111111111************************************************\"\
+    ,\n  \"****************111111111111111111111111111111111111111111111111\",\n);\n\
+    my $randomSeed = 42;\nsrand($randomSeed);\n\n\nmy @output;\n\n# for each template\n\
+    for(my $i = 0; $i <= $#templates; $i++)\n{\n\t# array where each element is a\
+    \ character from a template\n\tmy @templateTokens = split(\"\", $templates[$i]);\n\
+    \t# number of strings to generate\n\tmy $number = $numberOfStrings[$i];\n\t\n\t\
+    print \"Current template is \\\"\", $templates[$i], \"\\\", split into \", ($#templateTokens+1),\
+    \ \" tokens.\\n\" if $DEBUG;\n\n\t# generate strings\n\tfor(my $j = 0; $j < $number;\
+    \ $j++)\n\t{\n\t\tmy $string = \"\";\n\t\tfor(my $t = 0; $t <= $#templateTokens;\
+    \ $t++)\n\t\t{\n\t\t\tif( $templateTokens[$t] eq \"*\" )\n\t\t\t{\n\t\t\t\t# throw\
+    \ random number and take decision\n\t\t\t\tmy $random_number = rand();\n\t\t\t\
+    \tif( $random_number < 0.5 )\n\t\t\t\t{\n\t\t\t\t\t$string .= \"0\";\n\t\t\t\t\
+    }\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\t$string .= \"1\";\n\t\t\t\t}\n\t\t\t}\n\t\
+    \t\telse\n\t\t\t{\n\t\t\t\t$string .= $templateTokens[$t];\n\t\t\t}\n\t\t}\n\t\
+    \t# save string in output\n\t\tpush(@output, $string);\n\t}\n}\n\n# write output\n\
+    open OUTFILE, \">$outputFile\" or die \"Cannot write on \\\"$outputFile\\\" $!\\\
+    n\";\nforeach(@output)\n{\n\tprint OUTFILE $_, \"\\n\";\n}\nclose OUTFILE;\n"
+  string-coverage.population.xml: "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<parameters\
+    \ type=\"group\">\n  <!-- group population specific parameters -->\n  <!-- The\
+    \ maximum number of individuals in a group -->\n  <maxIndPerGroup value=\"8\"\
+    />\n  <!-- The minimum number of individuals in a group -->\n  <minIndPerGroup\
+    \ value=\"1\"/>\n  <!-- The maximum number of groups in the population -->\n \
+    \ <groupMu value=\"10\"/>\n  <!-- The initial number of groups in the population\
+    \ -->\n  <groupNu value=\"200\"/>\n  \n  <!-- elite size: the eliteSize best individuals\
+    \ do not age at each\n  generational step. --> \n  <eliteSize value=\"5\"/>\n\n\
+    \  <!-- (optional) if the best fitness value does not change for\n  maximumSteadyStateGenerations\
+    \ generations, the evolutions stops -->\n  <!-- <maximumSteadyStateGenerations\
+    \ value=\"100\"/> -->\n\n  <!-- BASIC POPULATION PARAMETERS -->\n\n  <!-- the\
+    \ maximum size of the population -->\n  <mu value=\"20\"/>\n\n  <!-- the initial\
+    \ size of the population -->\n  <nu value=\"1000\"/>\n\n  <!-- the numbers of\
+    \ genetic operators applied at every step of the evolution -->\n  <lambda value=\"\
+    30\"/>\n\n  <!-- the inertia for the self-adaptating parameters [0,1] -->\n  <inertia\
+    \ value=\"0.9\"/>\n\n  <!-- the number of dimensions of the fitness -->\n  <fitnessParameters\
+    \ value=\"1\"/>\n\n  <!-- the maximum age of the individuals -->\n  <maximumAge\
+    \ value=\"10\"/>\n\n  <!-- the strength of the mutation operators (0,1) -->\n\
+    \  <sigma value=\"0.9\"/>\n\n  <!-- when set to true, the fitness of all the individuals\
+    \ of the\n  population is discarded at every step so that in the next step it\
+    \ is\n  re-evaluated -->\n  <invalidateFitnessAfterGeneration value=\"0\"/>\n\n\
+    \  <!-- the definition of the constraints of the problem -->\n  <constraints value=\"\
+    string-coverage.constraints.xml\"/>\n\n  <!-- (optional) the maximum number of\
+    \ generations -->\n  <maximumGenerations value=\"2000\"/>\n\n  <!-- (optional)\
+    \ the maximum number of individuals that can be evaluated -->\n  <maximumEvaluations\
+    \ value=\"1000000\"/>\n\n  <!-- parents selector parameters -->\n  <selection\
+    \ type=\"tournamentWithFitnessHole\" tau=\"2\" tauMin=\"1\" tauMax=\"4\" fitnessHole=\"\
+    0\" />\n\n  <!-- <fitnessSharing distance=\"hamming\" radius=\"58\" /> -->\n \
+    \ <!-- <groupFitnessSharing radius=\"50\" /> -->\n  <!-- <individualContributionScalingFactor\
+    \ value=\"1\" /> -->\n  \n  <!-- evaluator parameters -->\n  <evaluation>\n  \
+    \  <concurrentEvaluations value=\"2\" />\n    <removeTempFiles value=\"true\"\
+    \ />\n    <evaluatorPathName value=\"./compat_eval.lua\" />\n    <evaluatorInputPathName\
+    \ value=\"input.in\" />\n    <evaluatorOutputPathName value=\"fitness.out\" />\n\
+    \  </evaluation>\n  \n  <!-- operator statistics -->\n  <operators default=\"\
+    none\">\n    <operator ref=\"groupDreamTeam\" />\n    <operator ref=\"groupRandomRemovalMutation\"\
+    \ />\n    <operator ref=\"groupUnbalancedCrossover\" />\n    <operator ref=\"\
+    singleParameterAlterationMutation\" />\n    <operator ref=\"twoPointCrossover\"\
+    \ />\n  </operators>\n</parameters>\n"
+  ugp3.settings.xml: "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<settings>\n  <context\
+    \ name=\"evolution\">\n    <!-- The seed for the pseudo-random number generator.\
+    \ If missing or 0 use epoch. -->\n    <option name=\"randomSeed\" value=\"42\"\
+    \ /> \n    <!-- For each population, its name and the file where the population\
+    \ parameters are defined. -->\n    <option name =\"populations\">\n      <population\
+    \ name=\"P1\" value=\"string-coverage.population.xml\" />\n    </option>\n   \
+    \ <!-- The file where the statistics on the evolution are saved. -->\n    <option\
+    \ name=\"statisticsPathName\" value=\"statistics.csv\" />\n    <!-- Merges two\
+    \ populations together specifying their indexes separated by whitespaces (e.g.\
+    \ '0 1; 1 2' tells to merge population 1 into population 0 and then population\
+    \ 2 in population 1.) -->\n    <!--option name=\"merge\" value=\"\" /-->\n\t\n\
+    \  </context>\n  <context name=\"recovery\">\n    <!-- The name of the file where\
+    \ the state of the algorthm is saved at the end of every generation. -->\n   \
+    \ <option name=\"recoveryOutput\" value=\"status.xml\" />\n    <!-- When set to\
+    \ true, overwrites the previous state file, otherwise saves it to another file.\
+    \ -->\n    <option name=\"recoveryOverwriteOutput\" value=\"true\" />\n    <!--\
+    \ When set to true, discards the fitness contained in the state file and re-evaluates\
+    \ the individuals. -->\n    <option name=\"recoveryDiscardFitness\" value=\"true\"\
+    \ />\n</context>\n\n  <context name=\"logging\">\n    <!-- Only essential information\
+    \ on standard output -->\n    <option name=\"std::cout\" value=\"info; brief\"\
+    \ />\n    <option name=\"verbose.log\" value=\"verbose; brief\" /> -->\n  </context>\n\
+    \  \n</settings>\n"
+test_name: string_coverage_lua_skewed
+ugp_name: ugp3_camellia_r611

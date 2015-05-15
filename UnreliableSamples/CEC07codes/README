@@ -1,0 +1,5 @@
+CEC 2007 MOEA Test suite
+
+1. run ./compile.sh to compile the evaluator for MicroGP
+2. edit the evaluator.sh script to choose which function to test
+3. 

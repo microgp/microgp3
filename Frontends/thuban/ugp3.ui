@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ugpMainWindow</class>
+ <widget class="QMainWindow" name="ugpMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>617</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>850</width>
+    <height>617</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ugp3-gui</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tabConstraints">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <attribute name="title">
+        <string>Individual Constraints</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0" colspan="2">
+           <widget class="QLabel" name="label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>XML Editor for Individual Constraints</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Individual Preview</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QTextBrowser" name="textBrowser_Preview">
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>467</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="pushButton_LoadConstraints">
+            <property name="text">
+             <string>Load</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="pushButton_PreviewConstraints">
+            <property name="text">
+             <string>Save and Preview</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="pushButton_SaveConstraints">
+            <property name="text">
+             <string>Save As</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0" colspan="4">
+           <widget class="CodeEditor" name="textEdit">
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>467</height>
+             </size>
+            </property>
+            <property name="palette">
+             <palette>
+              <active>
+               <colorrole role="Base">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </active>
+              <inactive>
+               <colorrole role="Base">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </inactive>
+              <disabled>
+               <colorrole role="Base">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </disabled>
+             </palette>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+       <zorder></zorder>
+      </widget>
+      <widget class="QWidget" name="tabPopulation">
+       <attribute name="title">
+        <string>Population Properties</string>
+       </attribute>
+       <widget class="QComboBox" name="comboBox_PopulationType">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>30</y>
+          <width>271</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="minimumContentsLength">
+         <number>1</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>&lt;select one population type&gt;</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Enhanced Population</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Multi-Objective Population</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Group Population &lt;experimental&gt;</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QFrame" name="frame_GeneralPopulationSettings">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>231</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_Sigma">
+         <property name="geometry">
+          <rect>
+           <x>151</x>
+           <y>110</y>
+           <width>71</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>'Sigma' is the strength of the evolutionary operators. If Sigma is high, children individuals will be very different from the parents;
+on the contrary, if Sigma is low, children individuals will be closer to the parents.</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>0.999000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.001000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.900000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>82</y>
+           <width>21</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>'Mu' is the number of individuals that will be included in the population.</string>
+         </property>
+         <property name="whatsThis">
+          <string>'Mu' is the number of individuals that will be included in the population.</string>
+         </property>
+         <property name="text">
+          <string>μ</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>16</x>
+           <y>113</y>
+           <width>20</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>'Lambda' is the number of new individuals that will be generated at each generation.</string>
+         </property>
+         <property name="text">
+          <string>λ</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>126</x>
+           <y>82</y>
+           <width>21</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>'Nu' is the size of the INITIAL population. If Nu &gt; Mu, the population will be resized at the end of the first generation.</string>
+         </property>
+         <property name="text">
+          <string>ν</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>127</x>
+           <y>112</y>
+           <width>20</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>'Sigma' is the strength of the evolutionary operators. If Sigma is high, children individuals will be very different from the parents;
+on the contrary, if Sigma is low, children individuals will be closer to the parents.</string>
+         </property>
+         <property name="text">
+          <string>σ</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_16">
+         <property name="geometry">
+          <rect>
+           <x>22</x>
+           <y>143</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>'Inertia' triggers the self-adapting mechanism of ugp3, influencing Sigma, the activation probabilities of the operators, and the selection type.</string>
+         </property>
+         <property name="text">
+          <string>Self-adapting inertia</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_DiscardFitness">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>230</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>If this option is checked, ALL individuals are evaluated at each generation.
+Normally, only new individuals are evaluated.</string>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Re-evaluate population
+at each generation?</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_Mu">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>80</y>
+           <width>71</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>'Mu' is the number of individuals that will be included in the population.</string>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>1000000</number>
+         </property>
+         <property name="value">
+          <number>50</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_Lambda">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>110</y>
+           <width>71</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>'Lambda' is the number of new individuals that will be generated at each generation.</string>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>10000000</number>
+         </property>
+         <property name="value">
+          <number>50</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_Nu">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>80</y>
+           <width>71</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>'Nu' is the size of the INITIAL population. If Nu &gt; Mu, the population will be resized at the end of the first generation.</string>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>1000000000</number>
+         </property>
+         <property name="value">
+          <number>50</number>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_Inertia">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>140</y>
+           <width>71</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>'Inertia' triggers the self-adapting mechanism of ugp3, influencing Sigma, the activation probabilities of the operators, and the selection type.</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.001000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.990000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_27">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>211</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>The constraints file describes the structure of an individual.</string>
+         </property>
+         <property name="text">
+          <string>Associated constraints file</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_ConstraintsFile">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>181</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>The constraints file describes the structure of an individual.</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Individual constraints file</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_26">
+         <property name="geometry">
+          <rect>
+           <x>22</x>
+           <y>173</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>If a genotype-level clone of an individual is found,
+its fitness value is scaled by this factor. By default, clones are deleted.</string>
+         </property>
+         <property name="text">
+          <string>Clone scaling factor</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_CloneScalingFactor">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>170</y>
+           <width>71</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>If a genotype-level clone of an individual is found,
+its fitness value is scaled by this factor. By default, clones are deleted.</string>
+         </property>
+         <property name="frame">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="specialValueText">
+          <string>Delete</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.001000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_MaximumAge">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>200</y>
+           <width>71</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Individuals who are created at a certain generation will be removed
+after this many generatons, leaving more room for new ones.</string>
+         </property>
+         <property name="specialValueText">
+          <string>Off</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>999999999</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_28">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>200</y>
+           <width>141</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Individuals who are created at a certain generation will be removed
+after this many generatons, leaving more room for new ones.</string>
+         </property>
+         <property name="text">
+          <string>Maximum individual age</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="toolButton_StatusFile_2">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>30</y>
+           <width>23</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>221</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>General Population Settings</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_EvaluatorSettings">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>90</y>
+          <width>271</width>
+          <height>221</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QCheckBox" name="checkBox_RemoveTemporaryFiles">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>190</y>
+           <width>191</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>If this option is checked, temporary individual files are removed after evaluation.
+Otherwise, they are stored in the folder the evolution is started in.</string>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string>Remove temporary files?</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_EvaluatorPath">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>251</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Insert evaluator path (and options)</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_EvaluatorInputPathName">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>60</y>
+           <width>141</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>ugp3 creates temporary files for the individuals, before evaluating them.
+This is the template to be used for the filenames: '%s' is replaced by the individual name.</string>
+         </property>
+         <property name="accessibleDescription">
+          <string/>
+         </property>
+         <property name="text">
+          <string>individual%s.in</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_EvaluatorOutputPathName">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>90</y>
+           <width>141</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>The evaluator must return the fitness value of each individual in a file whose name is specified here.</string>
+         </property>
+         <property name="text">
+          <string>fitness.out</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>10</y>
+           <width>101</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Evaluator Path</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>63</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>ugp3 creates temporary files for the individuals, before evaluating them.
+This is the template to be used for the filenames: '%s' is replaced by the individual name.</string>
+         </property>
+         <property name="text">
+          <string>Individual files</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>22</x>
+           <y>94</y>
+           <width>91</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>The evaluator must return the fitness value of each individual in a file whose name is specified here.</string>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Output file</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_17">
+         <property name="geometry">
+          <rect>
+           <x>11</x>
+           <y>150</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>ugp3 can manage more than one fitness value for each individual.
+How these are managed, depends on the population type.</string>
+         </property>
+         <property name="text">
+          <string>Number of fitness values</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>120</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Number of individuals to be passed as an argument to the evaluator.
+If more than one individual is evaluated, all fitness values must be returned in the specified fitness file.</string>
+         </property>
+         <property name="text">
+          <string>Concurrent evaluations</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_ConcurrentEvaluations">
+         <property name="geometry">
+          <rect>
+           <x>179</x>
+           <y>120</y>
+           <width>81</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Number of individuals to be passed as an argument to the evaluator.
+If more than one individual is evaluated, all fitness values must be returned in the specified fitness file.</string>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>10000</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_FitnessParameters">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>150</y>
+           <width>81</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>ugp3 can manage more than one fitness value for each individual.
+How these are managed, depends on the population type.</string>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>10000</number>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>261</x>
+          <y>70</y>
+          <width>271</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Evaluator Settings</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_LoadPopulation">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>98</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Load</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_SavePopulation">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>30</y>
+          <width>98</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Save</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_PopulationSpecifics">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>339</y>
+          <width>271</width>
+          <height>191</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QWidget" name="gridLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>251</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_SpecificSettings"/>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>320</y>
+          <width>271</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Population-specific Settings</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_StopConditions">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>400</y>
+          <width>231</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QTimeEdit" name="timeEdit_MaximumTime">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>90</y>
+           <width>91</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Stop after a given time has elapsed</string>
+         </property>
+         <property name="specialValueText">
+          <string>Off</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_MaximumGenerations">
+         <property name="geometry">
+          <rect>
+           <x>119</x>
+           <y>10</y>
+           <width>91</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Stop after a number of generations.</string>
+         </property>
+         <property name="specialValueText">
+          <string>Off</string>
+         </property>
+         <property name="maximum">
+          <number>999999999</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>101</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Stop after a number of generations.</string>
+         </property>
+         <property name="whatsThis">
+          <string>Stop after a number of generations.</string>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Maximum
+Generations</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_MaximumEvaluations">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>50</y>
+           <width>91</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Stop after a number of
+calls to the evaluator</string>
+         </property>
+         <property name="specialValueText">
+          <string>Off</string>
+         </property>
+         <property name="maximum">
+          <number>999999999</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_24">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>48</y>
+           <width>101</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Stop after a number of
+calls to the evaluator</string>
+         </property>
+         <property name="whatsThis">
+          <string>Stop after a number of
+calls to the evaluator</string>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Maximum
+Evaluations</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_25">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>101</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Stop after a given time has elapsed</string>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Maximum
+Time</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>380</y>
+          <width>221</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Stop Conditions</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_29">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>10</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Operators</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_OperatorsAdd">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>280</y>
+          <width>81</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_OperatorsRemove">
+        <property name="geometry">
+         <rect>
+          <x>640</x>
+          <y>280</y>
+          <width>81</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Remove</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_IndividualSelection">
+        <property name="geometry">
+         <rect>
+          <x>259</x>
+          <y>340</y>
+          <width>271</width>
+          <height>191</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QComboBox" name="comboBox_IndividualSelection">
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>20</y>
+           <width>241</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>&lt;choose one selector&gt;</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TournamentSelection</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>RankingSelection</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QWidget" name="gridLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>19</x>
+           <y>60</y>
+           <width>241</width>
+           <height>121</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_IndividualSelection"/>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label_IndividualSelector">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>320</y>
+          <width>271</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>At each generation, individuals are selected for reproduction.
+The fields below regulate the way individuals are selected.</string>
+        </property>
+        <property name="text">
+         <string>Individual Selector</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_OperatorsVerify">
+        <property name="geometry">
+         <rect>
+          <x>730</x>
+          <y>280</y>
+          <width>91</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Verify</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_Operators">
+        <property name="geometry">
+         <rect>
+          <x>545</x>
+          <y>30</y>
+          <width>271</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Genetic operators that will be used during the evolution. Each one has a starting probability of activation,
+that ranges between two values and may be self-adapted is Inertia is &lt; 1</string>
+        </property>
+        <property name="rowCount">
+         <number>0</number>
+        </property>
+        <property name="columnCount">
+         <number>4</number>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>63</number>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>45</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Value</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Min</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Max</string>
+         </property>
+        </column>
+       </widget>
+       <zorder>frame_EvaluatorSettings</zorder>
+       <zorder>frame_GeneralPopulationSettings</zorder>
+       <zorder>comboBox_PopulationType</zorder>
+       <zorder>label_8</zorder>
+       <zorder>label_9</zorder>
+       <zorder>pushButton_LoadPopulation</zorder>
+       <zorder>pushButton_SavePopulation</zorder>
+       <zorder>frame_PopulationSpecifics</zorder>
+       <zorder>label_18</zorder>
+       <zorder>frame_StopConditions</zorder>
+       <zorder>label_20</zorder>
+       <zorder>label_29</zorder>
+       <zorder>pushButton_OperatorsAdd</zorder>
+       <zorder>pushButton_OperatorsRemove</zorder>
+       <zorder>frame_IndividualSelection</zorder>
+       <zorder>label_IndividualSelector</zorder>
+       <zorder>pushButton_OperatorsVerify</zorder>
+       <zorder>tableWidget_Operators</zorder>
+      </widget>
+      <widget class="QWidget" name="tabStart">
+       <attribute name="title">
+        <string>Evolution Start</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0" colspan="2">
+         <widget class="QLabel" name="label_31">
+          <property name="text">
+           <string>Recovery/Output file</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3" rowspan="5" colspan="5">
+         <widget class="QTableWidget" name="tableWidget_Populations">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <property name="columnCount">
+           <number>6</number>
+          </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>80</number>
+          </attribute>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>80</number>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>#</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Type</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>File</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Recovered?</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Merge?</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="8" rowspan="3" colspan="2">
+         <widget class="QFrame" name="frame">
+          <property name="maximumSize">
+           <size>
+            <width>308</width>
+            <height>127</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QComboBox" name="comboBox_Migration">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>171</width>
+             <height>27</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>No Migration</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Classical Migration</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QWidget" name="gridLayoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>9</x>
+             <y>50</y>
+             <width>171</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_Migration"/>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QLineEdit" name="lineEdit_StatusFile">
+          <property name="text">
+           <string>status.xml</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QToolButton" name="toolButton_StatusFile">
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QCheckBox" name="checkBox">
+          <property name="text">
+           <string>Overwrite output file
+at each generation?</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="tristate">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_32">
+          <property name="text">
+           <string>Statistics file</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="8">
+         <widget class="QLabel" name="label_33">
+          <property name="maximumSize">
+           <size>
+            <width>308</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Log file</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="2">
+         <widget class="QLineEdit" name="lineEdit_StatisticsFile">
+          <property name="text">
+           <string>statistics.csv</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QToolButton" name="toolButton_StatisticsFile">
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="4">
+         <widget class="QPushButton" name="pushButton_PopulationsAdd">
+          <property name="maximumSize">
+           <size>
+            <width>85</width>
+            <height>27</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="5" colspan="2">
+         <widget class="QPushButton" name="pushButton_PopulationsEdit">
+          <property name="maximumSize">
+           <size>
+            <width>85</width>
+            <height>27</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Edit</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="7">
+         <widget class="QPushButton" name="pushButton_PopulationsRemove">
+          <property name="maximumSize">
+           <size>
+            <width>85</width>
+            <height>27</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Remove</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="8">
+         <widget class="QLineEdit" name="lineEdit_LogFile">
+          <property name="maximumSize">
+           <size>
+            <width>308</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>debug.log</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="9">
+         <widget class="QToolButton" name="toolButton_LogFile">
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" rowspan="2">
+         <widget class="QPushButton" name="pushButton_EvolutionStart">
+          <property name="text">
+           <string>Evolution
+Start!</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1" colspan="3">
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string>Current Generation</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="4" colspan="6">
+         <widget class="QProgressBar" name="progressBar_Generation">
+          <property name="value">
+           <number>42</number>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1" colspan="2">
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>Overall Evolution</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="4" colspan="6">
+         <widget class="QProgressBar" name="progressBar_Evolution">
+          <property name="value">
+           <number>24</number>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0" colspan="6">
+         <widget class="QGraphicsView" name="graphicsView_4"/>
+        </item>
+        <item row="8" column="6" colspan="4">
+         <widget class="QTextBrowser" name="textBrowser">
+          <property name="maximumSize">
+           <size>
+            <width>16666666</width>
+            <height>16666666</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QComboBox" name="comboBox_4">
+          <item>
+           <property name="text">
+            <string>&lt;X axis&gt;</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="9" column="1">
+         <widget class="QComboBox" name="comboBox_3">
+          <item>
+           <property name="text">
+            <string>&lt;Y axis&gt;</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabStatistics">
+       <attribute name="title">
+        <string>Statistics</string>
+       </attribute>
+       <widget class="QLabel" name="label_19">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>10</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Fitness Values</string>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>371</width>
+          <height>301</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="graphicsView_2">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>30</y>
+          <width>391</width>
+          <height>131</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="graphicsView_3">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>190</y>
+          <width>391</width>
+          <height>141</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_21">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>10</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Operator Activations</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_22">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>170</y>
+          <width>171</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Self-adapted Parameters</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>390</y>
+          <width>781</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_23">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>370</y>
+          <width>61</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Statistics</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>340</y>
+          <width>101</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>&lt;X axis&gt;</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QComboBox" name="comboBox_2">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>340</y>
+          <width>101</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>&lt;Y axis&gt;</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CodeEditor</class>
+   <extends>QPlainTextEdit</extends>
+   <header>CodeEditor.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<parameters type="multiObjective">
+<mu value="50000"/>
+<nu value="10"/>
+<lambda value="10"/>
+<inertia value="0.6"/>
+<fitnessParameters value="2"/>
+<maximumAge value="100"/>
+<maximumGenerations value="100"/>
+<maximumSteatyStateGenerations value="5"/>
+<sigma value="0.9"/>
+<constraints value="knapsack.constraints.xml"/>
+<cloneScalingFactor value="0.0"/>
+<eliteSize value="10"/>
+<fitnessHole value="0"/>
+<invalidateFitnessAfterGeneration value="false" />
+<selection type="tournamentWithFitnessHole" tau="1" tauMin="1" tauMax="10" fitnessHole="1.0"/>
+<operatorsStatistics>
+<operator ref="alterationMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="singleParameterAlterationMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<!--operator ref="insertionMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="removalMutation">
+  <weight current="0" minimum="0" maximum="1"/>
+</operator-->
+<operator ref="onePointSafeCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="onePointSafeSimpleCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="twoPointSafeSimpleCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="replacementMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="scanMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="localScanMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="randomWalkMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+</operatorsStatistics>
+</parameters>

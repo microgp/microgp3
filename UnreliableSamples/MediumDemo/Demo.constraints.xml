@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt"?>
+<constraints
+  xmlns="http://www.cad.polito.it/ugp3/schemas/constraints" 
+  id="Demo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+  <typeDefinitions>
+    <item xsi:type="constant" name="bit_type">
+      <value>0</value>
+      <value>1</value>
+    </item>
+    <item xsi:type="constant" name="register">
+      <value>%eax</value>
+      <value>%ebx</value>
+      <value>%ecx</value>
+      <value>%edx</value>
+    </item>
+    <item xsi:type="constant" name="instruction">
+      <value>addl</value>
+      <value>subl</value>
+      <value>movl</value>
+      <value>andl</value>
+      <value>orl</value>
+      <value>xorl</value>
+      <value>test</value>
+      <value>cmp</value>
+      <!--value>xcghl</value-->
+    </item>
+    <item xsi:type="constant" name="branch">
+      <value>ja</value>
+      <value>jz</value>
+      <value>jnz</value>
+      <value>je</value>
+      <value>jne</value>
+      <value>jc</value>
+      <value>jnc</value>
+      <value>jo</value>
+      <value>jno</value>
+    </item>
+  </typeDefinitions>
+  <commentFormat><value/></commentFormat>
+  <identifierFormat>n<value /></identifierFormat>
+  <labelFormat><value/>: </labelFormat>
+  <uniqueTagFormat><value /></uniqueTagFormat>
+  <prologue id="globalPrologue">
+    <expression>
+	.file	"foo.c"
+	.text
+    </expression>
+  </prologue>
+  <epilogue id="globalEpilogue">
+    <expression>
+	.ident	"GCC: (GNU) 4.1.1 20070105 (Red Hat 4.1.1-51)"
+	.section	.note.GNU-stack,"",@progbits
+    </expression>
+  </epilogue>
+  <sections>
+    <section id="fooFunc" prologueEpilogueCompulsory="true">
+      <prologue id="sectionPrologue">
+        <expression>
+.globl foo
+	.type	foo, @function
+foo:
+	pushl	%ebp
+	movl	%esp, %ebp
+	movl	8(%ebp), %eax
+	pushl	%ebx
+	pushl	%ecx
+	pushl	%edx
+	movl	$<param ref="scon1"/>, %ebx
+	movl	$<param ref="scon2"/>, %ecx
+	movl	$<param ref="scon3"/>, %edx
+        </expression>
+        <parameters>
+           <item xsi:type="integer" base="dec" minimum="0" maximum="255" name="scon1" />
+           <item xsi:type="integer" base="dec" minimum="0" maximum="255" name="scon2" />
+           <item xsi:type="integer" base="dec" minimum="0" maximum="255" name="scon3" />
+        </parameters>
+      </prologue>
+      <epilogue id="sectionEpilogue">
+        <expression>
+	popl	%edx
+	popl	%ecx
+	popl	%ebx
+	popl	%ebp
+	ret
+	.size	foo, .-foo
+        </expression>
+      </epilogue>
+      <subSections>
+        <subSection id="fooBody" maxOccurs="1" minOccurs="1" maxReferences="0">
+          <prologue id="commentPrologue">
+            <expression>
+# prologue
+            </expression>
+          </prologue>
+          <epilogue id="commentEpilogue">
+            <expression>
+#epilogue
+            </expression>
+          </epilogue>
+          <macros maxOccurs="infinity" minOccurs="1" averageOccurs="50" sigma="3">
+            <macro id="instrDirectDirect">
+              <expression>	<param ref="ins"/>	<param ref="sreg"/>, <param ref="dreg"/>
+	      </expression>
+              <parameters>
+                <item xsi:type="definedType" ref="instruction" name="ins" />
+                <item xsi:type="definedType" ref="register" name="sreg" />
+                <item xsi:type="definedType" ref="register" name="dreg" />
+              </parameters>
+            </macro>
+            <macro id="instrConstDirect">
+              <expression>	<param ref="ins"/>	$<param ref="scon"/>, <param ref="dreg"/>
+	      </expression>
+              <parameters>
+                <item xsi:type="definedType" ref="instruction" name="ins" />
+                <item xsi:type="integer" base="dec" minimum="0" maximum="255" name="scon" />
+                <item xsi:type="definedType" ref="register" name="dreg" />
+              </parameters>
+            </macro>
+            <macro id="branchCondFwd">
+              <expression>	<param ref="ins"/>	<param ref="target"/>
+	      </expression>
+              <parameters>
+                <item xsi:type="definedType" ref="branch" name="ins" />
+                <item xsi:type="innerForwardLabel" name="target" itself="false" epilogue="true"/>
+              </parameters>
+            </macro>
+          </macros>
+        </subSection>
+      </subSections>
+    </section>
+  </sections>
+</constraints>

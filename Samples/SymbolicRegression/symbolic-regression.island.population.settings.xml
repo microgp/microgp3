@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters xmlns="http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm" type="enhanced">
+
+<cloneScalingFactor value="0"/>
+<eliteSize value="3"/>
+
+<mu value="50"/>
+<nu value="50"/>
+<lambda value="25"/>
+<selection type="tournamentWithFitnessHole" tau="2" tauMin="1.5" tauMax="4" fitnessHole="0.5"/>
+
+<!-- fitness parameters: average derivative difference / average difference / percentage of expressed nodes / parcimony -->
+<fitnessParameters value="4"/>
+<maximumAge value="10000"/>
+<sigma value="0.9"/>
+<!-- <inertia value="0.998"/> -->
+<inertia value="0.9"/>
+<invalidateFitnessAfterGeneration value="false"/>
+<constraints value="symbolic-regression.constraints.xml"/>
+
+<!-- Termination conditions -->
+<maximumTime hours="2000" minutes="0" seconds="0"/>
+<maximumFitness value="10 10 0 0"/>
+<maximumGenerations value="100"/>
+<!--
+<maximumFitness value="10 10 0 0"/>
+<maximumEvaluations value="60000000"/>
+<maximumSteadyStateGenerations value="200"/>
+-->
+
+<evaluation>
+ <concurrentEvaluations value="1"/>
+ <removeTempFiles value="true"/>
+ <evaluatorPathName value="./evaluator --data data.txt --tree "/>
+ <evaluatorInputPathName value="individual.input"/>
+ <evaluatorOutputPathName value="fitness.output"/>
+</evaluation>
+
+
+<operators default="none">
+<operator ref="onePointImpreciseCrossover"/>
+<operator ref="twoPointImpreciseCrossover"/>
+<operator ref="singleParameterAlterationMutation"/>
+<operator ref="insertionMutation"/>
+<operator ref="removalMutation"/>
+<operator ref="replacementMutation"/>
+<operator ref="alterationMutation"/>
+<!--
+<operator ref="onePointSafeCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="onePointSafeSimpleCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="twoPointSafeSimpleCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="singleParameterAlterationMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="insertionMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="removalMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="replacementMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="alterationMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="subGraphInsertionMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="subGraphRemovalMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="scanMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="subGraphReplacementMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="randomWalkMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="localScanMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+-->
+</operators>
+</parameters>

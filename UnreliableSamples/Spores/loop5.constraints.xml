@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<constraints id="loop5"
+             xmlns="http://www.cad.polito.it/ugp3/schemas/constraints"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+<!--Loop covering hopeful library
+    
+    Removed multiplication
+    Constants no more embedded in macros for increased flexibility
+    only explicitly stated (parser can be simpler)
+    
+    Modified prologue to implement the double iterative function-->
+
+    <commentFormat>#<value />
+</commentFormat>
+    <labelFormat><value />:
+</labelFormat>
+    <uniqueTagFormat><value /></uniqueTagFormat>
+    <identifierFormat>n<value /></identifierFormat>
+    <typeDefinitions>
+        <item name="short" xsi:type="integer" minimum="0" maximum="255" />
+        <item name="back_ref" xsi:type="innerBackwardLabel" prologue="true" itself="false"/>
+        <item name="BOP" xsi:type="constant">
+            <value>+</value>
+            <value>-</value>
+            <value>&gt;</value>
+            <value>&lt;</value>
+            <value>&amp;</value>
+            <value>!</value>
+            <value>^</value>
+        </item>
+        <item name="UOP" xsi:type="constant">
+            <value>h</value>
+            <value>l</value>
+            <value>!</value>
+        </item>
+        <item name="ZOP" xsi:type="constant">
+            <value>c</value>
+        </item>
+    </typeDefinitions>
+    <prologue id="c_prologue" />
+    <sections>
+        <section id="MAIN" prologueEpilogueCompulsory="true">
+<<<<<<< .mine
+            <prologue id="s_prologue">
+                <expression></expression>
+            </prologue>
+=======
+            <prologue id="s_prologue" />
+>>>>>>> .r601
+            <subSections>
+                <subSection id="expression" minOccurs="1" maxOccurs="1">
+                <prologue id="ss_prologue">
+                    <expression><param ref="val1"/> <param ref="val2"/> <param ref="val3"/> <param ref="val4"/> <param ref="rootElement1" /> <param ref="rootElement2" />
+</expression>
+                    <parameters>
+                        <item name="val1" xsi::type="definedType" ref="short"/>
+               	        <item name="val2" xsi::type="definedType" ref="short"/>
+                        <item name="val3" xsi::type="definedType" ref="short"/>
+                        <item name="val4" xsi::type="definedType" ref="short"/>
+                        <item name="rootElement1" xsi::type="innerForwardLabel" epilogue="true" itself="false"/>
+                        <item name="rootElement2" xsi::type="innerForwardLabel" epilogue="true" itself="false"/>
+                        <item name="val1" xsi::type="definedType" ref="short"/>
+                        <item name="val2" xsi::type="definedType" ref="short"/>
+                        <item name="val3" xsi::type="definedType" ref="short"/>
+                        <item name="val4" xsi::type="definedType" ref="short"/>
+                    </parameters>
+                </prologue>
+                <macros minOccurs="0" maxOccurs="infinity" averageOccurs="20" sigma="5">
+                    <macro id="binaryOperation" weight="1">
+                        <expression><param ref="operator"/> <param ref="operand1"/> <param ref="operand2"/>
+</expression>
+                        <parameters>
+                            <item name="operator" xsi::type="definedType" ref="BOP"/>
+                            <item name="operand1" xsi::type="definedType" ref="back_ref"/>
+                            <item name="operand2" xsi::type="definedType" ref="back_ref"/>
+                        </parameters>
+                    </macro>
+                    <macro id="unaryOperation" weight="1">
+                        <expression><param ref="operator"/> <param ref="operand"/>
+</expression>
+                        <parameters>
+                            <item name="operator" xsi::type="definedType" ref="BOP"/>
+                            <item name="operand" xsi::type="definedType" ref="back_ref"/>
+                        </parameters>
+                    </macro>
+                    <macro id="zeroOperation" weight="1">
+                        <expression><param ref="operator"/> <param ref="operand"/>
+</expression>
+                        <parameters>
+                            <item name="operator" xsi::type="definedType" ref="ZOP"/>
+                            <item name="operand" xsi::type="definedType" ref="short"/>
+                        </parameters>
+                    </macro>
+                </macros>
+                <epilogue id="ss_epilogue"/>
+                </subSection>
+            </subSections>
+            <epilogue id="s_epilogue">
+                <expression>+ 0 0
+</expression>
+            </epilogue>
+        </section>
+    </sections>
+    <epilogue id="s_epilogue"/>
+</constraints>

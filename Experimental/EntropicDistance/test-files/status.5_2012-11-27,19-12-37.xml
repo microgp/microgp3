@@ -1,0 +1,3516 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<evolutionaryAlgorithm step='5'
+ dateTime='2012-11-27T19:12:37'
+ seconds='0.51'
+ outputPathName='status.xml'
+ overwriteOutput='0'
+ statisticsPathName='statistics.csv'
+ randomState='40063 22867 20782 58989 57068 5'
+ infinityStringIndividual='BH'
+ infinityStringNode='DLD'
+ xmlns='http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm'
+ xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+ xsi:schemaLocation='http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm.xsd'>
+<populations>
+<population generation='5' name='P1' type='enhanced'>
+<!-- Cumulative seconds elapsed in all previous runs -->
+<elapsedTimePreviousRuns seconds="2" />
+<parameters type="enhanced">
+<!-- enhanced population specific parameters -->
+<!-- clone scaling factor: the fitness of each clone of a given individual is multiplied by this factor (0,1). If set to 0, clones are discarded. -->
+<cloneScalingFactor value="0"/>
+<!-- elite size: the eliteSize best individuals do not age at each generational step. -->
+<eliteSize value="1"/>
+<!-- end of enhanced population specific parameters -->
+<!-- (optional) the maximum value of the fitness -->
+<maximumFitness value="50"/>
+<!-- (optional) if the best fitness value does not change for maximumSteadyStateGenerations generations, the evolutions stops -->
+<maximumSteadyStateGenerations value="5"/>
+<!-- (optional) after a time expressed in hours:minutes:seconds, the evolution stops -->
+<maximumTime seconds="3600" />
+<!-- basic population parameters -->
+<!-- the maximum size of the population -->
+<mu value="10"/>
+<!-- the initial size of the population -->
+<nu value="10"/>
+<!-- the numbers of genetic operators applied at every step of the evolution -->
+<lambda value="10"/>
+<!-- the inertia for the self-adaptating parameters [0,1] -->
+<inertia value="0.9"/>
+<!-- the number of dimensions of the fitness -->
+<fitnessParameters value="1"/>
+<!-- the maximum age of the individuals -->
+<maximumAge value="10"/>
+<!-- differential evolution crossover probability -->
+<diffevocp value="0"/>
+<!-- differential evolution differential weight -->
+<diffevodw value="0"/>
+<!-- the strength of the mutation operators (0,1) -->
+<sigma value="0.68049"/>
+<!-- when set to true, the fitness of all the individuals of the population
+     is discarded at every step so that in the next step it is re-evaluated -->
+<invalidateFitnessAfterGeneration value="0"/>
+<!-- the definition of the constraints of the problem -->
+<constraints value="onemax.constraints.xml"/>
+<!-- (optional) the maximum number of generations -->
+<maximumGenerations value="10"/>
+<!-- (optional) the maximum number of individuals that can be evaluated -->
+<maximumEvaluations value="10000"/>
+<!-- parents selector parameters -->
+<selection type="tournamentWithFitnessHole" tau="1" tauMin="1" tauMax="1" fitnessHole="0" />
+<!-- evaluator parameters -->
+<evaluation>
+ <concurrentEvaluations value="1" />
+ <removeTempFiles value="true" />
+ <evaluatorPathName value="perl ./onemax.fitness-script.pl" />
+ <evaluatorInputPathName value="individual_%s.in" />
+ <evaluatorOutputPathName value="fitness.out" />
+</evaluation>
+<!-- operator statistics -->
+<operatorsStatistics>
+<operator ref="onePointCrossover">
+  <weight current="0.290073" minimum="0" maximum="1"/>
+</operator>
+<operator ref="onePointImpreciseCrossover">
+  <weight current="0.0612527" minimum="0" maximum="1"/>
+</operator>
+<operator ref="twoPointImpreciseCrossover">
+  <weight current="0.0756207" minimum="0" maximum="1"/>
+</operator>
+<operator ref="singleParameterAlterationMutation">
+  <weight current="0.0680586" minimum="0" maximum="1"/>
+</operator>
+<operator ref="insertionMutation">
+  <weight current="0.0612527" minimum="0" maximum="1"/>
+</operator>
+<operator ref="removalMutation">
+  <weight current="0.0612527" minimum="0" maximum="1"/>
+</operator>
+<operator ref="replacementMutation">
+  <weight current="0.143604" minimum="0" maximum="1"/>
+</operator>
+<operator ref="alterationMutation">
+  <weight current="0.0612527" minimum="0" maximum="1"/>
+</operator>
+<operator ref="subGraphInsertionMutation">
+  <weight current="0.0612527" minimum="0" maximum="1"/>
+</operator>
+<operator ref="subGraphRemovalMutation">
+  <weight current="0.0551275" minimum="0" maximum="1"/>
+</operator>
+<operator ref="subGraphReplacementMutation">
+  <weight current="0.0612527" minimum="0" maximum="1"/>
+</operator>
+</operatorsStatistics>
+</parameters>
+<!-- Entropy of the whole population -->
+<entropy value="5.3132" />
+<steadyState generations='0' previousMaxFitness='33'/>
+<individuals best='AR' worst='AW'>
+<!-- total 10 individuals -->
+<individual id="AR" allopatricTag="AR" type="enhanced" deltaEntropy="-0.0166036" isHero="true">
+<life birth='4' age='0' />
+<placeholder value="0"/>
+<lineage>
+<operator ref="onePointCrossover" />
+<parents>
+<individual ref="H"/>
+<individual ref="AI"/>
+</parents>
+</lineage>
+<fitness>
+<description>AR@19:12:37</description>
+<value>33</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>AR@19:12:37</description>
+<value>33</value>
+</scaledFitness>
+<genome>
+<node id="B5L" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="B5M" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="B5N" constraintsRef="/One-Max/bitString/sectionPrologue">
+</node>
+<node id="B5O" constraintsRef="/One-Max/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="B5P" constraintsRef="/One-Max/bitString/main/stringPrologue">
+<tag name="next" value="B5Q"/>
+<tag name="place" value="0"/>
+</node>
+<node id="B5Q" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5R"/>
+<tag name="prev" value="B5P"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="B5R" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5S"/>
+<tag name="prev" value="B5Q"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="2"/>
+</node>
+<node id="B5S" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5T"/>
+<tag name="prev" value="B5R"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="B5T" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5U"/>
+<tag name="prev" value="B5S"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="B5U" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B35"/>
+<tag name="prev" value="B5T"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="5"/>
+</node>
+<node id="B35" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B36"/>
+<tag name="prev" value="B5U"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="6"/>
+</node>
+<node id="B36" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B37"/>
+<tag name="prev" value="B35"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="B37" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4A"/>
+<tag name="prev" value="B36"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="B4A" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4B"/>
+<tag name="prev" value="B37"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="9"/>
+</node>
+<node id="B4B" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4C"/>
+<tag name="prev" value="B4A"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="10"/>
+</node>
+<node id="B4C" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4D"/>
+<tag name="prev" value="B4B"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="11"/>
+</node>
+<node id="B4D" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4E"/>
+<tag name="prev" value="B4C"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="12"/>
+</node>
+<node id="B4E" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4F"/>
+<tag name="prev" value="B4D"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="13"/>
+</node>
+<node id="B4F" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4G"/>
+<tag name="prev" value="B4E"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="14"/>
+</node>
+<node id="B4G" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4H"/>
+<tag name="prev" value="B4F"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="15"/>
+</node>
+<node id="B4H" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4I"/>
+<tag name="prev" value="B4G"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="16"/>
+</node>
+<node id="B4I" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4J"/>
+<tag name="prev" value="B4H"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="17"/>
+</node>
+<node id="B4J" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4K"/>
+<tag name="prev" value="B4I"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="18"/>
+</node>
+<node id="B4K" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4L"/>
+<tag name="prev" value="B4J"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="19"/>
+</node>
+<node id="B4L" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4M"/>
+<tag name="prev" value="B4K"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="20"/>
+</node>
+<node id="B4M" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4N"/>
+<tag name="prev" value="B4L"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="21"/>
+</node>
+<node id="B4N" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4O"/>
+<tag name="prev" value="B4M"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="22"/>
+</node>
+<node id="B4O" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4P"/>
+<tag name="prev" value="B4N"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="23"/>
+</node>
+<node id="B4P" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4Q"/>
+<tag name="prev" value="B4O"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="24"/>
+</node>
+<node id="B4Q" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4R"/>
+<tag name="prev" value="B4P"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="25"/>
+</node>
+<node id="B4R" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4S"/>
+<tag name="prev" value="B4Q"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="26"/>
+</node>
+<node id="B4S" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4T"/>
+<tag name="prev" value="B4R"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="27"/>
+</node>
+<node id="B4T" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4U"/>
+<tag name="prev" value="B4S"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="28"/>
+</node>
+<node id="B4U" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4V"/>
+<tag name="prev" value="B4T"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="29"/>
+</node>
+<node id="B4V" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4W"/>
+<tag name="prev" value="B4U"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="30"/>
+</node>
+<node id="B4W" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4X"/>
+<tag name="prev" value="B4V"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="31"/>
+</node>
+<node id="B4X" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4Y"/>
+<tag name="prev" value="B4W"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="32"/>
+</node>
+<node id="B4Y" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B4Z"/>
+<tag name="prev" value="B4X"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="33"/>
+</node>
+<node id="B4Z" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B42"/>
+<tag name="prev" value="B4Y"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="34"/>
+</node>
+<node id="B42" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B43"/>
+<tag name="prev" value="B4Z"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="35"/>
+</node>
+<node id="B43" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B44"/>
+<tag name="prev" value="B42"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="36"/>
+</node>
+<node id="B44" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B45"/>
+<tag name="prev" value="B43"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="37"/>
+</node>
+<node id="B45" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B46"/>
+<tag name="prev" value="B44"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="38"/>
+</node>
+<node id="B46" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B47"/>
+<tag name="prev" value="B45"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="39"/>
+</node>
+<node id="B47" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5A"/>
+<tag name="prev" value="B46"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="40"/>
+</node>
+<node id="B5A" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5B"/>
+<tag name="prev" value="B47"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="41"/>
+</node>
+<node id="B5B" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5C"/>
+<tag name="prev" value="B5A"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="42"/>
+</node>
+<node id="B5C" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5D"/>
+<tag name="prev" value="B5B"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="43"/>
+</node>
+<node id="B5D" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5E"/>
+<tag name="prev" value="B5C"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="44"/>
+</node>
+<node id="B5E" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5F"/>
+<tag name="prev" value="B5D"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="45"/>
+</node>
+<node id="B5F" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5G"/>
+<tag name="prev" value="B5E"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="46"/>
+</node>
+<node id="B5G" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5H"/>
+<tag name="prev" value="B5F"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="47"/>
+</node>
+<node id="B5H" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5I"/>
+<tag name="prev" value="B5G"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="48"/>
+</node>
+<node id="B5I" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5J"/>
+<tag name="prev" value="B5H"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="49"/>
+</node>
+<node id="B5J" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="B5K"/>
+<tag name="prev" value="B5I"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="50"/>
+</node>
+<node id="B5K" constraintsRef="/One-Max/bitString/main/stringEpilogue">
+<tag name="prev" value="B5J"/>
+<tag name="place" value="51"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="A4" allopatricTag="A4" type="enhanced" deltaEntropy="-0.0119685">
+<life birth='5' age='1' />
+<placeholder value="1"/>
+<lineage>
+<operator ref="onePointCrossover" />
+<parents>
+<individual ref="AV"/>
+<individual ref="AU"/>
+</parents>
+</lineage>
+<fitness>
+<description>A4@19:12:37</description>
+<value>32</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>A4@19:12:37</description>
+<value>32</value>
+</scaledFitness>
+<genome>
+<node id="CUF" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="CUG" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="CUH" constraintsRef="/One-Max/bitString/sectionPrologue">
+</node>
+<node id="CUI" constraintsRef="/One-Max/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="CUJ" constraintsRef="/One-Max/bitString/main/stringPrologue">
+<tag name="next" value="CUK"/>
+<tag name="place" value="0"/>
+</node>
+<node id="CUK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CUL"/>
+<tag name="prev" value="CUJ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="CUL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CUM"/>
+<tag name="prev" value="CUK"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="2"/>
+</node>
+<node id="CUM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CUN"/>
+<tag name="prev" value="CUL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="CUN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CUO"/>
+<tag name="prev" value="CUM"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="4"/>
+</node>
+<node id="CUO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CSX"/>
+<tag name="prev" value="CUN"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="5"/>
+</node>
+<node id="CSX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CSY"/>
+<tag name="prev" value="CUO"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="6"/>
+</node>
+<node id="CSY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CSZ"/>
+<tag name="prev" value="CSX"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="CSZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CS2"/>
+<tag name="prev" value="CSY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="CS2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CS3"/>
+<tag name="prev" value="CSZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="9"/>
+</node>
+<node id="CS3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CS4"/>
+<tag name="prev" value="CS2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="10"/>
+</node>
+<node id="CS4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CS5"/>
+<tag name="prev" value="CS3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="11"/>
+</node>
+<node id="CS5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CS6"/>
+<tag name="prev" value="CS4"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="12"/>
+</node>
+<node id="CS6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CS7"/>
+<tag name="prev" value="CS5"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="13"/>
+</node>
+<node id="CS7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTA"/>
+<tag name="prev" value="CS6"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="14"/>
+</node>
+<node id="CTA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTB"/>
+<tag name="prev" value="CS7"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="15"/>
+</node>
+<node id="CTB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTC"/>
+<tag name="prev" value="CTA"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="16"/>
+</node>
+<node id="CTC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTD"/>
+<tag name="prev" value="CTB"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="17"/>
+</node>
+<node id="CTD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTE"/>
+<tag name="prev" value="CTC"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="18"/>
+</node>
+<node id="CTE" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTF"/>
+<tag name="prev" value="CTD"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="19"/>
+</node>
+<node id="CTF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTG"/>
+<tag name="prev" value="CTE"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="20"/>
+</node>
+<node id="CTG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTH"/>
+<tag name="prev" value="CTF"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="21"/>
+</node>
+<node id="CTH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTI"/>
+<tag name="prev" value="CTG"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="22"/>
+</node>
+<node id="CTI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTJ"/>
+<tag name="prev" value="CTH"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="23"/>
+</node>
+<node id="CTJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTK"/>
+<tag name="prev" value="CTI"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="24"/>
+</node>
+<node id="CTK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTL"/>
+<tag name="prev" value="CTJ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="25"/>
+</node>
+<node id="CTL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTM"/>
+<tag name="prev" value="CTK"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="26"/>
+</node>
+<node id="CTM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTN"/>
+<tag name="prev" value="CTL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="27"/>
+</node>
+<node id="CTN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTO"/>
+<tag name="prev" value="CTM"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="28"/>
+</node>
+<node id="CTO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTP"/>
+<tag name="prev" value="CTN"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="29"/>
+</node>
+<node id="CTP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTQ"/>
+<tag name="prev" value="CTO"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="30"/>
+</node>
+<node id="CTQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTR"/>
+<tag name="prev" value="CTP"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="31"/>
+</node>
+<node id="CTR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTS"/>
+<tag name="prev" value="CTQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="32"/>
+</node>
+<node id="CTS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTT"/>
+<tag name="prev" value="CTR"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="33"/>
+</node>
+<node id="CTT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTU"/>
+<tag name="prev" value="CTS"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="34"/>
+</node>
+<node id="CTU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTV"/>
+<tag name="prev" value="CTT"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="35"/>
+</node>
+<node id="CTV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTW"/>
+<tag name="prev" value="CTU"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="36"/>
+</node>
+<node id="CTW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTX"/>
+<tag name="prev" value="CTV"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="37"/>
+</node>
+<node id="CTX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTY"/>
+<tag name="prev" value="CTW"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="38"/>
+</node>
+<node id="CTY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CTZ"/>
+<tag name="prev" value="CTX"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="39"/>
+</node>
+<node id="CTZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CT2"/>
+<tag name="prev" value="CTY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="40"/>
+</node>
+<node id="CT2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CT3"/>
+<tag name="prev" value="CTZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="41"/>
+</node>
+<node id="CT3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CT4"/>
+<tag name="prev" value="CT2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="42"/>
+</node>
+<node id="CT4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CT5"/>
+<tag name="prev" value="CT3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="43"/>
+</node>
+<node id="CT5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CT6"/>
+<tag name="prev" value="CT4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="44"/>
+</node>
+<node id="CT6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CT7"/>
+<tag name="prev" value="CT5"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="45"/>
+</node>
+<node id="CT7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CUA"/>
+<tag name="prev" value="CT6"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="46"/>
+</node>
+<node id="CUA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CUB"/>
+<tag name="prev" value="CT7"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="47"/>
+</node>
+<node id="CUB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CUC"/>
+<tag name="prev" value="CUA"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="48"/>
+</node>
+<node id="CUC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CUD"/>
+<tag name="prev" value="CUB"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="49"/>
+</node>
+<node id="CUD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CUE"/>
+<tag name="prev" value="CUC"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="50"/>
+</node>
+<node id="CUE" constraintsRef="/One-Max/bitString/main/stringEpilogue">
+<tag name="prev" value="CUD"/>
+<tag name="place" value="51"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="AV" allopatricTag="AV" type="enhanced" deltaEntropy="-0.00854706">
+<life birth='4' age='2' />
+<placeholder value="2"/>
+<lineage>
+<operator ref="onePointCrossover" />
+<parents>
+<individual ref="H"/>
+<individual ref="2"/>
+</parents>
+</lineage>
+<fitness>
+<description>AV@19:12:37</description>
+<value>31</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>AV@19:12:37</description>
+<value>31</value>
+</scaledFitness>
+<genome>
+<node id="CEL" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="CEM" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="CEN" constraintsRef="/One-Max/bitString/sectionPrologue">
+</node>
+<node id="CEO" constraintsRef="/One-Max/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="CEP" constraintsRef="/One-Max/bitString/main/stringPrologue">
+<tag name="next" value="CEQ"/>
+<tag name="place" value="0"/>
+</node>
+<node id="CEQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CER"/>
+<tag name="prev" value="CEP"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="1"/>
+</node>
+<node id="CER" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CES"/>
+<tag name="prev" value="CEQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="2"/>
+</node>
+<node id="CES" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CC3"/>
+<tag name="prev" value="CER"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="CC3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CC4"/>
+<tag name="prev" value="CES"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="CC4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CC5"/>
+<tag name="prev" value="CC3"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="5"/>
+</node>
+<node id="CC5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CC6"/>
+<tag name="prev" value="CC4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="6"/>
+</node>
+<node id="CC6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CC7"/>
+<tag name="prev" value="CC5"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="CC7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDA"/>
+<tag name="prev" value="CC6"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="CDA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDB"/>
+<tag name="prev" value="CC7"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="9"/>
+</node>
+<node id="CDB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDC"/>
+<tag name="prev" value="CDA"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="10"/>
+</node>
+<node id="CDC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDD"/>
+<tag name="prev" value="CDB"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="11"/>
+</node>
+<node id="CDD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDE"/>
+<tag name="prev" value="CDC"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="12"/>
+</node>
+<node id="CDE" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDF"/>
+<tag name="prev" value="CDD"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="13"/>
+</node>
+<node id="CDF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDG"/>
+<tag name="prev" value="CDE"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="14"/>
+</node>
+<node id="CDG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDH"/>
+<tag name="prev" value="CDF"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="15"/>
+</node>
+<node id="CDH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDI"/>
+<tag name="prev" value="CDG"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="16"/>
+</node>
+<node id="CDI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDJ"/>
+<tag name="prev" value="CDH"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="17"/>
+</node>
+<node id="CDJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDK"/>
+<tag name="prev" value="CDI"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="18"/>
+</node>
+<node id="CDK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDL"/>
+<tag name="prev" value="CDJ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="19"/>
+</node>
+<node id="CDL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDM"/>
+<tag name="prev" value="CDK"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="20"/>
+</node>
+<node id="CDM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDN"/>
+<tag name="prev" value="CDL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="21"/>
+</node>
+<node id="CDN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDO"/>
+<tag name="prev" value="CDM"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="22"/>
+</node>
+<node id="CDO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDP"/>
+<tag name="prev" value="CDN"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="23"/>
+</node>
+<node id="CDP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDQ"/>
+<tag name="prev" value="CDO"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="24"/>
+</node>
+<node id="CDQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDR"/>
+<tag name="prev" value="CDP"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="25"/>
+</node>
+<node id="CDR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDS"/>
+<tag name="prev" value="CDQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="26"/>
+</node>
+<node id="CDS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDT"/>
+<tag name="prev" value="CDR"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="27"/>
+</node>
+<node id="CDT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDU"/>
+<tag name="prev" value="CDS"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="28"/>
+</node>
+<node id="CDU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDV"/>
+<tag name="prev" value="CDT"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="29"/>
+</node>
+<node id="CDV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDW"/>
+<tag name="prev" value="CDU"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="30"/>
+</node>
+<node id="CDW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDX"/>
+<tag name="prev" value="CDV"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="31"/>
+</node>
+<node id="CDX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDY"/>
+<tag name="prev" value="CDW"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="32"/>
+</node>
+<node id="CDY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CDZ"/>
+<tag name="prev" value="CDX"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="33"/>
+</node>
+<node id="CDZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CD2"/>
+<tag name="prev" value="CDY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="34"/>
+</node>
+<node id="CD2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CD3"/>
+<tag name="prev" value="CDZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="35"/>
+</node>
+<node id="CD3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CD4"/>
+<tag name="prev" value="CD2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="36"/>
+</node>
+<node id="CD4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CD5"/>
+<tag name="prev" value="CD3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="37"/>
+</node>
+<node id="CD5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CD6"/>
+<tag name="prev" value="CD4"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="38"/>
+</node>
+<node id="CD6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CD7"/>
+<tag name="prev" value="CD5"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="39"/>
+</node>
+<node id="CD7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEA"/>
+<tag name="prev" value="CD6"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="40"/>
+</node>
+<node id="CEA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEB"/>
+<tag name="prev" value="CD7"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="41"/>
+</node>
+<node id="CEB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEC"/>
+<tag name="prev" value="CEA"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="42"/>
+</node>
+<node id="CEC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CED"/>
+<tag name="prev" value="CEB"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="43"/>
+</node>
+<node id="CED" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEE"/>
+<tag name="prev" value="CEC"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="44"/>
+</node>
+<node id="CEE" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEF"/>
+<tag name="prev" value="CED"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="45"/>
+</node>
+<node id="CEF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEG"/>
+<tag name="prev" value="CEE"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="46"/>
+</node>
+<node id="CEG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEH"/>
+<tag name="prev" value="CEF"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="47"/>
+</node>
+<node id="CEH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEI"/>
+<tag name="prev" value="CEG"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="48"/>
+</node>
+<node id="CEI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEJ"/>
+<tag name="prev" value="CEH"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="49"/>
+</node>
+<node id="CEJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEK"/>
+<tag name="prev" value="CEI"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="50"/>
+</node>
+<node id="CEK" constraintsRef="/One-Max/bitString/main/stringEpilogue">
+<tag name="prev" value="CEJ"/>
+<tag name="place" value="51"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="AY" allopatricTag="AY" type="enhanced" deltaEntropy="0.00540214">
+<life birth='4' age='2' />
+<placeholder value="3"/>
+<lineage>
+<operator ref="replacementMutation" />
+<parents>
+<individual ref="6"/>
+</parents>
+</lineage>
+<fitness>
+<description>AY@19:12:37</description>
+<value>31</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>AY@19:12:37</description>
+<value>31</value>
+</scaledFitness>
+<genome>
+<node id="CJ3" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="CJ4" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="CJ5" constraintsRef="/One-Max/bitString/sectionPrologue">
+</node>
+<node id="CJ6" constraintsRef="/One-Max/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="CJ7" constraintsRef="/One-Max/bitString/main/stringPrologue">
+<tag name="next" value="CKA"/>
+<tag name="place" value="0"/>
+</node>
+<node id="CKA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKB"/>
+<tag name="prev" value="CJ7"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="CKB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKC"/>
+<tag name="prev" value="CKA"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="2"/>
+</node>
+<node id="CKC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKD"/>
+<tag name="prev" value="CKB"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="CKD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKE"/>
+<tag name="prev" value="CKC"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="CKE" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKF"/>
+<tag name="prev" value="CKD"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="5"/>
+</node>
+<node id="CKF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKG"/>
+<tag name="prev" value="CKE"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="6"/>
+</node>
+<node id="CKG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKH"/>
+<tag name="prev" value="CKF"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="CKH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKI"/>
+<tag name="prev" value="CKG"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="CKI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKJ"/>
+<tag name="prev" value="CKH"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="9"/>
+</node>
+<node id="CKJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKK"/>
+<tag name="prev" value="CKI"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="10"/>
+</node>
+<node id="CKK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKL"/>
+<tag name="prev" value="CKJ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="11"/>
+</node>
+<node id="CKL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKM"/>
+<tag name="prev" value="CKK"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="12"/>
+</node>
+<node id="CKM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKN"/>
+<tag name="prev" value="CKL"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="13"/>
+</node>
+<node id="CKN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKO"/>
+<tag name="prev" value="CKM"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="14"/>
+</node>
+<node id="CKO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKP"/>
+<tag name="prev" value="CKN"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="15"/>
+</node>
+<node id="CKP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKQ"/>
+<tag name="prev" value="CKO"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="16"/>
+</node>
+<node id="CKQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKR"/>
+<tag name="prev" value="CKP"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="17"/>
+</node>
+<node id="CKR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKS"/>
+<tag name="prev" value="CKQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="18"/>
+</node>
+<node id="CKS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLT"/>
+<tag name="prev" value="CKR"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="19"/>
+</node>
+<node id="CLT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKU"/>
+<tag name="prev" value="CKS"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="20"/>
+</node>
+<node id="CKU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLU"/>
+<tag name="prev" value="CLT"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="21"/>
+</node>
+<node id="CLU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKW"/>
+<tag name="prev" value="CKU"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="22"/>
+</node>
+<node id="CKW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKX"/>
+<tag name="prev" value="CLU"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="23"/>
+</node>
+<node id="CKX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKY"/>
+<tag name="prev" value="CKW"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="24"/>
+</node>
+<node id="CKY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CKZ"/>
+<tag name="prev" value="CKX"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="25"/>
+</node>
+<node id="CKZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CK2"/>
+<tag name="prev" value="CKY"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="26"/>
+</node>
+<node id="CK2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CK3"/>
+<tag name="prev" value="CKZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="27"/>
+</node>
+<node id="CK3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CK4"/>
+<tag name="prev" value="CK2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="28"/>
+</node>
+<node id="CK4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CK5"/>
+<tag name="prev" value="CK3"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="29"/>
+</node>
+<node id="CK5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CK6"/>
+<tag name="prev" value="CK4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="30"/>
+</node>
+<node id="CK6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CK7"/>
+<tag name="prev" value="CK5"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="31"/>
+</node>
+<node id="CK7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLA"/>
+<tag name="prev" value="CK6"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="32"/>
+</node>
+<node id="CLA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLB"/>
+<tag name="prev" value="CK7"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="33"/>
+</node>
+<node id="CLB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLC"/>
+<tag name="prev" value="CLA"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="34"/>
+</node>
+<node id="CLC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLD"/>
+<tag name="prev" value="CLB"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="35"/>
+</node>
+<node id="CLD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLE"/>
+<tag name="prev" value="CLC"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="36"/>
+</node>
+<node id="CLE" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLF"/>
+<tag name="prev" value="CLD"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="37"/>
+</node>
+<node id="CLF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLG"/>
+<tag name="prev" value="CLE"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="38"/>
+</node>
+<node id="CLG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLH"/>
+<tag name="prev" value="CLF"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="39"/>
+</node>
+<node id="CLH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLI"/>
+<tag name="prev" value="CLG"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="40"/>
+</node>
+<node id="CLI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLJ"/>
+<tag name="prev" value="CLH"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="41"/>
+</node>
+<node id="CLJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLK"/>
+<tag name="prev" value="CLI"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="42"/>
+</node>
+<node id="CLK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLL"/>
+<tag name="prev" value="CLJ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="43"/>
+</node>
+<node id="CLL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLM"/>
+<tag name="prev" value="CLK"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="44"/>
+</node>
+<node id="CLM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLN"/>
+<tag name="prev" value="CLL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="45"/>
+</node>
+<node id="CLN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLO"/>
+<tag name="prev" value="CLM"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="46"/>
+</node>
+<node id="CLO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLP"/>
+<tag name="prev" value="CLN"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="47"/>
+</node>
+<node id="CLP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLQ"/>
+<tag name="prev" value="CLO"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="48"/>
+</node>
+<node id="CLQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLR"/>
+<tag name="prev" value="CLP"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="49"/>
+</node>
+<node id="CLR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CLS"/>
+<tag name="prev" value="CLQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="50"/>
+</node>
+<node id="CLS" constraintsRef="/One-Max/bitString/main/stringEpilogue">
+<tag name="prev" value="CLR"/>
+<tag name="place" value="51"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="H" allopatricTag="H" type="enhanced" deltaEntropy="-0.0106724">
+<life birth='0' age='3' />
+<placeholder value="4"/>
+<lineage>
+<operator ref="NO_OPERATOR" />
+</lineage>
+<fitness>
+<description>H@19:12:35</description>
+<value>31</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>H@19:12:35</description>
+<value>31</value>
+</scaledFitness>
+<genome>
+<node id="LI" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="LJ" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="LK" constraintsRef="/One-Max/bitString/sectionPrologue">
+</node>
+<node id="LL" constraintsRef="/One-Max/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="LM" constraintsRef="/One-Max/bitString/main/stringPrologue">
+<tag name="next" value="LN"/>
+<tag name="place" value="0"/>
+</node>
+<node id="LN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LO"/>
+<tag name="prev" value="LM"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="LO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LP"/>
+<tag name="prev" value="LN"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="2"/>
+</node>
+<node id="LP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LQ"/>
+<tag name="prev" value="LO"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="LQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LR"/>
+<tag name="prev" value="LP"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="LR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LS"/>
+<tag name="prev" value="LQ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="5"/>
+</node>
+<node id="LS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LT"/>
+<tag name="prev" value="LR"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="6"/>
+</node>
+<node id="LT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LU"/>
+<tag name="prev" value="LS"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="LU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LV"/>
+<tag name="prev" value="LT"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="LV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LW"/>
+<tag name="prev" value="LU"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="9"/>
+</node>
+<node id="LW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LX"/>
+<tag name="prev" value="LV"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="10"/>
+</node>
+<node id="LX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LY"/>
+<tag name="prev" value="LW"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="11"/>
+</node>
+<node id="LY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="LZ"/>
+<tag name="prev" value="LX"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="12"/>
+</node>
+<node id="LZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="L2"/>
+<tag name="prev" value="LY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="13"/>
+</node>
+<node id="L2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="L3"/>
+<tag name="prev" value="LZ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="14"/>
+</node>
+<node id="L3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="L4"/>
+<tag name="prev" value="L2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="15"/>
+</node>
+<node id="L4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="L5"/>
+<tag name="prev" value="L3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="16"/>
+</node>
+<node id="L5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="L6"/>
+<tag name="prev" value="L4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="17"/>
+</node>
+<node id="L6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="L7"/>
+<tag name="prev" value="L5"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="18"/>
+</node>
+<node id="L7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MA"/>
+<tag name="prev" value="L6"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="19"/>
+</node>
+<node id="MA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MB"/>
+<tag name="prev" value="L7"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="20"/>
+</node>
+<node id="MB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MC"/>
+<tag name="prev" value="MA"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="21"/>
+</node>
+<node id="MC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MD"/>
+<tag name="prev" value="MB"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="22"/>
+</node>
+<node id="MD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="ME"/>
+<tag name="prev" value="MC"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="23"/>
+</node>
+<node id="ME" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MF"/>
+<tag name="prev" value="MD"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="24"/>
+</node>
+<node id="MF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MG"/>
+<tag name="prev" value="ME"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="25"/>
+</node>
+<node id="MG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MH"/>
+<tag name="prev" value="MF"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="26"/>
+</node>
+<node id="MH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MI"/>
+<tag name="prev" value="MG"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="27"/>
+</node>
+<node id="MI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MJ"/>
+<tag name="prev" value="MH"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="28"/>
+</node>
+<node id="MJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MK"/>
+<tag name="prev" value="MI"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="29"/>
+</node>
+<node id="MK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="ML"/>
+<tag name="prev" value="MJ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="30"/>
+</node>
+<node id="ML" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MM"/>
+<tag name="prev" value="MK"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="31"/>
+</node>
+<node id="MM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MN"/>
+<tag name="prev" value="ML"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="32"/>
+</node>
+<node id="MN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MO"/>
+<tag name="prev" value="MM"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="33"/>
+</node>
+<node id="MO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MP"/>
+<tag name="prev" value="MN"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="34"/>
+</node>
+<node id="MP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MQ"/>
+<tag name="prev" value="MO"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="35"/>
+</node>
+<node id="MQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MR"/>
+<tag name="prev" value="MP"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="36"/>
+</node>
+<node id="MR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MS"/>
+<tag name="prev" value="MQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="37"/>
+</node>
+<node id="MS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MT"/>
+<tag name="prev" value="MR"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="38"/>
+</node>
+<node id="MT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MU"/>
+<tag name="prev" value="MS"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="39"/>
+</node>
+<node id="MU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MV"/>
+<tag name="prev" value="MT"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="40"/>
+</node>
+<node id="MV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MW"/>
+<tag name="prev" value="MU"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="41"/>
+</node>
+<node id="MW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MX"/>
+<tag name="prev" value="MV"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="42"/>
+</node>
+<node id="MX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MY"/>
+<tag name="prev" value="MW"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="43"/>
+</node>
+<node id="MY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="MZ"/>
+<tag name="prev" value="MX"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="44"/>
+</node>
+<node id="MZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="M2"/>
+<tag name="prev" value="MY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="45"/>
+</node>
+<node id="M2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="M3"/>
+<tag name="prev" value="MZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="46"/>
+</node>
+<node id="M3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="M4"/>
+<tag name="prev" value="M2"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="47"/>
+</node>
+<node id="M4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="M5"/>
+<tag name="prev" value="M3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="48"/>
+</node>
+<node id="M5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="M6"/>
+<tag name="prev" value="M4"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="49"/>
+</node>
+<node id="M6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="M7"/>
+<tag name="prev" value="M5"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="50"/>
+</node>
+<node id="M7" constraintsRef="/One-Max/bitString/main/stringEpilogue">
+<tag name="prev" value="M6"/>
+<tag name="place" value="51"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="A5" allopatricTag="A5" type="enhanced" deltaEntropy="-0.00261437">
+<life birth='5' age='1' />
+<placeholder value="5"/>
+<lineage>
+<operator ref="replacementMutation" />
+<parents>
+<individual ref="AV"/>
+</parents>
+</lineage>
+<fitness>
+<description>A5@19:12:37</description>
+<value>30</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>A5@19:12:37</description>
+<value>30</value>
+</scaledFitness>
+<genome>
+<node id="CV5" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="CV6" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="CV7" constraintsRef="/One-Max/bitString/sectionPrologue">
+</node>
+<node id="CWA" constraintsRef="/One-Max/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="CWB" constraintsRef="/One-Max/bitString/main/stringPrologue">
+<tag name="next" value="CWC"/>
+<tag name="place" value="0"/>
+</node>
+<node id="CWC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWD"/>
+<tag name="prev" value="CWB"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="1"/>
+</node>
+<node id="CWD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWE"/>
+<tag name="prev" value="CWC"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="2"/>
+</node>
+<node id="CWE" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWF"/>
+<tag name="prev" value="CWD"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="CWF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWG"/>
+<tag name="prev" value="CWE"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="CWG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXV"/>
+<tag name="prev" value="CWF"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="5"/>
+</node>
+<node id="CXV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWI"/>
+<tag name="prev" value="CWG"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="6"/>
+</node>
+<node id="CWI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWJ"/>
+<tag name="prev" value="CXV"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="CWJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWK"/>
+<tag name="prev" value="CWI"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="CWK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWL"/>
+<tag name="prev" value="CWJ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="9"/>
+</node>
+<node id="CWL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWM"/>
+<tag name="prev" value="CWK"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="10"/>
+</node>
+<node id="CWM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWN"/>
+<tag name="prev" value="CWL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="11"/>
+</node>
+<node id="CWN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWO"/>
+<tag name="prev" value="CWM"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="12"/>
+</node>
+<node id="CWO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWP"/>
+<tag name="prev" value="CWN"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="13"/>
+</node>
+<node id="CWP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWQ"/>
+<tag name="prev" value="CWO"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="14"/>
+</node>
+<node id="CWQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXW"/>
+<tag name="prev" value="CWP"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="15"/>
+</node>
+<node id="CXW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWS"/>
+<tag name="prev" value="CWQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="16"/>
+</node>
+<node id="CWS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWT"/>
+<tag name="prev" value="CXW"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="17"/>
+</node>
+<node id="CWT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWU"/>
+<tag name="prev" value="CWS"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="18"/>
+</node>
+<node id="CWU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWV"/>
+<tag name="prev" value="CWT"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="19"/>
+</node>
+<node id="CWV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWW"/>
+<tag name="prev" value="CWU"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="20"/>
+</node>
+<node id="CWW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWX"/>
+<tag name="prev" value="CWV"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="21"/>
+</node>
+<node id="CWX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWY"/>
+<tag name="prev" value="CWW"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="22"/>
+</node>
+<node id="CWY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CWZ"/>
+<tag name="prev" value="CWX"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="23"/>
+</node>
+<node id="CWZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CW2"/>
+<tag name="prev" value="CWY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="24"/>
+</node>
+<node id="CW2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CW3"/>
+<tag name="prev" value="CWZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="25"/>
+</node>
+<node id="CW3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CW4"/>
+<tag name="prev" value="CW2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="26"/>
+</node>
+<node id="CW4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CW5"/>
+<tag name="prev" value="CW3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="27"/>
+</node>
+<node id="CW5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CW6"/>
+<tag name="prev" value="CW4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="28"/>
+</node>
+<node id="CW6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CW7"/>
+<tag name="prev" value="CW5"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="29"/>
+</node>
+<node id="CW7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXY"/>
+<tag name="prev" value="CW6"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="30"/>
+</node>
+<node id="CXY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXX"/>
+<tag name="prev" value="CW7"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="31"/>
+</node>
+<node id="CXX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXC"/>
+<tag name="prev" value="CXY"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="32"/>
+</node>
+<node id="CXC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXD"/>
+<tag name="prev" value="CXX"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="33"/>
+</node>
+<node id="CXD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXE"/>
+<tag name="prev" value="CXC"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="34"/>
+</node>
+<node id="CXE" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXF"/>
+<tag name="prev" value="CXD"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="35"/>
+</node>
+<node id="CXF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXG"/>
+<tag name="prev" value="CXE"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="36"/>
+</node>
+<node id="CXG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXH"/>
+<tag name="prev" value="CXF"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="37"/>
+</node>
+<node id="CXH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXI"/>
+<tag name="prev" value="CXG"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="38"/>
+</node>
+<node id="CXI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXJ"/>
+<tag name="prev" value="CXH"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="39"/>
+</node>
+<node id="CXJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXK"/>
+<tag name="prev" value="CXI"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="40"/>
+</node>
+<node id="CXK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXL"/>
+<tag name="prev" value="CXJ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="41"/>
+</node>
+<node id="CXL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXM"/>
+<tag name="prev" value="CXK"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="42"/>
+</node>
+<node id="CXM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXN"/>
+<tag name="prev" value="CXL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="43"/>
+</node>
+<node id="CXN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXO"/>
+<tag name="prev" value="CXM"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="44"/>
+</node>
+<node id="CXO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXP"/>
+<tag name="prev" value="CXN"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="45"/>
+</node>
+<node id="CXP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXQ"/>
+<tag name="prev" value="CXO"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="46"/>
+</node>
+<node id="CXQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXR"/>
+<tag name="prev" value="CXP"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="47"/>
+</node>
+<node id="CXR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXS"/>
+<tag name="prev" value="CXQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="48"/>
+</node>
+<node id="CXS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXT"/>
+<tag name="prev" value="CXR"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="49"/>
+</node>
+<node id="CXT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CXU"/>
+<tag name="prev" value="CXS"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="50"/>
+</node>
+<node id="CXU" constraintsRef="/One-Max/bitString/main/stringEpilogue">
+<tag name="prev" value="CXT"/>
+<tag name="place" value="51"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="BG" allopatricTag="BG" type="enhanced" deltaEntropy="0.0158775">
+<life birth='5' age='1' />
+<placeholder value="6"/>
+<lineage>
+<operator ref="replacementMutation" />
+<parents>
+<individual ref="6"/>
+</parents>
+</lineage>
+<fitness>
+<description>BG@19:12:37</description>
+<value>30</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>BG@19:12:37</description>
+<value>30</value>
+</scaledFitness>
+<genome>
+<node id="DJD" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="DJE" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="DJF" constraintsRef="/One-Max/bitString/sectionPrologue">
+</node>
+<node id="DJG" constraintsRef="/One-Max/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="DJH" constraintsRef="/One-Max/bitString/main/stringPrologue">
+<tag name="next" value="DJI"/>
+<tag name="place" value="0"/>
+</node>
+<node id="DJI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJJ"/>
+<tag name="prev" value="DJH"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="DJJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJK"/>
+<tag name="prev" value="DJI"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="2"/>
+</node>
+<node id="DJK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJL"/>
+<tag name="prev" value="DJJ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="DJL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJM"/>
+<tag name="prev" value="DJK"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="DJM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJN"/>
+<tag name="prev" value="DJL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="5"/>
+</node>
+<node id="DJN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJO"/>
+<tag name="prev" value="DJM"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="6"/>
+</node>
+<node id="DJO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJP"/>
+<tag name="prev" value="DJN"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="DJP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJQ"/>
+<tag name="prev" value="DJO"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="DJQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJR"/>
+<tag name="prev" value="DJP"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="9"/>
+</node>
+<node id="DJR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJS"/>
+<tag name="prev" value="DJQ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="10"/>
+</node>
+<node id="DJS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DLB"/>
+<tag name="prev" value="DJR"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="11"/>
+</node>
+<node id="DLB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJU"/>
+<tag name="prev" value="DJS"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="12"/>
+</node>
+<node id="DJU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJV"/>
+<tag name="prev" value="DLB"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="13"/>
+</node>
+<node id="DJV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJW"/>
+<tag name="prev" value="DJU"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="14"/>
+</node>
+<node id="DJW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJX"/>
+<tag name="prev" value="DJV"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="15"/>
+</node>
+<node id="DJX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJY"/>
+<tag name="prev" value="DJW"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="16"/>
+</node>
+<node id="DJY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJZ"/>
+<tag name="prev" value="DJX"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="17"/>
+</node>
+<node id="DJZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJ2"/>
+<tag name="prev" value="DJY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="18"/>
+</node>
+<node id="DJ2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJ3"/>
+<tag name="prev" value="DJZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="19"/>
+</node>
+<node id="DJ3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DK4"/>
+<tag name="prev" value="DJ2"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="20"/>
+</node>
+<node id="DK4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJ5"/>
+<tag name="prev" value="DJ3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="21"/>
+</node>
+<node id="DJ5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJ6"/>
+<tag name="prev" value="DK4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="22"/>
+</node>
+<node id="DJ6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DJ7"/>
+<tag name="prev" value="DJ5"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="23"/>
+</node>
+<node id="DJ7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKA"/>
+<tag name="prev" value="DJ6"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="24"/>
+</node>
+<node id="DKA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKB"/>
+<tag name="prev" value="DJ7"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="25"/>
+</node>
+<node id="DKB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKC"/>
+<tag name="prev" value="DKA"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="26"/>
+</node>
+<node id="DKC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKD"/>
+<tag name="prev" value="DKB"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="27"/>
+</node>
+<node id="DKD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DK3"/>
+<tag name="prev" value="DKC"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="28"/>
+</node>
+<node id="DK3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKF"/>
+<tag name="prev" value="DKD"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="29"/>
+</node>
+<node id="DKF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKG"/>
+<tag name="prev" value="DK3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="30"/>
+</node>
+<node id="DKG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKH"/>
+<tag name="prev" value="DKF"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="31"/>
+</node>
+<node id="DKH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKI"/>
+<tag name="prev" value="DKG"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="32"/>
+</node>
+<node id="DKI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DLC"/>
+<tag name="prev" value="DKH"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="33"/>
+</node>
+<node id="DLC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKK"/>
+<tag name="prev" value="DKI"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="34"/>
+</node>
+<node id="DKK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKL"/>
+<tag name="prev" value="DLC"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="35"/>
+</node>
+<node id="DKL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKM"/>
+<tag name="prev" value="DKK"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="36"/>
+</node>
+<node id="DKM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DK5"/>
+<tag name="prev" value="DKL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="37"/>
+</node>
+<node id="DK5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKO"/>
+<tag name="prev" value="DKM"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="38"/>
+</node>
+<node id="DKO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKP"/>
+<tag name="prev" value="DK5"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="39"/>
+</node>
+<node id="DKP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKQ"/>
+<tag name="prev" value="DKO"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="40"/>
+</node>
+<node id="DKQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DLA"/>
+<tag name="prev" value="DKP"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="41"/>
+</node>
+<node id="DLA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DK6"/>
+<tag name="prev" value="DKQ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="42"/>
+</node>
+<node id="DK6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKT"/>
+<tag name="prev" value="DLA"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="43"/>
+</node>
+<node id="DKT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKU"/>
+<tag name="prev" value="DK6"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="44"/>
+</node>
+<node id="DKU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKV"/>
+<tag name="prev" value="DKT"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="45"/>
+</node>
+<node id="DKV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKW"/>
+<tag name="prev" value="DKU"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="46"/>
+</node>
+<node id="DKW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DK7"/>
+<tag name="prev" value="DKV"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="47"/>
+</node>
+<node id="DK7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKY"/>
+<tag name="prev" value="DKW"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="48"/>
+</node>
+<node id="DKY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DKZ"/>
+<tag name="prev" value="DK7"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="49"/>
+</node>
+<node id="DKZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="DK2"/>
+<tag name="prev" value="DKY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="50"/>
+</node>
+<node id="DK2" constraintsRef="/One-Max/bitString/main/stringEpilogue">
+<tag name="prev" value="DKZ"/>
+<tag name="place" value="51"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="6" allopatricTag="6" type="enhanced" deltaEntropy="0.0065475">
+<life birth='2' age='4' />
+<placeholder value="7"/>
+<lineage>
+<operator ref="onePointCrossover" />
+<parents>
+<individual ref="K"/>
+<individual ref="F"/>
+</parents>
+</lineage>
+<fitness>
+<description>6@19:12:36</description>
+<value>30</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>6@19:12:36</description>
+<value>30</value>
+</scaledFitness>
+<genome>
+<node id="AXV" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="AXW" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="AXX" constraintsRef="/One-Max/bitString/sectionPrologue">
+</node>
+<node id="AXY" constraintsRef="/One-Max/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="AXZ" constraintsRef="/One-Max/bitString/main/stringPrologue">
+<tag name="next" value="AX2"/>
+<tag name="place" value="0"/>
+</node>
+<node id="AX2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AX3"/>
+<tag name="prev" value="AXZ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="AX3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AX4"/>
+<tag name="prev" value="AX2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="2"/>
+</node>
+<node id="AX4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AX5"/>
+<tag name="prev" value="AX3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="AX5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AX6"/>
+<tag name="prev" value="AX4"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="AX6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AX7"/>
+<tag name="prev" value="AX5"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="5"/>
+</node>
+<node id="AX7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYA"/>
+<tag name="prev" value="AX6"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="6"/>
+</node>
+<node id="AYA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYB"/>
+<tag name="prev" value="AX7"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="AYB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYC"/>
+<tag name="prev" value="AYA"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="AYC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYD"/>
+<tag name="prev" value="AYB"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="9"/>
+</node>
+<node id="AYD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYE"/>
+<tag name="prev" value="AYC"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="10"/>
+</node>
+<node id="AYE" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYF"/>
+<tag name="prev" value="AYD"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="11"/>
+</node>
+<node id="AYF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYG"/>
+<tag name="prev" value="AYE"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="12"/>
+</node>
+<node id="AYG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYH"/>
+<tag name="prev" value="AYF"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="13"/>
+</node>
+<node id="AYH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYI"/>
+<tag name="prev" value="AYG"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="14"/>
+</node>
+<node id="AYI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYJ"/>
+<tag name="prev" value="AYH"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="15"/>
+</node>
+<node id="AYJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYK"/>
+<tag name="prev" value="AYI"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="16"/>
+</node>
+<node id="AYK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYL"/>
+<tag name="prev" value="AYJ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="17"/>
+</node>
+<node id="AYL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYM"/>
+<tag name="prev" value="AYK"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="18"/>
+</node>
+<node id="AYM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYN"/>
+<tag name="prev" value="AYL"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="19"/>
+</node>
+<node id="AYN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYO"/>
+<tag name="prev" value="AYM"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="20"/>
+</node>
+<node id="AYO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYP"/>
+<tag name="prev" value="AYN"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="21"/>
+</node>
+<node id="AYP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYQ"/>
+<tag name="prev" value="AYO"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="22"/>
+</node>
+<node id="AYQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYR"/>
+<tag name="prev" value="AYP"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="23"/>
+</node>
+<node id="AYR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYS"/>
+<tag name="prev" value="AYQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="24"/>
+</node>
+<node id="AYS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AYT"/>
+<tag name="prev" value="AYR"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="25"/>
+</node>
+<node id="AYT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AW4"/>
+<tag name="prev" value="AYS"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="26"/>
+</node>
+<node id="AW4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AW5"/>
+<tag name="prev" value="AYT"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="27"/>
+</node>
+<node id="AW5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AW6"/>
+<tag name="prev" value="AW4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="28"/>
+</node>
+<node id="AW6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AW7"/>
+<tag name="prev" value="AW5"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="29"/>
+</node>
+<node id="AW7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXA"/>
+<tag name="prev" value="AW6"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="30"/>
+</node>
+<node id="AXA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXB"/>
+<tag name="prev" value="AW7"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="31"/>
+</node>
+<node id="AXB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXC"/>
+<tag name="prev" value="AXA"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="32"/>
+</node>
+<node id="AXC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXD"/>
+<tag name="prev" value="AXB"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="33"/>
+</node>
+<node id="AXD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXE"/>
+<tag name="prev" value="AXC"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="34"/>
+</node>
+<node id="AXE" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXF"/>
+<tag name="prev" value="AXD"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="35"/>
+</node>
+<node id="AXF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXG"/>
+<tag name="prev" value="AXE"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="36"/>
+</node>
+<node id="AXG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXH"/>
+<tag name="prev" value="AXF"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="37"/>
+</node>
+<node id="AXH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXI"/>
+<tag name="prev" value="AXG"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="38"/>
+</node>
+<node id="AXI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXJ"/>
+<tag name="prev" value="AXH"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="39"/>
+</node>
+<node id="AXJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXK"/>
+<tag name="prev" value="AXI"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="40"/>
+</node>
+<node id="AXK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXL"/>
+<tag name="prev" value="AXJ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="41"/>
+</node>
+<node id="AXL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXM"/>
+<tag name="prev" value="AXK"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="42"/>
+</node>
+<node id="AXM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXN"/>
+<tag name="prev" value="AXL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="43"/>
+</node>
+<node id="AXN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXO"/>
+<tag name="prev" value="AXM"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="44"/>
+</node>
+<node id="AXO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXP"/>
+<tag name="prev" value="AXN"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="45"/>
+</node>
+<node id="AXP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXQ"/>
+<tag name="prev" value="AXO"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="46"/>
+</node>
+<node id="AXQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXR"/>
+<tag name="prev" value="AXP"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="47"/>
+</node>
+<node id="AXR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXS"/>
+<tag name="prev" value="AXQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="48"/>
+</node>
+<node id="AXS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXT"/>
+<tag name="prev" value="AXR"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="49"/>
+</node>
+<node id="AXT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="AXU"/>
+<tag name="prev" value="AXS"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="50"/>
+</node>
+<node id="AXU" constraintsRef="/One-Max/bitString/main/stringEpilogue">
+<tag name="prev" value="AXT"/>
+<tag name="place" value="51"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="AU" allopatricTag="AU" type="enhanced" deltaEntropy="0.0374263">
+<life birth='4' age='2' />
+<placeholder value="8"/>
+<lineage>
+<operator ref="onePointCrossover" />
+<parents>
+<individual ref="H"/>
+<individual ref="2"/>
+</parents>
+</lineage>
+<fitness>
+<description>AU@19:12:37</description>
+<value>28</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>AU@19:12:37</description>
+<value>28</value>
+</scaledFitness>
+<genome>
+<node id="CCT" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="CCU" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="CCV" constraintsRef="/One-Max/bitString/sectionPrologue">
+</node>
+<node id="CCW" constraintsRef="/One-Max/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="CCX" constraintsRef="/One-Max/bitString/main/stringPrologue">
+<tag name="next" value="CCY"/>
+<tag name="place" value="0"/>
+</node>
+<node id="CCY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CCZ"/>
+<tag name="prev" value="CCX"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="CCZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CC2"/>
+<tag name="prev" value="CCY"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="2"/>
+</node>
+<node id="CC2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CET"/>
+<tag name="prev" value="CCZ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="CET" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEU"/>
+<tag name="prev" value="CC2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="4"/>
+</node>
+<node id="CEU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEV"/>
+<tag name="prev" value="CET"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="5"/>
+</node>
+<node id="CEV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEW"/>
+<tag name="prev" value="CEU"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="6"/>
+</node>
+<node id="CEW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEX"/>
+<tag name="prev" value="CEV"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="CEX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEY"/>
+<tag name="prev" value="CEW"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="8"/>
+</node>
+<node id="CEY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CEZ"/>
+<tag name="prev" value="CEX"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="9"/>
+</node>
+<node id="CEZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CE2"/>
+<tag name="prev" value="CEY"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="10"/>
+</node>
+<node id="CE2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CE3"/>
+<tag name="prev" value="CEZ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="11"/>
+</node>
+<node id="CE3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CE4"/>
+<tag name="prev" value="CE2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="12"/>
+</node>
+<node id="CE4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CE5"/>
+<tag name="prev" value="CE3"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="13"/>
+</node>
+<node id="CE5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CE6"/>
+<tag name="prev" value="CE4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="14"/>
+</node>
+<node id="CE6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CE7"/>
+<tag name="prev" value="CE5"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="15"/>
+</node>
+<node id="CE7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFA"/>
+<tag name="prev" value="CE6"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="16"/>
+</node>
+<node id="CFA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFB"/>
+<tag name="prev" value="CE7"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="17"/>
+</node>
+<node id="CFB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFC"/>
+<tag name="prev" value="CFA"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="18"/>
+</node>
+<node id="CFC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFD"/>
+<tag name="prev" value="CFB"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="19"/>
+</node>
+<node id="CFD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFE"/>
+<tag name="prev" value="CFC"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="20"/>
+</node>
+<node id="CFE" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFF"/>
+<tag name="prev" value="CFD"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="21"/>
+</node>
+<node id="CFF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFG"/>
+<tag name="prev" value="CFE"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="22"/>
+</node>
+<node id="CFG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFH"/>
+<tag name="prev" value="CFF"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="23"/>
+</node>
+<node id="CFH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFI"/>
+<tag name="prev" value="CFG"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="24"/>
+</node>
+<node id="CFI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFJ"/>
+<tag name="prev" value="CFH"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="25"/>
+</node>
+<node id="CFJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFK"/>
+<tag name="prev" value="CFI"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="26"/>
+</node>
+<node id="CFK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFL"/>
+<tag name="prev" value="CFJ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="27"/>
+</node>
+<node id="CFL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFM"/>
+<tag name="prev" value="CFK"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="28"/>
+</node>
+<node id="CFM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFN"/>
+<tag name="prev" value="CFL"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="29"/>
+</node>
+<node id="CFN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFO"/>
+<tag name="prev" value="CFM"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="30"/>
+</node>
+<node id="CFO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFP"/>
+<tag name="prev" value="CFN"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="31"/>
+</node>
+<node id="CFP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFQ"/>
+<tag name="prev" value="CFO"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="32"/>
+</node>
+<node id="CFQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFR"/>
+<tag name="prev" value="CFP"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="33"/>
+</node>
+<node id="CFR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFS"/>
+<tag name="prev" value="CFQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="34"/>
+</node>
+<node id="CFS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFT"/>
+<tag name="prev" value="CFR"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="35"/>
+</node>
+<node id="CFT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFU"/>
+<tag name="prev" value="CFS"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="36"/>
+</node>
+<node id="CFU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFV"/>
+<tag name="prev" value="CFT"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="37"/>
+</node>
+<node id="CFV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFW"/>
+<tag name="prev" value="CFU"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="38"/>
+</node>
+<node id="CFW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFX"/>
+<tag name="prev" value="CFV"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="39"/>
+</node>
+<node id="CFX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFY"/>
+<tag name="prev" value="CFW"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="40"/>
+</node>
+<node id="CFY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CFZ"/>
+<tag name="prev" value="CFX"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="41"/>
+</node>
+<node id="CFZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CF2"/>
+<tag name="prev" value="CFY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="42"/>
+</node>
+<node id="CF2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CF3"/>
+<tag name="prev" value="CFZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="43"/>
+</node>
+<node id="CF3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CF4"/>
+<tag name="prev" value="CF2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="44"/>
+</node>
+<node id="CF4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CF5"/>
+<tag name="prev" value="CF3"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="45"/>
+</node>
+<node id="CF5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CF6"/>
+<tag name="prev" value="CF4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="46"/>
+</node>
+<node id="CF6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CF7"/>
+<tag name="prev" value="CF5"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="47"/>
+</node>
+<node id="CF7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGA"/>
+<tag name="prev" value="CF6"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="48"/>
+</node>
+<node id="CGA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGB"/>
+<tag name="prev" value="CF7"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="49"/>
+</node>
+<node id="CGB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGC"/>
+<tag name="prev" value="CGA"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="50"/>
+</node>
+<node id="CGC" constraintsRef="/One-Max/bitString/main/stringEpilogue">
+<tag name="prev" value="CGB"/>
+<tag name="place" value="51"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="AW" allopatricTag="AW" type="enhanced" deltaEntropy="0.0143342">
+<life birth='4' age='2' />
+<placeholder value="9"/>
+<lineage>
+<operator ref="alterationMutation" />
+<parents>
+<individual ref="Y"/>
+</parents>
+</lineage>
+<fitness>
+<description>AW@19:12:37</description>
+<value>28</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>AW@19:12:37</description>
+<value>28</value>
+</scaledFitness>
+<genome>
+<node id="CGD" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="CGE" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="CGF" constraintsRef="/One-Max/bitString/sectionPrologue">
+</node>
+<node id="CGG" constraintsRef="/One-Max/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="CGH" constraintsRef="/One-Max/bitString/main/stringPrologue">
+<tag name="next" value="CGI"/>
+<tag name="place" value="0"/>
+</node>
+<node id="CGI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGJ"/>
+<tag name="prev" value="CGH"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="CGJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGK"/>
+<tag name="prev" value="CGI"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="2"/>
+</node>
+<node id="CGK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGL"/>
+<tag name="prev" value="CGJ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="3"/>
+</node>
+<node id="CGL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGM"/>
+<tag name="prev" value="CGK"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="CGM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGN"/>
+<tag name="prev" value="CGL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="5"/>
+</node>
+<node id="CGN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGO"/>
+<tag name="prev" value="CGM"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="6"/>
+</node>
+<node id="CGO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGP"/>
+<tag name="prev" value="CGN"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="CGP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGQ"/>
+<tag name="prev" value="CGO"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="CGQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGR"/>
+<tag name="prev" value="CGP"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="9"/>
+</node>
+<node id="CGR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGS"/>
+<tag name="prev" value="CGQ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="10"/>
+</node>
+<node id="CGS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGT"/>
+<tag name="prev" value="CGR"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="11"/>
+</node>
+<node id="CGT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGU"/>
+<tag name="prev" value="CGS"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="12"/>
+</node>
+<node id="CGU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGV"/>
+<tag name="prev" value="CGT"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="13"/>
+</node>
+<node id="CGV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGW"/>
+<tag name="prev" value="CGU"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="14"/>
+</node>
+<node id="CGW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGX"/>
+<tag name="prev" value="CGV"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="15"/>
+</node>
+<node id="CGX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGY"/>
+<tag name="prev" value="CGW"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="16"/>
+</node>
+<node id="CGY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CGZ"/>
+<tag name="prev" value="CGX"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="17"/>
+</node>
+<node id="CGZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CG2"/>
+<tag name="prev" value="CGY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="18"/>
+</node>
+<node id="CG2" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CG3"/>
+<tag name="prev" value="CGZ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="19"/>
+</node>
+<node id="CG3" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CG4"/>
+<tag name="prev" value="CG2"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="20"/>
+</node>
+<node id="CG4" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CG5"/>
+<tag name="prev" value="CG3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="21"/>
+</node>
+<node id="CG5" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CG6"/>
+<tag name="prev" value="CG4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="22"/>
+</node>
+<node id="CG6" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CG7"/>
+<tag name="prev" value="CG5"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="23"/>
+</node>
+<node id="CG7" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHA"/>
+<tag name="prev" value="CG6"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="24"/>
+</node>
+<node id="CHA" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHB"/>
+<tag name="prev" value="CG7"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="25"/>
+</node>
+<node id="CHB" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHC"/>
+<tag name="prev" value="CHA"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="26"/>
+</node>
+<node id="CHC" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHD"/>
+<tag name="prev" value="CHB"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="27"/>
+</node>
+<node id="CHD" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHE"/>
+<tag name="prev" value="CHC"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="28"/>
+</node>
+<node id="CHE" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHF"/>
+<tag name="prev" value="CHD"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="29"/>
+</node>
+<node id="CHF" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHG"/>
+<tag name="prev" value="CHE"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="30"/>
+</node>
+<node id="CHG" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHH"/>
+<tag name="prev" value="CHF"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="31"/>
+</node>
+<node id="CHH" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHI"/>
+<tag name="prev" value="CHG"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="32"/>
+</node>
+<node id="CHI" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHJ"/>
+<tag name="prev" value="CHH"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="33"/>
+</node>
+<node id="CHJ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHK"/>
+<tag name="prev" value="CHI"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="34"/>
+</node>
+<node id="CHK" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHL"/>
+<tag name="prev" value="CHJ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="35"/>
+</node>
+<node id="CHL" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHM"/>
+<tag name="prev" value="CHK"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="36"/>
+</node>
+<node id="CHM" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHN"/>
+<tag name="prev" value="CHL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="37"/>
+</node>
+<node id="CHN" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHO"/>
+<tag name="prev" value="CHM"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="38"/>
+</node>
+<node id="CHO" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHP"/>
+<tag name="prev" value="CHN"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="39"/>
+</node>
+<node id="CHP" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHQ"/>
+<tag name="prev" value="CHO"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="40"/>
+</node>
+<node id="CHQ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHR"/>
+<tag name="prev" value="CHP"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="41"/>
+</node>
+<node id="CHR" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHS"/>
+<tag name="prev" value="CHQ"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="42"/>
+</node>
+<node id="CHS" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHT"/>
+<tag name="prev" value="CHR"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="43"/>
+</node>
+<node id="CHT" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHU"/>
+<tag name="prev" value="CHS"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="44"/>
+</node>
+<node id="CHU" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHV"/>
+<tag name="prev" value="CHT"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="45"/>
+</node>
+<node id="CHV" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHW"/>
+<tag name="prev" value="CHU"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="46"/>
+</node>
+<node id="CHW" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHX"/>
+<tag name="prev" value="CHV"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="47"/>
+</node>
+<node id="CHX" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHY"/>
+<tag name="prev" value="CHW"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="48"/>
+</node>
+<node id="CHY" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CHZ"/>
+<tag name="prev" value="CHX"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="49"/>
+</node>
+<node id="CHZ" constraintsRef="/One-Max/bitString/main/bitString">
+<tag name="next" value="CH2"/>
+<tag name="prev" value="CHY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="50"/>
+</node>
+<node id="CH2" constraintsRef="/One-Max/bitString/main/stringEpilogue">
+<tag name="prev" value="CHZ"/>
+<tag name="place" value="51"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+</individuals>
+</population>
+</populations>
+</evolutionaryAlgorithm>

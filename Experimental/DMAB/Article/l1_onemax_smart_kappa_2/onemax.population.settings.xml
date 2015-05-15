@@ -1,0 +1,88 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters xmlns="http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm" type="enhanced">
+
+  <!-- ENHANCED POPULATION SPECIFIC PARAMETERS -->
+
+  <!-- clone scaling factor: the fitness of each clone of a given
+  individual is multiplied by this factor (0,1). If set to 0, clones
+  are discarded. --> 
+  <cloneScalingFactor value="0"/>
+  
+  <!-- elite size: the eliteSize best individuals do not age at each
+  generational step. --> 
+  <eliteSize value="1"/>
+  
+  <!-- end of enhanced population specific parameters -->
+
+  <!-- (optional) the maximum value of the fitness -->
+  <maximumFitness value="10000"/>
+  
+  <!-- (optional) if the best fitness value does not change for
+  maximumSteadyStateGenerations generations, the evolutions stops -->
+  <!-- <maximumSteadyStateGenerations value="5"/> -->
+
+  <!-- maximum "real" time (ie. wall clock) for an experiment -->
+  <!-- <maximumTime seconds="600"/> -->
+
+  <!-- BASIC POPULATION PARAMETERS -->
+
+  <!-- the maximum size of the population -->
+  <mu value="10"/>
+
+  <!-- the initial size of the population -->
+  <nu value="10"/>
+
+  <!-- the numbers of genetic operators applied at every step of the evolution -->
+  <lambda value="1"/>
+
+  <!-- the inertia for the self-adaptating parameters [0,1] -->
+  <inertia value="0.9"/>
+
+  <!-- the number of dimensions of the fitness -->
+  <fitnessParameters value="1"/>
+
+  <!-- the maximum age of the individuals -->
+  <maximumAge value="10"/>
+
+  <!-- the strength of the mutation operators (0,1) -->
+  <sigma value="0.9"/>
+
+  <!-- when set to true, the fitness of all the individuals of the
+  population is discarded at every step so that in the next step it is
+  re-evaluated -->
+  <invalidateFitnessAfterGeneration value="0"/>
+
+  <!-- the definition of the constraints of the problem -->
+  <constraints value="onemax.constraints.xml"/>
+
+  <!-- (optional) the maximum number of generations -->
+  <maximumGenerations value="30000"/>
+
+  <!-- (optional) the maximum number of individuals that can be evaluated -->
+  <maximumEvaluations value="1000000"/>
+
+  <!-- parents selector parameters -->
+  <selection type="tournamentWithFitnessHole" tau="1" tauMin="1" tauMax="1" fitnessHole="0"/>
+  
+  <!-- evaluator parameters -->
+  <evaluation>
+    <concurrentEvaluations value="2"/>
+    <removeTempFiles value="true"/>
+    <evaluatorPathName value="./onemax.fitness-script.lua"/>
+    <evaluatorInputPathName value="individual_%s.in"/>
+    <evaluatorOutputPathName value="fitness.out"/>
+  </evaluation>
+  
+  <!-- operator statistics -->
+<operators default="smart" selector="kappaRouletteDMAB">
+  <kappa value="2" />
+<operator ref="bitStringFlipOneMutation"/>
+<operator ref="bitStringResetOneMutation"/>
+<operator ref="bitStringSetOneMutation"/>
+<operator ref="bitStringGlobalMajorityMutation"/>
+<operator ref="bitStringGlobalMinorityMutation"/>
+<operator ref="bitStringLocalMajorityMutation"/>
+<operator ref="bitStringLocalMinorityMutation"/>
+</operators>
+</parameters>

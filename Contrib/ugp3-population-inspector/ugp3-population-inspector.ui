@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>populationInspectorMainWindow</class>
+ <widget class="QMainWindow" name="populationInspectorMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>877</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ugp3 Population Inspector</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0" columnstretch="0,0,0,0,0,0,0">
+      <item row="0" column="0" colspan="6">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Population</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Population Statistics</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="6">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Individual Preview</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="pushButton_LoadStatusFile">
+        <property name="text">
+         <string>Load Status File</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="pushButton_SetAsStartingPoint">
+        <property name="text">
+         <string>Set as Starting Point</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QPushButton" name="pushButton_AddToEndPoints">
+        <property name="text">
+         <string>Add to End Points</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QPushButton" name="pushButton_EntropicDistance">
+        <property name="text">
+         <string>Entropic Distance</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" rowspan="3" colspan="6">
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="minimumSize">
+         <size>
+          <width>714</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Parent(s)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Operator</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>DeltaEntropy</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Birth</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item row="3" column="6" rowspan="2">
+       <widget class="QTextBrowser" name="textBrowser"/>
+      </item>
+      <item row="4" column="4">
+       <widget class="QPushButton" name="pushButton_IndividualToFile">
+        <property name="text">
+         <string>Individual to File</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QTableWidget" name="statisticsTableWidget">
+        <column>
+         <property name="text">
+          <string>Parameter</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Value</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>877</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad_Population"/>
+    <addaction name="actionSave_Individual_as"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuQuestionMark">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuQuestionMark"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLoad_Population">
+   <property name="text">
+    <string>Load Status File</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSave_Individual_as">
+   <property name="text">
+    <string>Save Individual as...</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>populationInspectorMainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>438</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

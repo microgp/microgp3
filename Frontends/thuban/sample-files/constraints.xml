@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt"?>
+<constraints xmlns="http://www.cad.polito.it/ugp3/schemas/constraints" 
+  id="One-Max" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+
+<commentFormat><value/></commentFormat>
+<identifierFormat>n<value /></identifierFormat>
+<labelFormat><value/>: </labelFormat>
+<uniqueTagFormat><value /></uniqueTagFormat>
+
+<prologue id="globalPrologue">
+<expression>This is the global prologue!
+</expression>
+</prologue>
+
+
+<epilogue id="globalEpilogue">
+<expression>This is the global epilogue: here, take an integer in [-10,100]: <param ref="integer1"/>
+</expression>
+<parameters>
+	<item name="integer1" type="integer" minimum="-10" maximum="100"/>
+</parameters>
+</epilogue>
+
+<sections>
+    <section id="bitString" prologueEpilogueCompulsory="false">
+      <prologue id="sectionPrologue"/>
+      <epilogue id="sectionEpilogue">
+        <expression></expression>
+      </epilogue>
+      <subSections>
+
+        <subSection id="main1" maxOccurs="1" minOccurs="1" maxReferences="0">
+          <prologue id="stringPrologue"/>
+          <epilogue id="stringEpilogue"/>
+          <macros maxOccurs="50" minOccurs="10" averageOccurs="30" sigma="10">
+            <macro id="bitString" >
+              <expression><param ref="bit"/>
+</expression>
+                <parameters>
+                  <item type="constant" ref="constant" name="bit">
+	<value>value1</value>
+	<value>value2</value>
+              </item>
+                </parameters>
+            </macro>
+          </macros>
+        </subSection>
+
+      </subSections>
+    </section>
+  </sections>
+</constraints>

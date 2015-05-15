@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt"?>
+<constraints
+  xmlns="http://www.cad.polito.it/ugp3/schemas/constraints" 
+  id="CEC07-OKA2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+  <commentFormat><value/></commentFormat>
+  <identifierFormat>n<value /></identifierFormat>
+  <labelFormat><value/>: </labelFormat>
+  <uniqueTagFormat><value /></uniqueTagFormat>
+  <prologue id="prologue"/>
+  <epilogue id="epilogue"/>
+  <sections>
+    <section id="x_1" prologueEpilogueCompulsory="false">
+      <prologue id="prologue"/>
+      <epilogue id="epilogue"/>
+      <subSections>
+        <subSection id="main" maxOccurs="1" minOccurs="1" maxReferences="0">
+          <prologue id="prologue"/>
+          <epilogue id="epilogue"/>
+          <macros maxOccurs="1" minOccurs="1" averageOccurs="1" sigma="0">
+            <macro id="x_vector" >
+              <expression><param ref="x_value"/> </expression>
+                <parameters>
+                  <item xsi:type="float" name="x_value" minimum="-3.141592654" maximum="3.141592654"/>
+                </parameters>
+            </macro>
+          </macros>
+        </subSection>
+      </subSections>
+    </section>
+    <section id="x2_x3" prologueEpilogueCompulsory="false">
+      <prologue id="prologue"/>
+      <epilogue id="epilogue"/>
+      <subSections>
+        <subSection id="main" maxOccurs="1" minOccurs="1" maxReferences="0">
+          <prologue id="prologue"/>
+          <epilogue id="epilogue"/>
+          <macros maxOccurs="2" minOccurs="2" averageOccurs="2" sigma="0">
+            <macro id="x_vector" >
+              <expression><param ref="x_value"/></expression>
+                <parameters>
+                  <item xsi:type="float" name="x_value" minimum="-5" maximum="5"/>
+                </parameters>
+            </macro>
+          </macros>
+        </subSection>
+      </subSections>
+    </section>
+  </sections>
+</constraints>

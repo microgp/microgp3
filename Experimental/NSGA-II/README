@@ -1,0 +1,36 @@
+WHAT IS THIS
+------------
+This is a simple wrapper class for the Shark library implementation of the NSGA-II multi-objective evolutionary algorithm. The cool thing is that it can read a ugp3 XML population file, and take all the meaningful information from there. NOTE: not ALL parameters are actually read, for many there is no equivalence between NSGA-II and ugp3. The parameters actually used are:
+- mu = size of the population (lambda == mu in standard implementation NSGA-II)
+- maximumGenerations = stop condition based on the number of generations
+- maximumEvaluations = stop condition based on the number of evaluations (calls to the evaluation function)
+- evaluation scope
+	-- name of the evaluator
+	-- name of the fitness output file
+- constraints = used to get the size of the problem, and the constraints on the variables
+
+MAKE IT COMPILE
+---------------
+In order to make this work, you need:
+- Shark 2.xx C++ library (NOTE: it will NOT work with Shark 3.0 and above)
+- Qt library (used only for the qmake, sorry...)
+- ugp3
+
+Install all of the above. Make sure that qmake is working properly. Then, edit the nsga-ii.pro Qt project file, and change the following parameters:
+UGPHOME = /path/to/your/installed/ugp3/
+SHARKHOME = /path/to/your/installed/Shark/
+
+Cross your fingers, sacrifice a goat to the Dark God of Computer Programming, and then type:
+qmake
+make
+
+It should create an executable called nsga-ii
+
+MAKE IT WORK
+------------
+The command line options are:
+
+
+TODO
+----
+

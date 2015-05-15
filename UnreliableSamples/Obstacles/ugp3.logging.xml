@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<logger>
+  <handler type='console' level='INFO'>
+  <formatter type='brief'/>
+    <enableSmartWrap>true</enableSmartWrap>
+    <enableProgressbars>true</enableProgressbars>
+  </handler>
+  <handler type='file' level='DEBUG'>
+  <formatter type='brief'/>
+    <fileName>verbose.log</fileName>
+    <recordsPerFile>500000</recordsPerFile>
+  </handler>
+</logger>

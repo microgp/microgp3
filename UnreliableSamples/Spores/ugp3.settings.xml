@@ -1,0 +1,36 @@
+<settings>
+	<context name="evolution">
+		<option name="constraintsPathName" value="./loop5.constraints.xml" type="string" />
+		<option name="randomSeed" value="0" type="integer" />
+		<option name="mu" value="5" type="integer" />
+		<option name="nu" value="10" type="integer" />
+		<option name="lambda" value="500" type="integer" />
+		<option name="tau" value="2.5" type="float" />
+		<option name="sigma" value="0.1" type="float" />
+		<option name="selfAdaptationInertia" value="0.95" type="float" />
+		<option name="eliteCardinality" value="500" type="integer" />
+		<option name="fitnessHole" value="1.0" type="float" />
+		<option name="cloneScalingFactor" value="0.0" type="float" />
+		<option name="maximumAge" value="infinity" type="integer" />
+	</context>
+		<context name="stopConditions">
+		<option name="maximumGenerations" value="200" type="integer" />
+		<option name="maximumSteadyStateGenerations" value="infinity" type="integer" />
+		<option name="maximumFitness" value="infinity" type="integer" />
+	</context>
+	<context name="evaluation">
+		<option name="concurrentEvaluations" value="1" type="integer" />
+		<option name="parametersCount" value="5" type="integer" />
+		<option name="evaluatorPathName" value="./fitness5" type="string" />
+		<option name="evaluatorInputPathName" value="individual.input" type="string" />
+		<option name="evaluatorOutputPathName" value="fitness5.out" type="string" />
+	</context>
+	<context name="recovery">
+		<option name="recoveryInputPopulations" value="" type="string" />
+		<option name="recoveryOutput" value="Algorithm.xml" type="string" />
+		<option name="recoveryOverwriteOutput" value="true" type="boolean" />
+	</context>
+	<context name="logging">
+		<option name="std::cout" value="info; brief" type="string" />
+	</context>
+</settings>

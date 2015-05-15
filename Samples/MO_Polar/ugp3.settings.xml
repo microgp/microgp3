@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <context name="evolution">
+    <!-- <option name="randomSeed" value="42" /> -->
+    <option name="randomSeed" value="42" /> 
+    <option name ="populations">
+      <population name="popA" value="moea-population.xml" />
+    </option>
+    <option name="statisticsPathName" value="statistics.csv" />
+	
+  </context>
+  <context name="recovery">
+    <option name="recoveryInput" value="" />
+    <option name="recoveryInputPopulations" value="" />
+    <option name="recoveryOutput" value="status.xml" />
+    <option name="recoveryOverwriteOutput" value="true" />
+    <option name="recoveryDiscardFitness" value="true" />
+</context>
+
+  <context name="logging">
+    <!-- Only essential information on standard output -->
+    <option name="std::cout" value="info; brief" />
+    <!-- Debug information on a file -->
+    <option name="debug.log" value="debug; brief" />
+  </context>
+  
+</settings>

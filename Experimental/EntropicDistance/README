@@ -1,0 +1,13 @@
+entropic-distance
+-----------------
+Ok, questo è un eseguibile fatto velocissimamente che: 
+- prende tutti i file status.xml passati come argomento (devono essere nella stessa cartella dove eseguite il programma, insieme al file dei constraints)
+- scrive su un file "analysis.csv", per ogni coppia di individui all'interno della *stessa popolazione*
+	Generation,Individual1,Individual2,EntropicDistance,DeltaFitness
+  dove Individual1 e Individual2 sono gli ID degli individui, e DeltaFitness è abs(fitness2-fitness1) sul primo valore di fitness
+
+La classe chiamata "OtherMetric" implementa una distanza fra individui problem-specific, così possiamo vedere (ad esempio) come varia l'entropic distance con la distanza di Hamming (se gli individui sono bit) o con la distanza euclidea (se gli individui sono N numeri reali).
+
+Per provarlo, potete andare nella cartella test-files ed eseguire il link simbolico all'eseguibile. La sintassi è ./entropic-distance status-*; c'è un LOG_DEBUG riversato su schermo, quindi aspettatevi moooooolto output. Il risultato sarà dentro analysis.csv
+
+Al momento i file di esempio provengono da un run di OneMax Base con 50 bit, quindi OtherMetric è una distanza di Hamming (spero). In ogni caso, per modificarla basta pasticciare dentro OtherMetric.cpp, nella funzione "compute" (il codice è abbastanza commentato).

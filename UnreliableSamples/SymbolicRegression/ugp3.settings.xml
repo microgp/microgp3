@@ -1,0 +1,23 @@
+<settings>
+<context name="evolution">
+  <option name="randomSeed" value="24701234" type="integer" />
+  <option name="population" value="population.settings.xml" type="string" />
+</context>
+<context name="evaluation">
+  <option name="concurrentEvaluations" value="1" type="integer" />
+  <option name="parametersCount" value="2" type="integer" />
+  <option name="evaluatorPathName" value="./evaluator" type="string" />
+  <option name="evaluatorInputPathName" value="individual.input" type="string" />
+  <option name="evaluatorOutputPathName" value="fitness.output" type="string" />
+</context>
+  <context name="recovery">
+  <option name="recoveryInput" value="" type="string" />
+  <option name="recoveryInputPopulations" value="" type="string" />
+  <option name="recoveryOutput" value="Algorithm.xml" type="string" />
+  <option name="recoveryOverwriteOutput" value="true" type="boolean" />
+</context>
+  <context name="logging">
+  <option name="std::cout" value="info; brief" type="string" />
+<!--option name="debug.log" value="debug; brief" type="string" /-->
+</context>
+</settings>

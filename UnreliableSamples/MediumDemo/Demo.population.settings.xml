@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<parameters type="multiObjective">
+<!-- the maximum size of the population -->
+<mu value="1000"/>
+<!-- the initial size of the population -->
+<nu value="1000"/>
+<!-- the numbers of genetic operators applied at every step of the evolution -->
+<lambda value="33"/>
+<!-- the inertia for the auto-adaptation of the parameters -->
+<inertia value="0.9998"/>
+<!-- the number of dimensions of the fitness -->
+<fitnessParameters value="103"/>
+<!-- the maximum age of the individuals -->
+<maximumAge value="10000"/>
+<!-- the strength of the mutation operators -->
+<sigma value="0.8"/>
+<!-- the definition of the constraints of the problem -->
+<constraints value="./Demo.constraints.xml"/>
+<cloneScalingFactor value="0"/>
+<eliteSize value="3"/>
+<maximumGenerations value="10000"/>
+<!--maximumFitness value=""-->
+<!--maximumSteadyStateGenerations value="1"/-->
+<selection type="tournamentWithFitnessHole" tau="2" tauMin="1" tauMax="4" fitnessHole="1.0" />
+<operatorsStatistics>
+<operator ref="alterationMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="singleParameterAlterationMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="insertionMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="removalMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="onePointSafeCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="onePointSafeSimpleCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="twoPointSafeSimpleCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="replacementMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="scanMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="localScanMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="randomWalkMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<!--operator ref="subGraphInsertionMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="subGraphRemovalMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator-->
+</operatorsStatistics>
+</parameters>

@@ -1,0 +1,3980 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448"
+   height="3052.3601"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="Diagrams.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible">
+      <path
+         id="path3945"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         id="path3942"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path3936"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-4"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-0"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-0"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3945-9"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-7"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3945-95"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-1"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-9"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-9"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-93"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-4"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-0"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-3"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-3"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-5"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-5"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-2"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-8"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4745"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4747"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4749"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4751"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-52"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-59"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-7"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-54"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-97"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-1"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-70"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-32"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-28"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-2"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-8"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-935"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-45"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-39"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-90"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-36"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-52"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-18"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-50"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-72"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-4"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-14"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-00"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-39"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-36"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-39-7"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-36-3"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-39-1"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-36-7"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart-0-39-8"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3942-2-36-71"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="288.815"
+     inkscape:cy="2225.0206"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="852"
+     inkscape:window-x="-4"
+     inkscape:window-y="-2"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,1999.9977)">
+    <g
+       id="g3922"
+       transform="translate(45.585575,-60.262524)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(160.98912,-20.173315)"
+         id="g3782">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004"
+           width="105"
+           height="72.14286"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 105.04705,0"
+           id="path3774"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776"
+         y="94.688866"
+         x="608.31055"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="94.688866"
+           x="608.31055"
+           id="tspan3778"
+           sodipodi:role="line">:Statistics</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780"
+         d="m 609.38198,97.724572 57.85714,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g3565"
+       transform="translate(25,-1.4285714)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         style="fill:none"
+         id="g3782-3"
+         transform="translate(18.614884,-52.246447)">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-1"
+           width="123.43532"
+           height="105.73044"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 123.2298,0"
+           id="path3774-9"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-9"
+         y="62.615734"
+         x="489.42239"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="62.615734"
+           x="489.42239"
+           id="tspan3778-2"
+           sodipodi:role="line">:Data</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-4"
+         d="m 490.4938,65.651443 31.84571,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3908"
+         y="89.939346"
+         x="452.29581"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="89.939346"
+           x="452.29581"
+           id="tspan3910"
+           sodipodi:role="line">- meanReward</tspan><tspan
+           id="tspan3912"
+           y="107.43935"
+           x="452.29581"
+           sodipodi:role="line">- nExecutions</tspan><tspan
+           id="tspan3918"
+           y="124.93935"
+           x="452.29581"
+           sodipodi:role="line">- meanDeviation</tspan><tspan
+           id="tspan3914"
+           y="142.43935"
+           x="452.29581"
+           sodipodi:role="line">- maxDeviation</tspan></text>
+    </g>
+    <g
+       id="g3434"
+       transform="translate(-4.2857143,0.71428571)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         style="fill:none"
+         id="g3782-9"
+         transform="translate(-413.73041,-65.37843)">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-8"
+           width="141.87061"
+           height="118.10481"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 141.41254,0"
+           id="path3774-2"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-8"
+         y="49.483753"
+         x="49.254562"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="49.483753"
+           x="49.254562"
+           id="tspan3778-32"
+           sodipodi:role="line">C:CallData</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-6"
+         d="m 51.083595,52.51946 62.402825,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path3930"
+         d="m 28.789348,68.978679 0,57.073621 119.703072,0"
+         style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart);marker-end:url(#Arrow1Mend)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4752"
+         y="141.45714"
+         x="30.052038"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           dx="0 0 0 0 1.8 0 0 0 1.5100001 0 0 0 0.66999996 0 0 1.0599999"
+           style="font-weight:bold;-inkscape-font-specification:Lato Bold"
+           y="141.45714"
+           x="30.052038"
+           id="tspan4754"
+           sodipodi:role="line">VB  B   N   G  VG</tspan></text>
+      <rect
+         y="100.67224"
+         x="51.496365"
+         height="24.622467"
+         width="21.298847"
+         id="rect4750-2"
+         style="fill:#d45500;stroke:none" />
+      <rect
+         y="115.19318"
+         x="29.862633"
+         height="10.101525"
+         width="21.298847"
+         id="rect4750-2-3"
+         style="fill:#d40000;stroke:none" />
+      <rect
+         y="111.78392"
+         x="73.130104"
+         height="13.510791"
+         width="21.298847"
+         id="rect4750-2-4"
+         style="fill:#d4aa00;stroke:none" />
+      <rect
+         y="74.029465"
+         x="94.763832"
+         height="51.26524"
+         width="21.298847"
+         id="rect4750-2-2"
+         style="fill:#88aa00;stroke:none" />
+      <rect
+         y="108.50092"
+         x="116.39757"
+         height="16.793787"
+         width="21.298847"
+         id="rect4750-2-8"
+         style="fill:#00aa00;stroke:none" />
+    </g>
+    <g
+       id="g6119"
+       transform="translate(18.571428,0)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         style="fill:none"
+         id="g3782-9-9"
+         transform="translate(-265.22102,-2.623831)">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-8-3"
+           width="141.87061"
+           height="118.10481"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 141.41254,0"
+           id="path3774-2-0"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-8-3"
+         y="112.23835"
+         x="195.85043"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="112.23835"
+           x="195.85043"
+           id="tspan3778-32-3"
+           sodipodi:role="line">D:CallData</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-6-9"
+         d="m 196.92185,115.27406 64.32161,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path3930-3"
+         d="m 177.29874,131.73328 0,57.07362 119.70307,0"
+         style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart);marker-end:url(#Arrow1Mend)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4752-1"
+         y="204.21173"
+         x="178.56143"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           dx="0 0 0 0 1.8 0 0 0 1.5100001 0 0 0 0.66999996 0 0 1.0599999"
+           style="font-weight:bold;-inkscape-font-specification:Lato Bold"
+           y="204.21173"
+           x="178.56143"
+           id="tspan4754-6"
+           sodipodi:role="line">VB  B   N   G  VG</tspan></text>
+      <rect
+         y="153.0697"
+         x="200.00575"
+         height="34.97961"
+         width="21.298847"
+         id="rect4750-2-7"
+         style="fill:#d45500;stroke:none" />
+      <rect
+         y="159.73349"
+         x="178.37202"
+         height="28.315802"
+         width="21.298847"
+         id="rect4750-2-3-5"
+         style="fill:#d40000;stroke:none" />
+      <rect
+         y="174.53851"
+         x="221.6395"
+         height="13.510791"
+         width="21.298847"
+         id="rect4750-2-4-9"
+         style="fill:#d4aa00;stroke:none" />
+      <rect
+         y="187.49835"
+         x="243.27322"
+         height="0.55095434"
+         width="21.298847"
+         id="rect4750-2-2-7"
+         style="fill:#88aa00;stroke:none" />
+      <rect
+         y="187.32695"
+         x="264.90695"
+         height="0.72235852"
+         width="21.298847"
+         id="rect4750-2-8-1"
+         style="fill:#00aa00;stroke:none" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text6085"
+       y="25.093069"
+       x="138.52036"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+       xml:space="preserve"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225"><tspan
+         style="font-style:italic;fill:#008000;-inkscape-font-specification:Lato Light Italic"
+         y="25.093069"
+         x="138.52036"
+         id="tspan6087"
+         sodipodi:role="line">Call C produced VeryGood and Good children, reward = 1</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text6089"
+       y="65.040756"
+       x="369.82144"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#aa0000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+       xml:space="preserve"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225"><tspan
+         style="font-style:italic;fill:#aa0000;-inkscape-font-specification:Lato Light Italic"
+         y="65.040756"
+         x="369.82144"
+         id="tspan6091"
+         sodipodi:role="line">reward = 0</tspan></text>
+    <g
+       id="g3434-8"
+       transform="translate(382.6392,192.32386)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         style="fill:none"
+         id="g3782-9-4"
+         transform="translate(-413.73041,-65.37843)">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-8-4"
+           width="141.87061"
+           height="118.10481"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 141.41254,0"
+           id="path3774-2-02"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-8-6"
+         y="49.483753"
+         x="54.305325"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="49.483753"
+           x="54.305325"
+           id="tspan3778-32-9"
+           sodipodi:role="line">:CallData</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-6-7"
+         d="m 55.376743,52.51946 54.321607,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path3930-6"
+         d="m 28.789348,68.978679 0,57.073621 119.703072,0"
+         style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart);marker-end:url(#Arrow1Mend)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4752-9"
+         y="141.45714"
+         x="30.052038"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           dx="0 0 0 0 1.8 0 0 0 1.5100001 0 0 0 0.66999996 0 0 1.0599999"
+           style="font-weight:bold;-inkscape-font-specification:Lato Bold"
+           y="141.45714"
+           x="30.052038"
+           id="tspan4754-69"
+           sodipodi:role="line">VB  B   N   G  VG</tspan></text>
+      <rect
+         y="92.161186"
+         x="51.496365"
+         height="33.133518"
+         width="21.298847"
+         id="rect4750-2-0"
+         style="fill:#d45500;stroke:none" />
+      <rect
+         y="125.0146"
+         x="29.862633"
+         height="0.2800968"
+         width="21.298847"
+         id="rect4750-2-3-9"
+         style="fill:#d40000;stroke:none" />
+      <rect
+         y="92.14106"
+         x="73.130104"
+         height="33.153648"
+         width="21.298847"
+         id="rect4750-2-4-1"
+         style="fill:#d4aa00;stroke:none" />
+      <rect
+         y="125.10089"
+         x="94.763832"
+         height="0.19381146"
+         width="21.298847"
+         id="rect4750-2-2-4"
+         style="fill:#88aa00;stroke:none" />
+      <rect
+         y="92.335396"
+         x="116.39757"
+         height="32.959305"
+         width="21.298847"
+         id="rect4750-2-8-5"
+         style="fill:#00aa00;stroke:none" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="M 154.28572,49.505046 471.07143,92.897904"
+       id="path3578"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 325.95232,110.99968 144.79695,-8.01033"
+       id="path3578-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 599.07797,59.881585 34.9711,2.546411"
+       id="path3578-83"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <g
+       id="g3565-1"
+       transform="translate(158.09872,106.30996)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         style="fill:none"
+         id="g3782-3-5"
+         transform="translate(18.614884,-52.246447)">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-1-1"
+           width="123.43532"
+           height="105.73044"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 123.2298,0"
+           id="path3774-9-5"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-9-9"
+         y="62.615734"
+         x="489.42239"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="62.615734"
+           x="489.42239"
+           id="tspan3778-2-4"
+           sodipodi:role="line">:Data</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-4-8"
+         d="m 490.4938,65.651443 31.84571,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3908-6"
+         y="89.939346"
+         x="452.29581"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="89.939346"
+           x="452.29581"
+           id="tspan3910-3"
+           sodipodi:role="line">- meanReward</tspan><tspan
+           id="tspan3912-7"
+           y="107.43935"
+           x="452.29581"
+           sodipodi:role="line">- nExecutions</tspan><tspan
+           id="tspan3918-4"
+           y="124.93935"
+           x="452.29581"
+           sodipodi:role="line">- meanDeviation</tspan><tspan
+           id="tspan3914-5"
+           y="142.43935"
+           x="452.29581"
+           sodipodi:role="line">- maxDeviation</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 647.84194,148.72173 6.65835,-57.30025"
+       id="path3578-83-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="M 541.09689,236.15104 603.79334,220.1987"
+       id="path3578-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <g
+       transform="translate(-156.95716,327.11405)"
+       id="g5135"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(90.111164,95.995094)"
+         id="g3782-8-6"
+         style="fill:none">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-3"
+           width="66.748558"
+           height="55.980423"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 66.29052,0"
+           id="path3774-6-7"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-4"
+         y="210.85728"
+         x="531.25653"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="210.85728"
+           x="531.25653"
+           id="tspan3778-6-9"
+           sodipodi:role="line">:Group</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-4"
+         d="m 532.32799,213.89299 40.17947,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(-450.14574,239.53716)"
+       id="g5015"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(36.539735,-29.004905)"
+         id="g3782-8-62">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-62"
+           width="83.534271"
+           height="55.980427"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 83.07623,0"
+           id="path3774-6-20"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-3"
+         y="85.857285"
+         x="480.83069"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="85.857285"
+           x="480.83069"
+           id="tspan3778-6-73"
+           sodipodi:role="line">:Lineage</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-66"
+         d="m 481.90214,88.892995 48.76577,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5015-66"
+       transform="translate(-111.77859,342.95269)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(36.539735,-29.004905)"
+         id="g3782-8-62-2">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-62-2"
+           width="83.534271"
+           height="55.980427"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 83.07623,0"
+           id="path3774-6-20-1"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-3-4"
+         y="85.857285"
+         x="480.83069"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="85.857285"
+           x="480.83069"
+           id="tspan3778-6-73-38"
+           sodipodi:role="line">:Lineage</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-66-8"
+         d="m 481.90214,88.892995 48.76577,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5236"
+       transform="translate(-506.12032,231.45506)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(90.111164,95.995094)"
+         id="g3782-8-6-4"
+         style="fill:none">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-3-2"
+           width="88.340576"
+           height="55.980423"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 87.88253,0"
+           id="path3774-6-7-1"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-4-0"
+         y="210.85728"
+         x="525.99652"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="210.85728"
+           x="525.99652"
+           id="tspan3778-6-9-0"
+           sodipodi:role="line">A:Individual</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-4-7"
+         d="m 525.80532,213.89299 71.99928,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 56.018279,369.18009 0,55.8963"
+       id="path3578-86-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <g
+       transform="translate(-311.82604,240.83403)"
+       id="g5015-1"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(36.539735,-29.004905)"
+         id="g3782-8-62-8">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-62-1"
+           width="83.534271"
+           height="55.980427"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 83.07623,0"
+           id="path3774-6-20-3"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-3-70"
+         y="85.857285"
+         x="480.83069"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="85.857285"
+           x="480.83069"
+           id="tspan3778-6-73-1"
+           sodipodi:role="line">:Lineage</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-66-1"
+         d="m 481.90214,88.892995 48.76577,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5236-2"
+       transform="translate(-367.80062,232.75193)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(90.111164,95.995094)"
+         id="g3782-8-6-4-0"
+         style="fill:none">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-3-2-1"
+           width="88.340576"
+           height="55.980423"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 87.88253,0"
+           id="path3774-6-7-1-9"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-4-0-5"
+         y="210.85728"
+         x="530.54224"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="210.85728"
+           x="530.54224"
+           id="tspan3778-6-9-0-8"
+           sodipodi:role="line">:Individual</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-4-7-5"
+         d="m 531.6137,213.89299 60.8876,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 194.33797,370.47696 0,55.8963"
+       id="path3578-86-8-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <g
+       transform="translate(-208.79048,240.83403)"
+       id="g5015-20"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(36.539735,-29.004905)"
+         id="g3782-8-62-3">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-62-27"
+           width="83.534271"
+           height="55.980427"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 83.07623,0"
+           id="path3774-6-20-06"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-3-41"
+         y="85.857285"
+         x="480.83069"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="85.857285"
+           x="480.83069"
+           id="tspan3778-6-73-3"
+           sodipodi:role="line">:Lineage</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-66-5"
+         d="m 481.90214,88.892995 48.76577,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5236-5"
+       transform="translate(-264.76506,232.75193)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(90.111164,95.995094)"
+         id="g3782-8-6-4-3"
+         style="fill:none">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-3-2-8"
+           width="88.340576"
+           height="55.980423"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 87.88253,0"
+           id="path3774-6-7-1-8"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-4-0-3"
+         y="210.85728"
+         x="530.54224"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="210.85728"
+           x="530.54224"
+           id="tspan3778-6-9-0-81"
+           sodipodi:role="line">:Individual</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-4-7-6"
+         d="m 531.6137,213.89299 60.8876,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 297.37353,370.47696 0,55.8963"
+       id="path3578-86-8-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 394.38543,474.00943 0,48.75344"
+       id="path3578-86-8-0-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <g
+       transform="translate(-58.38815,326.5626)"
+       id="g5135-9"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(90.111164,95.995094)"
+         id="g3782-8-6-8"
+         style="fill:none">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-3-0"
+           width="66.748558"
+           height="55.980423"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 66.29052,0"
+           id="path3774-6-7-4"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-4-9"
+         y="210.85728"
+         x="531.25653"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="210.85728"
+           x="531.25653"
+           id="tspan3778-6-9-5"
+           sodipodi:role="line">:Group</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-4-6"
+         d="m 532.32799,213.89299 40.17947,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5015-66-6"
+       transform="translate(-13.20958,342.40124)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(36.539735,-29.004905)"
+         id="g3782-8-62-2-6">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-62-2-3"
+           width="83.534271"
+           height="55.980427"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 83.07623,0"
+           id="path3774-6-20-1-0"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-3-4-9"
+         y="85.857285"
+         x="480.83069"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="85.857285"
+           x="480.83069"
+           id="tspan3778-6-73-38-8"
+           sodipodi:role="line">:Lineage</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-66-8-7"
+         d="m 481.90214,88.892995 48.76577,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 492.95444,473.45798 0,48.75344"
+       id="path3578-86-8-0-9-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <g
+       transform="translate(43.637257,326.5626)"
+       id="g5135-4"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(90.111164,95.995094)"
+         id="g3782-8-6-6"
+         style="fill:none">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-3-5"
+           width="66.748558"
+           height="55.980423"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 66.29052,0"
+           id="path3774-6-7-6"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-4-05"
+         y="210.85728"
+         x="531.25653"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="210.85728"
+           x="531.25653"
+           id="tspan3778-6-9-8"
+           sodipodi:role="line">:Group</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-4-9"
+         d="m 532.32799,213.89299 40.17947,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5015-66-5"
+       transform="translate(88.815827,342.40124)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <g
+         transform="translate(36.539735,-29.004905)"
+         id="g3782-8-62-2-7">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-62-2-4"
+           width="83.534271"
+           height="55.980427"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 83.07623,0"
+           id="path3774-6-20-1-1"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-3-4-93"
+         y="85.857285"
+         x="480.83069"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="85.857285"
+           x="480.83069"
+           id="tspan3778-6-73-38-3"
+           sodipodi:role="line">:Lineage</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-66-8-3"
+         d="m 481.90214,88.892995 48.76577,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 594.97985,473.45798 0,48.75344"
+       id="path3578-86-8-0-9-48"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 263.56931,219.06231 37.37565,92.26179"
+       id="path3578-86-8-0-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 237.81042,218.55723 -36.36549,91.75671"
+       id="path3578-86-8-0-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="M 67.175144,155.4227 56.063466,308.11162"
+       id="path3578-86-8-0-44"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 449.10561,346.84661 -52.11566,64.98767"
+       id="path3578-86-8-0-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 485.97618,345.83645 109.50874,64.98768"
+       id="path3578-86-8-0-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 466.78329,347.85675 25.66607,64.4826"
+       id="path3578-86-8-0-47"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <g
+       id="g6015"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path5765"
+         d="M 89.249819,424.30071 C 61.067073,315.20934 69.490649,205.43632 101.30559,146.91238"
+         style="fill:none;stroke:#668000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path6003"
+         d="m 88.865327,159.97827 12.805483,-13.48053 -3.359491,18.04788"
+         style="fill:none;stroke:#668000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#668000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+       x="80.192001"
+       y="238.30795"
+       id="text6005"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225"><tspan
+         sodipodi:role="line"
+         x="80.192001"
+         y="238.30795"
+         id="tspan6009"
+         style="font-style:italic;-inkscape-font-specification:Lato Light Italic">Individual A is better</tspan><tspan
+         sodipodi:role="line"
+         x="80.192001"
+         y="255.80795"
+         id="tspan6011"
+         style="font-style:italic;-inkscape-font-specification:Lato Light Italic">than all his parents,</tspan><tspan
+         sodipodi:role="line"
+         x="80.192001"
+         y="273.30795"
+         style="font-style:italic;-inkscape-font-specification:Lato Light Italic"
+         id="tspan6093">performance = Good</tspan><tspan
+         sodipodi:role="line"
+         x="80.192001"
+         y="290.80795"
+         id="tspan6013"
+         style="font-style:italic;-inkscape-font-specification:Lato Light Italic" /></text>
+    <g
+       transform="matrix(0,1,-1,0,544.99266,-47.990396)"
+       id="g6015-7"
+       style="fill:none;stroke:#008000"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path5765-4"
+         d="M 89.249819,392.87214 C 77.464105,347.515 73.789877,138.99035 98.789877,76.490353"
+         style="fill:none;stroke:#008000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path6003-0"
+         d="M 87.264019,90.767612 98.954707,76.309643 97.936748,95.460677"
+         style="fill:none;stroke:#008000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       transform="matrix(0,1,-1,0,614.46462,-35.593766)"
+       id="g6015-7-0"
+       style="fill:none;stroke:#aa0000"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path5765-4-5"
+         d="M 139.37238,290.61289 C 113.30096,245.97003 102.80671,215.36288 100.99479,144.18154"
+         style="fill:none;stroke:#aa0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path6003-0-3"
+         d="m 96.351861,161.9334 4.718969,-17.98433 6.93954,17.87851"
+         style="fill:none;stroke:#aa0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#666666;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Italic"
+       x="337.5"
+       y="138.79076"
+       id="text6135"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225"><tspan
+         sodipodi:role="line"
+         id="tspan6137"
+         x="337.5"
+         y="138.79076">This genetic operator</tspan><tspan
+         sodipodi:role="line"
+         x="337.5"
+         y="156.29076"
+         id="tspan6139">was called twice</tspan><tspan
+         sodipodi:role="line"
+         x="337.5"
+         y="173.79076"
+         id="tspan6141">during the generation</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#666666;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Italic"
+       x="561.7807"
+       y="287.05078"
+       id="text6135-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225"><tspan
+         sodipodi:role="line"
+         id="tspan6137-7"
+         x="561.7807"
+         y="287.05078">This group operator</tspan><tspan
+         sodipodi:role="line"
+         x="561.7807"
+         y="304.55078"
+         id="tspan6139-6">was called once</tspan><tspan
+         sodipodi:role="line"
+         x="561.7807"
+         y="322.05078"
+         id="tspan6141-6">during the generation</tspan><tspan
+         sodipodi:role="line"
+         x="561.7807"
+         y="339.55078"
+         id="tspan6174">and generated 3 groups</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="M 56.994687,154.62294 36.42398,186.85011"
+       id="path3578-86-8-0-44-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Italic"
+       x="23.107239"
+       y="199.28836"
+       id="text6200"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225"><tspan
+         sodipodi:role="line"
+         id="tspan6202"
+         x="23.107239"
+         y="199.28836">...</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)"
+       d="m 276.28497,216.86626 40.03845,32.73224"
+       id="path3578-86-8-0-44-8-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Italic"
+       x="321.44196"
+       y="258.75375"
+       id="text6200-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225"><tspan
+         sodipodi:role="line"
+         id="tspan6202-2"
+         x="321.44196"
+         y="258.75375">...</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text6085-3"
+       y="198.69955"
+       x="514.68738"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+       xml:space="preserve"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225"><tspan
+         style="font-style:italic;fill:#008000;-inkscape-font-specification:Lato Light Italic"
+         y="198.69955"
+         x="514.68738"
+         id="tspan6087-7"
+         sodipodi:role="line">reward = 1</tspan></text>
+    <g
+       transform="matrix(0,1,-1,0,810.54797,128.14146)"
+       id="g6015-7-8"
+       style="fill:none;stroke:#008000"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABInstanceDiagram.png"
+       inkscape:export-xdpi="92.257225"
+       inkscape:export-ydpi="92.257225">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path5765-4-3"
+         d="M 97.078501,358.27442 C 61.301664,325.29164 43.311431,275.37524 41.281405,208.0913"
+         style="fill:none;stroke:#008000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path6003-0-9"
+         d="m 36.413671,225.78284 4.946716,-17.92303 6.712196,17.9651"
+         style="fill:none;stroke:#008000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g6317"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABPerformanceScale.png"
+       inkscape:export-xdpi="95.986504"
+       inkscape:export-ydpi="95.986504">
+      <path
+         inkscape:export-ydpi="300"
+         inkscape:export-xdpi="300"
+         inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/GroupEvolutionJany/Documentation/DMABInstanceDiagram.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3578-86-8-0-45"
+         d="m 556.08983,757.83578 -518.90063,0"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart-0-39)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text6288"
+         y="762.88629"
+         x="576.38123"
+         style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Italic"
+         xml:space="preserve"><tspan
+           y="762.88629"
+           x="576.38123"
+           id="tspan6290"
+           sodipodi:role="line">Fitness of the offstpring</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text6292"
+         y="765.26978"
+         x="239.06674"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+         xml:space="preserve"><tspan
+           style="font-size:24px;font-weight:bold;-inkscape-font-specification:Lato Bold"
+           y="765.26978"
+           x="239.06674"
+           id="tspan6294"
+           sodipodi:role="line">[                   ]</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text6292-5"
+         y="765.26978"
+         x="106.59362"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+         xml:space="preserve"><tspan
+           style="font-size:24px;font-weight:bold;-inkscape-font-specification:Lato Bold"
+           y="765.26978"
+           x="106.59362"
+           id="tspan6294-3"
+           sodipodi:role="line">[                                                          ]</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Italic"
+       x="278.97189"
+       y="738.34692"
+       id="text6326"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABPerformanceScale.png"
+       inkscape:export-xdpi="95.986504"
+       inkscape:export-ydpi="95.986504"><tspan
+         sodipodi:role="line"
+         id="tspan6328"
+         x="278.97189"
+         y="738.34692">Parents</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Italic"
+       x="172.85715"
+       y="717.71936"
+       id="text6330"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABPerformanceScale.png"
+       inkscape:export-xdpi="95.986504"
+       inkscape:export-ydpi="95.986504"><tspan
+         sodipodi:role="line"
+         id="tspan6332"
+         x="172.85715"
+         y="717.71936">Population of the  previous generation</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 111.42857,713.83784 58.57143,0"
+       id="path6334"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABPerformanceScale.png"
+       inkscape:export-xdpi="95.986504"
+       inkscape:export-ydpi="95.986504" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 395,713.83784 60.71428,0"
+       id="path6336"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABPerformanceScale.png"
+       inkscape:export-xdpi="95.986504"
+       inkscape:export-ydpi="95.986504" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 242.14286,734.90268 33.57142,0"
+       id="path6338"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABPerformanceScale.png"
+       inkscape:export-xdpi="95.986504"
+       inkscape:export-ydpi="95.986504" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 326.42857,734.90268 33.57143,0"
+       id="path6340"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABPerformanceScale.png"
+       inkscape:export-xdpi="95.986504"
+       inkscape:export-ydpi="95.986504" />
+    <g
+       id="g6418"
+       transform="translate(0,-8.5714285)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/DMABPerformanceScale.png"
+       inkscape:export-xdpi="95.986504"
+       inkscape:export-ydpi="95.986504">
+      <text
+         sodipodi:linespacing="125%"
+         id="text6342"
+         y="804.58508"
+         x="43.571426"
+         style="font-size:14px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Bold Italic"
+         xml:space="preserve"><tspan
+           y="804.58508"
+           x="43.571426"
+           id="tspan6344"
+           sodipodi:role="line">VeryBad</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text6346"
+         y="804.58508"
+         x="163.57143"
+         style="font-size:14px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Bold Italic"
+         xml:space="preserve"><tspan
+           y="804.58508"
+           x="163.57143"
+           id="tspan6348"
+           sodipodi:role="line">Bad</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text6350"
+         y="804.58508"
+         x="283.57144"
+         style="font-size:14px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Bold Italic"
+         xml:space="preserve"><tspan
+           y="804.58508"
+           x="283.57144"
+           id="tspan6352"
+           sodipodi:role="line">Normal</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text6354"
+         y="804.58508"
+         x="390.71429"
+         style="font-size:14px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Bold Italic"
+         xml:space="preserve"><tspan
+           y="804.58508"
+           x="390.71429"
+           id="tspan6356"
+           sodipodi:role="line">Good</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text6358"
+         y="804.58508"
+         x="479.28571"
+         style="font-size:14px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans Bold Italic"
+         xml:space="preserve"><tspan
+           y="804.58508"
+           x="479.28571"
+           id="tspan6360"
+           sodipodi:role="line">VeryGood</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Bold Italic"
+         x="576.17798"
+         y="804.58508"
+         id="text6288-5"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan6392"
+           sodipodi:role="line"
+           x="576.17798"
+           y="804.58508">Performance of the operator</tspan></text>
+    </g>
+    <g
+       id="g3502"
+       transform="translate(0,-8.5714286)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <g
+         transform="translate(0,-133.34014)"
+         id="g3874">
+        <g
+           transform="translate(-316.83872,-549.87274)"
+           id="g3782-3-7"
+           style="fill:none">
+          <rect
+             y="98.790756"
+             x="427.85715"
+             height="112.8733"
+             width="153.7399"
+             id="rect3004-1-54"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path3774-9-0"
+             d="m 427.89675,125.21932 153.0293,0"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+           x="187.51321"
+           y="-432.99026"
+           id="text3776-9-4"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan3417"
+             sodipodi:role="line"
+             x="187.51321"
+             y="-432.99026">EvaluatorCommon</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text3564"
+           y="-364.78061"
+           x="116.78571"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans"
+           xml:space="preserve"><tspan
+             y="-364.78061"
+             x="116.78571"
+             id="tspan3566"
+             sodipodi:role="line">+ evaluate(T&amp;)</tspan><tspan
+             id="tspan3568"
+             y="-347.28061"
+             x="116.78571"
+             sodipodi:role="line">+ flush()</tspan></text>
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 111.69964,-381.92343 153.0293,0"
+           id="path3774-9-0-5"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans"
+           x="119.21275"
+           y="-408.05612"
+           id="text3564-5"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             x="119.21275"
+             y="-408.05612"
+             id="tspan3568-8">- cache</tspan><tspan
+             sodipodi:role="line"
+             x="119.21275"
+             y="-390.55612"
+             id="tspan3801"
+             style="fill:#cc0000">- cacheMutex</tspan></text>
+      </g>
+      <g
+         id="g4978">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.5, 3;stroke-dashoffset:0"
+           id="rect3982"
+           width="23.738581"
+           height="24.622499"
+           x="251.97487"
+           y="-595.05151" />
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+           x="259.70715"
+           y="-577.72479"
+           id="text4938"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4940"
+             x="259.70715"
+             y="-577.72479">T</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g3521"
+       transform="translate(0,-8.5714286)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <g
+         transform="translate(-24.066023,-132.04154)"
+         id="g3839">
+        <g
+           transform="translate(46.816187,-526.06237)"
+           id="g3782-3-6-2"
+           style="fill:none">
+          <rect
+             y="84.505035"
+             x="427.85715"
+             height="91.226807"
+             width="156.26529"
+             id="rect3004-1-5-1"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path3774-9-3-1"
+             d="m 427.89675,125.21932 155.55468,0"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+           x="553.23511"
+           y="-424.77161"
+           id="text3776-9-0-6"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3778-2-6-8"
+             x="553.23511"
+             y="-424.77161">&lt;&lt;abstract&gt;&gt;</tspan><tspan
+             sodipodi:role="line"
+             x="553.23511"
+             y="-407.27161"
+             id="tspan3457">EvaluatorDispatcher</tspan><tspan
+             id="tspan3347-4"
+             sodipodi:role="line"
+             x="553.23511"
+             y="-389.77161" /></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text3564-3"
+           y="-376.80487"
+           x="481.17322"
+           style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light Italic"
+           xml:space="preserve"><tspan
+             y="-376.80487"
+             x="481.17322"
+             id="tspan3566-0"
+             sodipodi:role="line">+ evaluate(T&amp;)</tspan><tspan
+             id="tspan3568-0"
+             y="-359.30487"
+             x="481.17322"
+             sodipodi:role="line">+ flush()</tspan></text>
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 475.02864,-394.68123 155.55468,0"
+           id="path3774-9-3-1-3"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <g
+         id="g4978-8"
+         transform="translate(342.17651,10.860164)">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.5, 3;stroke-dashoffset:0"
+           id="rect3982-7"
+           width="23.738581"
+           height="24.622499"
+           x="251.97487"
+           y="-595.05151" />
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+           x="259.70715"
+           y="-577.72479"
+           id="text4938-2"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4940-7"
+             x="259.70715"
+             y="-577.72479">T</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g3465"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <g
+         transform="translate(0,-133.34014)"
+         id="g3916">
+        <g
+           transform="translate(113.99135,-395.82448)"
+           id="g3782-3-7-0-7"
+           style="fill:none">
+          <rect
+             y="98.790756"
+             x="427.85715"
+             height="113.57272"
+             width="182.52921"
+             id="rect3004-1-54-5-8"
+             style="fill:none;stroke:#cc0000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path3774-9-0-6-1"
+             d="m 427.89675,125.21932 182.32372,0"
+             style="fill:none;stroke:#cc0000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#cc0000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+           x="634.32568"
+           y="-278.94199"
+           id="text3776-9-4-8-6"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan3417-1-5"
+             sodipodi:role="line"
+             x="634.32568"
+             y="-278.94199">EvaluatorLuaDispatcher</tspan></text>
+        <path
+           style="fill:none;stroke:#cc0000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 541.69872,-227.53072 182.57626,0"
+           id="path3774-9-0-6-7-3"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#cc0000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans"
+           x="550.61084"
+           y="-253.37726"
+           id="text3564-5-3-5"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             x="550.61084"
+             y="-253.37726"
+             id="tspan3568-8-5-2">- queue</tspan><tspan
+             sodipodi:role="line"
+             x="550.61084"
+             y="-235.87726"
+             id="tspan3803">- queueMutex</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text3564-3-8-2"
+           y="-210.51657"
+           x="549.10596"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#cc0000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans"
+           xml:space="preserve"><tspan
+             y="-210.51657"
+             x="549.10596"
+             id="tspan3566-0-1-1"
+             sodipodi:role="line">+ evaluate(T&amp;)</tspan><tspan
+             id="tspan3568-0-0-1"
+             y="-193.01657"
+             x="549.10596"
+             sodipodi:role="line">+ flush()</tspan></text>
+      </g>
+      <g
+         id="g4978-6"
+         transform="translate(459.6776,154.21892)">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#cc0000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.5, 3;stroke-dashoffset:0"
+           id="rect3982-9"
+           width="23.738581"
+           height="24.622499"
+           x="251.97487"
+           y="-595.05151" />
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#cc0000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+           x="259.70715"
+           y="-577.72479"
+           id="text4938-3"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4940-4"
+             x="259.70715"
+             y="-577.72479">T</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g3484"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <g
+         transform="translate(0,-133.34015)"
+         id="g3893">
+        <g
+           transform="translate(-94.605166,-395.82447)"
+           id="g3782-3-7-0"
+           style="fill:none">
+          <rect
+             y="98.790756"
+             x="427.85715"
+             height="96.133995"
+             width="185.05453"
+             id="rect3004-1-54-5"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path3774-9-0-6"
+             d="m 427.89675,125.21932 185.35418,0"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+           x="425.93427"
+           y="-278.94199"
+           id="text3776-9-4-8"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan3417-1"
+             sodipodi:role="line"
+             x="425.93427"
+             y="-278.94199">EvaluatorFileDispatcher</tspan></text>
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 333.10221,-245.17866 185.35418,0"
+           id="path3774-9-0-6-7"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <text
+           sodipodi:linespacing="125%"
+           id="text3564-3-8"
+           y="-228.31245"
+           x="338.99423"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans"
+           xml:space="preserve"><tspan
+             y="-228.31245"
+             x="338.99423"
+             id="tspan3566-0-1"
+             sodipodi:role="line">+ evaluate(T&amp;)</tspan><tspan
+             id="tspan3568-0-0"
+             y="-210.81245"
+             x="338.99423"
+             sodipodi:role="line">+ flush()</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans"
+           x="341.34756"
+           y="-252.70607"
+           id="text3564-5-3"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             x="341.34756"
+             y="-252.70607"
+             id="tspan3568-8-5">- queue</tspan></text>
+      </g>
+      <g
+         id="g4978-4"
+         transform="translate(253.60647,154.21891)">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.5, 3;stroke-dashoffset:0"
+           id="rect3982-91"
+           width="23.738581"
+           height="24.622499"
+           x="251.97487"
+           y="-595.05151" />
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+           x="259.70715"
+           y="-577.72479"
+           id="text4938-24"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4940-3"
+             x="259.70715"
+             y="-577.72479">T</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g3448"
+       transform="translate(0,27.142857)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <g
+         transform="translate(-1.0147949,-133.34014)"
+         id="g3932">
+        <rect
+           style="fill:none;stroke:#cc0000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-1-54-5-8-9"
+           width="164.34647"
+           height="89.692345"
+           x="552.22797"
+           y="-149.00613" />
+        <path
+           style="fill:none;stroke:#cc0000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 552.26755,-122.57757 164.0797,0"
+           id="path3774-9-0-6-1-4"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#cc0000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+           x="634.06842"
+           y="-130.91441"
+           id="text3776-9-4-8-6-6"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan3417-1-5-5"
+             sodipodi:role="line"
+             x="634.06842"
+             y="-130.91441">EvaluatorLuaWorker</tspan></text>
+        <path
+           style="fill:none;stroke:#cc0000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 551.53158,-82.280567 164.0797,0"
+           id="path3774-9-0-6-1-4-1"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#cc0000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+           x="559.28571"
+           y="-106.20912"
+           id="text3823"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3825"
+             x="559.28571"
+             y="-106.20912">- execution thread</tspan><tspan
+             sodipodi:role="line"
+             x="559.28571"
+             y="-88.709122"
+             id="tspan3827">- Lua state</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#cc0000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+           x="558.21423"
+           y="-66.209129"
+           id="text3829"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3831"
+             x="558.21423"
+             y="-66.209129">+ start()</tspan></text>
+      </g>
+      <g
+         id="g4978-6-4"
+         transform="translate(450.83877,302.20627)">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#cc0000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.5, 3;stroke-dashoffset:0"
+           id="rect3982-9-9"
+           width="23.738581"
+           height="24.622499"
+           x="251.97487"
+           y="-595.05151" />
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#cc0000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+           x="259.70715"
+           y="-577.72479"
+           id="text4938-3-1"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4940-4-2"
+             x="259.70715"
+             y="-577.72479">T</tspan></text>
+      </g>
+    </g>
+    <g
+       transform="translate(-320.31921,7.6579073)"
+       id="g3893-0"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <g
+         transform="translate(-94.605166,-395.82447)"
+         id="g3782-3-7-0-3"
+         style="fill:none">
+        <rect
+           y="98.790756"
+           x="427.85715"
+           height="52.697433"
+           width="199.70175"
+           id="rect3004-1-54-5-88"
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path3774-9-0-6-75"
+           d="m 427.89675,125.21932 198.99124,0"
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         x="434.01547"
+         y="-278.94199"
+         id="text3776-9-4-8-2"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan3417-1-9"
+           sodipodi:role="line"
+           x="434.01547"
+           y="-278.94199">EvaluatorCommon&lt;Individual&gt;</tspan></text>
+    </g>
+    <g
+       transform="translate(-102.92966,7.6579073)"
+       id="g3893-0-3"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <g
+         transform="translate(-94.605166,-395.82447)"
+         id="g3782-3-7-0-3-1"
+         style="fill:none">
+        <rect
+           y="98.790756"
+           x="436.94852"
+           height="52.697433"
+           width="181.51901"
+           id="rect3004-1-54-5-88-3"
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path3774-9-0-6-75-7"
+           d="m 436.66162,125.21932 181.40023,0"
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         x="434.01547"
+         y="-278.94199"
+         id="text3776-9-4-8-2-7"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan3417-1-9-4"
+           sodipodi:role="line"
+           x="434.01547"
+           y="-278.94199">EvaluatorCommon&lt;Group&gt;</tspan></text>
+    </g>
+    <g
+       transform="translate(-320.17576,99.970418)"
+       id="g3893-0-3-7"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <g
+         transform="translate(-94.605166,-395.82447)"
+         id="g3782-3-7-0-3-1-9"
+         style="fill:none">
+        <rect
+           y="98.660416"
+           x="466.01187"
+           height="52.958111"
+           width="123.30028"
+           id="rect3004-1-54-5-88-3-1"
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path3774-9-0-6-75-7-2"
+           d="m 465.81699,125.21971 123.2196,0"
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         x="434.01547"
+         y="-278.94199"
+         id="text3776-9-4-8-2-7-9"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan3417-1-9-4-9"
+           sodipodi:role="line"
+           x="434.01547"
+           y="-278.94199">FitnessEvaluator</tspan></text>
+    </g>
+    <g
+       id="g3543"
+       transform="matrix(0.72507538,0,0,0.72507538,78.02287,-336.55958)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3541"
+         d="m 151.52287,-403.43001 0,49.60351"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:nodetypes="cc" />
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path3538"
+         d="m 160.87717,599.01203 -9.3543,0 -9.35429,0 4.67715,-9.49288 4.67714,-9.49288 4.67715,9.49288 z"
+         inkscape:transform-center-y="-3.1642938"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.06875038;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         transform="translate(0,-999.99782)" />
+    </g>
+    <g
+       id="g3543-1"
+       transform="matrix(0.72507538,0,0,0.72507538,2.9181409,74.847279)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3541-9"
+         d="m 151.52287,-410.49486 0,35.42253"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:nodetypes="cc" />
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path3538-7"
+         d="m 160.87717,591.94718 -9.3543,0 -9.35429,0 4.67715,-9.49288 4.67714,-9.49288 4.67715,9.49288 z"
+         inkscape:transform-center-y="-3.1642938"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.06875038;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         transform="translate(0,-999.99782)" />
+    </g>
+    <g
+       id="g3543-7"
+       transform="matrix(0.72507538,0,0,0.72507538,220.16424,75.226087)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3541-6"
+         d="m 151.52287,-410.49486 0,35.07424"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:nodetypes="cc" />
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path3538-1"
+         d="m 160.87717,591.94718 -9.3543,0 -9.35429,0 4.67715,-9.49288 4.67714,-9.49288 4.67715,9.49288 z"
+         inkscape:transform-center-y="-3.1642938"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.06875038;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         transform="translate(0,-999.99782)" />
+    </g>
+    <g
+       id="g3543-9"
+       transform="matrix(0.72507538,0,0,0.72507538,418.87445,-179.9637)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3541-64"
+         d="m 151.52287,-409.10169 0,24.46395"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:nodetypes="cc" />
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path3538-78"
+         d="m 160.87717,591.94718 -9.3543,0 -9.35429,0 4.67715,-9.49288 4.67714,-9.49288 4.67715,9.49288 z"
+         inkscape:transform-center-y="-3.1642938"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.06875038;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         transform="translate(0,-999.99782)" />
+    </g>
+    <g
+       id="g3543-4"
+       transform="matrix(0.72507538,0,0,0.72507538,532.94865,-4.8090163)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#cc0000;stroke-width:2.06875038;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3541-7"
+         d="m 138.1435,-430.6898 0,85.3512"
+         style="fill:#ffffff;fill-opacity:1;stroke:#cc0000;stroke-width:2.06875038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 427.5,-430.55613 0,-27.92893 205.11384,0 0,27.63306"
+       id="path4615"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088" />
+    <g
+       id="g3543-3"
+       transform="matrix(0.6934764,0.21171865,-0.21171865,0.6934764,-30.184424,-214.47672)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3541-5"
+         d="m 151.52287,-424.77909 0,272.09137"
+         style="fill:none;stroke:#000000;stroke-width:2.06875038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:6.20625127, 2.06875042;stroke-dashoffset:0"
+         sodipodi:nodetypes="cc" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3538-69"
+         d="m 142.16858,591.94718 4.67715,-9.49288 4.67714,-9.49288 4.67715,9.49288 4.67715,9.49288"
+         inkscape:transform-center-y="-3.1642938"
+         style="fill:none;stroke:#000000;stroke-width:2.06875038;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         transform="translate(0,-999.99782)" />
+    </g>
+    <g
+       id="g3543-3-6"
+       transform="matrix(0.65798636,-0.30461166,0.30461166,0.65798636,238.24249,-151.31612)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3541-5-9"
+         d="m 151.52287,-424.77909 1.53153,284.97676"
+         style="fill:none;stroke:#000000;stroke-width:2.06875038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:6.20625127, 2.06875042;stroke-dashoffset:0"
+         sodipodi:nodetypes="cc" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3538-69-3"
+         d="m 142.16858,591.94718 4.67715,-9.49288 4.67714,-9.49288 4.67715,9.49288 4.67715,9.49288"
+         inkscape:transform-center-y="-3.1642938"
+         style="fill:none;stroke:#000000;stroke-width:2.06875038;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         transform="translate(0,-999.99782)" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="272.88525"
+       y="558.0744"
+       id="text4652"
+       sodipodi:linespacing="125%"
+       transform="translate(0,-999.99782)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088"><tspan
+         sodipodi:role="line"
+         id="tspan4654"
+         x="272.88525"
+         y="558.0744">&lt;T → Group&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="272.88525"
+         y="575.5744"
+         id="tspan4656">&lt;&lt;bind&gt;&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="86.429131"
+       y="-407.0795"
+       id="text4652-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088"><tspan
+         sodipodi:role="line"
+         x="86.429131"
+         y="-407.0795"
+         id="tspan4682">&lt;T → Individual&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="86.429131"
+         y="-389.5795"
+         id="tspan4656-0">&lt;&lt;bind&gt;&gt;</tspan></text>
+    <g
+       id="g5046"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <g
+         transform="translate(-197.67828,-295.85405)"
+         id="g3782-3-7-0-3-0"
+         style="fill:none">
+        <rect
+           y="98.700851"
+           x="450.62439"
+           height="73.080292"
+           width="154.1673"
+           id="rect3004-1-54-5-88-0"
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path3774-9-0-6-75-6"
+           d="m 450.65496,125.21959 153.61877,0"
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         x="330.94235"
+         y="-178.97157"
+         id="text3776-9-4-8-2-6"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan3417-1-9-9"
+           sodipodi:role="line"
+           x="330.94235"
+           y="-178.97157">GroupFitnessEvaluator</tspan></text>
+      <text
+         inkscape:export-ydpi="300"
+         inkscape:export-xdpi="300"
+         inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/GroupEvolutionJany/Documentation/EvaluatorClassDiagram.png"
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans"
+         x="258.6871"
+         y="-152.55101"
+         id="text3564-9"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3566-3"
+           x="258.6871"
+           y="-152.55101">+ evaluate(Group&amp;)</tspan><tspan
+           sodipodi:role="line"
+           x="258.6871"
+           y="-135.05101"
+           id="tspan3568-9">+ flush()</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 264.48224,-556.92343 186.23205,0"
+       id="path4710"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="268.70059"
+       y="-541.65845"
+       id="text4712"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088"><tspan
+         sodipodi:role="line"
+         id="tspan4714"
+         x="268.70059"
+         y="-541.65845">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="438.40619"
+       y="-541.65845"
+       id="text4716"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088"><tspan
+         sodipodi:role="line"
+         id="tspan4718"
+         x="438.40619"
+         y="-541.65845">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#cc0000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="637.81494"
+       y="-300.23199"
+       id="text4720"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088"><tspan
+         sodipodi:role="line"
+         id="tspan4722"
+         x="637.81494"
+         y="-300.23199">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#cc0000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="637.81494"
+       y="-260.7435"
+       id="text4720-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088"><tspan
+         sodipodi:role="line"
+         id="tspan4722-2"
+         x="637.81494"
+         y="-260.7435">1..*</tspan></text>
+    <g
+       id="g4497"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <g
+         style="fill:none"
+         id="g3782-3-6"
+         transform="translate(-301.68644,-817.78724)">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-1-5"
+           width="123.43533"
+           height="90.31382"
+           x="427.85715"
+           y="84.505035" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 123.2298,0"
+           id="path3774-9-3"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-9-0"
+         y="-716.49652"
+         x="187.55995"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="-716.49652"
+           x="187.55995"
+           id="tspan3778-2-6"
+           sodipodi:role="line">&lt;&lt;abstract&gt;&gt;</tspan><tspan
+           y="-698.99652"
+           x="187.55995"
+           sodipodi:role="line"
+           id="tspan3459">Evaluator</tspan><tspan
+           y="-681.49652"
+           x="187.55995"
+           sodipodi:role="line"
+           id="tspan3347" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Sans"
+         x="133.35576"
+         y="-675.09851"
+         id="text3556"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="133.35576"
+           y="-675.09851"
+           id="tspan3560">- configuration</tspan><tspan
+           sodipodi:role="line"
+           x="133.35576"
+           y="-657.59851"
+           id="tspan3562" /></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3774-9-3-3"
+         d="m 126.24224,-666.47963 123.2298,0"
+         style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       id="g3543-5"
+       transform="matrix(0,0.72507538,-0.72507538,0,80.825827,-823.16058)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3541-63"
+         d="m 151.52287,-403.43001 0,170.80921"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:8.2750017, 2.06875042;stroke-dashoffset:0"
+         sodipodi:nodetypes="cc" />
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path3538-8"
+         d="m 160.87717,599.01203 -9.3543,0 -9.35429,0 4.67715,-9.49288 4.67714,-9.49288 4.67715,9.49288 z"
+         inkscape:transform-center-y="-3.1642938"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.06875038;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         transform="translate(0,-999.99782)" />
+    </g>
+    <g
+       id="g3857-1"
+       transform="translate(258.86308,-95.893833)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="93.284088"
+       inkscape:export-ydpi="93.284088">
+      <g
+         style="fill:none"
+         id="g3782-3-6-21"
+         transform="translate(-299.93015,-721.89341)">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-1-5-3"
+           width="123.43533"
+           height="66.070152"
+           x="427.85715"
+           y="84.505035" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 123.2298,0"
+           id="path3774-9-3-7"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-9-0-2"
+         y="-620.60266"
+         x="189.31624"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="-620.60266"
+           x="189.31624"
+           id="tspan3778-2-6-4"
+           sodipodi:role="line">&lt;&lt;interface&gt;&gt;</tspan><tspan
+           y="-603.10266"
+           x="189.31624"
+           sodipodi:role="line"
+           id="tspan3459-1">XMLIFace</tspan><tspan
+           y="-585.60266"
+           x="189.31624"
+           sodipodi:role="line"
+           id="tspan3347-7" /></text>
+    </g>
+    <g
+       id="g3543-7-1"
+       transform="matrix(0.72507538,0,0,0.72507538,1.7165568,-976.38607)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3541-6-6"
+         d="m 151.52287,-410.49486 0,244.41208"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:nodetypes="cc" />
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path3538-1-2"
+         d="m 160.87717,591.94718 -9.3543,0 -9.35429,0 4.67715,-9.49288 4.67714,-9.49288 4.67715,9.49288 z"
+         inkscape:transform-center-y="-3.1642938"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.06875038;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         transform="translate(0,-999.99782)" />
+      <path
+         sodipodi:nodetypes="cc"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+         d="m 151.52287,-92.301338 0,114.868895"
+         id="path5397"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g3543-4-1"
+       transform="matrix(0.72507538,0,0,0.72507538,501.18341,-1111.5858)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#cc0000;stroke-width:2.06875038;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/GroupEvolutionJany/Documentation/EvaluatorClassDiagram.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 206.02591,-1328.1683 241.76776,0"
+       id="path4710-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537" />
+    <g
+       id="g5223"
+       transform="translate(-80.812204,-1.16091)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537">
+      <g
+         transform="translate(-12.707858,-889.94823)"
+         id="g3874-3">
+        <g
+           transform="translate(-316.83872,-549.87274)"
+           id="g3782-3-7-01"
+           style="fill:none">
+          <path
+             style="stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+             d="m 427.85715,98.790756 188.16739,0 0,53.805654 -188.16739,0 z"
+             id="rect3004-1-54-6"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ccccc" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path3774-9-0-1"
+             d="m 427.89675,125.21932 187.60472,0"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+           x="205.52264"
+           y="-434.71472"
+           id="text3776-9-4-2"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan3417-2"
+             sodipodi:role="line"
+             x="205.52264"
+             y="-434.71472">:EvaluatorCommon&lt;Group&gt;</tspan></text>
+      </g>
+      <g
+         transform="translate(-12.707858,-756.60809)"
+         id="g4978-3" />
+      <path
+         sodipodi:nodetypes="cc"
+         transform="translate(0,-1999.9977)"
+         inkscape:connector-curvature="0"
+         id="path5058"
+         d="m 107.32143,678.18796 170.35714,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5245"
+       transform="translate(-71.679677,-69.182111)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537">
+      <g
+         transform="translate(-344.4463,-1126.2428)"
+         id="g3782-3-7-0-3-0-8"
+         style="fill:none">
+        <path
+           style="stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+           d="m 450.62439,98.700851 154.1673,0 0,53.805659 -154.1673,0 z"
+           id="rect3004-1-54-5-88-0-4"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path3774-9-0-6-75-6-6"
+           d="m 450.65496,125.21959 153.61877,0"
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         x="184.17435"
+         y="-1010.7889"
+         id="text3776-9-4-8-2-6-5"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan3417-1-9-9-0"
+           sodipodi:role="line"
+           x="184.17435"
+           y="-1010.7889">:GroupFitnessEvaluator</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         transform="translate(0,-1999.9977)"
+         inkscape:connector-curvature="0"
+         id="path5060"
+         d="m 113.8947,991.90144 141.54762,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5192"
+       transform="translate(-36.42621,0)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537">
+      <g
+         transform="translate(-57.019047,-1045.1574)"
+         id="g3916-0">
+        <g
+           transform="translate(113.99135,-395.82448)"
+           id="g3782-3-7-0-7-7"
+           style="fill:none">
+          <path
+             style="stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+             d="m 427.85715,98.790756 217.37946,0 0,53.805654 -217.37946,0 z"
+             id="rect3004-1-54-5-8-8"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ccccc" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path3774-9-0-6-1-0"
+             d="m 427.89675,125.21932 217.17398,0"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+           x="650.99316"
+           y="-279.69962"
+           id="text3776-9-4-8-6-5"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan3417-1-5-57"
+             sodipodi:role="line"
+             x="650.99316"
+             y="-279.69962">:EvaluatorLuaDispatcher&lt;Group&gt;</tspan></text>
+      </g>
+      <g
+         id="g4978-6-46"
+         transform="translate(402.65855,-757.59837)" />
+      <path
+         transform="translate(0,-1999.9977)"
+         inkscape:connector-curvature="0"
+         id="path5062"
+         d="m 493.21429,678.43153 202.14286,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5258"
+       transform="translate(-22.857143,-82.832515)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537">
+      <g
+         transform="translate(-32.324882,-59.002896)"
+         id="g5163">
+        <g
+           id="g3932-6"
+           transform="translate(-196.42474,-885.68457)">
+          <path
+             sodipodi:nodetypes="ccccc"
+             inkscape:connector-curvature="0"
+             id="rect3004-1-54-5-8-9-5"
+             d="m 552.22797,-149.00613 195.66119,0 0,53.805652 -195.66119,0 z"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path3774-9-0-6-1-4-6"
+             d="m 552.26755,-122.57757 195.39443,0"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3776-9-4-8-6-6-9"
+             y="-131.67203"
+             x="650.7359"
+             style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+             xml:space="preserve"><tspan
+               y="-131.67203"
+               x="650.7359"
+               sodipodi:role="line"
+               id="tspan3417-1-5-5-2">:EvaluatorLuaWorker&lt;Group&gt;</tspan></text>
+        </g>
+        <g
+           transform="translate(255.42882,-450.13816)"
+           id="g4978-6-4-4" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 364.1091,-1013.879 180.71429,0"
+           id="path5064"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         transform="translate(-60.609154,-80.904736)"
+         id="g5136">
+        <g
+           id="g3932-6-1"
+           transform="translate(46.284736,-863.78273)">
+          <path
+             sodipodi:nodetypes="ccccc"
+             inkscape:connector-curvature="0"
+             id="rect3004-1-54-5-8-9-5-3"
+             d="m 552.22797,-149.00613 195.66119,0 0,53.805652 -195.66119,0 z"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path3774-9-0-6-1-4-6-6"
+             d="m 552.26755,-122.57757 195.39443,0"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3776-9-4-8-6-6-9-7"
+             y="-131.67203"
+             x="650.7359"
+             style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+             xml:space="preserve"><tspan
+               y="-131.67203"
+               x="650.7359"
+               sodipodi:role="line"
+               id="tspan3417-1-5-5-2-4">:EvaluatorLuaWorker&lt;Group&gt;</tspan></text>
+        </g>
+        <g
+           transform="translate(498.1383,-428.23632)"
+           id="g4978-6-4-4-5" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 606.81859,-991.97719 180.71428,0"
+           id="path5064-6"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="g5295"
+       transform="translate(-25.366666,0)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537">
+      <path
+         sodipodi:nodetypes="cc"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.06875038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+         d="m 8.0327726,-243.51714 0,152.900849"
+         id="path3541-7-8"
+         inkscape:connector-curvature="0"
+         transform="matrix(0.72507538,0,0,0.72507538,501.18341,-1111.5858)" />
+      <path
+         sodipodi:nodetypes="cc"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7.5;stroke-opacity:1;stroke-dasharray:none"
+         d="m 555.05436,-1287.8664 0,110.8647"
+         id="path3541-7-8-4"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       transform="translate(-71.679677,67.246461)"
+       id="g5383"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537">
+      <g
+         style="fill:none"
+         id="g5385"
+         transform="translate(-344.4463,-1126.2428)">
+        <path
+           sodipodi:nodetypes="ccccc"
+           inkscape:connector-curvature="0"
+           id="path5387"
+           d="m 450.62439,98.700851 154.1673,0 0,53.805659 -154.1673,0 z"
+           style="stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 450.65496,125.21959 153.61877,0"
+           id="path5389"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5391"
+         y="-1010.7889"
+         x="184.17435"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="-1010.7889"
+           x="184.17435"
+           sodipodi:role="line"
+           id="tspan5393">:GroupPopulation</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 131.06729,991.90144 107.20244,0"
+         id="path5395"
+         inkscape:connector-curvature="0"
+         transform="translate(0,-1999.9977)"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="120"
+       y="-1012.9947"
+       id="text5399"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"><tspan
+         sodipodi:role="line"
+         id="tspan5401"
+         x="120"
+         y="-1012.9947">↑ 1: eval({A, B, C})</tspan><tspan
+         sodipodi:role="line"
+         x="120"
+         y="-995.49469"
+         id="tspan3556">↑ 2: eval({B, C, D})</tspan><tspan
+         sodipodi:role="line"
+         x="120"
+         y="-977.99469"
+         id="tspan3558">↑ 3: flush()</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5424"
+       y="-985.49469"
+       x="120"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       xml:space="preserve"><tspan
+         y="-985.49469"
+         x="120"
+         id="tspan5426"
+         sodipodi:role="line" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="120"
+       y="-1249.4232"
+       id="text5428"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"><tspan
+         sodipodi:role="line"
+         id="tspan5430"
+         x="120"
+         y="-1249.4232">↑ 1.1: eval({A, B, C})</tspan><tspan
+         sodipodi:role="line"
+         x="120"
+         y="-1231.9232"
+         id="tspan5432">↑ 1.2: eval({A})</tspan><tspan
+         sodipodi:role="line"
+         x="120"
+         y="-1214.4232"
+         id="tspan5434">↑ 1.3: eval({B})</tspan><tspan
+         sodipodi:role="line"
+         x="120"
+         y="-1196.9232"
+         id="tspan5438">↑ 1.4: eval({C})</tspan><tspan
+         sodipodi:role="line"
+         x="120"
+         y="-1179.4232"
+         id="tspan5440">↑ 2.1: eval({B, C, D})</tspan><tspan
+         sodipodi:role="line"
+         x="120"
+         y="-1161.9232"
+         id="tspan5442">↑ 2.2: eval({B})</tspan><tspan
+         sodipodi:role="line"
+         x="120"
+         y="-1144.4232"
+         id="tspan5444">↑ 2.3: eval({C})</tspan><tspan
+         sodipodi:role="line"
+         x="120"
+         y="-1126.9232"
+         id="tspan5446">↑ 2.4: eval({D})</tspan><tspan
+         sodipodi:role="line"
+         x="120"
+         y="-1109.4232"
+         id="tspan3563">↑ 3.1: flush()</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="216.5663"
+       y="-1443.2345"
+       id="text5428-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"><tspan
+         sodipodi:role="line"
+         id="tspan5430-2"
+         x="216.5663"
+         y="-1443.2345">→ 1.1.1: eval({A, B, C})</tspan><tspan
+         sodipodi:role="line"
+         x="216.5663"
+         y="-1425.7345"
+         id="tspan5432-7">→ 1.2.1: eval({A})</tspan><tspan
+         sodipodi:role="line"
+         x="216.5663"
+         y="-1408.2345"
+         id="tspan5434-5">→ 1.3.1: eval({B})</tspan><tspan
+         sodipodi:role="line"
+         x="216.5663"
+         y="-1390.7345"
+         id="tspan5438-2">→ 1.4.1: eval({C})</tspan><tspan
+         sodipodi:role="line"
+         x="216.5663"
+         y="-1373.2345"
+         id="tspan5444-7">→ 2.1.1: eval({B, C, D})</tspan><tspan
+         sodipodi:role="line"
+         x="216.5663"
+         y="-1355.7345"
+         id="tspan5446-5">→ 2.4.1: eval({D})</tspan><tspan
+         sodipodi:role="line"
+         x="216.5663"
+         y="-1338.2345"
+         id="tspan3565">→ 3.1.1: flush()</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="540.02582"
+       y="-1224.1082"
+       id="text5428-0-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"><tspan
+         sodipodi:role="line"
+         id="tspan5430-2-1"
+         x="540.02582"
+         y="-1224.1082">↑ 1.1.1.1: {A, B, C} = pop()</tspan><tspan
+         sodipodi:role="line"
+         x="540.02582"
+         y="-1206.6082"
+         id="tspan5432-7-8">↑ 1.1.1.2: done({A, B, C}, fitness)</tspan><tspan
+         sodipodi:role="line"
+         x="540.02582"
+         y="-1189.1082"
+         id="tspan3565-4">↑ ...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="308.59711"
+       y="-1224.1082"
+       id="text5428-0-94"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"><tspan
+         sodipodi:role="line"
+         x="308.59711"
+         y="-1224.1082"
+         id="tspan5432-7-0">↑ 1.2.1.1: {A} = pop()</tspan><tspan
+         sodipodi:role="line"
+         x="308.59711"
+         y="-1206.6082"
+         id="tspan5434-5-9">↑ 1.2.1.2: done({A}, fitness)</tspan><tspan
+         sodipodi:role="line"
+         x="308.59711"
+         y="-1189.1082"
+         id="tspan3565-7">↑ ...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="215.47789"
+       y="-1311.3317"
+       id="text3585"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"><tspan
+         sodipodi:role="line"
+         id="tspan3587"
+         x="215.47789"
+         y="-1311.3317">← 1.3.1.1.2: cacheFitness({B})</tspan><tspan
+         sodipodi:role="line"
+         x="215.47789"
+         y="-1293.8317"
+         id="tspan3581">← ...</tspan><tspan
+         sodipodi:role="line"
+         x="215.47789"
+         y="-1276.3317"
+         id="tspan3583">← 3.1.2: flush() returns</tspan></text>
+    <g
+       id="g5223-5"
+       transform="translate(360.53554,-158.89157)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537">
+      <g
+         transform="translate(-12.707858,-889.94823)"
+         id="g3874-3-0">
+        <g
+           transform="translate(-316.83872,-549.87274)"
+           id="g3782-3-7-01-2"
+           style="fill:none">
+          <path
+             style="stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+             d="m 427.85715,98.790756 188.16739,0 0,70.948514 -188.16739,0 z"
+             id="rect3004-1-54-6-2"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ccccc" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path3774-9-0-1-3"
+             d="m 427.89675,125.21932 187.60472,0"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+           x="205.52264"
+           y="-434.71472"
+           id="text3776-9-4-2-9"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan3417-2-4"
+             sodipodi:role="line"
+             x="205.52264"
+             y="-434.71472">GB1:Group</tspan></text>
+      </g>
+      <g
+         transform="translate(-12.707858,-756.60809)"
+         id="g4978-3-4" />
+      <path
+         sodipodi:nodetypes="cc"
+         transform="translate(0,-1999.9977)"
+         inkscape:connector-curvature="0"
+         id="path5058-1"
+         d="m 158.75,678.18796 68.25761,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+         x="102.67875"
+         y="-1295.5317"
+         id="text3631"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3633"
+           x="102.67875"
+           y="-1295.5317">- individuals = {B}</tspan><tspan
+           sodipodi:role="line"
+           x="102.67875"
+           y="-1278.0317"
+           id="tspan3573">- fitness</tspan><tspan
+           sodipodi:role="line"
+           x="102.67875"
+           y="-1260.5317"
+           id="tspan3635" /></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 526.42857,570.21725 0,87.85714"
+         id="path3575"
+         inkscape:connector-curvature="0"
+         transform="translate(-383.39268,-1841.1061)" />
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+         x="151.60733"
+         y="-1248.0317"
+         id="text3577"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="151.60733"
+           y="-1248.0317"
+           id="tspan3840">↑ 1.3.1.1.1: setFitness(fitness)</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="39.457619"
+       y="-1142.5454"
+       id="text3586"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"><tspan
+         sodipodi:role="line"
+         id="tspan3588"
+         x="39.457619"
+         y="-1142.5454"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Lato;-inkscape-font-specification:Lato Medium">↓ 3.2:</tspan><tspan
+         sodipodi:role="line"
+         x="39.457619"
+         y="-1125.0454"
+         id="tspan3590"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Lato;-inkscape-font-specification:Lato Medium">    flush()</tspan><tspan
+         sodipodi:role="line"
+         x="39.457619"
+         y="-1107.5454"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Lato;-inkscape-font-specification:Lato Medium"
+         id="tspan3844">    returns</tspan></text>
+    <g
+       id="g5223-5-4"
+       transform="translate(-77.225289,-281.32091)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537">
+      <g
+         transform="translate(-12.707858,-889.94823)"
+         id="g3874-3-0-8">
+        <g
+           transform="translate(-316.83872,-549.87274)"
+           id="g3782-3-7-01-2-0"
+           style="fill:none">
+          <path
+             style="stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+             d="m 427.85715,98.790756 188.16739,0 0,70.948514 -188.16739,0 z"
+             id="rect3004-1-54-6-2-1"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ccccc" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path3774-9-0-1-3-1"
+             d="m 427.89675,125.21932 187.60472,0"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+           x="205.52264"
+           y="-434.71472"
+           id="text3776-9-4-2-9-1"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan3417-2-4-6"
+             sodipodi:role="line"
+             x="205.52264"
+             y="-434.71472">GB2:Group</tspan></text>
+      </g>
+      <g
+         transform="translate(-12.707858,-756.60809)"
+         id="g4978-3-4-9" />
+      <path
+         sodipodi:nodetypes="cc"
+         transform="translate(0,-1999.9977)"
+         inkscape:connector-curvature="0"
+         id="path5058-1-2"
+         d="m 158.75,678.18796 68.25761,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+         x="102.67875"
+         y="-1295.5317"
+         id="text3631-1"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3633-5"
+           x="102.67875"
+           y="-1295.5317">- individuals = {B}</tspan><tspan
+           sodipodi:role="line"
+           x="102.67875"
+           y="-1278.0317"
+           id="tspan3573-6">- fitness</tspan><tspan
+           sodipodi:role="line"
+           x="102.67875"
+           y="-1260.5317"
+           id="tspan3635-3" /></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 526.42857,570.21725 0,210.71428"
+         id="path3575-8"
+         inkscape:connector-curvature="0"
+         transform="translate(-383.39268,-1841.1061)"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+         x="151.60733"
+         y="-1248.0317"
+         id="text3577-7"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3579-7"
+           x="151.60733"
+           y="-1248.0317">↑ 2.2.2: setFitness(cache({B}))</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 90.913729,657.28843 0,-143.44167 368.010621,0"
+       id="path3679"
+       inkscape:connector-curvature="0"
+       transform="translate(0,-1999.9977)"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="124.48046"
+       y="-1494.8799"
+       id="text3577-7-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"><tspan
+         sodipodi:role="line"
+         id="tspan3579-7-1"
+         x="124.48046"
+         y="-1494.8799">→ 1.3.1.1.2.1: cache({B}) = getFitness()</tspan></text>
+    <g
+       id="g5223-5-45"
+       transform="translate(374.94024,247.25052)"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537">
+      <g
+         transform="translate(-12.707858,-889.94823)"
+         id="g3874-3-0-82">
+        <g
+           transform="translate(-316.83872,-549.87274)"
+           id="g3782-3-7-01-2-5"
+           style="fill:none">
+          <path
+             style="stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+             d="m 427.85715,98.790756 188.16739,0 0,70.948514 -188.16739,0 z"
+             id="rect3004-1-54-6-2-7"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ccccc" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path3774-9-0-1-3-9"
+             d="m 427.89675,125.21932 187.60472,0"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+           x="205.52264"
+           y="-434.71472"
+           id="text3776-9-4-2-9-8"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan3417-2-4-3"
+             sodipodi:role="line"
+             x="205.52264"
+             y="-434.71472">GB1:Group</tspan></text>
+      </g>
+      <g
+         transform="translate(-12.707858,-756.60809)"
+         id="g4978-3-4-96" />
+      <path
+         sodipodi:nodetypes="cc"
+         transform="translate(0,-1999.9977)"
+         inkscape:connector-curvature="0"
+         id="path5058-1-7"
+         d="m 158.75,678.18796 68.25761,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+         x="102.67875"
+         y="-1295.5317"
+         id="text3631-0"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3633-0"
+           x="102.67875"
+           y="-1295.5317">- individuals = {B}</tspan><tspan
+           sodipodi:role="line"
+           x="102.67875"
+           y="-1278.0317"
+           id="tspan3573-7">- fitness</tspan><tspan
+           sodipodi:role="line"
+           x="102.67875"
+           y="-1260.5317"
+           id="tspan3635-0" /></text>
+    </g>
+    <g
+       transform="translate(8.8539291,-1057.5565)"
+       id="g5015-20-0"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537">
+      <g
+         transform="translate(36.539735,-29.004905)"
+         id="g3782-8-62-3-0">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3004-9-62-27-5"
+           width="83.534271"
+           height="55.980427"
+           x="427.85715"
+           y="98.790756" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 427.89675,125.21932 83.07623,0"
+           id="path3774-6-20-06-1"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3776-0-3-41-5"
+         y="85.857285"
+         x="470.83069"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+         xml:space="preserve"><tspan
+           y="85.857285"
+           x="470.83069"
+           id="tspan3778-6-73-3-3"
+           sodipodi:role="line">B:Individual</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3780-9-66-5-5"
+         d="m 470.11642,88.892995 73.76577,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 188.76598,-1079.1918 283.85287,0"
+       id="path3803"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 188.76598,-1052.1702 244.962,0 0,77.78176 38.89087,0"
+       id="path3803-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="259.19907"
+       y="-1085.7758"
+       id="text3825"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"><tspan
+         sodipodi:role="line"
+         id="tspan3828"
+         x="259.19907"
+         y="-1085.7758">→ 3.3: fB = getFitness()</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="259.19907"
+       y="-1058.6329"
+       id="text3830"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"><tspan
+         sodipodi:role="line"
+         id="tspan3832"
+         x="259.19907"
+         y="-1058.6329">→ 3.4: setFitness(fB)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       x="480.71429"
+       y="-941.20905"
+       id="text3834"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-ydpi="93.592537"><tspan
+         sodipodi:role="line"
+         id="tspan3836"
+         x="480.71429"
+         y="-941.20905">- fitness</tspan></text>
+    <text
+       inkscape:export-ydpi="93.592537"
+       inkscape:export-xdpi="93.592537"
+       inkscape:export-filename="/home/jany/Developpement/ugp/ugp3/branches/PalmTree/Documentation/EvaluatorCollaborationDiagram.png"
+       sodipodi:linespacing="125%"
+       id="text3629"
+       y="-1030.8538"
+       x="259.19907"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       xml:space="preserve"><tspan
+         y="-1030.8538"
+         x="259.19907"
+         id="tspan3631"
+         sodipodi:role="line">→ 3.*: <tspan
+   style="font-style:italic;-inkscape-font-specification:Lato Light Italic"
+   id="tspan3640">the two same</tspan></tspan><tspan
+         y="-1013.3538"
+         x="259.19907"
+         sodipodi:role="line"
+         id="tspan3634"
+         style="font-style:italic;-inkscape-font-specification:Lato Light Italic">            messages are repeated</tspan><tspan
+         y="-995.85376"
+         x="259.19907"
+         sodipodi:role="line"
+         id="tspan3636"
+         style="font-style:italic;-inkscape-font-specification:Lato Light Italic">            for each evaluated</tspan><tspan
+         y="-978.35376"
+         x="259.19907"
+         sodipodi:role="line"
+         id="tspan3638"
+         style="font-style:italic;-inkscape-font-specification:Lato Light Italic">            subgroup.</tspan></text>
+  </g>
+</svg>

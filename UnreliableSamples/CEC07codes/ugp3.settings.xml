@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+<context name="evolution">
+    <option name="randomSeed" value="5987579" type="integer" />
+    <option name="statisticsPathName" value="statistics.xml" type="string" />
+    <option name="population" value="OKA2.population.settings.xml" type="string" />
+</context>
+
+<context name="evaluation">
+    <option name="concurrentEvaluations" value="100" type="integer" />
+    <option name="parametersCount" value="2" type="integer" />
+    <option name="evaluatorPathName" value="./evaluator.sh" type="string" />
+    <option name="evaluatorInputPathName" value="individual.input" type="string" />
+    <option name="evaluatorOutputPathName" value="fitness.txt" type="string" />
+    <option name="removeTempFiles" value="true" type="boolean" />
+</context>
+
+<context name="recovery">
+    <option name="recoveryInput" value="" type="string" />
+    <option name="recoveryInputPopulations" value="" type="string" />
+    <option name="recoveryOutput" value="Algorithm.xml" type="string" />
+    <option name="recoveryOverwriteOutput" value="true" type="boolean" />
+    <option name="recoveryDiscardFitness" value="true" type="boolean" />
+</context>
+
+</settings>

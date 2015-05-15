@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+<context name="evolution">
+<!--
+<option name="randomSeed" value="1310060770" />
+-->
+<option name ="populations">
+	<population name="symbolic-regression" value="symbolic-regression.population.settings.xml" />
+</option>
+<!--
+	<population name="symbolic-regression-island1" value="symbolic-regression.island.population.settings.xml" />
+	<population name="symbolic-regression-island2" value="symbolic-regression.island.population.settings.xml" />
+-->
+<option name="statisticsPathName" value="statistics.xml" />
+<option name="migration" value="classical; 1; 10"/>
+<!--
+-->
+</context>
+
+<context name="recovery">
+<option name="recoveryOutput" value="status.xml" />
+<option name="recoveryOverwriteOutput" value="true" />
+<option name="recoveryDiscardFitness" value="true" />
+</context>
+
+<context name="logging">
+<option name="std::cout" value="info; brief" />
+<!--
+<option name="logs/debug.log" value="debug; brief" />
+-->
+</context>
+
+</settings>

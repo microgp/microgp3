@@ -1,0 +1,3 @@
+2014-02-03
+----------
+The "fake evaluator" is a program that returns random fitness values for individuals. It is used mainly to test constraints files and resuming evolutions starting from status files that have been altered (for example, by Individual Editor or other programs). Still, it is kinda useful and I had to re-write it several times, since I always managed to delete the folders where I run it...so, I decided to store it here.

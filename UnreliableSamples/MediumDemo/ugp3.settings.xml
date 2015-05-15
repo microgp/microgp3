@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+<context name="evolution">
+<option name="randomSeed" value="34545662" type="integer" />
+<option name="population" value="./Demo.population.settings.xml" type="string" />
+<option name="statisticsPathName" value="./Demo.statistics.xml" type="string" />
+</context>
+<context name="evaluation">
+<option name="concurrentEvaluations" value="1" type="integer" />
+<!--option name="parametersCount" value="1" type="integer" /-->
+<option name="evaluatorPathName" value="./fitness.sh" type="string" />
+<option name="evaluatorInputPathName" value="individual.input" type="string" />
+<option name="evaluatorOutputPathName" value="fitness.output" type="string" />
+<option name="removeTempFiles" value="true" type="boolean" />
+</context>
+<context name="recovery">
+<option name="recoveryInput" value="" type="string" />
+<option name="recoveryInputPopulations" value="" type="string" />
+<option name="recoveryOutput" value="Algorithm.xml" type="string" />
+<option name="recoveryOverwriteOutput" value="true" type="boolean" />
+<option name="recoveryDiscardFitness" value="true" type="boolean" />
+</context>
+<context name="logging">
+<option name="std::cout" value="info; brief" type="string" />
+<!--option name="debug.log" value="debug; brief" type="string" /-->
+</context>
+</settings>
