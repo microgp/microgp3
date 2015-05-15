@@ -39,7 +39,7 @@
 /** Old threshold, used in tentative experiments to reset sigma */
 #define SIGMA_THRESHOLD 0.0001
 /** The self-adapting parameters will be changed each EPOCH generations */
-#define EPOCH 7
+#define EPOCH 1
 
 #include <vector>
 #include <map>

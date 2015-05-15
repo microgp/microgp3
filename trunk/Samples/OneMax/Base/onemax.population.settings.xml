@@ -17,8 +17,9 @@
   <maximumFitness value="50"/>
   
   <!-- (optional) if the best fitness value does not change for
-  maximumSteadyStateGenerations generations, the evolutions stops -->
+  maximumSteadyStateGenerations generations, the evolutions stops 
   <maximumSteadyStateGenerations value="10"/>
+  -->
 
   <!-- maximum "real" time (ie. wall clock) for an experiment -->
   <maximumTime seconds="600" />
@@ -55,10 +56,10 @@
   <constraints value="onemax.constraints.xml"/>
 
   <!-- (optional) the maximum number of generations -->
-  <maximumGenerations value="100"/>
+  <maximumGenerations value="10000"/>
 
   <!-- (optional) the maximum number of individuals that can be evaluated -->
-  <maximumEvaluations value="10000"/>
+  <maximumEvaluations value="1000000"/>
 
   <!-- parents selector parameters -->
   <selection type="tournamentWithFitnessHole" tau="1" tauMin="1" tauMax="1" fitnessHole="0" />
