@@ -1,0 +1,42 @@
+# Benchmark of various operator selection strategies
+# Using a specially crafted onemax with predictable operators
+# From Álvaro Fialho, Luis Da Costa, Marc Schoenauer,
+# Michèle Sebag. Dynamic Multi-Armed Bandits and Extreme Value-based
+# Rewards for Adaptive Operator Selection in Evolutionary Algorithms.
+# Learning and Intelligent Optimization (LION 3), Jan 2009, Trento,
+# Italy. <inria-00377401v1>
+
+# Directories of the tests to use for the benchmark, and files that determine the outcome
+tests:
+  onemaxbs_dmab:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+  onemaxbs_roulette:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+  onemaxbs_random:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+  onemaxbs_sa:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+  onemaxbs_smooth:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+  onemaxbs_exdmab:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+  onemaxbs_beta:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+
+# Names of the MicroGP executables to run
+ugp_executables:
+  - ./ugp3_camellia_r589
+
+# Random seeds to use
+seeds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+#21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+
+# Whether to show the full ugp output or only the generations
+full_ugp_output: false

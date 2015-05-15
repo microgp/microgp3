@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<parameters type="multiObjective">
+<mu value="100"/>
+<nu value="50"/>
+<lambda value="50"/>
+<inertia value="0.5"/>
+<fitnessParameters value="2"/>
+<maximumAge value="100"/>
+<!--maximumGenerations value="25"/-->
+<!--maximumSteatyStateGenerations value="200"/-->
+<maximumFitness value="1000 1000"/>
+<!--maximumEvaluations value="500"/-->
+<sigma value="0.5"/>
+<constraints value="OKA2.constraints.xml"/>
+<cloneScalingFactor value="0.5"/>
+<eliteSize value="10"/>
+<fitnessHole value="0"/>
+<selection type="tournamentWithFitnessHole" tau="1" tauMin="1" tauMax="10" fitnessHole="1"/>
+<operatorsStatistics>
+<operator ref="alterationMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="onePointSafeCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="onePointSafeSimpleCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="twoPointSafeSimpleCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="replacementMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="scanMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="localScanMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="randomWalkMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+</operatorsStatistics>
+</parameters>

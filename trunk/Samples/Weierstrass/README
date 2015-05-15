@@ -1,0 +1,3 @@
+This simple mathematical function has the property that it is continuous everywhere but differentiable nowhere. It is named after its discoverer Karl Weierstrass.
+
+In this example, the number of dimensions is 5, so each individual is a set of 5 floating-point values between -1 and 1. 

@@ -1,0 +1,951 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<evolutionaryAlgorithm version='3.3.0_434'
+ step='3'
+ dateTime='2013-12-11T17:16:26'
+ seconds='73.031'
+ outputPathName='status.xml'
+ overwriteOutput='1'
+ statisticsPathName='statistics.xml'
+ randomState='5419 45517 42102 58989 57068 5'
+ infinityStringIndividual='R'
+ infinityStringNode='E4'
+ xmlns='http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm'
+ xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+ xsi:schemaLocation='http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm.xsd'>
+<populations>
+<population generation='2' name='pop1' type='enhanced'>
+<!-- Cumulative seconds elapsed in all previous runs -->
+<elapsedTimePreviousRuns seconds="266" />
+<parameters type="enhanced">
+<!-- enhanced population specific parameters -->
+<!-- clone scaling factor: the fitness of each clone of a given individual is multiplied by this factor (0,1). If set to 0, clones are discarded. -->
+<cloneScalingFactor value="0"/>
+<!-- elite size: the eliteSize best individuals do not age at each generational step. -->
+<eliteSize value="1"/>
+<!-- end of enhanced population specific parameters -->
+<!-- (optional) if the best fitness value does not change for maximumSteadyStateGenerations generations, the evolutions stops -->
+<maximumSteadyStateGenerations value="1"/>
+<!-- basic population parameters -->
+<!-- the maximum size of the population -->
+<mu value="10"/>
+<!-- the initial size of the population -->
+<nu value="10"/>
+<!-- the numbers of genetic operators applied at every step of the evolution -->
+<lambda value="2"/>
+<!-- the inertia for the self-adaptating parameters [0,1] -->
+<inertia value="0.9"/>
+<!-- the number of dimensions of the fitness -->
+<fitnessParameters value="1"/>
+<!-- the maximum age of the individuals -->
+<maximumAge value="10"/>
+<!-- differential evolution crossover probability -->
+<diffevocp value="0"/>
+<!-- differential evolution differential weight -->
+<diffevodw value="0"/>
+<!-- the strength of the mutation operators (0,1) -->
+<sigma value="0.819"/>
+<!-- when set to true, the fitness of all the individuals of the population
+     is discarded at every step so that in the next step it is re-evaluated -->
+<invalidateFitnessAfterGeneration value="0"/>
+<!-- the definition of the constraints of the problem -->
+<constraints value="lorena.constraints.xml"/>
+<!-- (optional) the maximum number of generations -->
+<maximumGenerations value="2"/>
+<!-- (optional) the maximum number of individuals that can be evaluated -->
+<maximumEvaluations value="1000"/>
+<!-- parents selector parameters -->
+<selection type="tournamentWithFitnessHole" tau="1" tauMin="1" tauMax="1" fitnessHole="0" />
+<!-- evaluator parameters -->
+<evaluation>
+ <concurrentEvaluations value="1" />
+ <totalMilliseconds value="265165" />
+ <totalEvaluations value="14" />
+ <removeTempFiles value="true" />
+ <evaluatorPathName value="Externe.exe &quot;" />
+ <evaluatorInputPathName value="C:\Users\lsilvabeli\Documents\Visual Studio 2012\Projects\ConnexionAffectation\Externe\individual%s.rules" />
+ <evaluatorOutputPathName value="C:\Users\lsilvabeli\Documents\Visual Studio 2012\Projects\ConnexionAffectation\Externe\sortie.out" />
+</evaluation>
+<!-- operator statistics -->
+<operatorsStatistics>
+<operator ref="onePointImpreciseCrossover">
+  <weight current="0.147059" minimum="0" maximum="1"/>
+</operator>
+<operator ref="twoPointImpreciseCrossover">
+  <weight current="0.132353" minimum="0" maximum="1"/>
+</operator>
+<operator ref="singleParameterAlterationMutation">
+  <weight current="0.132353" minimum="0" maximum="1"/>
+</operator>
+<operator ref="insertionMutation">
+  <weight current="0.147059" minimum="0" maximum="1"/>
+</operator>
+<operator ref="removalMutation">
+  <weight current="0.147059" minimum="0" maximum="1"/>
+</operator>
+<operator ref="replacementMutation">
+  <weight current="0.147059" minimum="0" maximum="1"/>
+</operator>
+<operator ref="alterationMutation">
+  <weight current="0.147059" minimum="0" maximum="1"/>
+</operator>
+</operatorsStatistics>
+</parameters>
+<!-- Entropy of the whole population -->
+<entropy value="6.53899" />
+<steadyState generations='0' previousMaxFitness='8267.4'/>
+<individuals best='N' worst='E'>
+<!-- total 10 individuals -->
+<individual id="N" allopatricTag="N" type="enhanced" deltaEntropy="0.100638" isHero="true">
+<life birth='1' age='0' />
+<placeholder value="0"/>
+<lineage>
+<operator ref="twoPointImpreciseCrossover" />
+<parents>
+<individual ref="E"/>
+<individual ref="I"/>
+</parents>
+</lineage>
+<fitness>
+<description></description>
+<value>8267.4</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description></description>
+<value>8267.4</value>
+</scaledFitness>
+<genome>
+<node id="DQ" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="DR" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="sectionRules"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="DS" constraintsRef="/One-Max/sectionRules/sectionPrologue">
+</node>
+<node id="DT" constraintsRef="/One-Max/sectionRules/sectionEpilogue">
+</node>
+<subGraph constraintsRef="subSectionRules" >
+<node id="DU" constraintsRef="/One-Max/sectionRules/subSectionRules/stringPrologue">
+<tag name="next" value="DV"/>
+<tag name="place" value="0"/>
+</node>
+<node id="DV" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="DW"/>
+<tag name="prev" value="DU"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="1"/>
+<edge to="DZ">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="DW" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="DN"/>
+<tag name="prev" value="DV"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="2"/>
+<edge to="DN">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="DN" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="DX"/>
+<tag name="prev" value="DW"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="3"/>
+<edge to="DY">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="DX" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="DY"/>
+<tag name="prev" value="DN"/>
+<tag name="$a1" value="12"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M2"/>
+<tag name="place" value="4"/>
+</node>
+<node id="DY" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1">
+<tag name="next" value="DZ"/>
+<tag name="prev" value="DX"/>
+<tag name="$a1" value="22"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M2"/>
+<tag name="place" value="5"/>
+</node>
+<node id="DZ" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="D2"/>
+<tag name="prev" value="DY"/>
+<tag name="$a1" value="11"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M2"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="6"/>
+</node>
+<node id="D2" constraintsRef="/One-Max/sectionRules/subSectionRules/stringEpilogue">
+<tag name="prev" value="DZ"/>
+<tag name="place" value="7"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="K" allopatricTag="K" type="enhanced" deltaEntropy="0.0263304">
+<life birth='1' age='2' />
+<placeholder value="1"/>
+<lineage>
+<operator ref="onePointImpreciseCrossover" />
+<parents>
+<individual ref="I"/>
+<individual ref="H"/>
+</parents>
+</lineage>
+<fitness>
+<description></description>
+<value>8266.2</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description></description>
+<value>8266.2</value>
+</scaledFitness>
+<genome>
+<node id="CP" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="CQ" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="sectionRules"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="CR" constraintsRef="/One-Max/sectionRules/sectionPrologue">
+</node>
+<node id="CS" constraintsRef="/One-Max/sectionRules/sectionEpilogue">
+</node>
+<subGraph constraintsRef="subSectionRules" >
+<node id="CT" constraintsRef="/One-Max/sectionRules/subSectionRules/stringPrologue">
+<tag name="next" value="CU"/>
+<tag name="place" value="0"/>
+</node>
+<node id="CU" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="CV"/>
+<tag name="prev" value="CT"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="1"/>
+<edge to="DE">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="CV" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="CW"/>
+<tag name="prev" value="CU"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="2"/>
+<edge to="CW">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="CW" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="CX"/>
+<tag name="prev" value="CV"/>
+<tag name="$a1" value="12"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M2"/>
+<tag name="place" value="3"/>
+</node>
+<node id="CX" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1">
+<tag name="next" value="DD"/>
+<tag name="prev" value="CW"/>
+<tag name="$a1" value="22"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M2"/>
+<tag name="place" value="4"/>
+</node>
+<node id="DD" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="DE"/>
+<tag name="prev" value="CX"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="5"/>
+<edge to="DE">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="DE" constraintsRef="/One-Max/sectionRules/subSectionRules/stringEpilogue">
+<tag name="prev" value="DD"/>
+<tag name="place" value="6"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="I" allopatricTag="I" type="enhanced" deltaEntropy="-0.0453689">
+<life birth='0' age='3' />
+<placeholder value="2"/>
+<lineage>
+<operator ref="NO_OPERATOR" />
+</lineage>
+<fitness>
+<description></description>
+<value>8266.2</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description></description>
+<value>8266.2</value>
+</scaledFitness>
+<genome>
+<node id="BW" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="BX" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="sectionRules"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="BY" constraintsRef="/One-Max/sectionRules/sectionPrologue">
+</node>
+<node id="BZ" constraintsRef="/One-Max/sectionRules/sectionEpilogue">
+</node>
+<subGraph constraintsRef="subSectionRules" >
+<node id="B2" constraintsRef="/One-Max/sectionRules/subSectionRules/stringPrologue">
+<tag name="next" value="B3"/>
+<tag name="place" value="0"/>
+</node>
+<node id="B3" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="B4"/>
+<tag name="prev" value="B2"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="1"/>
+<edge to="CA">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="B4" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="B5"/>
+<tag name="prev" value="B3"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="2"/>
+<edge to="B5">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="B5" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="B6"/>
+<tag name="prev" value="B4"/>
+<tag name="$a1" value="12"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M2"/>
+<tag name="place" value="3"/>
+</node>
+<node id="B6" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1">
+<tag name="next" value="B7"/>
+<tag name="prev" value="B5"/>
+<tag name="$a1" value="22"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M2"/>
+<tag name="place" value="4"/>
+</node>
+<node id="B7" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="CA"/>
+<tag name="prev" value="B6"/>
+<tag name="$a1" value="11"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M2"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="5"/>
+</node>
+<node id="CA" constraintsRef="/One-Max/sectionRules/subSectionRules/stringEpilogue">
+<tag name="prev" value="B7"/>
+<tag name="place" value="6"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="B" allopatricTag="B" type="enhanced" deltaEntropy="0.164343">
+<life birth='0' age='3' />
+<placeholder value="3"/>
+<lineage>
+<operator ref="NO_OPERATOR" />
+</lineage>
+<fitness>
+<description></description>
+<value>4874.8</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description></description>
+<value>4874.8</value>
+</scaledFitness>
+<genome>
+<node id="K" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="L" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="sectionRules"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="M" constraintsRef="/One-Max/sectionRules/sectionPrologue">
+</node>
+<node id="N" constraintsRef="/One-Max/sectionRules/sectionEpilogue">
+</node>
+<subGraph constraintsRef="subSectionRules" >
+<node id="O" constraintsRef="/One-Max/sectionRules/subSectionRules/stringPrologue">
+<tag name="next" value="P"/>
+<tag name="place" value="0"/>
+</node>
+<node id="P" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1">
+<tag name="next" value="Q"/>
+<tag name="prev" value="O"/>
+<tag name="$a1" value="21"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS1M1"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="Q" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1">
+<tag name="next" value="R"/>
+<tag name="prev" value="P"/>
+<tag name="$a1" value="22"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS1M1"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="2"/>
+</node>
+<node id="R" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="S"/>
+<tag name="prev" value="Q"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="3"/>
+<edge to="T">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="S" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1">
+<tag name="next" value="T"/>
+<tag name="prev" value="R"/>
+<tag name="$a1" value="21"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS1M1"/>
+<tag name="$p2" value="LiberationWS1M2"/>
+<tag name="place" value="4"/>
+</node>
+<node id="T" constraintsRef="/One-Max/sectionRules/subSectionRules/stringEpilogue">
+<tag name="prev" value="S"/>
+<tag name="place" value="5"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="L" allopatricTag="L" type="enhanced" deltaEntropy="0.159664">
+<life birth='1' age='2' />
+<placeholder value="4"/>
+<lineage>
+<operator ref="onePointImpreciseCrossover" />
+<parents>
+<individual ref="I"/>
+<individual ref="H"/>
+</parents>
+</lineage>
+<fitness>
+<description></description>
+<value>4808.2</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description></description>
+<value>4808.2</value>
+</scaledFitness>
+<genome>
+<node id="C2" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="C3" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="sectionRules"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="C4" constraintsRef="/One-Max/sectionRules/sectionPrologue">
+</node>
+<node id="C5" constraintsRef="/One-Max/sectionRules/sectionEpilogue">
+</node>
+<subGraph constraintsRef="subSectionRules" >
+<node id="C6" constraintsRef="/One-Max/sectionRules/subSectionRules/stringPrologue">
+<tag name="next" value="C7"/>
+<tag name="place" value="0"/>
+</node>
+<node id="C7" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="DA"/>
+<tag name="prev" value="C6"/>
+<tag name="$a1" value="21"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M2"/>
+<tag name="$p2" value="LiberationWS2M2"/>
+<tag name="place" value="1"/>
+</node>
+<node id="DA" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="DB"/>
+<tag name="prev" value="C7"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="2"/>
+<edge to="CZ">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="DB" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="DC"/>
+<tag name="prev" value="DA"/>
+<tag name="$a1" value="12"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="DC" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="CY"/>
+<tag name="prev" value="DB"/>
+<tag name="$a1" value="12"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M2"/>
+<tag name="place" value="4"/>
+</node>
+<node id="CY" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="CZ"/>
+<tag name="prev" value="DC"/>
+<tag name="$a1" value="11"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M2"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="5"/>
+</node>
+<node id="CZ" constraintsRef="/One-Max/sectionRules/subSectionRules/stringEpilogue">
+<tag name="prev" value="CY"/>
+<tag name="place" value="6"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="M" allopatricTag="M" type="enhanced" deltaEntropy="-0.0023876">
+<life birth='1' age='2' />
+<placeholder value="5"/>
+<lineage>
+<operator ref="twoPointImpreciseCrossover" />
+<parents>
+<individual ref="E"/>
+<individual ref="I"/>
+</parents>
+</lineage>
+<fitness>
+<description></description>
+<value>4808.2</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description></description>
+<value>4808.2</value>
+</scaledFitness>
+<genome>
+<node id="DF" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="DG" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="sectionRules"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="DH" constraintsRef="/One-Max/sectionRules/sectionPrologue">
+</node>
+<node id="DI" constraintsRef="/One-Max/sectionRules/sectionEpilogue">
+</node>
+<subGraph constraintsRef="subSectionRules" >
+<node id="DJ" constraintsRef="/One-Max/sectionRules/subSectionRules/stringPrologue">
+<tag name="next" value="DK"/>
+<tag name="place" value="0"/>
+</node>
+<node id="DK" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="DL"/>
+<tag name="prev" value="DJ"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M2"/>
+<tag name="place" value="1"/>
+<edge to="DM">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="DL" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="DM"/>
+<tag name="prev" value="DK"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="2"/>
+<edge to="DP">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="DM" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="DO"/>
+<tag name="prev" value="DL"/>
+<tag name="$a1" value="11"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M2"/>
+<tag name="place" value="3"/>
+</node>
+<node id="DO" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="DP"/>
+<tag name="prev" value="DM"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="4"/>
+<edge to="DP">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="DP" constraintsRef="/One-Max/sectionRules/subSectionRules/stringEpilogue">
+<tag name="prev" value="DO"/>
+<tag name="place" value="5"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="A" allopatricTag="A" type="enhanced" deltaEntropy="0.121923">
+<life birth='0' age='3' />
+<placeholder value="6"/>
+<lineage>
+<operator ref="NO_OPERATOR" />
+</lineage>
+<fitness>
+<description></description>
+<value>4808.2</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description></description>
+<value>4808.2</value>
+</scaledFitness>
+<genome>
+<node id="A" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="B" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="sectionRules"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="C" constraintsRef="/One-Max/sectionRules/sectionPrologue">
+</node>
+<node id="D" constraintsRef="/One-Max/sectionRules/sectionEpilogue">
+</node>
+<subGraph constraintsRef="subSectionRules" >
+<node id="E" constraintsRef="/One-Max/sectionRules/subSectionRules/stringPrologue">
+<tag name="next" value="F"/>
+<tag name="place" value="0"/>
+</node>
+<node id="F" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="G"/>
+<tag name="prev" value="E"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="1"/>
+<edge to="J">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="G" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="H"/>
+<tag name="prev" value="F"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M2"/>
+<tag name="place" value="2"/>
+<edge to="J">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="H" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="I"/>
+<tag name="prev" value="G"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M2"/>
+<tag name="$p2" value="LiberationWS2M2"/>
+<tag name="place" value="3"/>
+<edge to="I">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="I" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="J"/>
+<tag name="prev" value="H"/>
+<tag name="$a1" value="12"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M2"/>
+<tag name="$p2" value="LiberationWS2M2"/>
+<tag name="place" value="4"/>
+</node>
+<node id="J" constraintsRef="/One-Max/sectionRules/subSectionRules/stringEpilogue">
+<tag name="prev" value="I"/>
+<tag name="place" value="5"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="C" allopatricTag="C" type="enhanced" deltaEntropy="0.164343">
+<life birth='0' age='3' />
+<placeholder value="7"/>
+<lineage>
+<operator ref="NO_OPERATOR" />
+</lineage>
+<fitness>
+<description></description>
+<value>4808.2</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description></description>
+<value>4808.2</value>
+</scaledFitness>
+<genome>
+<node id="U" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="V" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="sectionRules"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="W" constraintsRef="/One-Max/sectionRules/sectionPrologue">
+</node>
+<node id="X" constraintsRef="/One-Max/sectionRules/sectionEpilogue">
+</node>
+<subGraph constraintsRef="subSectionRules" >
+<node id="Y" constraintsRef="/One-Max/sectionRules/subSectionRules/stringPrologue">
+<tag name="next" value="Z"/>
+<tag name="place" value="0"/>
+</node>
+<node id="Z" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1">
+<tag name="next" value="2"/>
+<tag name="prev" value="Y"/>
+<tag name="$a1" value="21"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M2"/>
+<tag name="place" value="1"/>
+</node>
+<node id="2" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="3"/>
+<tag name="prev" value="Z"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M2"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="2"/>
+<edge to="5">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="3" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="4"/>
+<tag name="prev" value="2"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS2M2"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="3"/>
+<edge to="4">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="4" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="5"/>
+<tag name="prev" value="3"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="4"/>
+<edge to="5">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="5" constraintsRef="/One-Max/sectionRules/subSectionRules/stringEpilogue">
+<tag name="prev" value="4"/>
+<tag name="place" value="5"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="D" allopatricTag="D" type="enhanced" deltaEntropy="0.128331">
+<life birth='0' age='3' />
+<placeholder value="8"/>
+<lineage>
+<operator ref="NO_OPERATOR" />
+</lineage>
+<fitness>
+<description></description>
+<value>4808.2</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description></description>
+<value>4808.2</value>
+</scaledFitness>
+<genome>
+<node id="6" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="7" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="sectionRules"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="AA" constraintsRef="/One-Max/sectionRules/sectionPrologue">
+</node>
+<node id="AB" constraintsRef="/One-Max/sectionRules/sectionEpilogue">
+</node>
+<subGraph constraintsRef="subSectionRules" >
+<node id="AC" constraintsRef="/One-Max/sectionRules/subSectionRules/stringPrologue">
+<tag name="next" value="AD"/>
+<tag name="place" value="0"/>
+</node>
+<node id="AD" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="AE"/>
+<tag name="prev" value="AC"/>
+<tag name="$a1" value="22"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS2M2"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="AE" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="AF"/>
+<tag name="prev" value="AD"/>
+<tag name="$a1" value="11"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M2"/>
+<tag name="$p2" value="LiberationWS2M2"/>
+<tag name="place" value="2"/>
+</node>
+<node id="AF" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="AG"/>
+<tag name="prev" value="AE"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS1M1"/>
+<tag name="$p2" value="LiberationWS1M1"/>
+<tag name="place" value="3"/>
+<edge to="AG">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="AG" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="AH"/>
+<tag name="prev" value="AF"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="4"/>
+<edge to="AH">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="AH" constraintsRef="/One-Max/sectionRules/subSectionRules/stringEpilogue">
+<tag name="prev" value="AG"/>
+<tag name="place" value="5"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="E" allopatricTag="E" type="enhanced" deltaEntropy="0.0429319">
+<life birth='0' age='3' />
+<placeholder value="9"/>
+<lineage>
+<operator ref="NO_OPERATOR" />
+</lineage>
+<fitness>
+<description></description>
+<value>4808.2</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description></description>
+<value>4808.2</value>
+</scaledFitness>
+<genome>
+<node id="AI" constraintsRef="/One-Max/globalPrologue">
+</node>
+<node id="AJ" constraintsRef="/One-Max/globalEpilogue">
+</node>
+<graph constraintsRef="sectionRules"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="AK" constraintsRef="/One-Max/sectionRules/sectionPrologue">
+</node>
+<node id="AL" constraintsRef="/One-Max/sectionRules/sectionEpilogue">
+</node>
+<subGraph constraintsRef="subSectionRules" >
+<node id="AM" constraintsRef="/One-Max/sectionRules/subSectionRules/stringPrologue">
+<tag name="next" value="AN"/>
+<tag name="place" value="0"/>
+</node>
+<node id="AN" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS1Jump">
+<tag name="next" value="AO"/>
+<tag name="prev" value="AM"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS1M2"/>
+<tag name="$p2" value="LiberationWS1M2"/>
+<tag name="place" value="1"/>
+<edge to="AP">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="AO" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="AP"/>
+<tag name="prev" value="AN"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="2"/>
+<edge to="AR">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="AP" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2">
+<tag name="next" value="AQ"/>
+<tag name="prev" value="AO"/>
+<tag name="$a1" value="11"/>
+<tag name="$c" value=">"/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M2"/>
+<tag name="place" value="3"/>
+</node>
+<node id="AQ" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="AR"/>
+<tag name="prev" value="AP"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="4"/>
+<edge to="AS">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="AR" constraintsRef="/One-Max/sectionRules/subSectionRules/twoParametersLibWS2Jump">
+<tag name="next" value="AS"/>
+<tag name="prev" value="AQ"/>
+<tag name="$c" value=">="/>
+<tag name="$p1" value="LiberationWS2M1"/>
+<tag name="$p2" value="LiberationWS2M1"/>
+<tag name="place" value="5"/>
+<edge to="AS">
+<tag name="parameter" value="j1"/>
+</edge>
+</node>
+<node id="AS" constraintsRef="/One-Max/sectionRules/subSectionRules/stringEpilogue">
+<tag name="prev" value="AR"/>
+<tag name="place" value="6"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+</individuals>
+</population>
+</populations>
+</evolutionaryAlgorithm>

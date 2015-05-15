@@ -1,0 +1,72 @@
+//////////////////////////////////////////////////////////////////////////
+//                                                                       /
+// ugp3.rc                                                               /
+//                                                                       /
+// This file is part of MicroGP v3 (ugp3)                                /
+// http://ugp3.sourceforge.net/                                          /
+//                                                                       /
+// Copyright (c) 2002-2015 Giovanni Squillero                            /
+//                                                                       /
+//////////////////////////////////////////////////////////////////////////
+//                                                                       /
+// This program is free software; you can redistribute it and/or modify  /
+// it under the terms of the GNU General Public License as published by  /
+// the Free Software Foundation, either version 3 of the License, or (at /
+// your option) any later version.                                       /
+//                                                                       /
+// This program is distributed in the hope that it will be useful, but   /
+// WITHOUT ANY WARRANTY; without even the implied warranty of            /
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      /
+// General Public License for more details                               /
+//                                                                       /
+//////////////////////////////////////////////////////////////////////////
+// $Revision: 644 $
+// $Date: 2015-02-23 14:50:30 +0100 (Mon, 23 Feb 2015) $
+//////////////////////////////////////////////////////////////////////////
+
+#include <windows.h>
+
+id ICON "ugp3.ico"
+
+#ifndef UGP3_VERSION
+#define UGP3_VERSION 0
+#endif
+#ifndef UGP3_SUBVERSION
+#define UGP3_SUBVERSION 0
+#endif
+#ifndef UGP3_REVISION
+#define UGP3_REVISION 0
+#endif
+
+//#define RC_VERSION 3,UGP3_VERSION,UGP3_SUBVERSION,UGP3_REVISION
+#define RC_VERSION 3,2,1,0
+
+VS_VERSION_INFO VERSIONINFO
+//FILEVERSION     RC_VERSION
+//PRODUCTVERSION 	RC_VERSION
+FILEVERSION     RC_VERSION
+PRODUCTVERSION 	RC_VERSION
+FILEFLAGSMASK  	VS_FFI_FILEFLAGSMASK
+FILEOS         	VOS__WINDOWS32
+FILETYPE       	VFT_DLL
+FILESUBTYPE    	VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "FileDescription",  "MicroGP v3\000"
+            VALUE "LegalCopyright",   "Copyright (c) 2002-2015 by Giovanni Squillero\000"
+            VALUE "CompanyName",      "The MicroGP Collective\000"
+            VALUE "InternalName",     "Camellia\000"
+            VALUE "OriginalFilename", "UGP3.EXE\000"
+            //VALUE "LegalTrademarks",  "PowerBASIC is a trademark of PowerBASIC, Inc.\000"
+            VALUE "ProductName",      "MicroGP\000"
+            VALUE "ProductVersion",   "3.3.0\000"
+            VALUE "FileVersion",      "0\000"
+            VALUE "Comments",  "Yet another multi-purpose extensible self-adaptive evolutionary algorithm.\000"
+            VALUE "URL",  "http://ugp3.sf.net/\000"
+            VALUE "GPL",   "This is free software, and you are welcome to redistribute it under certain conditions (see file COPYING for details)\000"
+        END
+    END
+END

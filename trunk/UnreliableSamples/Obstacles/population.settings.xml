@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<!--Così tende a massimizzare entrambi i parametri..altrimenti si concentra sul primo a scapito del secondo
+Si ferma quando raggiunge entrambi gli obiettivi!
+-->
+<parameters type="multiObjective"> 
+<!--parameters type="enhanced"-->
+  
+<!-- *** enhanced and multiObjective specific parameters *** -->
+
+	<!--fattore di diminuzione della fitness per individui cloni
+	0= scarta i cloni
+	-->
+	<cloneScalingFactor value="0.8"/>
+
+<!-- Number of heroes (individuals that do not age) -->
+	<eliteSize value="4"/>
+
+	<!-- the number of dimensions of the fitness -->
+	<fitnessParameters value="2"/>
+
+<!-- *** basic population parameters *** -->
+	
+	<!-- the definition of the constraints of the problem -->
+	<constraints value="constraints.xml"/>
+
+	<!-- maximum size of the population -->
+	<mu value="100"/>
+
+	<!-- initial size of the population -->
+	<nu value="100"/>
+
+	<!-- the number of genetic operators applied at every step of the evolution -->
+	<!-- aumentandolo può aumentare la velocità di convergenza verso la soluzione... perche' vengono applicate piu' mutazioni ed e' piu' probabile trovare
+	individui utili-->
+
+	<lambda value="100"/>
+
+	<!-- strength of the mutation operators -->
+	<!-- ugp applies one more mutation to an individual with sigma probability -->
+	<sigma value="0.9"/>
+
+	<!-- the inertia for the auto-adaptation of the parameters -->
+	<inertia value="1"/>
+	
+	<!-- the maximum age of the individuals -->
+	<maximumAge value="1000000000"/>
+
+	<!-- when set to true, the fitness of all the individuals of the population
+	 is discarded at every step so that in the next step it is re-evaluated -->
+	<invalidateFitnessAfterGeneration value="0"/>
+	
+<!-- Stop conditions (all are optional) -->
+
+	<!-- maximum number of generations -->
+	<maximumGenerations value="5000"/>
+	
+	<!-- maximum number of evaluations performed -->
+	<!-- maximumEvaluations value="10000000"/-->
+
+	<!-- numero di generazioni per cui non si ha un cambiamento nell'individuo migliore-->
+	<!-- for multiObjective evolution, number of generations where no individuals in first level are declassed to lower levels (individuals in first level are removed only by slaughtering) -->
+	<maximumSteadyStateGenerations value="100000"/>
+	
+	<!-- maximum value of the fitness -->
+	<!-- Con piu' componenti vengono massimizzate entrambe;
+	se si utilizza enhanced viene massimizzata prima la prima componente, poi si massimizza l'altra-->
+	<maximumFitness value="0.5 0.0625"/> 
+
+<!-- end stop conditions -->
+
+<selection type="tournamentWithFitnessHole" tau="2" tauMin="2" tauMax="2" fitnessHole="0" />
+	  
+	<!-- Fitness hole confronta gli individui con un "altro" parametro diverso dalla fitness che può essere la lunghezza
+	serve per "spingere l'algoritmo" verso un'altra direzione; at the moment the other parameter is deltaEntropy -->
+
+	<operatorsStatistics>
+		
+		<operator ref="insertionMutation">
+			<weight current="0.5" minimum="0" maximum="1"/>
+		</operator>
+		<operator ref="removalMutation">
+			<weight current="0.5" minimum="0" maximum="1"/>
+		</operator>
+		<operator ref="replacementMutation">
+			<weight current="0.5" minimum="0" maximum="1"/>
+		</operator>
+
+<!--<operator ref="singleParameterAlterationMutation">
+			<weight current="0.5" minimum="0" maximum="1"/>
+		</operator>-->
+		
+<operator ref="onePointSafeSimpleCrossover">
+			<weight current="0.5" minimum="0" maximum="1"/>
+		</operator>
+
+		<!--<operator ref="onePointSafeCrossover">
+			<weight current="1" minimum="0" maximum="1"/>
+		</operator>
+		<operator ref="onePointSafeSimpleCrossover">
+			<weight current="1" minimum="0" maximum="1"/>
+		</operator>
+		<operator ref="twoPointSafeSimpleCrossover">
+			<weight current="1" minimum="0" maximum="1"/>
+		</operator>
+		<operator ref="singleParameterAlterationMutation">
+			<weight current="1" minimum="0" maximum="1"/>
+		</operator>
+		
+		<operator ref="alterationMutation">
+			<weight current="1" minimum="0" maximum="1"/>
+		</operator>
+		<operator ref="subGraphInsertionMutation">
+			<weight current="1" minimum="0" maximum="1"/>
+		</operator>
+		<operator ref="subGraphRemovalMutation">
+			<weight current="1" minimum="0" maximum="1"/>
+		</operator>
+		<operator ref="scanMutation">
+			<weight current="1" minimum="0" maximum="1"/>
+		</operator>
+		<operator ref="subGraphReplacementMutation">
+			<weight current="1" minimum="0" maximum="1"/>
+		</operator>
+		<operator ref="randomWalkMutation">
+			<weight current="1" minimum="0" maximum="1"/>
+		</operator>
+		<operator ref="localScanMutation">
+			<weight current="1" minimum="0" maximum="1"/>
+		</operator>-->
+	</operatorsStatistics>
+</parameters>

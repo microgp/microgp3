@@ -1,0 +1,28 @@
+PROCEDURE TO RUN THE EXPERIMENTS
+--------------------------------
+a) cd to one of the test functions directories (e.g. cd zdt2)
+b) compile the .cpp file into an executable with the same name (e.g. g++ zdt2.cpp -o zdt2)
+c) create a symbolic link to the Perl script that will be used to run the experiments (e.g. ln -sf ../perl-scripts/run-experiments.pl .)
+d) check that ugp3/nsga2 are inside the directory (or accessible)
+e) run the Perl script (e.g. perl run-experiments.pl --number 5 --directory ugp3-5exp-5k-mu40-l20)
+f) the results will be stored inside the given directory
+
+In order to visually compare the results of ugp3 and nsga2, it is necessary to run both, and then call the script that produces a .dot file that can be later processed by graphviz.
+
+
+
+2013-12-08
+----------
+NSGA-II is now running as it should, and experiments with ZDT2 are complete (for 10k evaluations, at least). Now, it's the time to go on to ZDT3, that features a Pareto front with discontinuities.
+
+2013-12-06
+----------
+Aaaand exactly SEVEN months later, we resume the project! So, here is the configuration for zdt2:
+
+the Pareto front is obj2 = 1 - (obj1)^2
+
+2013-05-06
+----------
+The idea is to try our method on several benchmarks for MO optimization. There is an interesting publication with some comparisons, full of details (such as population size and so on) for NSGA-II and other MOEAs.
+
+The objective is to obtain a reasonable performance.

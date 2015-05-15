@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <context name="evolution">
+    <!-- The seed for the pseudo-random number generator. If missing or 0 use epoch. -->
+    <option name="randomSeed" value="42" />
+    <!-- For each population, its name and the file where the population parameters are defined. -->
+    <option name ="populations">
+      <population name="P1" value="onemax.population.settings.xml" />
+    </option>
+    <!-- The file where the statistics on the evolution are saved. -->
+    <option name="statisticsPathName" value="statistics.csv" />
+    <!-- Merges two populations together specifying their indexes separated by whitespaces (e.g. '0 1; 1 2' tells to merge population 1 into population 0 and then population 2 in population 1.) -->
+    <!--option name="merge" value="" /-->
+	
+  </context>
+  <context name="recovery">
+    <!-- The name of the file where the state of the algorthm is saved at the end of every generation. -->
+    <option name="recoveryOutput" value="status.xml" />
+    <!-- When set to true, overwrites the previous state file, otherwise saves it to another file. -->
+    <option name="recoveryOverwriteOutput" value="true" />
+    <!-- When set to true, discards the fitness contained in the state file and re-evaluates the individuals. -->
+    <option name="recoveryDiscardFitness" value="true" />
+</context>
+
+  <context name="logging">
+    <!-- Only essential information on standard output -->
+    <option name="std::cout" value="info; brief" />
+    <!-- <option name="debug.log" value="debug; brief" /> -->
+    <option name="verbose.log" value="verbose; brief" />
+  </context>
+  
+</settings>

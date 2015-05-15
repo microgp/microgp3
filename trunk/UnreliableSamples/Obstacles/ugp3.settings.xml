@@ -1,0 +1,27 @@
+<settings>
+
+<context name="evolution">
+     <!-- Se non è specificato dovrebbe partire casualmente ogni volta da un numero casuale diverso -->
+	<!-- Same seed gives same results for every run -->
+    <option name="randomSeed" value="5987579" type="integer" />
+
+    <option name="statisticsPathName" value="statistics.xml" type="string" />
+    <option name="population" value="population.settings.xml" type="string" />
+</context>
+
+<context name="evaluation">
+    <option name="concurrentEvaluations" value="50" type="integer" />
+    <option name="evaluatorPathName" value="./Evaluator" type="string" />
+<!--option name="evaluatorInputPathName" value="/dev/shm/individual.input" type="string" /-->
+    <option name="evaluatorInputPathName" value="individual.input" type="string" />
+    <option name="evaluatorOutputPathName" value="fitness.output" type="string" />
+    <option name="removeTempFiles" value="true" type="boolean" />
+</context>
+
+<context name="recovery">
+    <option name="recoveryOutput" value="Algorithm.xml" type="string" />
+    <option name="recoveryOverwriteOutput" value="true" type="boolean" />
+    <option name="recoveryDiscardFitness" value="true" type="boolean" />
+</context>
+
+</settings>

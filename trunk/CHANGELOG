@@ -1,0 +1,36 @@
+ugp3 version 3.3 (Camellia)
+===========================
+
+For a detailed list of improvements, see http://sourceforge.net/p/ugp3/wiki/Changes%20introduced%20in%20Camellia/
+
+GENERAL
+-------
+- MicroGP is now C++11 compliant
+- The self-adapting mechanism that manages operators' activation probabilities has been improved with the state-of-the-art Dynamic Multi-Armed Bandit logic
+- The "info" (basic) log now displays more information, in particular
+	-- relative (%) size of the tournament selection with respect to the population
+	-- total number of evaluations (calls to the evaluation program) so far 
+	-- if the steady state stop condition is set, number of generations with no improvement of the best solution
+- Lots of bug fixing
+
+multiObjective
+--------------
+- Multi-objective optimization fixed and improved with crowding distance (NSGA-II like)
+- "eliteSize" parameter in "multiObjective" populations now indicates the number of fronts to preserve, rather than the number of individuals; for example, eliteSize=1 makes individuals on the Pareto front immortal
+
+Population Inspector (alpha)
+--------------------
+- A Qt-based GUI companion program called "Population Inspector" is added to the project
+- Population Inspector allows the user to explore population XML files (e.g., status.xml)
+- Individuals are shown in a table, with their ID, parents, operator and fitness values
+- Population statistics (e.g., size, offspring size, current activation probabilities of the operators) are also displayed
+- Single individuals in the population can be selected and saved to a text file
+- WARNING: this software is still experimental, it *is* unstable and it *will* crash frequently. Qt4.8+ libraries are required to compile and run it. 
+
+Individual Editor (alpha)
+-----------------
+- A Qt-based GUI companion program called "Individual Editor" is added to the project
+- Individual Editor allows users to manually create and add individuals to an existing population
+- The aim of the program is to assist users by seeding the initial population with existing candidate solutions
+- Individuals are created and edited through a "wizard"-like interface
+- WARNING: this software is still experimental, it *is* unstable and it *will* crash frequently. Qt4.8+ libraries are required to compile and run it. 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt"?>
+<constraints
+  xmlns="http://www.cad.polito.it/ugp3/schemas/constraints" 
+  id="One-Max" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+  <typeDefinitions>
+    <item type="constant" name="bit_type">
+      <value>*</value>
+      <value>1</value>
+    </item>
+  </typeDefinitions>
+  <commentFormat><value/></commentFormat>
+  <identifierFormat>n<value /></identifierFormat>
+  <labelFormat><value/>: </labelFormat>
+  <uniqueTagFormat><value /></uniqueTagFormat>
+  <prologue id="globalPrologue"/>
+  <epilogue id="globalEpilogue"/>
+  <sections>
+    <section id="bitString" prologueEpilogueCompulsory="false">
+      <prologue id="sectionPrologue"/>
+      <epilogue id="sectionEpilogue"/>
+      <subSections>
+        <subSection id="main" maxOccurs="10" minOccurs="1" maxReferences="0">
+          <prologue id="stringPrologue"/>
+          <epilogue id="stringEpilogue"><expression>
+</expression>
+         </epilogue>
+          <macros maxOccurs="64" minOccurs="64" averageOccurs="64" sigma="0">
+            <macro id="bitString" >
+              <expression><param ref="bit"/></expression>
+                <parameters>
+                  <item type="definedType" ref="bit_type" name="bit" />
+                </parameters>
+            </macro>
+          </macros>
+        </subSection>
+      </subSections>
+    </section>
+  </sections>
+</constraints>

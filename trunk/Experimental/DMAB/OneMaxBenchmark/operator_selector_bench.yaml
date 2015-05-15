@@ -1,0 +1,110 @@
+# Benchmark of various operator selection strategies
+
+# Directories of the tests to use for the benchmark, and files that determine the outcome
+tests:
+  1M_dmab:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+  1M_roulette:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+  1M_random:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+  1M_sa:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+  1M_smooth:
+    files: [onemax.constraints.xml, onemax.fitness-script.lua,
+      onemax.population.settings.xml, ugp3.settings.xml]
+  1M_ass_dmab:
+    files: [compat_eval.lua, constraints.xml.x86_64,
+      eval.lua, main.c, population.settings.xml, ugp3.settings.xml]
+  1M_ass_roulette:
+    files: [compat_eval.lua, constraints.xml.x86_64,
+      eval.lua, main.c, population.settings.xml, ugp3.settings.xml]
+  1M_ass_random:
+    files: [compat_eval.lua,  constraints.xml.x86_64,
+      eval.lua, main.c, population.settings.xml, ugp3.settings.xml]
+  1M_ass_sa:
+    files: [compat_eval.lua, constraints.xml.x86_64,
+      eval.lua, main.c, population.settings.xml, ugp3.settings.xml]
+  1M_ass_smooth:
+    files: [compat_eval.lua, constraints.xml.x86_64,
+      eval.lua, main.c, population.settings.xml, ugp3.settings.xml]
+  1M_ass_smart_dmab:
+    files: [compat_eval.lua, constraints.xml.x86_64,
+      eval.lua, main.c, population.settings.xml, ugp3.settings.xml]
+  1M_ass_smart_roulette:
+    files: [compat_eval.lua, constraints.xml.x86_64,
+      eval.lua, main.c, population.settings.xml, ugp3.settings.xml]
+  1M_ass_smart_random:
+    files: [compat_eval.lua,  constraints.xml.x86_64,
+      eval.lua, main.c, population.settings.xml, ugp3.settings.xml]
+  1M_ass_smart_sa:
+    files: [compat_eval.lua, constraints.xml.x86_64,
+      eval.lua, main.c, population.settings.xml, ugp3.settings.xml]
+  1M_ass_smart_smooth:
+    files: [compat_eval.lua, constraints.xml.x86_64,
+      eval.lua, main.c, population.settings.xml, ugp3.settings.xml]
+  sc4full_dmab:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  sc4full_sa:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  sc4full_roulette:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  sc4full_random:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  sc4full_smooth:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  smart_sc4full_dmab:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  smart_sc4full_sa:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  smart_sc4full_roulette:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  smart_sc4full_random:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  smart_sc4full_smooth:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+
+# Names of the MicroGP executables to run
+ugp_executables:
+  - ./ugp3_camellia_r582
+
+# Random seeds to use
+seeds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+
+# Whether to show the full ugp output or only the generations
+full_ugp_output: false

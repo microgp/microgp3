@@ -1,0 +1,17 @@
+-*- text -*-
+
+Multi-objective maximization of two, independent quantities.
+
+Individuals encode two real values: rho [1, 100] and theta [0,
+Pi/2]. The two components of the "fitness" are calculated translating
+the polar coordinates into Cartesian ones. I.e.,
+
+x = rho * cos(theta)
+y = rho * sin(theta)
+
+Useless, as many examples, but it is pretty easy to see the Pareto
+Front here...
+
+The evaluator can evaluate any number of individuals of arbitrary
+length in the same invocation (here concurrentEvaluations is set to
+50).

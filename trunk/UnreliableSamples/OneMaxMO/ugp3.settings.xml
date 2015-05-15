@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  
+  <context name="evolution">
+    <option name="randomSeed" value="5987579" />
+    <option name="statisticsPathName" value="statistics.csv" />
+    <option name ="populations">
+      <population name="P1" value="population.settings.xml" />
+    </option>
+  </context>
+  
+  <context name="recovery">
+    <option name="recoveryInput" value="" />
+    <option name="recoveryInputPopulations" value="" />
+    <option name="recoveryOutput" value="Algorithm.xml" />
+    <option name="recoveryOverwriteOutput" value="true" type="boolean" />
+    <option name="recoveryDiscardFitness" value="true" type="boolean" />
+  </context>
+  
+  <context name="logging">
+    <option name="std::cout" value="info; brief" />
+  </context>
+  
+</settings>

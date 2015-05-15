@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt"?>
+<constraints
+  xmlns="http://www.cad.polito.it/ugp3/schemas/constraints" 
+  id="Banana" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+  <commentFormat><value/></commentFormat>
+  <identifierFormat>n<value /></identifierFormat>
+  <labelFormat><value/>: </labelFormat>
+  <uniqueTagFormat><value /></uniqueTagFormat>
+  <prologue id="prologue"/>
+  <epilogue id="epilogue"/>
+  <sections>
+    <section id="section" prologueEpilogueCompulsory="false">
+      <prologue id="prologue"/>
+      <epilogue id="epilogue">
+        <expression></expression>
+      </epilogue>
+      <subSections>
+        <subSection id="subSection" maxOccurs="1" minOccurs="1" maxReferences="0">
+          <prologue id="prologue"/>
+          <epilogue id="epilogue"/>
+          <macros maxOccurs="2" minOccurs="2" averageOccurs="2" sigma="0">
+            <macro id="value" >
+              <expression><param ref="value"/> </expression>
+                <parameters>
+                  <item xsi:type="float" name="value" minimum="-100" maximum="100" />
+                </parameters>
+            </macro>
+          </macros>
+        </subSection>
+      </subSections>
+    </section>
+  </sections>
+</constraints>

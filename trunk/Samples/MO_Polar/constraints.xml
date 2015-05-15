@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<constraints id="One-Max">
+  <commentFormat><value/></commentFormat>
+  <identifierFormat>n<value /></identifierFormat>
+  <labelFormat><value/>: </labelFormat>
+  <uniqueTagFormat><value /></uniqueTagFormat>
+  <prologue id="emptyGlobalPrologue"/>
+  <epilogue id="emptyGlobalEpilogue"/>
+  <sections>
+    <section id="bitString" prologueEpilogueCompulsory="false">
+      <prologue id="emptySectionPrologue"/>
+      <epilogue id="emptySectionEpilogue"/>
+      <subSections>
+        <subSection id="main" maxOccurs="1" minOccurs="1" maxReferences="0">
+          <prologue id="emptySubSectionPrologue"/>
+          <epilogue id="emptySubSectionEpilogue"/>
+          <macros maxOccurs="1" minOccurs="1" averageOccurs="1" sigma="10">
+            <macro id="rho_theta" >
+              <expression><param ref="rho"/> <param ref="theta"/></expression>
+                <parameters>
+                  <item name="rho" type="float" minimum="1" maximum="100" />
+                  <item name="theta" type="float" minimum="0" maximum="1.570795" />
+                </parameters>
+            </macro>
+          </macros>
+        </subSection>
+      </subSections>
+    </section>
+  </sections>
+</constraints>

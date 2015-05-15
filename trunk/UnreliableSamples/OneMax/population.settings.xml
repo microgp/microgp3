@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<parameters type="enhanced">
+  <mu value="10"/>
+  <nu value="10"/>
+  <lambda value="100"/>
+  <inertia value="0.5"/>
+  <fitnessParameters value="1"/>
+  <maximumAge value="2"/>
+<maximumGenerations value="10"/>
+<maximumSteatyStateGenerations value="20"/>
+<maximumFitness value="50"/>
+<maximumEvaluations value="500"/>
+<sigma value="0.3"/>
+<constraints value="OneMax.constraints.xml"/>
+<cloneScalingFactor value="0.0"/>
+<eliteSize value="3"/>
+<selection type="tournamentWithFitnessHole" tau="1" tauMin="1" tauMax="10" fitnessHole="1"/>
+<operatorsStatistics>
+<operator ref="alterationMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="singleParameterAlterationMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="insertionMutation">
+  <weight current="0" minimum="0" maximum="0"/>
+</operator>
+<operator ref="removalMutation">
+  <weight current="0" minimum="0" maximum="0"/>
+</operator>
+<operator ref="onePointSafeCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="onePointSafeSimpleCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="twoPointSafeSimpleCrossover">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="replacementMutation">
+  <weight current="1" minimum="0" maximum="1"/>
+</operator>
+<operator ref="scanMutation">
+  <weight current="0" minimum="0" maximum="0"/>
+</operator>
+<operator ref="randomWalkMutation">
+  <weight current="0" minimum="0" maximum="0"/>
+</operator>
+<operator ref="subGraphInsertionMutation">
+  <weight current="0" minimum="0" maximum="0"/>
+</operator>
+<operator ref="subGraphRemovalMutation">
+  <weight current="0" minimum="0" maximum="0"/>
+</operator>
+</operatorsStatistics>
+</parameters>

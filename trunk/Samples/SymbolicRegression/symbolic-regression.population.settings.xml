@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters xmlns="http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm" type="enhanced">
+
+<cloneScalingFactor value="0"/>
+<eliteSize value="20"/>
+
+<mu value="100"/>
+<nu value="100"/>
+<lambda value="100"/>
+<selection type="tournamentWithFitnessHole" tau="2" tauMin="1" tauMax="4" fitnessHole="0"/>
+
+<!-- fitness parameters: average derivative difference / average difference / percentage of expressed nodes / parcimony -->
+<fitnessParameters value="4"/>
+<maximumAge value="10000"/>
+<sigma value="0.9"/>
+<inertia value="0.99"/>
+<invalidateFitnessAfterGeneration value="false"/>
+<constraints value="symbolic-regression.constraints.xml"/>
+
+<!-- Termination conditions -->
+<maximumTime hours="2000" minutes="0" seconds="0"/>
+<maximumGenerations value="100"/>
+<maximumFitness value="10 10 0 0"/>
+<!--
+<maximumFitness value="10 0 0"/>
+<maximumEvaluations value="60000000"/>
+<maximumSteadyStateGenerations value="200"/>
+-->
+
+<evaluation>
+ <concurrentEvaluations value="1"/>
+ <removeTempFiles value="true"/>
+ <evaluatorPathName value="./evaluator --data data.txt --tree "/>
+ <evaluatorInputPathName value="individual.input"/>
+ <evaluatorOutputPathName value="fitness.output"/>
+</evaluation>
+
+
+<operators default="none">
+<operator ref="onePointImpreciseCrossover"/>
+<operator ref="singleParameterAlterationMutation"/>
+<operator ref="insertionMutation"/>
+<operator ref="removalMutation"/>
+<operator ref="replacementMutation"/>
+<operator ref="alterationMutation"/>
+<!-- 	
+	since the genome defined in the constraints has no outerLabel parameters,
+	these two crossovers work exactly as the "Imprecise" ones
+
+    <operator ref="onePointCrossover">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+    <operator ref="twoPointCrossover">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+	
+	since the genome defined in the constraints contains a single section 
+	and a single subsection, all operators that act on subsections do not
+	work, with the exception of subGraphReplacementMutation, that de facto
+	creates a completely random individual
+
+    <operator ref="subGraphInsertionMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <operator ref="subGraphRemovalMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <operator ref="subGraphReplacementMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+
+    -->
+</operators>
+</parameters>

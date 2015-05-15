@@ -1,0 +1,97 @@
+# Benchmark of MicroGP PalmTree vs revisions of GroupEvolutionJany branch
+
+# Directories of the tests to use for the benchmark, and files that determine the outcome
+tests:
+  # lampade_lua:
+  #   files: [eval.lua, compat_eval.lua, parameters.txt, constraints.xml,
+  #     population.settings.xml, ugp3.settings.xml]
+  # lampade_lua_big:
+  #   files: [eval.lua, compat_eval.lua, parameters.txt, constraints.xml,
+  #     population.settings.xml, ugp3.settings.xml]
+  # string_coverage_lua_2:
+  #   files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+  #     string-coverage.constraints.xml, string-coverage.population.xml,
+  #     ugp3.settings.xml, params.txt]
+  #   precmd: "perl string-coverage.generator.pl $seed"
+  string_coverage_lua_4_good1:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  string_coverage_lua_4_good2:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  string_coverage_lua_4_good3:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  string_coverage_lua_4_good4:
+    files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+      string-coverage.constraints.xml, string-coverage.population.xml,
+      ugp3.settings.xml, params.txt]
+    precmd: "perl string-coverage.generator.pl $seed"
+  #string_coverage_lua_4_bare:
+  #  files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+  #    string-coverage.constraints.xml, string-coverage.population.xml,
+  #    ugp3.settings.xml, params.txt]
+  #  precmd: "perl string-coverage.generator.pl $seed"
+  #string_coverage_lua_4_indsharing:
+  #  files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+  #    string-coverage.constraints.xml, string-coverage.population.xml,
+  #    ugp3.settings.xml, params.txt]
+  #  precmd: "perl string-coverage.generator.pl $seed"
+  #string_coverage_lua_4_grsharing:
+  #  files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+  #    string-coverage.constraints.xml, string-coverage.population.xml,
+  #    ugp3.settings.xml, params.txt]
+  #  precmd: "perl string-coverage.generator.pl $seed"
+  #string_coverage_lua_4_grindsharing:
+  #  files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+  #    string-coverage.constraints.xml, string-coverage.population.xml,
+  #    ugp3.settings.xml, params.txt]
+  #  precmd: "perl string-coverage.generator.pl $seed"
+  #string_coverage_lua_4_hole:
+  #  files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+  #    string-coverage.constraints.xml, string-coverage.population.xml,
+  #    ugp3.settings.xml, params.txt]
+  #  precmd: "perl string-coverage.generator.pl $seed"
+  #string_coverage_lua_4_scan:
+  #  files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+  #    string-coverage.constraints.xml, string-coverage.population.xml,
+  #    ugp3.settings.xml, params.txt]
+  #  precmd: "perl string-coverage.generator.pl $seed"
+  #string_coverage_lua_4_full:
+  #  files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+  #    string-coverage.constraints.xml, string-coverage.population.xml,
+  #    ugp3.settings.xml, params.txt]
+  #  precmd: "perl string-coverage.generator.pl $seed"
+  #string_coverage_lua_8:
+  #  files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+  #    string-coverage.constraints.xml, string-coverage.population.xml,
+  #    ugp3.settings.xml, params.txt]
+  #  precmd: "perl string-coverage.generator.pl $seed"
+  #string_coverage_lua_skewed:
+  #  files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+  #    string-coverage.constraints.xml, string-coverage.population.xml,
+  #    ugp3.settings.xml, params.txt]
+  #  precmd: "perl string-coverage.generator.pl $seed"
+  #string_coverage_lua_skewed_indsharing:
+  #  files: [eval.lua, compat_eval.lua, string-coverage.generator.pl,
+  #    string-coverage.constraints.xml, string-coverage.population.xml,
+  #    ugp3.settings.xml, params.txt]
+  #  precmd: "perl string-coverage.generator.pl $seed"
+
+# Names of the MicroGP executables to run
+ugp_executables:
+  - ./ugp3_camellia_r611
+
+# Random seeds to use
+seeds: [1, 2, 3, 4, 5, 6, 7, 8]
+# seeds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+# Whether to show the full ugp output or only the generations
+full_ugp_output: false
+

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<constraints id="One-Max">
+  <typeDefinitions>
+    <item type="constant" name="comparison">
+      <value>==</value>
+      <value>!=</value>
+      <value>></value>
+      <value>>=</value>
+	  <value>&lt;</value>
+	  <value>&lt;=</value>
+    </item>
+    <item type="constant" name="comparison2Int">
+      <value>==</value>
+      <value>!=</value>
+      <value>></value>
+      <value>>=</value>
+    </item>
+    <item type="constant" name="comparisonFloat">
+      <value>></value>
+      <value>>=</value>
+	  <value>&lt;</value>
+	  <value>&lt;=</value>
+    </item>
+    <item type="constant" name="comparison2Float">
+      <value>></value>
+      <value>>=</value>
+    </item>
+    <item type="constant" name="comparisonBinaire">
+      <value>==</value>
+    </item>
+    <item type="constant" name="comparisonPredefini">
+      <value>==</value>
+      <value>!=</value>
+    </item>
+    
+    <item type="constant" name="parameterWS1">
+      <value>LiberationWS1M1</value>
+      <value>LiberationWS1M2</value>
+    </item>
+	<item type="constant" name="parameterWS2">
+      <value>LiberationWS2M1</value>
+      <value>LiberationWS2M2</value>
+    </item>
+    <item type="constant" name="parameterDisp">
+      <value>DisponibiliteWS1M1</value>
+      <value>DisponibiliteWS1M2</value>
+      <value>DisponibiliteWS2M1</value>
+      <value>DisponibiliteWS2M2</value>
+    </item>
+    <item type="constant" name="parameterProxPause">
+      <value>Compteur50WS1M1</value>
+      <value>Compteur50WS1M2</value>
+      <value>Compteur50WS2M1</value>
+      <value>Compteur50WS2M2</value>
+    </item>
+    <item type="constant" name="parameterFile">
+      <value>ProcessWS1M1</value>
+      <value>ProcessWS1M2</value>
+      <value>ProcessWS2M1</value>
+      <value>ProcessWS2M2</value>
+    </item>
+    
+    <item type="constant" name="action">
+      <value>11</value>
+      <value>12</value>
+      <value>21</value>
+      <value>22</value>
+    </item>
+  </typeDefinitions>
+  
+  <commentFormat><value/></commentFormat>
+  <identifierFormat>n<value /></identifierFormat>
+  <labelFormat><value/>: </labelFormat>
+  <uniqueTagFormat><value /></uniqueTagFormat>
+  <prologue id="globalPrologue"/>
+  <epilogue id="globalEpilogue"/>
+  <sections>
+    <section id="sectionRules" prologueEpilogueCompulsory="false">
+      <prologue id="sectionPrologue"/>
+      <epilogue id="sectionEpilogue">
+	<expression> 11
+</expression>
+      </epilogue>
+      <subSections>
+	      <subSection id="subSectionRules" maxOccurs="1" minOccurs="1" maxReferences="0">
+	        <prologue id="stringPrologue"/>
+	        <epilogue id="stringEpilogue"/>
+	  
+	        <macros maxOccurs="10" minOccurs="4" averageOccurs="5" sigma="3">
+
+            <macro id="twoParametersLibWS1Jump">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterWS1" />
+                <item name="c" type="definedType" ref="comparison2Float" />
+                <item name="p2" type="definedType" ref="parameterWS1" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+
+            <macro id="twoParametersLibWS1">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterWS1" />
+                <item name="c" type="definedType" ref="comparison2Float" />
+                <item name="p2" type="definedType" ref="parameterWS1" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <macro id="twoParametersLibWS2Jump">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterWS2" />
+                <item name="c" type="definedType" ref="comparison2Float" />
+                <item name="p2" type="definedType" ref="parameterWS2" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+
+            <macro id="twoParametersLibWS2">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterWS2" />
+                <item name="c" type="definedType" ref="comparison2Float" />
+                <item name="p2" type="definedType" ref="parameterWS2" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <!--<macro id="twoParametersProxPauseJump">
+              <expression>if(<param ref="p"/> <param ref="c"/> <param ref="i"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameterProxPause" />
+                <item name="c" type="definedType" ref="comparison" />
+                <item name="i" type="integer" minimum="1" maximum="49" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+
+            <macro id="twoParametersProxPause">
+              <expression>if(<param ref="p"/> <param ref="c"/> <param ref="i"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameterProxPause" />
+                <item name="c" type="definedType" ref="comparison" />
+                <item name="i" type="integer" minimum="1" maximum="49" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>-->
+
+            <!-- <macro id="twoParametersDateLibJump">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterDateLib" />
+                <item name="c" type="definedType" ref="comparison2Float" />
+                <item name="p2" type="definedType" ref="parameterDateLib" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+
+            <macro id="twoParametersDateLib">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterDateLib" />
+                <item name="c" type="definedType" ref="comparison2Float" />
+                <item name="p2" type="definedType" ref="parameterDateLib" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <macro id="oneParameterLoiArrivee">
+              <expression>if(<param ref="p"/> <param ref="c"/> <param ref="i"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameterLoiArrivee" />
+                <item name="c" type="definedType" ref="comparisonFloat" />
+                <item name="i" type="float" minimum="1" maximum="3" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <macro id="oneParameterLoiArriveeJump">
+              <expression>if(<param ref="p"/> <param ref="c"/> <param ref="i"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameterLoiArrivee" />
+                <item name="c" type="definedType" ref="comparisonFloat" />
+                <item name="i" type="float" minimum="1" maximum="3" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+			
+			<macro id="oneParameterDate">
+              <expression>if(<param ref="p"/> <param ref="c"/> <param ref="i"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameterDates" />
+                <item name="c" type="definedType" ref="comparisonFloat" />
+                <item name="i" type="float" minimum="0" maximum="180" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <macro id="oneParameterDateJump">
+              <expression>if(<param ref="p"/> <param ref="c"/> <param ref="i"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameterDates" />
+                <item name="c" type="definedType" ref="comparisonFloat" />
+                <item name="i" type="float" minimum="0" maximum="180" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+			
+			<macro id="oneParameterDateTnow">
+              <expression>if(<param ref="p"/> <param ref="c"/> tnow) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameterDates" />
+                <item name="c" type="definedType" ref="comparisonFloat" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <macro id="oneParameterDateTnowJump">
+              <expression>if(<param ref="p"/> <param ref="c"/> tnow) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameterDates" />
+                <item name="c" type="definedType" ref="comparisonFloat" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+
+            <macro id="oneParameter">
+              <expression>if(<param ref="p"/> <param ref="c"/> <param ref="i"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameter" />
+                <item name="c" type="definedType" ref="comparison" />
+                <item name="i" type="integer" minimum="0" maximum="100" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <macro id="oneParameterJump">
+              <expression>if(<param ref="p"/> <param ref="c"/> <param ref="i"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameter" />
+                <item name="c" type="definedType" ref="comparison" />
+                <item name="i" type="integer" minimum="0" maximum="100" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+            
+            <macro id="twoParameterFile">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterFile" />
+                <item name="c" type="definedType" ref="comparison2Int" />
+                <item name="p2" type="definedType" ref="parameterFile" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <macro id="twoParameterFileJump">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterFile" />
+                <item name="c" type="definedType" ref="comparison2Int" />
+                <item name="p2" type="definedType" ref="parameterFile" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+            
+			<macro id="twoParameterFileAB">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterFileAB" />
+                <item name="c" type="definedType" ref="comparison2Int" />
+                <item name="p2" type="definedType" ref="parameterFileAB" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <macro id="twoParameterFileABJump">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterFileAB" />
+                <item name="c" type="definedType" ref="comparison2Int" />
+                <item name="p2" type="definedType" ref="parameterFileAB" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+            
+			<macro id="oneParameterPosition">
+              <expression>if(PositionMachineAB <param ref="c"/> <param ref="i"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="c" type="definedType" ref="comparisonPredefini" />
+                <item name="i" type="integer" minimum="1" maximum="2" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <macro id="oneParameterPositionJump">
+              <expression>if(PositionMachineAB <param ref="c"/> <param ref="i"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="c" type="definedType" ref="comparisonPredefini" />
+                <item name="i" type="integer" minimum="1" maximum="2" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+			
+			<macro id="oneParameterBinaire">
+              <expression>if(<param ref="p"/> <param ref="c"/> <param ref="i"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameterBinaire" />
+				<item name="c" type="definedType" ref="comparisonBinaire" />
+                <item name="i" type="integer" minimum="0" maximum="1" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <macro id="oneParameterBinaireJump">
+              <expression>if(<param ref="p"/> <param ref="c"/> <param ref="i"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p" type="definedType" ref="parameterBinaire" />
+				<item name="c" type="definedType" ref="comparisonBinaire" />
+                <item name="i" type="integer" minimum="0" maximum="1" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro>
+			
+			<macro id="twoParameterOccupation">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) <param ref="a1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterRessource" />
+				<item name="c" type="definedType" ref="comparisonPredefini" />
+                <item name="p2" type="definedType" ref="parameterRessource" />
+                <item name="a1" type="definedType" ref="action" />
+              </parameters>
+            </macro>
+
+            <macro id="twoParameterOccupationJump">
+              <expression>if(<param ref="p1"/> <param ref="c"/> <param ref="p2"/>) jumpTo <param ref="j1"/>
+</expression>
+              <parameters>
+                <item name="p1" type="definedType" ref="parameterRessource" />
+				<item name="c" type="definedType" ref="comparisonPredefini" />
+                <item name="p2" type="definedType" ref="parameterRessource" />
+                <item name="j1" type="innerForwardLabel" epilogue="true" itself="false" />
+              </parameters>
+            </macro> -->
+
+          </macros>
+        </subSection>
+      </subSections>   
+    </section>
+  </sections>
+</constraints>

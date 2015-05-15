@@ -1,0 +1,39 @@
+-*-text-*-
+
+Banana function: Sample application for MicroGP3 
+$Revision: 644 $
+$Date: 2015-02-23 14:50:30 +0100 (Mon, 23 Feb 2015) $
+
+Email: ugp3@cad.polito.it
+Home: http://www.cad.polito.it/ugp3/
+Sourceforge project: http://sourceforge.net/projects/ugp3/
+
+
+WHTAT IS IT?
+~~~~~~~~~~~~
+
+This demo shows the ability of MicroGP in solving simple mathematical functions.
+The Rosenbrock banana function is used. It has a global minimum of 0 in (1,1).
+
+
+BUILD INSTRUCTIONS
+~~~~~~~~~~~~~~~~~~
+
+Before starting MicroGP to solve the problem, you need to compile the evaluator.
+Type 'make' from the root directory of the microgp project. This will
+compile the evaluator of this sample.
+
+
+HOW TO
+~~~~~~
+
+After compiling the evaluator, run MicroGP in the directory 'Samples/Banana'.
+
+You can change the parameters in the xml settings file to try different 
+evolutive behaviours.
+
+
+CREDITS
+~~~~~~~
+
+Please visit our website or contact us by email for more information.

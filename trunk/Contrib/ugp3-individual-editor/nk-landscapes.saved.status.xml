@@ -1,0 +1,745 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<evolutionaryAlgorithm version='3.3.0_439'
+ step='53'
+ dateTime='2013-12-16T10:37:47'
+ seconds='3.12'
+ outputPathName='status.xml'
+ overwriteOutput='1'
+ statisticsPathName='statistics.csv'
+ randomState='33952 55663 15080 58989 57068 5'
+ infinityStringIndividual='2N'
+ infinityStringNode='MWA'
+ xmlns='http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm'
+ xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+ xsi:schemaLocation='http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm.xsd'>
+<populations>
+<population generation='0' name='' type='enhanced'>
+<!-- Cumulative seconds elapsed in all previous runs -->
+<elapsedTimePreviousRuns seconds="0" />
+<parameters type="base">
+<!-- the maximum size of the population -->
+<mu value="0"/>
+<!-- the initial size of the population -->
+<nu value="0"/>
+<!-- the numbers of genetic operators applied at every step of the evolution -->
+<lambda value="0"/>
+<!-- the inertia for the self-adaptating parameters [0,1] -->
+<inertia value="0"/>
+<!-- the number of dimensions of the fitness -->
+<fitnessParameters value="1"/>
+<!-- the maximum age of the individuals -->
+<maximumAge value="0"/>
+<!-- differential evolution crossover probability -->
+<diffevocp value="0"/>
+<!-- differential evolution differential weight -->
+<diffevodw value="0"/>
+<!-- the strength of the mutation operators (0,1) -->
+<sigma value="0"/>
+<!-- when set to true, the fitness of all the individuals of the population
+     is discarded at every step so that in the next step it is re-evaluated -->
+<invalidateFitnessAfterGeneration value="0"/>
+<!-- the definition of the constraints of the problem -->
+<constraints value="/home/alberto/Research/ugp3-palmtree/Contrib/ugp3-individual-editor/nk-landscapes.constraints.xml"/>
+<!-- parents selector parameters -->
+<selection type="tournament" tau="1" tauMin="1" tauMax="1" />
+<!-- evaluator parameters -->
+<evaluation>
+ <concurrentEvaluations value="1" />
+ <removeTempFiles value="false" />
+ <evaluatorPathName value="fitness.script" />
+ <evaluatorInputPathName value="fitness.input" />
+ <evaluatorOutputPathName value="fitness.output" />
+</evaluation>
+<!-- operator statistics -->
+</parameters>
+<!-- Entropy of the whole population -->
+<entropy value="4.9896" />
+<steadyState generations='50' previousMaxFitness='0.793365'/>
+<individuals best='AN' worst='XZ'>
+<!-- total 11 individuals -->
+<individual id="AN" allopatricTag="AN" type="enhanced" deltaEntropy="-0.00417814" isHero="true">
+<life birth='2' age='0' />
+<placeholder value="0"/>
+<lineage>
+<operator ref="NO_OPERATOR" />
+</lineage>
+<genome>
+<node id="Q" constraintsRef="/NK-Landscapes/globalPrologue">
+</node>
+<node id="7" constraintsRef="/NK-Landscapes/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="R" constraintsRef="/NK-Landscapes/bitString/sectionPrologue">
+</node>
+<node id="S" constraintsRef="/NK-Landscapes/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="T" constraintsRef="/NK-Landscapes/bitString/main/stringPrologue">
+<tag name="next" value="U"/>
+<tag name="place" value="0"/>
+</node>
+<node id="U" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="V"/>
+<tag name="prev" value="T"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="V" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="W"/>
+<tag name="prev" value="U"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="2"/>
+</node>
+<node id="W" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="X"/>
+<tag name="prev" value="V"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="X" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="Y"/>
+<tag name="prev" value="W"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="4"/>
+</node>
+<node id="Y" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="Z"/>
+<tag name="prev" value="X"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="5"/>
+</node>
+<node id="Z" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="2"/>
+<tag name="prev" value="Y"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="6"/>
+</node>
+<node id="2" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="3"/>
+<tag name="prev" value="Z"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="3" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="4"/>
+<tag name="prev" value="2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="4" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="5"/>
+<tag name="prev" value="3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="9"/>
+</node>
+<node id="5" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="6"/>
+<tag name="prev" value="4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="10"/>
+</node>
+<node id="6" constraintsRef="/NK-Landscapes/bitString/main/stringEpilogue">
+<tag name="prev" value="5"/>
+<tag name="place" value="11"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="WW" allopatricTag="WW" type="enhanced" deltaEntropy="0.00210768">
+<life birth='45' age='8' />
+<placeholder value="5"/>
+<lineage>
+<operator ref="onePointImpreciseCrossover" />
+<parents>
+<individual ref="SQ"/>
+<individual ref="V2"/>
+</parents>
+</lineage>
+<fitness>
+<description>#1100000111</description>
+<value>0.704819</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>#1100000111</description>
+<value>0.704819</value>
+</scaledFitness>
+<genome>
+<node id="K2A" constraintsRef="/NK-Landscapes/globalPrologue">
+</node>
+<node id="K2B" constraintsRef="/NK-Landscapes/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="K2C" constraintsRef="/NK-Landscapes/bitString/sectionPrologue">
+</node>
+<node id="K2D" constraintsRef="/NK-Landscapes/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="K2E" constraintsRef="/NK-Landscapes/bitString/main/stringPrologue">
+<tag name="next" value="K2F"/>
+<tag name="place" value="0"/>
+</node>
+<node id="K2F" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="K2G"/>
+<tag name="prev" value="K2E"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="K2G" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="K2H"/>
+<tag name="prev" value="K2F"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="2"/>
+</node>
+<node id="K2H" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="K2I"/>
+<tag name="prev" value="K2G"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="3"/>
+</node>
+<node id="K2I" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KZZ"/>
+<tag name="prev" value="K2H"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="KZZ" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KZ2"/>
+<tag name="prev" value="K2I"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="5"/>
+</node>
+<node id="KZ2" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KZ3"/>
+<tag name="prev" value="KZZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="6"/>
+</node>
+<node id="KZ3" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KZ4"/>
+<tag name="prev" value="KZ2"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="7"/>
+</node>
+<node id="KZ4" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KZ5"/>
+<tag name="prev" value="KZ3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="KZ5" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KZ6"/>
+<tag name="prev" value="KZ4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="9"/>
+</node>
+<node id="KZ6" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KZ7"/>
+<tag name="prev" value="KZ5"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="10"/>
+</node>
+<node id="KZ7" constraintsRef="/NK-Landscapes/bitString/main/stringEpilogue">
+<tag name="prev" value="KZ6"/>
+<tag name="place" value="11"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="YD" allopatricTag="YD" type="enhanced" deltaEntropy="-0.00389341">
+<life birth='48' age='5' />
+<placeholder value="6"/>
+<lineage>
+<operator ref="onePointImpreciseCrossover" />
+<parents>
+<individual ref="SQ"/>
+<individual ref="WD"/>
+</parents>
+</lineage>
+<fitness>
+<description>#1000000111</description>
+<value>0.696585</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>clone #1 of master &quot;SQ"</description>
+<value>0.696585</value>
+</scaledFitness>
+<genome>
+<node id="LQQ" constraintsRef="/NK-Landscapes/globalPrologue">
+</node>
+<node id="LQR" constraintsRef="/NK-Landscapes/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="LQS" constraintsRef="/NK-Landscapes/bitString/sectionPrologue">
+</node>
+<node id="LQT" constraintsRef="/NK-Landscapes/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="LQU" constraintsRef="/NK-Landscapes/bitString/main/stringPrologue">
+<tag name="next" value="LQV"/>
+<tag name="place" value="0"/>
+</node>
+<node id="LQV" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LQG"/>
+<tag name="prev" value="LQU"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="LQG" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LQH"/>
+<tag name="prev" value="LQV"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="2"/>
+</node>
+<node id="LQH" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LQI"/>
+<tag name="prev" value="LQG"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="3"/>
+</node>
+<node id="LQI" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LQJ"/>
+<tag name="prev" value="LQH"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="LQJ" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LQK"/>
+<tag name="prev" value="LQI"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="5"/>
+</node>
+<node id="LQK" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LQL"/>
+<tag name="prev" value="LQJ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="6"/>
+</node>
+<node id="LQL" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LQM"/>
+<tag name="prev" value="LQK"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="7"/>
+</node>
+<node id="LQM" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LQN"/>
+<tag name="prev" value="LQL"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="LQN" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LQO"/>
+<tag name="prev" value="LQM"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="9"/>
+</node>
+<node id="LQO" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LQP"/>
+<tag name="prev" value="LQN"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="10"/>
+</node>
+<node id="LQP" constraintsRef="/NK-Landscapes/bitString/main/stringEpilogue">
+<tag name="prev" value="LQO"/>
+<tag name="place" value="11"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="2C" allopatricTag="2C" type="enhanced" deltaEntropy="0.00219344">
+<life birth='52' age='1' />
+<placeholder value="7"/>
+<lineage>
+<operator ref="onePointImpreciseCrossover" />
+<parents>
+<individual ref="U4"/>
+<individual ref="U4"/>
+</parents>
+</lineage>
+<fitness>
+<description>#1010000111</description>
+<value>0.689397</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>clone #1 of master &quot;U4"</description>
+<value>0.689397</value>
+</scaledFitness>
+<genome>
+<node id="MQA" constraintsRef="/NK-Landscapes/globalPrologue">
+</node>
+<node id="MQB" constraintsRef="/NK-Landscapes/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="MQC" constraintsRef="/NK-Landscapes/bitString/sectionPrologue">
+</node>
+<node id="MQD" constraintsRef="/NK-Landscapes/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="MQE" constraintsRef="/NK-Landscapes/bitString/main/stringPrologue">
+<tag name="next" value="MQF"/>
+<tag name="place" value="0"/>
+</node>
+<node id="MQF" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MQW"/>
+<tag name="prev" value="MQE"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="MQW" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MQX"/>
+<tag name="prev" value="MQF"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="2"/>
+</node>
+<node id="MQX" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MQY"/>
+<tag name="prev" value="MQW"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="3"/>
+</node>
+<node id="MQY" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MQZ"/>
+<tag name="prev" value="MQX"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="MQZ" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MQ2"/>
+<tag name="prev" value="MQY"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="5"/>
+</node>
+<node id="MQ2" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MQ3"/>
+<tag name="prev" value="MQZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="6"/>
+</node>
+<node id="MQ3" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MQ4"/>
+<tag name="prev" value="MQ2"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="7"/>
+</node>
+<node id="MQ4" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MQ5"/>
+<tag name="prev" value="MQ3"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="8"/>
+</node>
+<node id="MQ5" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MQ6"/>
+<tag name="prev" value="MQ4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="9"/>
+</node>
+<node id="MQ6" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MQ7"/>
+<tag name="prev" value="MQ5"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="10"/>
+</node>
+<node id="MQ7" constraintsRef="/NK-Landscapes/bitString/main/stringEpilogue">
+<tag name="prev" value="MQ6"/>
+<tag name="place" value="11"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="WD" allopatricTag="WD" type="enhanced" deltaEntropy="0.00179106">
+<life birth='44' age='9' />
+<placeholder value="8"/>
+<lineage>
+<operator ref="singleParameterAlterationMutation" />
+<parents>
+<individual ref="AN"/>
+</parents>
+</lineage>
+<fitness>
+<description>#1101101011</description>
+<value>0.678172</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>#1101101011</description>
+<value>0.678172</value>
+</scaledFitness>
+<genome>
+<node id="KQQ" constraintsRef="/NK-Landscapes/globalPrologue">
+</node>
+<node id="KQR" constraintsRef="/NK-Landscapes/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="KQS" constraintsRef="/NK-Landscapes/bitString/sectionPrologue">
+</node>
+<node id="KQT" constraintsRef="/NK-Landscapes/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="KQU" constraintsRef="/NK-Landscapes/bitString/main/stringPrologue">
+<tag name="next" value="KQV"/>
+<tag name="place" value="0"/>
+</node>
+<node id="KQV" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KQW"/>
+<tag name="prev" value="KQU"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="KQW" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KQX"/>
+<tag name="prev" value="KQV"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="2"/>
+</node>
+<node id="KQX" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KQY"/>
+<tag name="prev" value="KQW"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="3"/>
+</node>
+<node id="KQY" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KQZ"/>
+<tag name="prev" value="KQX"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="4"/>
+</node>
+<node id="KQZ" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KQ2"/>
+<tag name="prev" value="KQY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="5"/>
+</node>
+<node id="KQ2" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KQ3"/>
+<tag name="prev" value="KQZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="6"/>
+</node>
+<node id="KQ3" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KQ4"/>
+<tag name="prev" value="KQ2"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="7"/>
+</node>
+<node id="KQ4" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KQ5"/>
+<tag name="prev" value="KQ3"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="8"/>
+</node>
+<node id="KQ5" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KQ6"/>
+<tag name="prev" value="KQ4"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="9"/>
+</node>
+<node id="KQ6" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="KQ7"/>
+<tag name="prev" value="KQ5"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="10"/>
+</node>
+<node id="KQ7" constraintsRef="/NK-Landscapes/bitString/main/stringEpilogue">
+<tag name="prev" value="KQ6"/>
+<tag name="place" value="11"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="XZ" allopatricTag="XZ" type="enhanced" deltaEntropy="0.0696222">
+<life birth='48' age='5' />
+<placeholder value="9"/>
+<lineage>
+<operator ref="twoPointImpreciseCrossover" />
+<parents>
+<individual ref="VF"/>
+<individual ref="WW"/>
+</parents>
+</lineage>
+<fitness>
+<description>#1001110000</description>
+<value>0.676881</value>
+</fitness>
+<scaledFitness cloneCount="0" >
+<description>#1001110000</description>
+<value>0.676881</value>
+</scaledFitness>
+<genome>
+<node id="LLQ" constraintsRef="/NK-Landscapes/globalPrologue">
+</node>
+<node id="LLR" constraintsRef="/NK-Landscapes/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="LLS" constraintsRef="/NK-Landscapes/bitString/sectionPrologue">
+</node>
+<node id="LLT" constraintsRef="/NK-Landscapes/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="LLU" constraintsRef="/NK-Landscapes/bitString/main/stringPrologue">
+<tag name="next" value="LLV"/>
+<tag name="place" value="0"/>
+</node>
+<node id="LLV" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LLW"/>
+<tag name="prev" value="LLU"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="1"/>
+</node>
+<node id="LLW" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LLX"/>
+<tag name="prev" value="LLV"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="2"/>
+</node>
+<node id="LLX" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LLY"/>
+<tag name="prev" value="LLW"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="3"/>
+</node>
+<node id="LLY" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LMF"/>
+<tag name="prev" value="LLX"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="4"/>
+</node>
+<node id="LMF" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LMG"/>
+<tag name="prev" value="LLY"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="5"/>
+</node>
+<node id="LMG" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LMH"/>
+<tag name="prev" value="LMF"/>
+<tag name="$bit" value="1"/>
+<tag name="place" value="6"/>
+</node>
+<node id="LMH" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LMI"/>
+<tag name="prev" value="LMG"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="7"/>
+</node>
+<node id="LMI" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LMJ"/>
+<tag name="prev" value="LMH"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="8"/>
+</node>
+<node id="LMJ" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LMK"/>
+<tag name="prev" value="LMI"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="9"/>
+</node>
+<node id="LMK" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="LL7"/>
+<tag name="prev" value="LMJ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="10"/>
+</node>
+<node id="LL7" constraintsRef="/NK-Landscapes/bitString/main/stringEpilogue">
+<tag name="prev" value="LMK"/>
+<tag name="place" value="11"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+<individual id="2M" allopatricTag="K" type="enhanced" deltaEntropy="0">
+<life birth='0' age='0' />
+<placeholder value="10"/>
+<lineage>
+<operator ref="NO_OPERATOR" />
+</lineage>
+<genome>
+<node id="MVQ" constraintsRef="/NK-Landscapes/globalPrologue">
+</node>
+<node id="MV7" constraintsRef="/NK-Landscapes/globalEpilogue">
+</node>
+<graph constraintsRef="bitString"  xmlns="http://www.cad.polito.it/ugp3/schemas/constrained-graph">
+<node id="MVR" constraintsRef="/NK-Landscapes/bitString/sectionPrologue">
+</node>
+<node id="MVS" constraintsRef="/NK-Landscapes/bitString/sectionEpilogue">
+</node>
+<subGraph constraintsRef="main" >
+<node id="MVT" constraintsRef="/NK-Landscapes/bitString/main/stringPrologue">
+<tag name="next" value="MVU"/>
+<tag name="place" value="0"/>
+</node>
+<node id="MVU" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MVV"/>
+<tag name="prev" value="MVT"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="1"/>
+</node>
+<node id="MVV" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MVW"/>
+<tag name="prev" value="MVU"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="2"/>
+</node>
+<node id="MVW" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MVX"/>
+<tag name="prev" value="MVV"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="3"/>
+</node>
+<node id="MVX" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MVY"/>
+<tag name="prev" value="MVW"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="4"/>
+</node>
+<node id="MVY" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MVZ"/>
+<tag name="prev" value="MVX"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="5"/>
+</node>
+<node id="MVZ" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MV2"/>
+<tag name="prev" value="MVY"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="6"/>
+</node>
+<node id="MV2" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MV3"/>
+<tag name="prev" value="MVZ"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="7"/>
+</node>
+<node id="MV3" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MV4"/>
+<tag name="prev" value="MV2"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="8"/>
+</node>
+<node id="MV4" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MV5"/>
+<tag name="prev" value="MV3"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="9"/>
+</node>
+<node id="MV5" constraintsRef="/NK-Landscapes/bitString/main/bitString">
+<tag name="next" value="MV6"/>
+<tag name="prev" value="MV4"/>
+<tag name="$bit" value="0"/>
+<tag name="place" value="10"/>
+</node>
+<node id="MV6" constraintsRef="/NK-Landscapes/bitString/main/stringEpilogue">
+<tag name="prev" value="MV5"/>
+<tag name="place" value="11"/>
+</node>
+</subGraph>
+</graph>
+</genome>
+</individual>
+</individuals>
+</population>
+</populations>
+</evolutionaryAlgorithm>

@@ -1,0 +1,24 @@
+
+The objective of the problem is to find a group of string templates that contains the highest possible number of "1", while at the same time covering the maximum possible number of binary strings in a test set.
+
+Taking for example strings on 8 bits, a template might be: 1*1*1111. A string is matched by a template iff the string presents "1"s in the same position as the template, and either "0" or "1" where the template shows a wildcard "*".
+
+For example, this template 
+ 1*1*1111
+will match all the strings below
+ 11111111
+ 10101111
+ 11101111
+ 10111111
+but not this one
+ 00101111
+ ^
+nor this one
+ 10011111
+   ^
+
+The test set is generated with the PERL script "string-coverage.generator.pl", that uses two 64-bit templates to create 400 strings (found in "testSet.txt"), 200 strings with each template. Thus, in this case the optimal solution is represented by the same two templates that have been used to create the 400 strings in the test set. It is of course possible to modify the PERL generator to use different templates and/or number of strings generated, or use your very own generator to produce a "testSet.txt" file.
+
+The fitness function rewards group of templates presenting a high number of "1"s and a high coverage of the test set. The size of the groups is also taken into account, favouring small groups over bigg one.
+
+This sample and related fitness function have been taken from Wu and Banzhaf, "A hierarchical cooperative evolutionary algorithm", 2010.

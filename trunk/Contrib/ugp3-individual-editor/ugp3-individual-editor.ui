@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>individualEditorMainWindow</class>
+ <widget class="QMainWindow" name="individualEditorMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ugp3 Individual Editor</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Individual Preview</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Population</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QListWidget" name="listWidget_Population"/>
+    </item>
+    <item row="2" column="2">
+     <widget class="QComboBox" name="comboBox"/>
+    </item>
+    <item row="0" column="1" rowspan="3">
+     <widget class="QTreeWidget" name="treeWidget_individualStructure">
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true">Individual Structure</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="1" column="0" rowspan="2">
+     <widget class="QTextBrowser" name="textBrowser_individualPreview"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad_Constraints"/>
+    <addaction name="actionLoad_Population"/>
+    <addaction name="actionSave_Population"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuIndividual">
+    <property name="title">
+     <string>Individual</string>
+    </property>
+    <addaction name="actionNew_Individual"/>
+   </widget>
+   <widget class="QMenu" name="menuQuestionMark">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuIndividual"/>
+   <addaction name="menuQuestionMark"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLoad_Constraints">
+   <property name="text">
+    <string>Load &amp;Constraints</string>
+   </property>
+  </action>
+  <action name="actionSave_Population">
+   <property name="text">
+    <string>&amp;Save Population</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+  </action>
+  <action name="actionLoad_Population">
+   <property name="text">
+    <string>Load &amp;Population</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>&amp;Save current individual</string>
+   </property>
+  </action>
+  <action name="actionNew_Individual">
+   <property name="text">
+    <string>&amp;New individual</string>
+   </property>
+  </action>
+  <action name="action_New_individual_from_operator">
+   <property name="text">
+    <string>&amp;New individual(s) from operator</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>individualEditorMainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

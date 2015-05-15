@@ -1,0 +1,18 @@
+-*- text -*-
+
+The OneMax Problem is a simple problem consisting in maximizing the
+number of ones of a bitstring. It is one of the most used test bench
+in evolutionary computation because it is simple, unimodal (has only one global
+optimum), separable (can be solved for each bit independently), and the definition of the fitness function is quite straightforward.
+
+* Base
+
+Simple 1-max problem. Please note that the evaluator can evaluate any
+number of individuals of arbitrary length in the same invocation
+(ie. concurrentEvaluations may be > 1).
+
+
+* Assembly
+
+The goal is to generate an assembly function that writes 0xFFFFFFFF (32
+1's bit) to register eax. The secondary goal is to minimiza the size of the function. 

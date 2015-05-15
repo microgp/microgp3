@@ -1,0 +1,4 @@
+GEN,CPU,P1_Generation,P1_E,P1_Mu,P1_Lambda,P1_Tau,P1_Sigma,P1_AvgAge,P1_AvgSize,P1_Avg_f0,P1_Best_f0,P1_Worst_f0,P1_onePointImpreciseCrossover,P1_twoPointImpreciseCrossover,P1_singleParameterAlterationMutation
+1,2.56609,1,0,40,25,1,0.9,1.61905,106,9.7619,15,4,0.333333,0.333333,0.333333
+2,3.83087,2,0,40,25,1,0.91,2.17308,106,10.0769,17,4,0.294118,0.352941,0.352941
+3,5.58959,3,0,40,25,1,0.91,2.82353,106,10.1765,16,4,0.255682,0.340909,0.403409

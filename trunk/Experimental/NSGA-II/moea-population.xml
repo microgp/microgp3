@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<parameters type="multiObjective">
+  <!-- MultiObjective populations are also enhanced! -->
+  <cloneScalingFactor value="0" />
+  <eliteSize value="0" />
+  <!-- end of enhanced population specific parameters -->
+
+  <!-- (optional) the maximum value of the fitness -->
+  <maximumFitness value="100 100" />
+
+  <!-- BASIC POPULATION PARAMETERS -->
+
+  <!-- the maximum size of the population -->
+  <mu value="40" />
+
+  <!-- the initial size of the population -->
+  <nu value="40" />
+
+  <!-- the numbers of genetic operators applied at every step of the evolution -->
+  <lambda value="40" />
+
+  <!-- the inertia for the self-adaptating parameters [0,1] -->
+  <inertia value="0.9" />
+
+  <!-- the number of dimensions of the fitness -->
+  <fitnessParameters value="2" />
+
+  <!-- the maximum age of the individuals -->
+  <maximumAge value="999999" />
+
+  <!-- the strength of the mutation operators (0,1) -->
+  <sigma value="0.9" />
+
+  <!-- when set to true, the fitness of all the individuals of the
+  population is discarded at every step so that in the next step it is
+  re-evaluated -->
+  <invalidateFitnessAfterGeneration value="0" />
+
+  <!-- the definition of the constraints of the problem -->
+  <constraints value="constraints.xml" />
+
+<!--
+  <maximumEvaluations value="5000" />
+  <maximumGenerations value="100000" />
+-->
+
+  <!-- parents selector parameters -->
+  <selection type="tournamentWithFitnessHole" tau="2" tauMin="1" tauMax="4" fitnessHole="0" />
+  
+  <!-- evaluator parameters -->
+  <evaluation>
+    <concurrentEvaluations value="1" />
+    <removeTempFiles value="true" />
+    <evaluatorPathName value="./zdt2 --minimize --individual " />
+    <evaluatorInputPathName value="individual%s.in" />
+    <evaluatorOutputPathName value="fitness.output" />
+  </evaluation>
+  
+  <!-- operator statistics -->
+  <operatorsStatistics>
+    <operator ref="onePointImpreciseCrossover">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+    <operator ref="twoPointImpreciseCrossover">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+    <operator ref="singleParameterAlterationMutation">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+    <!-- 	
+	since the genome defined in the constraints file has a fixed length, 
+	the following operators do not work
+
+    <operator ref="removalMutation">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+    <operator ref="insertionMutation">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+
+	since the genome defined in the constraints has no outerLabel parameters,
+	these two crossovers work exactly as the "Imprecise" ones
+
+    <operator ref="onePointCrossover">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+    <operator ref="twoPointCrossover">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+	
+	since the genome defined in the constraints contains two macros, each
+	with only one parameter, alterationMutation, replacementMutation and 
+	singleParameterAlterationMutation work exactly in the same way, 
+	so all but one are commented
+
+    <operator ref="replacementMutation">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+    <operator ref="alterationMutation">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+
+    -->
+
+  </operatorsStatistics>
+</parameters>

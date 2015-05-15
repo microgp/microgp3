@@ -1,0 +1,45 @@
+<parameters>
+	<dimension value="4"/>
+	<initialX value="0.1 0.1 0.1 0.1"/>
+	<typicalX value="1"/>
+	<initialStandardDeviations value="1e-3"/>
+	
+	<!-- population -->
+	<lambda value="10"/> <!-- mu is 1/2*lambda -->
+	<!-- <weights value="lin"/> default is "log" -->
+	<restarts value="1"/>
+	<restartIncreaseRatio value="10"/>
+	
+	<!-- stop conditions -->
+	<stopMaxFunEvals value="1e299"/>
+	<!-- <stopMaxIter value="10"/> -->
+	<stopTolFun value="1e-12"/>
+	<stopTolFunHist value="1e-13"/>
+	<stopTolX value="1e-11"/>
+	<stopTolUpXFactor value="1e3"/>
+	<!-- <diffMinChange value="1"/> -->
+	
+	<!-- internal CPU-time related settings -->
+	<!-- <maxTimeFractionForEigendecompostion value="1"/> -->
+	<!-- <updatecov value="1"/> -->
+	<!-- <facUpdatecov value="3"/> -->
+	<!-- <resume value="allcmaes.dat"/> -->
+
+	<!-- random seed, 0 == by time -->
+	<seed value="42"/>
+
+	<!-- evaluator -->
+	<evaluator>
+		<path value="./evaluator-test "/>
+		<inputFile value="input.txt"/>
+		<outputFile value="fitness.out"/>
+		<!-- <parallelEvaluations value="1" TODO -->
+	</evaluator>
+	
+	<!-- logging -->
+	<logging>
+		<log name="std::cout" level="info"/>
+		<!-- <log name="debug.log" level="debug"/> -->
+	</logging>
+
+</parameters>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt"?>
+<!-- This file contains the constraints definition for 
+     arithmetic expressions represented by a tree. 
+     The section 'startElement' contains a single macro with a
+     label 'start:' followed by a reference to a macro inside 
+     the 'expression/elements' subsection.
+     The 'expression/elements' subsection can contain only 
+     one instance of the defined macros. The macros 'terminal' and 'x' represent
+     respectively a floating point number and the terminal symbol x.
+     The macro 'operation' represents an arithmetic operation with an operator and two 
+     references to other expression elements. -->
+<constraints
+  xmlns="http://www.cad.polito.it/ugp3/schemas/constraints" 
+  id="Symbolic Regression" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+  <typeDefinitions>
+    <item xsi:type="constant" name="operator_type">
+      <value>add</value>
+      <value>mul</value>
+      <!--value>div</value>
+      <value>sub</value-->
+    </item>
+    <item xsi:type="outerLabel"  name="outerReference">
+      <ref section="expression" subSection="elements"/>
+    </item>
+  </typeDefinitions>
+  <commentFormat><value/></commentFormat>
+  <identifierFormat>n<value /></identifierFormat>
+  <labelFormat><value/>: </labelFormat>
+  <uniqueTagFormat><value /></uniqueTagFormat>
+  <prologue id="globalPrologue" />
+  <epilogue id="globalEpilogue" />
+  <sections>
+    <section id="startElement" prologueEpilogueCompulsory="false">
+      <prologue id="sectionPrologue" />
+      <epilogue id="sectionEpilogue" />
+      <subSections>
+        <subSection id="startelement" maxOccurs="1" minOccurs="1" maxReferences="0">
+          <prologue id="stringPrologue" />
+          <epilogue id="stringEpilogue" />
+	   <macros maxOccurs="1" minOccurs="1" averageOccurs="1" sigma="0">
+            <macro id="operation" weight ="1.0">
+              <expression>start: <param ref="operand1"/>
+</expression>
+	    <parameters>
+              <item xsi:type="definedType" name="operand1" ref="outerReference"/>
+            </parameters>
+            </macro>
+</macros>
+        </subSection>
+      </subSections>
+    </section>
+    <section id="expression" prologueEpilogueCompulsory="false">
+      <prologue id="sectionPrologue" />
+      <epilogue id="sectionEpilogue" />
+      <subSections>
+        <subSection id="elements" maxOccurs="50" minOccurs="3" maxReferences="1">
+          <prologue id="stringPrologue" />
+          <epilogue id="stringEpilogue" />
+          <macros maxOccurs="1" minOccurs="1" averageOccurs="1" sigma="0">
+            <macro id="operation" weight ="1.0">
+              <expression><param ref="operator"/> <param ref="operand1"/> <param ref="operand2"/>
+</expression>
+              <parameters>
+                <item xsi:type="definedType" name="operator" ref="operator_type"/>
+ 		        <item xsi:type="definedType" name="operand1" ref="outerReference"/>
+                <item xsi:type="definedType" name="operand2" ref="outerReference"/>
+              </parameters>
+            </macro>
+            <macro id="terminal" weight ="1.0">
+              <expression><param ref="number"/>
+</expression>
+              <parameters>
+                <item xsi:type="float" name="number" minimum="-50" maximum="50"/>
+              </parameters>
+            </macro>
+            <macro id="terminal2" weight ="1.0">
+              <expression><param ref="number"/>
+</expression>
+              <parameters>
+                <item xsi:type="float" name="number" minimum="-1" maximum="1"/>
+              </parameters>
+            </macro>
+           <!--macro id="operation_mul" weight ="0.5">
+              <expression>mul <param ref="number"/> <param ref="operand"/>
+</expression>
+              <parameters>
+                <item xsi:type="definedType" name="operator" ref="operator_type"/>
+         		<item xsi:type="float" name="number" minimum="0" maximum="1"/>
+        		<item xsi:type="definedType" name="operand" ref="outerReference"/>
+              </parameters>
+            </macro-->
+            <macro id="x" weight="1.0">
+              <expression>x
+</expression>
+            </macro>
+          </macros>
+        </subSection>
+      </subSections>
+    </section>
+  </sections>
+</constraints>

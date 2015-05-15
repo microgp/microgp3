@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<parameters type="multiObjective">
+  <!-- MultiObjective populations are also enhanced! -->
+  <cloneScalingFactor value="0" />
+  <eliteSize value="1" />
+  <!-- end of enhanced population specific parameters -->
+
+  <!-- (optional) the maximum value of the fitness -->
+  <maximumFitness value="100 100" />
+
+  <!-- BASIC POPULATION PARAMETERS -->
+
+  <!-- the maximum size of the population -->
+  <mu value="200" />
+
+  <!-- the initial size of the population -->
+  <nu value="200" />
+
+  <!-- the numbers of genetic operators applied at every step of the evolution -->
+  <lambda value="50" />
+
+  <!-- the inertia for the self-adaptating parameters [0,1] -->
+  <inertia value="0.9" />
+
+  <!-- the number of dimensions of the fitness -->
+  <fitnessParameters value="2" />
+
+  <!-- the maximum age of the individuals -->
+  <maximumAge value="10000" />
+
+  <!-- the strength of the mutation operators (0,1) -->
+  <sigma value="0.9" />
+
+  <!-- when set to true, the fitness of all the individuals of the
+  population is discarded at every step so that in the next step it is
+  re-evaluated -->
+  <invalidateFitnessAfterGeneration value="0" />
+
+  <!-- the definition of the constraints of the problem -->
+  <constraints value="constraints.xml" />
+
+  <!-- (optional) the maximum number of generations -->
+  <maximumGenerations value="9999" />
+
+  <!-- (optional) the maximum number of individuals that can be evaluated -->
+  <maximumEvaluations value="10000" />
+
+  <!-- parents selector parameters -->
+
+  <selection type="tournamentWithFitnessHole" tau="2" tauMin="1" tauMax="4" fitnessHole="0" />
+<!--
+  <selection type="tournamentWithFitnessHole" tau="2" tauMin="1" tauMax="4" fitnessHole="0" />
+-->
+  <!-- evaluator parameters -->
+  <evaluation>
+    <concurrentEvaluations value="1" />
+    <removeTempFiles value="true" />
+    <evaluatorPathName value="./zdt3 --maximize --individual " />
+    <evaluatorInputPathName value="individual%s.in" />
+    <evaluatorOutputPathName value="fitness.output" />
+  </evaluation>
+  
+  <!-- operator statistics -->
+  <operators default="none">
+    <operator ref="onePointCrossover"/>
+    <operator ref="twoPointCrossover"/>
+    <operator ref="singleParameterAlterationMutation"/>
+  </operators>
+</parameters>

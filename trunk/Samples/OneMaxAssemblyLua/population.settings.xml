@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters xmlns="http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm" type="enhanced">
+
+  <!-- enhanced population specific parameters -->
+  <!-- clone scaling factor: the fitness of each clone of a given individual is multiplied by this factor (0,1). If set to 0, clones are discarded. -->
+  <cloneScalingFactor value="0.5"/>
+  <!-- elite size: the eliteSize best individuals do not age at each generational step. -->
+  <eliteSize value="0"/>
+  <!-- end of enhanced population specific parameters -->
+  <!-- (optional) the maximum value of the fitness -->
+  <maximumFitness value="32 9999"/>
+  <!-- (optional) if the best fitness value does not change for maximumSteadyStateGenerations generations, the evolutions stops -->
+  <maximumSteadyStateGenerations value="50"/>
+  <!-- basic population parameters -->
+  <!-- the maximum size of the population -->
+  <mu value="30"/>
+  <!-- the initial size of the population -->
+  <nu value="30"/>
+  <!-- the numbers of genetic operators applied at every step of the evolution -->
+  <lambda value="20"/>
+  <!-- the inertia for the self-adaptating parameters [0,1] -->
+  <inertia value="0.9"/>
+  <!-- the number of dimensions of the fitness -->
+  <fitnessParameters value="2"/>
+  <!-- the maximum age of the individuals -->
+  <maximumAge value="10"/>
+  <!-- the strength of the mutation operators (0,1) -->
+  <sigma value="0.9"/>
+  <!-- when set to true, the fitness of all the individuals of the population is discarded at every step so that in the next step it is re-evaluated -->
+  <invalidateFitnessAfterGeneration value="0"/>
+  <!-- the definition of the constraints of the problem -->
+  <constraints value="constraints.xml.x86_64"/>
+  <!-- (optional) the maximum number of generations -->
+  <maximumGenerations value="50000"/>
+  <!-- (optional) the maximum number of individuals that can be evaluated -->
+  <maximumEvaluations value="5000000"/>
+  <!-- parents selector parameters -->
+  <selection type="tournamentWithFitnessHole" tau="1" tauMin="1" tauMax="1" fitnessHole="0"/>
+  <!-- evaluator parameters -->
+
+  <fitnessSharing distance="entropic" radius="30"/>
+
+  <evaluation>
+    <concurrentEvaluations value="4"/>
+    <removeTempFiles value="true"/>
+    <evaluatorPathName value="./compat_eval.lua"/>
+    <evaluatorInputPathName value="i%s.s"/>
+    <evaluatorOutputPathName value="fitness.out"/>
+  </evaluation>
+
+  <!-- operator statistics -->
+  
+<operators default="none">
+<operator ref="onePointImpreciseCrossover"/>
+<operator ref="twoPointImpreciseCrossover"/>
+<operator ref="singleParameterAlterationMutation"/>
+<operator ref="insertionMutation"/>
+<operator ref="removalMutation"/>
+<operator ref="replacementMutation"/>
+<operator ref="alterationMutation"/>
+<!-- 	
+	since the genome defined in the constraints has no outerLabel parameters,
+	these two crossovers work exactly as the "Imprecise" ones
+
+    <operator ref="onePointCrossover">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+    <operator ref="twoPointCrossover">
+      <weight current="1" minimum="0" maximum="1" />
+    </operator>
+	
+	since the genome defined in the constraints contains a single section 
+	and a single subsection, all operators that act on subsections do not
+	work, with the exception of subGraphReplacementMutation, that de facto
+	creates a completely random individual
+
+    <operator ref="subGraphInsertionMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <operator ref="subGraphRemovalMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+    <operator ref="subGraphReplacementMutation">
+      <weight current="1" minimum="0" maximum="1"/>
+    </operator>
+
+    -->
+</operators>
+</parameters>
