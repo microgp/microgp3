@@ -77,8 +77,8 @@
   <operators default="none">
     <!-- 
     <operator ref="twoPointCrossover"/> 
-    <operator ref="onePointCrossover"/>
     -->
     <operator ref="singleParameterAlterationMutation"/>
+    <operator ref="onePointCrossover"/>
   </operators>
 </parameters>
