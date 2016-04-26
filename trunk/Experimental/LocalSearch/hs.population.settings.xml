@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<parameters type="enhanced">
+  <!-- ENHANCED POPULATION SPECIFIC PARAMETERS -->
+
+  <!-- clone scaling factor: the fitness of each clone of a given
+  individual is multiplied by this factor (0,1). If set to 0, clones
+  are discarded. --> 
+  <cloneScalingFactor value="0"/>
+  
+  <!-- elite size: the eliteSize best individuals do not age at each
+  generational step. --> 
+  <eliteSize value="1"/>
+  
+  <!-- end of enhanced population specific parameters -->
+
+  <!-- (optional) the maximum value of the fitness -->
+  <maximumFitness value="1 30"/>
+  
+  <!-- (optional) if the best fitness value does not change for
+  maximumSteadyStateGenerations generations, the evolutions stops 
+  <maximumSteadyStateGenerations value="10"/>
+  -->
+
+  <!-- maximum "real" time (ie. wall clock) for an experiment -->
+  <!--<maximumTime seconds="600" />-->
+
+  <!-- BASIC POPULATION PARAMETERS -->
+
+  <!-- the maximum size of the population -->
+  <mu value="10"/>
+
+  <!-- the initial size of the population -->
+  <nu value="10"/>
+
+  <!-- the numbers of genetic operators applied at every step of the evolution -->
+  <lambda value="10"/>
+
+  <!-- the inertia for the self-adaptating parameters [0,1] -->
+  <inertia value="0.9"/>
+
+  <!-- the number of dimensions of the fitness -->
+  <fitnessParameters value="2"/>
+
+  <!-- the maximum age of the individuals -->
+  <maximumAge value="10"/>
+
+  <!-- the strength of the mutation operators (0,1) -->
+  <sigma value="0.9"/>
+
+  <!-- when set to true, the fitness of all the individuals of the
+  population is discarded at every step so that in the next step it is
+  re-evaluated -->
+  <invalidateFitnessAfterGeneration value="0"/>
+
+  <!-- the definition of the constraints of the problem -->
+  <constraints value="hs.hunter.constraints.xml"/>
+
+  <!-- (optional) the maximum number of individuals that can be evaluated -->
+  <maximumEvaluations value="1000000"/>
+
+  <!-- parents selector parameters -->
+  <selection type="tournamentWithFitnessHole" tau="2" tauMin="1" tauMax="4" fitnessHole="0" />
+  
+  <!-- evaluator parameters -->
+  <evaluation>
+    <cacheSize value="100"/>
+    <concurrentEvaluations value="1" />
+    <removeTempFiles value="false" />
+    <evaluatorPathName value="python evaluator.py" />
+    <evaluatorInputPathName value="individual_%s.in" />
+    <evaluatorOutputPathName value="fitness.out" />
+  </evaluation>
+  
+  <!-- specific operator values -->
+  <localSearch numberOfParents="1" executable="python localSearch.py" outputPathName="individualsLocalSearch.txt"/>
+
+  <!-- operator statistics -->
+  <operators default="none">
+    <operator ref="singleParameterAlterationMutation"/>
+    <operator ref="onePointCrossover"/>
+    <operator ref="twoPointCrossover"/> 
+    <operator ref="localSearch"/>
+  </operators>
+</parameters>

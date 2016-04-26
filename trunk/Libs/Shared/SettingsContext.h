@@ -67,6 +67,7 @@ namespace ugp3
     private:
         //Tags to read and write xml
         static const std::string XML_ATTRIBUTE_NAME;
+	static const std::string XML_ATTRIBUTE_SEEDINGFILE;
         static const std::string POPULATION_XML_NAME;
         static const std::string POPULATIONNAMES_XML_NAME;
 

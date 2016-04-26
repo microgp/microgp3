@@ -19,7 +19,10 @@ class LineInformation;
 		// some constants
 		static const int topDown;
 		static const int bottomUp;
-
+		
+		// return a regex from a target string, with all characters correctly escaped
+		static std::string stringToRegex( const std::string& originalString);
+		
 		// return a string for an error code
 		static std::string errorCodeToText( int code );
 
@@ -28,7 +31,7 @@ class LineInformation;
 		static unsigned int regexMatch(std::string textToMatch, std::string regex, std::vector< std::string >& returnMatches);
 		
 		// incremental rollback matching function
-		static int incrementalRollbackMatch( std::string regularExpression, std::vector<LineInformation>& textToMatch, int topLine, int bottomLine, int direction );
+		static bool incrementalRollbackMatch( std::string regularExpression, std::string macroPath, std::vector<LineInformation>& textToMatch, unsigned int& topLine, unsigned int& bottomLine, int direction );
 	};
 
 }

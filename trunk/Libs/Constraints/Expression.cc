@@ -69,14 +69,28 @@ Expression::~Expression()
 
 const string Expression::getRegex() const
 {
-	string regex = "[\\s]*";
+	// adding [\s]* before and after the regex SEEMS like a good idea,
+	// but it actually creates problems when checking for empty regexes.
+	// it's better to manage this directly at Population::assimilate() level
+	//string regex = "[\\s]*";
+	
+	string regex = "";
 	
 	// build the regex, by iterating over every element
 	for(unsigned int i = 0; i < this->elements.size(); i++)
 	{
 		regex += this->elements[i]->getRegex();
 	}
-	regex += "[\\s]*";
+	//regex += "[\\s]*";
+
+	// however, it is a good idea to replace compulsory spaces with optional spaces at the beginning of a line 
+	string toReplace = "[\\s]+";
+	
+	if( regex.compare(0, toReplace.length(), toReplace ) == 0 )
+		// replace with [\\s]*
+		regex[4] = '*';
+	//else /* for some reason, this creates problems */
+	//	regex = toReplace + regex;
 
 	return regex;
 }

@@ -182,14 +182,16 @@ void EvolutionaryAlgorithm::readXml(const xml::Element& element)
 
     CandidateSolution::setAllopatricTagCounter(xml::Utility::attributeValueToString(element, "infinityStringIndividualAllopatricTag"));
     
-    if (xml::Utility::hasAttribute(element, "infinityStringGroup")) {
+    if (xml::Utility::hasAttribute(element, "infinityStringGroup")) 
+    {
         Group::setGroupCounter(xml::Utility::attributeValueToString(element, "infinityStringGroup"));
     }
-    
+
     if(populationsFound == false)
     {
         throw xml::MissingElementSchemaException("/evolutionaryAlgorithm/populations", LOCATION);
     }
+
 }
 
 void EvolutionaryAlgorithm::fromFile(const string& xmlFileName, bool discardFitness)
@@ -210,13 +212,39 @@ void EvolutionaryAlgorithm::fromFile(const string& xmlFileName, bool discardFitn
         LOG_INFO << "Invalidating individuals' fitness..." << ends;
         for(unsigned int p = 0; p < this->getPopulationCount(); p++)
         {
-            Population& population = this->getPopulation(p);
-            population.discardFitnessValues();
-            
-            MOPopulation *moPopulation = dynamic_cast<MOPopulation *>(&population);
-            if(moPopulation != nullptr)
-                moPopulation->setFirstRecovery(true);
+		Population& population = this->getPopulation(p);
+		population.discardFitnessValues();
+
+		MOPopulation *moPopulation = dynamic_cast<MOPopulation *>(&population);
+		if(moPopulation != nullptr)
+			moPopulation->setFirstRecovery(true);
+
+		// now that the cache is stored inside the status file, however, to
+		// force re-evaluation we have to delete all values in the cache;
+		// or, more appropriately, only the values of individuals in the current
+		// population. The latter option, however, is way more complicated to
+		// implement...and we may assume that forcing re-evaluation means that
+		// the fitness function somehow changed.
+		Evaluator& evaluator = population.getParameters().getEvaluator();
+		
+		// now, the base class "Evaluator" has no visibility on its cache; we need to typecast it
+		// to the correct inherited class, that actually includes cache information
+		if( dynamic_cast<EvaluatorCommon<Individual>*>( &evaluator) != nullptr )
+		{
+			LOG_INFO << "Clearing cache for individual population #" << p << "..." << ends;
+			EvaluatorCommon<Individual>* evaluatorCommon = dynamic_cast<EvaluatorCommon<Individual>*>( &evaluator );
+			evaluatorCommon->clearCache();
+		}
+		else if( dynamic_cast<EvaluatorCommon<Group>*>( &evaluator) != nullptr )
+		{
+			LOG_INFO << "Clearing cache for group population #" << p << "..." << ends;
+			EvaluatorCommon<Group>* evaluatorCommon = dynamic_cast<EvaluatorCommon<Group>*>( &evaluator );
+			evaluatorCommon->clearCache();
+		}
+		
         }
+	
+	
     }
 }
 

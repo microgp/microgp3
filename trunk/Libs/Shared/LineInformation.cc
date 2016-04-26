@@ -8,7 +8,8 @@ text(text),
 label(""),
 macro(""),
 occurrence(""),
-referenceTo(-1)
+referenceTo(-1),
+matched(false)
 {}
 
 // empty constructor
@@ -17,5 +18,17 @@ text(""),
 label(""),
 macro(""),
 occurrence(""),
-referenceTo(-1)
+referenceTo(-1),
+matched(false)
 {}
+
+// clear everything, except text
+void LineInformation::clearMacro()
+{
+	this->label = "";
+	this->macro = "";
+	this->occurrence = "";
+	this->referenceTo = -1;
+	this->matched = false;
+	this->macroParameters.clear();
+}

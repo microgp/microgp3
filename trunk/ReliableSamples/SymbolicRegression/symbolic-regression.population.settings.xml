@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters xmlns="http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm" type="enhanced">
+
+<cloneScalingFactor value="0"/>
+<eliteSize value="20"/>
+
+<mu value="100"/>
+<nu value="100"/>
+<lambda value="100"/>
+<selection type="tournamentWithFitnessHole" tau="2" tauMin="1" tauMax="4" fitnessHole="0"/>
+
+<!-- fitness parameters: average derivative difference / average difference / percentage of expressed nodes / parcimony -->
+<fitnessParameters value="4"/>
+<maximumAge value="10000"/>
+<sigma value="0.9"/>
+<inertia value="0.99"/>
+<constraints value="symbolic-regression.constraints.xml"/>
+
+<!-- Termination conditions -->
+<maximumTime hours="2000" minutes="0" seconds="0"/>
+<maximumGenerations value="100"/>
+<maximumFitness value="10 10 0 0"/>
+
+<evaluation>
+ <cacheSize value="100"/>
+ <concurrentEvaluations value="1"/>
+ <removeTempFiles value="true"/>
+ <evaluatorPathName value="./evaluator --data data.csv --tree "/>
+ <evaluatorInputPathName value="individual.input"/>
+ <evaluatorOutputPathName value="fitness.output"/>
+</evaluation>
+
+
+<operators default="none">
+	<operator ref="onePointCrossover"/>
+	<operator ref="singleParameterAlterationMutation"/>
+	<operator ref="insertionMutation"/>
+	<operator ref="removalMutation"/>
+	<operator ref="replacementMutation"/>
+	<operator ref="alterationMutation"/>
+</operators>
+</parameters>

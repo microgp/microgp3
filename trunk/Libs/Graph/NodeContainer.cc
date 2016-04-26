@@ -42,7 +42,7 @@ void NodeContainer::setAsParent(CNode* node, NodeContainer* newParent) const
     node->parentContainer = newParent;
 }
 
-void NodeContainer::setPrologue(std::unique_ptr<CNode> value)
+void NodeContainer::setPrologue(std::unique_ptr<CNode>& value)
 {
 	if(this->prologue.get() != nullptr)
 		this->prologue->detachOuterLabels();
@@ -50,7 +50,7 @@ void NodeContainer::setPrologue(std::unique_ptr<CNode> value)
 	this->prologue.reset(value.release());
 }
 
-void NodeContainer::setEpilogue(std::unique_ptr<CNode> value)
+void NodeContainer::setEpilogue(std::unique_ptr<CNode>& value)
 {
 	if(this->epilogue.get() != nullptr)
 		this->epilogue->detachOuterLabels();
@@ -58,3 +58,19 @@ void NodeContainer::setEpilogue(std::unique_ptr<CNode> value)
 	this->epilogue.reset(value.release());
 }
 
+// overloaded methods added by Alberto Tonda, 2015
+void NodeContainer::setPrologue(CNode* node)
+{
+	if( this->prologue.get() != nullptr )
+		this->prologue->detachOuterLabels();
+	
+	this->prologue.reset( node );
+}
+
+void NodeContainer::setEpilogue(CNode* node)
+{
+	if( this->epilogue.get() != nullptr )
+		this->epilogue->detachOuterLabels();
+	
+	this->epilogue.reset( node );
+}

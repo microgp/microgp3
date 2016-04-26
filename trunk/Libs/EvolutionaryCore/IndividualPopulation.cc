@@ -123,10 +123,13 @@ void SpecificIndividualPopulation<IndividualType>::setupPopulation()
         std::unique_ptr<IndividualType> individual = newRandomSpecificIndividual();
         
         // Check if the individual is valid.
-        if (individual->validate()) {
+        if (individual->validate()) 
+	{
             // Save the new individual in the vector.
             addIndividual(std::move(individual));
-        } else {
+        } 
+	else 
+	{
             // Discard the individual because it is not valid.
             deadIndividuals++;
         }
@@ -156,13 +159,15 @@ void SpecificIndividualPopulation<IndividualType>::evaluateAndHandleClones()
     size_t evaluated = runEvaluator(m_individuals.begin(), m_individuals.end());
     
     // Because just after a recovery, we might not need to compute anything if the recovery file had all the information
-    if (evaluated > 0) {
+    if (evaluated > 0) 
+    {
         // Compute scaled fitness and/or kill the clones
         detectAndHandleClones(m_individuals.begin(), m_individuals.end());
         
         m_entropy = updateDeltaEntropy(m_individuals.begin(), m_individuals.end());
         
-        if (getParameters().getFitnessSharingEnabled()) {
+        if (getParameters().getFitnessSharingEnabled()) 
+	{
             shareFitness(m_individuals.begin(), m_individuals.end());
         }
     }
@@ -172,8 +177,10 @@ template <class IndividualType>
 void SpecificIndividualPopulation<IndividualType>::checkFitnessValidity()
 {
     // Check that all fitnesses of not-dead invidividuals are valid.
-    for (auto ind: m_individuals) {
-        if (!ind->isDead()) {
+    for (auto ind: m_individuals) 
+    {
+        if (!ind->isDead()) 
+	{
             Assert(ind->getRawFitness().getIsValid());
             Assert(ind->getFitness().getIsValid());
         }
@@ -184,16 +191,21 @@ template <class IndividualType>
 void SpecificIndividualPopulation<IndividualType>::updateOperatorStatistics(const std::vector< CandidateSolution* >& newGeneration)
 {
     std::vector<Individual*> newGenerationInds;
-    for (auto candidate: newGeneration) {
+    for (auto candidate: newGeneration) 
+    {
         Assert(candidate);
-        if (IndividualType* ind = dynamic_cast<IndividualType*>(candidate)) {
+        if (IndividualType* ind = dynamic_cast<IndividualType*>(candidate)) 
+	{
             newGenerationInds.push_back(ind);
         }
     }
+
     std::vector<Individual*> everyone;
-    for (auto individual: m_individuals) {
+    for (auto individual: m_individuals) 
+    {
         everyone.push_back(individual);
     }
+
     getParameters().getActivations().template updateOperatorsStatistics<Individual>(
         std::move(everyone), newGenerationInds, getBestScaledIndividual(), getWorstScaledIndividual());
 }
@@ -227,8 +239,10 @@ void SpecificIndividualPopulation<IndividualType>::slaughtering()
 template <class IndividualType>
 void SpecificIndividualPopulation<IndividualType>::mergeNewGeneration(const std::vector< CandidateSolution* >& newGeneration)
 {
-    for (auto candidate: newGeneration) {
-        if (IndividualType* ind = dynamic_cast<IndividualType*>(candidate)) {
+    for (auto candidate: newGeneration) 
+    {
+        if (IndividualType* ind = dynamic_cast<IndividualType*>(candidate)) 
+	{
             addIndividual(unique_ptr<Individual>(ind));
         }
     }
@@ -239,7 +253,8 @@ void SpecificIndividualPopulation<IndividualType>::prepareForCommit()
 {
     m_entropy = updateDeltaEntropy(m_individuals.begin(), m_individuals.end());
     
-    if (getParameters().getFitnessSharingEnabled()) {
+    if (getParameters().getFitnessSharingEnabled()) 
+    {
         shareFitness(m_individuals.begin(), m_individuals.end());
     }
 }
@@ -254,12 +269,15 @@ void SpecificIndividualPopulation<IndividualType>::commit()
         m_individuals.begin(), m_individuals.end(), [this] (IndividualType* a, IndividualType* b) {
             return !compareRawBestWorst(a, b);
         });
+
     m_worstRawIndividual = *minmax.first;
     m_bestRawIndividual = *minmax.second;
+
     minmax = std::minmax_element(
         m_individuals.begin(), m_individuals.end(), [this] (IndividualType* a, IndividualType* b) {
             return !compareScaledBestWorst(a, b);
         });
+
     m_worstScaledIndividual = *minmax.first;
     m_bestScaledIndividual = *minmax.second;
     
@@ -541,6 +559,61 @@ void SpecificIndividualPopulation<IndividualType>::writeInnerXml(ostream& output
     output << "</" << XML_CHILD_ELEMENT_INDIVIDUALS << ">" << endl;
 }
 
+template <class IndividualType> 
+void SpecificIndividualPopulation<IndividualType>::discardFitnessValues() 
+{
+	LOG_DEBUG << "Invalidating the fitness value of individuals inside IndividualPopulation..." << ends;
+	for (auto ind: this->m_individuals) 
+	{
+	    ind->getRawFitness().invalidate();
+	    ind->getFitness().invalidate();
+	}
+}
+
+template <class IndividualType> 
+void SpecificIndividualPopulation<IndividualType>::seeding(string fileName)
+{
+	if( ! File::exists(fileName) )
+	{
+		LOG_WARNING << "Error: could not read file \"" << fileName << "\". Skipping population seeding..." << ends;
+		return;
+	}
+
+	// open file, there should be a file name on every line	
+	vector<string> listOfFiles;
+	ifstream inputFile(fileName);
+	if( inputFile.is_open() )
+	{
+		string buffer;
+		while( getline(inputFile, buffer) )
+		{
+			listOfFiles.push_back(buffer);
+		}
+	}
+	
+	// and now, assimilate ALL the files!
+	ugp3::constraints::Constraints* modifiedConstraints = nullptr; //FIXME this pointer should be changed, or the function should be overloaded
+	for(unsigned int i = 0; i < listOfFiles.size(); i++)
+	{
+		LOG_INFO << "Reading file \"" << listOfFiles[i] << "\"..." << ends;
+		CandidateSolution* candidateSolution = Population::assimilate(listOfFiles[i], modifiedConstraints);
+		
+		if( dynamic_cast<IndividualType*>(candidateSolution) != nullptr)
+		{
+			unique_ptr<IndividualType> individual( (IndividualType*)candidateSolution );
+			addIndividual( std::move(individual) ); 
+			LOG_INFO << "Individual successfully added to the population!" << ends;
+		}
+		else
+		{
+			LOG_WARNING 	<< "Could not add the individual from file \"" 
+					<< listOfFiles[i] + "\" to the population. Skipping to the next file..." 
+					<< ends;
+		}
+	}
+
+	return;
+}
 
 template class SpecificIndividualPopulation<MOIndividual>;
 template class SpecificIndividualPopulation<GEIndividual>;

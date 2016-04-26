@@ -1,3 +1,5 @@
+#include <vector>
+
 #include "ugp3_config.h"
 #include "EvolutionaryCore.h"
 #include "Operators/LocalSearch.h"
@@ -51,15 +53,10 @@ void LocalSearchOperator::generate(
     std::vector< Individual* >& outChildren,
     IndividualPopulation& population) const
 {
-// what should ugp3 do:
-// - select parent(s), using the internal selector
-// Already done by the caller (apply())
-
-// - write parent(s) to file
 	vector<string> parentNames;
     
-    // Generated files to be removed
-    vector<string> outfiles;
+	// Generated files to be removed
+	vector<string> outfiles;
 
 	LOG_DEBUG << this->getName() << ": writing " << parents.size() << " parents individual to file." << ends;
 	for(unsigned int i = 0; i < parents.size(); i++)
@@ -73,8 +70,7 @@ void LocalSearchOperator::generate(
 	}
 
 // - delete previously produced individual files
-	// TODO: 	find a way to obtain a list of all files with a certain pattern, with a new method for ugp3::File;
-	//		the method File::exists does not work with "name*"
+	// TODO: check whether the lines below actually work	
 	vector<string> existingOffspring = File::getList( this->outputPattern + "*" );
 	for(unsigned int i = 0; i < existingOffspring.size(); i++)
 	{
@@ -94,32 +90,43 @@ void LocalSearchOperator::generate(
 	scriptCommandLine = this->executable + " " + scriptCommandLine;
 	
 	LOG_DEBUG << this->getName() << ": executing command \"" << scriptCommandLine << "\"..." << ends;
-	int returnValue = system( scriptCommandLine.c_str() );
+	int returnValue = system( scriptCommandLine.c_str() ); // TODO is this good? compare with how the evaluator is called
 	
 	LOG_DEBUG 	<< this->getName() << ": local search process \"" << scriptCommandLine 
-#include <vector>
 			<< "\" terminated with return value " << returnValue << ends;
 	
 // - read output file(s) and assimilate them in ugp3
-	// first, get the list of files that are coherent with the output pattern
-	vector<string> offspringNames = File::getList( this->outputPattern + "*" );
+	vector<string> offspringNames;
+	if( File::exists( this->outputPattern ) )
+	{
+		LOG_DEBUG << "Reading individual names..." << ends;
+		ifstream file(this->outputPattern);
+		string buffer;
+		
+		while(getline(file, buffer))
+		{
+			offspringNames.push_back(buffer);
+		}
+	}
 	
 	if( offspringNames.size() == 0 )
 	{
 		LOG_WARNING << "No individuals produced by the local search process \"" << scriptCommandLine << "\"..." << ends;
 	}
 	
-	// TODO: write the assimilation function
+	// call the assimilation function
 	for(unsigned int i = 0; i < offspringNames.size(); i++)
 	{
-			/* it does not work, because the copy constructor fro Constraints is declared as private...why?
-			const ugp3::constraints::Constraints& constraints = populationParameters->getConstraints();
-			Individual* child = population->assimilate( offspringNames[i], &constraints );
-			outChildren.push_back( child );
-			*/
+		ugp3::constraints::Constraints* constraints = new ugp3::constraints::Constraints(); 
+		CandidateSolution* child = population.assimilate( offspringNames[i], constraints );
+		if( dynamic_cast<Individual*>( child ) != nullptr )
+		{
+			outChildren.push_back( (Individual*) child );
+		}
 	}
 	
 // - delete parent file(s) and output file(s)
+	// TODO actually implement this part
 #if 0 
     // FIXME BUG This operator tends to CLEAR THE CURRENT DIRECTORY. Very naughty.
 	for(unsigned int i = 0; i < parentNames.size(); i++)

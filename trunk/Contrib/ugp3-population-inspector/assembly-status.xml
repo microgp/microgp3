@@ -4,6 +4,7 @@
  seconds='18.32'
  outputPathName='status.xml'
  overwriteOutput='1'
+ elapsedTimePreviousRuns='0'
  statisticsPathName='statistics.xml'
  randomState='43215 16066 55165 58989 57068 5'
  infinityStringIndividual='ABA'
@@ -11,12 +12,12 @@
  xmlns='http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm'
  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
  xsi:schemaLocation='http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm http://www.cad.polito.it/ugp3/schemas/evolutionary-algorithm.xsd'>
+<!-- Cumulative seconds elapsed in all previous runs -->
 <populations>
 <population generation='36' name='populationAssembly' type='enhanced'>
-<!-- Cumulative seconds elapsed in all previous runs -->
-<elapsedTimePreviousRuns seconds="154" />
 <parameters type="enhanced">
 <!-- enhanced population specific parameters -->
+<elapsedTimePreviousRuns seconds="154" />
 <!-- clone scaling factor: the fitness of each clone of a given individual is multiplied by this factor (0,1). If set to 0, clones are discarded. -->
 <cloneScalingFactor value="0"/>
 <!-- elite size: the eliteSize best individuals do not age at each generational step. -->

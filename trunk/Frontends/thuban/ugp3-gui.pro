@@ -4,30 +4,35 @@
 
 TEMPLATE = app
 
-TARGET = 
+TARGET = ugp3-gui 
+
+QT += widgets
+
+QMAKE_CXXFLAGS += -std=c++11
 
 DEPENDPATH += 	. \ 
 		../../ \
-		../../Libs/Shared \
-		../../Libs/Log \
-		../../Libs/XmlParser \
-		../../Libs/Graph \
-		../../Libs/Shared/Exceptions \
-		../../Libs/Shared \
-		../../Libs/Log \
-		../../Libs/XmlParser/ \
-		../../Libs/Graph \
 		../../Libs/Constraints \
-		../../Libs/EvolutionaryCore
+		../../Libs/EvolutionaryCore \
+		../../Libs/EvolutionaryCore/Operators \
+		../../Libs/EvolutionaryCore/OperatorSelectors \
+		../../Libs/Graph \
+		../../Libs/Log \
+		../../Libs/Shared \
+		../../Libs/Shared/Exceptions \
+		../../Libs/XmlParser/
 
 INCLUDEPATH += 	. \
 		../../ \
-		../../Libs/Shared \
-		../../Libs/Log \
-		../../Libs/XmlParser \
-		../../Libs/Graph \
 		../../Libs/Constraints \
-		../../Libs/EvolutionaryCore
+		../../Libs/EvolutionaryCore \
+		../../Libs/EvolutionaryCore/Operators \
+		../../Libs/EvolutionaryCore/OperatorSelectors \
+		../../Libs/Graph \
+		../../Libs/Log \
+		../../Libs/Shared \
+		../../Libs/Shared/Exceptions \
+		../../Libs/XmlParser
 
 LIBS +=		-L../../Libs/XmlParser/ \
 		-L../../Libs/Shared/ \

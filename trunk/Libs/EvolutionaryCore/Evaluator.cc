@@ -60,7 +60,8 @@ Evaluator::~Evaluator()
 
 void Evaluator::evaluate(CandidateSolution& object)
 {
-    if (m_flushed) {
+    if (m_flushed) 
+    {
         m_flushed = false;
         m_startNewEvaluations = std::chrono::steady_clock::now();
     }

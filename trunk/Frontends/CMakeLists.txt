@@ -27,4 +27,4 @@
 MESSAGE(STATUS "Adding frontends: ugp3, thuban")
 
 ADD_SUBDIRECTORY(ugp3)
-#ADD_SUBDIRECTORY(thuban)
+ADD_SUBDIRECTORY(thuban)

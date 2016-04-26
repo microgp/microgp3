@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt"?>
+<constraints
+    xmlns="http://www.cad.polito.it/ugp3/schemas/constraints" 
+    id="One-Max" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+  <typeDefinitions>
+    <item type="constant" name="register">
+      <value>%eax</value>
+      <value>%ebx</value>
+      <value>%ecx</value>
+      <value>%edx</value>
+    </item>
+    <item type="constant" name="instruction">
+      <value>addl</value>
+      <value>subl</value>
+      <value>movl</value>
+      <value>andl</value>
+      <value>orl</value>
+      <value>xorl</value>
+      <value>cmpl</value>
+    </item>
+    
+    <item type="constant" name="branch">
+      <value>ja</value>
+      <value>jz</value>
+      <value>jnz</value>
+      <value>je</value>
+      <value>jne</value>
+      <value>jc</value>
+      <value>jnc</value>
+      <value>jo</value>
+      <value>jno</value>
+    </item>
+    
+    <item type="constant" name="instruction_0_op">
+      <value>cbw</value>
+    </item>
+    
+    <item type="constant" name="instruction_1_op">
+      <value>incl</value>
+      <value>decl</value>
+      <value>notl</value>
+    </item>
+  </typeDefinitions>
+  <commentFormat><value/></commentFormat>
+  <identifierFormat>n<value /></identifierFormat>
+  <labelFormat><value/>: </labelFormat>
+  <uniqueTagFormat><value /></uniqueTagFormat>
+  <prologue id="globalPrologue"/>
+  <epilogue id="globalEpilogue"/>
+  <sections>
+    <section id="bitString" prologueEpilogueCompulsory="false">
+      <prologue id="sectionPrologue">
+	<expression>
+	.text
+	.globl	evolved_function
+	.type	evolved_function, @function
+evolved_function:
+.LFB0:
+	.cfi_startproc
+	pushl %ebx
+	pushl %ecx
+	pushl %edx
+	movl $0x00000505, %eax
+	movl $0x00050500, %ebx
+	movl $0x00050500, %ecx
+	movl $0x05050000, %edx
+</expression>
+      </prologue>
+      <epilogue id="sectionEpilogue">
+	<expression>
+	popl %edx
+	popl %ecx
+	popl %ebx
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	evolved_function, .-evolved_function
+	.ident	"MicroGP"
+	.section	.note.GNU-stack,"",@progbits
+</expression>
+      </epilogue>
+      <subSections>
+	<subSection id="main" maxOccurs="1" minOccurs="1" maxReferences="0">
+	  <prologue id="stringPrologue"/>
+	  <epilogue id="stringEpilogue"/>
+	  
+	  <macros maxOccurs="1500" minOccurs="1" averageOccurs="70" sigma="60">
+	    <macro id="instrDirectDirect">
+	      <expression>	<param ref="ins"/>    <param ref="sreg"/>,  <param ref="dreg"/>
+</expression>
+	      
+	      <parameters>
+		<item type="definedType" ref="instruction" name="ins" />
+		<item type="definedType" ref="register" name="sreg" />
+		<item type="definedType" ref="register" name="dreg" />
+	      </parameters>
+	    </macro>
+	    
+	    <macro id="instrConstDirect">
+	      <expression>	<param ref="ins"/>     $0x<param ref="scon"/>,   <param ref="dreg"/> 
+</expression>
+	      
+	      <parameters>
+		<item type="definedType" ref="instruction" name="ins" />
+		<item type="bitArray" length="32" base="hex" name="scon" />
+		<item type="definedType" ref="register" name="dreg" />
+		
+	      </parameters>
+	    </macro>
+	    
+	    <macro id="Instr_1_op">
+	      <expression>	<param ref="ins" />   <param ref="reg" />
+</expression>
+	      
+	      <parameters>
+		<item type="definedType" ref="instruction_1_op" name="ins" />
+		<item type="definedType" ref="register" name="reg" />
+	      </parameters>
+	    </macro>
+	    
+	    <macro id="branchCond">
+	      <expression>	<param ref="ins"/>   <param ref="target"/>
+</expression>
+	      
+	      <parameters>
+		<item type="definedType" ref="branch" name="ins" />
+		<item type="innerGenericLabel" name="target" itself="true" prologue="true" epilogue="true"/>
+	      </parameters>
+	    </macro>
+	  </macros>
+	</subSection>
+      </subSections>   
+    </section>
+  </sections>
+</constraints>

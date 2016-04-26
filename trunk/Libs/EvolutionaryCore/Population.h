@@ -713,6 +713,12 @@ public: // Stuff to rework
      */
     CandidateSolution* assimilate(std::string fileName, ugp3::constraints::Constraints* modifiedConstraints);
 
+/**
+     * Assimilates several candidate solutions, reading them from file. Virtual, since each population has different types of candidate solutions (groups, individuals).
+     * @param std::string fileName name of the file that contains the individuals' filenames.
+*/
+    virtual void seeding(std::string fileName) = 0;
+
 protected: // static fields
     /** Xml tag to specify the generation of the population */
     static const std::string XML_ATTRIBUTE_GENERATION;

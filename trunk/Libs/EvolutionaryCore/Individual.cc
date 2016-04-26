@@ -252,15 +252,17 @@ void Individual::outputLineage(ostream& lineageFile, unsigned int recursion, con
     }
 }
 
-void Individual::setGraphContainer( unique_ptr<ugp3::ctgraph::CGraphContainer> graphContainer )
+void Individual::setCGraphContainer( unique_ptr<ugp3::ctgraph::CGraphContainer>& graphContainer)
 {
-	// really rough control
-	if( this->m_graphContainer.get() == nullptr )
+	if(this->m_graphContainer.get() == nullptr )
+	{
+		LOG_DEBUG << "Setting graph container of individual " << *this << " to a new value..." << ends;
 		this->m_graphContainer.reset( graphContainer.release() );
+	}
 	else
-		LOG_WARNING 	<< "Trying to change the graph container (genome) of Individual " << *this
-				<< ", while the graph container is not empty!"
-				<< ends;
+	{
+		LOG_ERROR << "Graph container of individual " << *this << " is already set. Cannot set it to another value." << ends;
+	}
 
 	return;
 }

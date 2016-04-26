@@ -54,9 +54,9 @@ void Evaluator::readXml(const xml::Element& element)
 	}
 
 	bool filesFound = false;
-    bool scriptFileFound = false;
-    bool inputFileFound = false;
-    bool outputFileFound = false;
+	bool scriptFileFound = false;
+	bool inputFileFound = false;
+	bool outputFileFound = false;
 	bool environmentFound = false;
 	const xml::Element* childElement = element.FirstChildElement();
 	while(childElement != nullptr)

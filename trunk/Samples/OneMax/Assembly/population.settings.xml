@@ -39,6 +39,8 @@
   <!-- evaluator parameters -->
 
   <evaluation>
+    <cacheSize value="100"/>
+    <cacheSaved value="true"/>
     <concurrentEvaluations value="1"/>
     <removeTempFiles value="true"/>
     <evaluatorPathName value="./fitness.sh"/>

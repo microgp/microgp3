@@ -48,6 +48,8 @@ const std::string EvaluatorCommon<T>::XML_CHILDELEMENT_TOTALEVALUATIONS = "total
 template <class T>
 const std::string EvaluatorCommon<T>::XML_CHILDELEMENT_CACHE = "cache";
 template <class T>
+const std::string EvaluatorCommon<T>::XML_CHILDELEMENT_CACHESAVED = "cacheSaved";
+template <class T>
 const std::string EvaluatorCommon<T>::XML_CHILDELEMENT_CACHEENTRY = "cacheEntry";
 template <class T>
 const std::string EvaluatorCommon<T>::XML_ATTRIBUTE_VALUE = "value";
@@ -60,14 +62,15 @@ const std::string EvaluatorCommon<T>::XML_ATTRIBUTE_PHENOTYPE = "phenotype";
 
 template <class T>
 EvaluatorCommon<T>::EvaluatorCommon()
-: m_dispatcher(nullptr), m_generation(0)
+: m_dispatcher(nullptr), m_generation(0), m_cacheSaved(false)
 {
 }
 
 template <class T>
 EvaluatorCommon<T>::~EvaluatorCommon()
 {
-    if (m_dispatcher) {
+    if (m_dispatcher) 
+    {
         delete m_dispatcher;
     }
 }
@@ -86,7 +89,8 @@ void EvaluatorCommon<T>::clear()
     m_cacheResolvedCount = 0;
     
     m_cache.clear();
-    if (m_dispatcher) {
+    if (m_dispatcher) 
+    {
         delete m_dispatcher;
         m_dispatcher = nullptr;
     }
@@ -103,16 +107,24 @@ void EvaluatorCommon<T>::evaluate(CandidateSolution& object)
     
     LOG_DEBUG << "Eval: req. for " << object << " = " << object.getNormalizedPhenotype() << std::ends;
     CacheEntry* entry = findCacheEntry(object.getNormalizedPhenotype());
-    if (entry) {
+
+    if (entry) 
+    {
         bool immediate = entry->read(object, m_generation);
-        if (immediate) {
+        if (immediate) 
+	{
             LOG_DEBUG << "Eval: cache returned an entry from this generation (duplicate)." << std::ends;
             ++m_duplicateRequestCount;
-        } else {
+        } 
+	else 
+	{
             LOG_DEBUG << "Eval: cache returned an entry from generation " << entry->getGenerationStored() << std::ends;
             ++m_cacheResolvedCount;
         }
-    } else {
+
+    }
+    else 
+    {
         // The entry will be updated when the object gets evaluated.
         LOG_DEBUG << "Eval: creating cache entry." << std::ends;
         createCacheEntry(object.getNormalizedPhenotype());
@@ -126,7 +138,8 @@ template <class T>
 CacheEntry* EvaluatorCommon<T>::findCacheEntry(const std::string& code)
 {
     auto it = m_cache.find(code);
-    if (it != m_cache.end()) {
+    if (it != m_cache.end()) 
+    {
         return &it->second;
     }
     return nullptr;
@@ -154,36 +167,53 @@ void EvaluatorCommon<T>::readXml(const xml::Element& element)
     ugp3::core::Evaluator::readXml(element);
     
     const xml::Element* childElement = element.FirstChildElement();
-    while (childElement) {
+    while (childElement) 
+    {
         const string& elementName = childElement->ValueStr();
-        if (elementName == XML_CHILDELEMENT_TOTALEVALUATIONS) {
+        if (elementName == XML_CHILDELEMENT_TOTALEVALUATIONS) 
+	{
             m_actualEvaluationCount = xml::Utility::attributeValueToUInt(*childElement, XML_ATTRIBUTE_VALUE);
-            if (xml::Utility::hasAttribute(*childElement, XML_ATTRIBUTE_DUPLICATE)) {
+
+            if (xml::Utility::hasAttribute(*childElement, XML_ATTRIBUTE_DUPLICATE)) 
+	    {
                 m_duplicateRequestCount = xml::Utility::attributeValueToUInt(*childElement, XML_ATTRIBUTE_DUPLICATE);
             }
-            if (xml::Utility::hasAttribute(*childElement, XML_ATTRIBUTE_CACHE)) {
+
+            if (xml::Utility::hasAttribute(*childElement, XML_ATTRIBUTE_CACHE)) 
+	    {
                 m_cacheResolvedCount = xml::Utility::attributeValueToUInt(*childElement, XML_ATTRIBUTE_CACHE);
             }
-        } else if (elementName == XML_CHILDELEMENT_CACHE) {
+
+        } 
+	else if (elementName == XML_CHILDELEMENT_CACHE) 
+	{
 #ifdef UGP3_USE_LUA
             std::lock_guard<std::mutex> lock(m_cacheMutex);
 #endif
             auto entryElement = childElement->FirstChildElement();
-            while (entryElement) {
+            while (entryElement) 
+	    {
                 const auto& code = xml::Utility::attributeValueToString(*entryElement, XML_ATTRIBUTE_PHENOTYPE);
                 const auto& entry = m_cache.emplace(code, 0);
                 entry.first->second.readXml(*entryElement);
                 entryElement = entryElement->NextSiblingElement();
             }
         }
+	else if (elementName == XML_CHILDELEMENT_CACHESAVED )
+	{
+		m_cacheSaved = xml::Utility::attributeValueToBool(*childElement, XML_ATTRIBUTE_VALUE);
+	}
         childElement = childElement->NextSiblingElement();
     }
     
 #ifdef UGP3_USE_LUA
     const std::string& file = getScriptFile();
-    if (file.substr(file.length() - 4, file.length()) == ".lua") {
+    if (file.substr(file.length() - 4, file.length()) == ".lua") 
+    {
         m_dispatcher = new EvaluatorLuaDispatcher<T>(*this);
-    } else {
+    } 
+    else 
+    {
         m_dispatcher = new EvaluatorFileDispatcher<T>(*this);
     }
 #else
@@ -203,15 +233,20 @@ void EvaluatorCommon<T>::writeInnerXml(ostream& output) const
 #ifdef UGP3_USE_LUA
     std::lock_guard<std::mutex> lock(m_cacheMutex);
 #endif
-    output << "<" << XML_CHILDELEMENT_CACHE << ">" << std::endl;
-    for (auto& entry: m_cache) {
-        output << "<" << XML_CHILDELEMENT_CACHEENTRY
-        << " " << XML_ATTRIBUTE_PHENOTYPE << "='" << xml::Utility::transformXmlEscChar(entry.first) << "'"
-        << ">" << std::endl;
-        entry.second.writeInnerXml(output);
-        output << "</" << XML_CHILDELEMENT_CACHEENTRY << ">" << std::endl;
+    // we save the cache to file ONLY if the appropriate flag is set
+    if( m_cacheSaved == true )
+    {
+	output << "<" << XML_CHILDELEMENT_CACHE << ">" << std::endl;
+	for (auto& entry: m_cache) 
+	{
+		output << "<" << XML_CHILDELEMENT_CACHEENTRY
+		<< " " << XML_ATTRIBUTE_PHENOTYPE << "='" << xml::Utility::transformXmlEscChar(entry.first) << "'"
+		<< ">" << std::endl;
+		entry.second.writeInnerXml(output);
+		output << "</" << XML_CHILDELEMENT_CACHEENTRY << ">" << std::endl;
+	}
+	output << "</" << XML_CHILDELEMENT_CACHE << ">" << std::endl;
     }
-    output << "</" << XML_CHILDELEMENT_CACHE << ">" << std::endl;
 }
 
 template <class T>
@@ -230,42 +265,62 @@ void EvaluatorCommon<T>::step(unsigned int generation)
 #endif
     
     m_generation = generation;
-    if (getCacheSize() == 0) {
+    if (getCacheSize() == 0) 
+    {
         m_cache.clear();
-    } else if (m_cache.size() > getCacheSize()) {
+    } 
+    else if (m_cache.size() > getCacheSize()) 
+    {
         LOG_VERBOSE << "Resizing the evaluator cache using LRU. Current size: " 
         << m_cache.size() << ", target: " << getCacheSize() << ends;
+
         // Generate histogram of cache entry ages
         std::vector<std::size_t> generationHistogram(m_generation + 1, 0);
-        for (auto& entry : m_cache) {
+        for (auto& entry : m_cache) 
+	{
             ++generationHistogram[entry.second.getGenerationLastUsed()];
         } 
+
         // Erase the tail of the histogram
         std::vector<std::size_t> toDeleteHistogram(m_generation + 1, 0);
         std::size_t toDelete = m_cache.size() - getCacheSize();
-        for (unsigned int i = 0; i < m_generation + 1; ++i) {
+        for (unsigned int i = 0; i < m_generation + 1; ++i) 
+	{
             std::size_t toDeleteThisGen = std::min(toDelete, generationHistogram[i]);
             toDeleteHistogram[i] = toDeleteThisGen;
             toDelete -= toDeleteThisGen;
         }
+
         LOG_VERBOSE << "toDelete: " << toDelete << ", toDeleteHistogram: ";
-        for (size_t td: toDeleteHistogram) {
+        for (size_t td: toDeleteHistogram) 
+	{
             LOG_VERBOSE << td << " ";
         }
         LOG_VERBOSE << ends;
+
         // Apply the deletions to the map
         auto it = m_cache.begin();
-        while (it != m_cache.end()) {
+        while (it != m_cache.end()) 
+	{
             auto gen = it->second.getGenerationLastUsed();
-            if (toDeleteHistogram[gen] > 0) {
+            if (toDeleteHistogram[gen] > 0) 
+	    {
                 --toDeleteHistogram[gen];
                 it = m_cache.erase(it);
-            } else {
+            } 
+	    else 
+	    {
                 ++it;
             }
         }
         Assert(m_cache.size() == getCacheSize());
     }
+}
+
+template <class T>
+void EvaluatorCommon<T>::clearCache()
+{
+	this->m_cache.clear();
 }
 
 template <class T>
@@ -296,7 +351,8 @@ void EvaluatorCommon<T>::showStatistics() const
     << requestedEvaluationCount << " requests, "
     << m_actualEvaluationCount << " actually performed, "
     << m_duplicateRequestCount << " duplicates and "
-    << m_cacheResolvedCount << " found in cache."
+    << m_cacheResolvedCount << " found in cache (currently "
+    << m_cache.size() << " elements are stored in the cache)."
     << ends;
     
     LOG_INFO << "Evaluator cache: ";
@@ -304,9 +360,6 @@ void EvaluatorCommon<T>::showStatistics() const
     {
         LOG_INFO	<< m_cache.size() << " entries (max " << getCacheSize() << ")";
 	
-	// now, we might be after a recoveryInput; in this case, the cache is empty, and looking
-	// for the last generation used will make it crash
-	// TODO: study whether it makes sense to save and restore the cache content
 	if( m_cache.size() != 0 )
 		LOG_INFO 	<< ", LRU from generation "
 				<< std::min_element(m_cache.begin(), m_cache.end(),
@@ -359,7 +412,8 @@ void CacheEntry::store(const Fitness& fitness)
 {
     Assert(fitness.getIsValid());
     m_fitness = fitness;
-    for (CandidateSolution* object: m_waiters) {
+    for (CandidateSolution* object: m_waiters) 
+    {
         object->getRawFitness() = m_fitness;
     }
     m_waiters.clear();
@@ -368,12 +422,16 @@ void CacheEntry::store(const Fitness& fitness)
 void CacheEntry::readXml(const xml::Element& element)
 {
     const xml::Element* childElement = element.FirstChildElement();
-    while (childElement) {
+    while (childElement) 
+    {
         const string& elementName = childElement->ValueStr();
-        if (elementName == XML_ELEMENT_HISTORY) {
+        if (elementName == XML_ELEMENT_HISTORY) 
+	{
             m_generationRead = xml::Utility::attributeValueToUInt(*childElement, XML_ATTRIBUTE_GENERATIONREAD);
             m_generationStored = xml::Utility::attributeValueToUInt(*childElement, XML_ATTRIBUTE_GENERATIONSTORED);
-        } else if (elementName == Fitness::XML_NAME) {
+        } 
+	else if (elementName == Fitness::XML_NAME) 
+	{
             m_fitness.readXml(*childElement);
         }
         childElement = childElement->NextSiblingElement();

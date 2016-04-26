@@ -74,9 +74,12 @@ void EvaluatorFileDispatcher<T>::flush(std::function<void(double)>& showProgress
     unsigned int concurrentEvaluations = EvaluatorDispatcher<T>::getEvaluator().getConcurrentEvaluations();
     std::vector<T*> objects;
     objects.reserve(concurrentEvaluations);
-    while (!m_pendingEvaluations.empty()) {
+
+    while (!m_pendingEvaluations.empty()) 
+    {
         showProgress((double)(m_requestsSinceFlush - m_pendingEvaluations.size()) / m_requestsSinceFlush);
-        while (!m_pendingEvaluations.empty() && objects.size() < concurrentEvaluations) {
+        while (!m_pendingEvaluations.empty() && objects.size() < concurrentEvaluations) 
+	{
             objects.push_back(m_pendingEvaluations.front());
             m_pendingEvaluations.pop();
         }
@@ -189,7 +192,8 @@ void EvaluatorFileDispatcher<T>::runScript(const vector<T*>& evaluatedCandidates
     }
 
     // extract the individuals from the queue
-    for (T* candidate: evaluatedCandidates) {
+    for (T* candidate: evaluatedCandidates) 
+    {
         //(!)20111221const string& fileName = File::appendStringToName(this->inputFile, individual->getId());
         const string& fileName = File::formatToName(EvaluatorDispatcher<T>::getEvaluator().getInputFile(), candidate->getId());
         
@@ -202,6 +206,7 @@ void EvaluatorFileDispatcher<T>::runScript(const vector<T*>& evaluatedCandidates
         // add the file name in the file containing the individuals to evaluate
         individualsListFile << fileName << endl;
     }
+
     individualsListFile.close();
     scriptCommandline = scriptCommandline.substr(0, scriptCommandline.length() - 1);
     
@@ -241,7 +246,6 @@ void EvaluatorFileDispatcher<T>::runScript(const vector<T*>& evaluatedCandidates
 #endif
 
     // retrieve the results
-    
     retrieveEvaluations(evaluatedCandidates);
     
     // clean up the temporary files

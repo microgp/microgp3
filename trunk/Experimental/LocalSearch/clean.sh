@@ -3,7 +3,8 @@
 rm -f core
 rm -f fitness.out
 rm -f *.log
-rm -f individual_*.in
+rm -f individual*
+rm -f localSearchParent*
 rm -f statistics.csv
 rm -f statistics_*.csv
 rm -f status.xml

@@ -40,6 +40,7 @@ using namespace ugp3;
 using namespace std;
 
 const string SettingsContext::XML_ATTRIBUTE_NAME = "name";
+const string SettingsContext::XML_ATTRIBUTE_SEEDINGFILE = "seedingFile";
 const string SettingsContext::XML_NAME = "context";
 const string SettingsContext::POPULATION_XML_NAME = "population";
 const string SettingsContext::POPULATIONNAMES_XML_NAME = "populationNames";
@@ -74,10 +75,12 @@ void SettingsContext::readXml(const xml::Element& element)
                 // temporary
                 this->removeOption("population");
                 this->removeOption("populationNames");
+		this->removeOption("populationSeedingFiles"); // added 2016-04-10
 
                 // if an option is called "populations", we treat it differently
                 unique_ptr<Option> populationFiles( new Option() );
                 unique_ptr<Option> populationNames( new Option() );
+                unique_ptr<Option> populationSeedingFiles( new Option() ); // added 2016-04-10
 
                 // two different kind of options (population names and population files)
                 populationFiles->setName("population");
@@ -85,6 +88,13 @@ void SettingsContext::readXml(const xml::Element& element)
 
                 populationNames->setName("populationNames");
                 populationNames->setType("string");
+		
+		// added 2016-04-10
+		populationSeedingFiles->setName("populationSeedingFiles");
+		populationSeedingFiles->setType("string");
+		
+		// TODO here we should add new 'options' for the population, e.g. the file with the
+		//	names of the individuals we are trying to assimilate before starting
 
                 bool firstName = true;
 
@@ -102,12 +112,29 @@ void SettingsContext::readXml(const xml::Element& element)
                         populationFiles->setValue(populationFiles->getValue() + ";" + xml::Utility::attributeValueToString((*populationsChildElement), "value"));
                         populationNames->setValue(populationNames->getValue() + ";" + xml::Utility::attributeValueToString((*populationsChildElement), XML_ATTRIBUTE_NAME));
                     }
+		    // in any case, check if the optional tag is set
+		    if( xml::Utility::hasAttribute((*populationsChildElement), XML_ATTRIBUTE_SEEDINGFILE) )
+		    {
+			if(populationSeedingFiles->getValue().length() > 0) // some attributes of this kind have already been read
+			{
+				populationSeedingFiles->setValue(populationSeedingFiles->getValue() + ";" + 
+									xml::Utility::attributeValueToString((*populationsChildElement), 
+													XML_ATTRIBUTE_SEEDINGFILE));
+			}
+			else
+			{
+				// first attribute read
+				populationSeedingFiles->setValue(xml::Utility::attributeValueToString((*populationsChildElement), 
+													XML_ATTRIBUTE_SEEDINGFILE));
+			}
+		    } 
 
                     populationsChildElement = populationsChildElement->NextSiblingElement();
                 }
 
                 this->addOption(std::move(populationFiles));
                 this->addOption(std::move(populationNames));
+		this->addOption(std::move(populationSeedingFiles)); // added 2016-04-10
 
             } // end of new block
             else

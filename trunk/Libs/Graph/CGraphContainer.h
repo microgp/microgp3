@@ -61,7 +61,7 @@ namespace ugp3
         // forward declarations
         class CGraph;
         class CSubGraph;
-        class CNode;
+        class CNode; 
         class CGraphContainer;
 
         /**

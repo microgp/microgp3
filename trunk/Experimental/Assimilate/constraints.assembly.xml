@@ -50,7 +50,7 @@
   <prologue id="globalPrologue"/>
   <epilogue id="globalEpilogue"/>
   <sections>
-    <section id="bitString" prologueEpilogueCompulsory="false">
+    <section id="bitString" prologueEpilogueCompulsory="true">
       <prologue id="sectionPrologue">
 	<expression>
 	.text

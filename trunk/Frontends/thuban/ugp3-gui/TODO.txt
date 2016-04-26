@@ -1,0 +1,13 @@
+2015-09-23
+----------
+- manage correctly pause/restart 
+- graph2 update
+- visualize best individual 
+
+2015-09-07
+----------
+Now, I patched the logging by:
+a) creating an ostringstream that ConsoleHandler will use to dump all the text to;
+b) at the end of every function, calling a method that reverses the content of the ostringstream to the textEdit inside the GUI.
+
+It's not superclean, and I wonder whether there is a way to trigger a signal everytime the ostringstream is written to...

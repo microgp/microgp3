@@ -836,7 +836,7 @@ hash_t CSubGraph::calculateHashCode(Purpose purpose) const
     return hashCode;
 }
 
-void CSubGraph::setPrologue(unique_ptr<CNode> value)
+void CSubGraph::setPrologue(unique_ptr<CNode>& value)
 {
 	if(value->getNext() != nullptr)
 	{
@@ -895,7 +895,7 @@ void CSubGraph::setPrologue(unique_ptr<CNode> value)
 	this->slice.append(*this->prologue);
 }
 
-void CSubGraph::setEpilogue(unique_ptr<CNode> value)
+void CSubGraph::setEpilogue(unique_ptr<CNode>& value)
 {
     // a new epilogue cannot be set if the current epilogue
     // is not detached from the previous node

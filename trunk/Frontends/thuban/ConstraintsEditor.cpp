@@ -18,8 +18,10 @@
 #include "XmlHighlighter.h"
 
 // MicroGP classes
+#include "CNode.h"
 #include "CGraphContainer.h"
 #include "Constraints.h"
+#include "Relabeller.h"
 
 // namespace
 using namespace std;
@@ -92,9 +94,11 @@ void ConstraintsEditorWindow::previewConstraintsFile()
 		throw ugp3::Exception("Failed to create random individual. If you get this message too often, check your contraints: they might contain indications that make it hard or impossible to create valid individuals. Usually, the problem arises with innerForwardLabel and innerBackwardLabel parameters.", LOCATION);
 	}
 		
+	// the relabeller is necessary to relabel stuff
+	ugp3::ctgraph::IdentityRelabeller relabeller;
 	// stringstream to collect the individual
 	stringstream ss ( stringstream::in | stringstream::out );
-	cgraphContainer->writeExternalRepresentation( ss );
+	cgraphContainer->writeExternalRepresentation( ss, relabeller );
 	ss << ends;
 	
 	// visualize output on textBrowse widget

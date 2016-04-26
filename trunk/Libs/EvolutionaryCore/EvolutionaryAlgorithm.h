@@ -118,13 +118,16 @@ namespace ugp3
             Population&         getPopulation(unsigned int index) const;
             unsigned int        getPopulationCount() const;
             
-            chrono::time_point<chrono::steady_clock> getStartTime() const {
+            chrono::time_point<chrono::steady_clock> getStartTime() const 
+	    {
                 return m_startTime;
             }
-            chrono::seconds getElapsedTime(void) const {
+            chrono::seconds getElapsedTime(void) const 
+	    {
                 return m_elapsedTimeThisRun + m_elapsedTimePreviousRuns;
             }
-            void setElapsedTime(chrono::seconds elapsed) {
+            void setElapsedTime(chrono::seconds elapsed) 
+	    {
                 m_elapsedTimeThisRun = elapsed;
             }
 

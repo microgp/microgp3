@@ -8,30 +8,33 @@ TARGET = ugp3-constraints-gui
 
 QT += widgets
 
-FLAGS += -std=c++11
+QMAKE_CXXFLAGS += -std=c++11
 
 DEPENDPATH += 	. \ 
 		../../ \
-		../../Libs/Shared \
-		../../Libs/Log \
-		../../Libs/XmlParser \
-		../../Libs/Graph \
-		../../Libs/Shared/Exceptions \
-		../../Libs/Shared \
-		../../Libs/Log \
-		../../Libs/XmlParser/ \
-		../../Libs/Graph \
+		../../Frontends/ugp3 \ 
 		../../Libs/Constraints \
-		../../Libs/EvolutionaryCore
+		../../Libs/EvolutionaryCore \
+		../../Libs/EvolutionaryCore/Operators \
+		../../Libs/EvolutionaryCore/OperatorSelectors \
+		../../Libs/Graph \
+		../../Libs/Log \
+		../../Libs/Shared \
+		../../Libs/Shared/Exceptions \
+		../../Libs/XmlParser 
 
 INCLUDEPATH += 	. \
 		../../ \
-		../../Libs/Shared \
-		../../Libs/Log \
-		../../Libs/XmlParser \
-		../../Libs/Graph \
+		../../Frontends/ugp3 \ 
 		../../Libs/Constraints \
-		../../Libs/EvolutionaryCore
+		../../Libs/EvolutionaryCore \
+		../../Libs/EvolutionaryCore/Operators \
+		../../Libs/EvolutionaryCore/OperatorSelectors \
+		../../Libs/Graph \
+		../../Libs/Log \
+		../../Libs/Shared \
+		../../Libs/Shared/Exceptions \
+		../../Libs/XmlParser 
 
 LIBS +=		-L../../Libs/XmlParser/ \
 		-L../../Libs/Shared/ \

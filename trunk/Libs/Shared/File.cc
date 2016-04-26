@@ -249,11 +249,13 @@ vector<string> File::getList(const string& pattern)
 		}
 	}
 	
+	/* debugging
 	cout 	<< "Directory name is \"" << directoryName 
 		<< "\"; file pattern is:";
 	for(unsigned int i = 0; i < filePatternClean.size(); i++)
 		cout << " \"" << filePatternClean[i] << "\"";
 	cout << endl;
+	*/
 
 	dir = opendir( directoryName.c_str() );
 	
@@ -305,10 +307,12 @@ vector<string> File::getList(const string& pattern)
 	}
 	closedir(dir);
 #endif
+	/* debugging
 	cout << "File list retrieved is:";
 	for(unsigned int i = 0; i < fileList.size(); i++)
 		cout << " " << fileList[i];
 	cout << endl;
+	*/
 
 	return fileList;
 } 

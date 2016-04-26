@@ -87,47 +87,11 @@ int main (int argc, char* argv[])
 
 	// start assimilation!
 	LOG_INFO << "Calling assimilate method..." << ends;
-	ugp3::core::CandidateSolution* individual = population->assimilate(toAssimilateFile, constraints);
+	ugp3::core::CandidateSolution* candidateSolution = population->assimilate(toAssimilateFile, constraints);
 	
-	// if the individual is not nullptr, write it to file
-	if( individual == nullptr )
-	{
-		LOG_ERROR << "Assimilated individual is not valid." << ends;
-	}
-	else
-	{
-		LOG_INFO << "Writing individual to file..." << ends;
-		string outputFile = toAssimilateFile + OUTPUT_FILE;
-	}
-/*
-	// an evolutionary algorithm instance is (unfortunately) needed for this...maybe it could be time to overload the function?
-	ugp3::core::EvolutionaryAlgorithm* evolutionaryAlgorithm = new ugp3::core::EvolutionaryAlgorithm();
-	
-	// create population parameters from file 
-	LOG_INFO << "Loading population parameters file \"" << populationFile << "\"..." << ends;
-	unique_ptr<ugp3::core::PopulationParameters> populationParameters = ugp3::core::PopulationParameters::fromFile(populationFile); 
-	
-	// this is terrible programming, but I have been fighting against unique_ptr for too long
-	ugp3::core::PopulationParameters* ppPtr = populationParameters.release();
-	ugp3::core::EnhancedPopulationParameters* eppPtr = dynamic_cast<ugp3::core::EnhancedPopulationParameters*>(ppPtr);
-	
-	if( eppPtr == nullptr )
-	{
-		LOG_ERROR 	<< "There is something wrong with the population parameters, they should be in the EnhancedPopulation format."
-				<< ends;
-		return -1;
-	}
-	
-	LOG_INFO << "Creating population..." << ends;
-	ugp3::core::EnhancedPopulation* population = new ugp3::core::EnhancedPopulation( unique_ptr<ugp3::core::EnhancedPopulationParameters>(eppPtr), *evolutionaryAlgorithm );
-
-	// create empty constraints
-	LOG_INFO << "Creating empty constraints..." << ends;
-	ugp3::constraints::Constraints* constraints = new ugp3::constraints::Constraints();
-	
-	// start assimilation!
-	LOG_INFO << "Calling assimilate method..." << ends;
-	ugp3::core::CandidateSolution* individual = population->assimilate(toAssimilateFile, constraints);
+	ugp3::core::EnhancedIndividual* individual = nullptr;
+	if( static_cast<ugp3::core::EnhancedIndividual*>( candidateSolution) != nullptr )
+		individual = static_cast<ugp3::core::EnhancedIndividual*>( candidateSolution);
 	
 	// if the individual is not nullptr, write it to file
 	if( individual == nullptr )
@@ -139,9 +103,9 @@ int main (int argc, char* argv[])
 		LOG_INFO << "Writing individual to file..." << ends;
 		string outputFile = toAssimilateFile + OUTPUT_FILE;
 		
-		//(Individual*)individual->toCode( outputFile );
+		individual->toCode( outputFile );
 	}
-*/
+
 	LOG_INFO << "Done." << ends;
 	return 0;
 }

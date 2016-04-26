@@ -2,10 +2,11 @@
 <settings>
   <context name="evolution">
     <!-- The seed for the pseudo-random number generator. If missing or 0 use epoch. -->
-    <option name="randomSeed" value="42" />
+    <!-- <option name="randomSeed" value="42" /> -->
     <!-- For each population, its name and the file where the population parameters are defined. -->
     <option name ="populations">
-      <population name="P1" value="population.settings.xml" />
+      <!-- <population name="P1" value="hs.population.settings.xml" seeding="toBeAssimilated.txt" /> -->
+      <population name="P1" value="hs.population.settings.xml" seedingFile="toBeAssimilated.txt"/>
     </option>
     <!-- The file where the statistics on the evolution are saved. -->
     <option name="statisticsPathName" value="statistics.csv" />
@@ -19,16 +20,14 @@
     <!-- When set to true, overwrites the previous state file, otherwise saves it to another file. -->
     <option name="recoveryOverwriteOutput" value="true" />
     <!-- When set to true, discards the fitness contained in the state file and re-evaluates the individuals. -->
-    <option name="recoveryDiscardFitness" value="true" />
+    <option name="recoveryDiscardFitness" value="false" />
 </context>
 
   <context name="logging">
     <!-- Only essential information on standard output -->
-    	<option name="std::cout" value="info; brief" />
-    	<option name="debug.log" value="debug; brief" />
-    <!-- 
-	<option name="info-verbose.txt" value="info; extended" /> 
-    -->
+    <option name="std::cout" value="info; brief" />
+    <option name="debug.log" value="debug; brief" />
+    <!-- <option name="verbose.log" value="verbose; extended" /> -->
   </context>
   
 </settings>
