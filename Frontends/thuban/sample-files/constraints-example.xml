@@ -37,7 +37,7 @@
 </expression>
 </epilogue>
 
-<!-- list of subsections inside section1 -->
+<!-- list of subsections inside section A -->
 <subSections>
 
 	<subSection id="subSection1" maxOccurs="3" minOccurs="1" maxReferences="0">
@@ -91,34 +91,27 @@
 	<subSection id="subSection2" maxOccurs="3" minOccurs="1" maxReferences="0">
 
 	<prologue id="subSection2Prologue">
-	<expression>  This is the prologue of subSection II
+	<expression>  This is the prologue of an instance of subSection II
 </expression>	
 	</prologue>
 
 
 	<epilogue id="subSection2Epilogue">
-	<expression>  This is the epilogue of subSection II
+	<expression>  This is the epilogue of an instance of subSection II
 </expression>	
 	</epilogue>
 	
 	<macros maxOccurs="5" minOccurs="1" averageOccurs="2" sigma="5">
 	
 	<macro id="macroNoParameters" weight="1">
-	<expression>   macro with no parameters, on two lines...
+	<expression>   macro with no parameters, on three lines...
    you start to understand how this goes, right?
+good! let's keep going!
 </expression>
-	</macro>
-
-	<macro id="macroSelfRef" weight="1">
-	<expression>   Yeah, I have a reference to myself, so what? <param ref="selfRef1"/>
-</expression>
-	<parameters>
-		<item name="selfRef1" type="selfRef"/>
-	</parameters>
 	</macro>
 
 	<macro id="macroUniqueTag" weight="1">
-	<expression><param ref="uniqueTag1"/>:   Yeah, I have a reference to myself, so what? <param ref="uniqueTag1"/>
+	<expression><param ref="uniqueTag1"/>: Yeah, I have a reference to myself, so what?  <param ref="uniqueTag1"/>
 </expression>
 	<parameters>
 		<item name="uniqueTag1" type="uniqueTag"/>
@@ -127,8 +120,55 @@
 
 	</macros>
 	</subSection>
-
 </subSections>
 </section>
+
+<section id="sectionB" prologueEpilogueCompulsory="true">
+
+<prologue id="sectionBPrologue">
+<expression> This is the prologue of Section B
+</expression>
+</prologue>
+
+<epilogue id="sectionBEpilogue">
+<expression> This is the epilogue of Section B
+</expression>
+</epilogue>
+
+<subSections>
+<subSection id="subSection3" maxOccurs="1" minOccurs="1" maxReferences="0">
+	<prologue id="stringPrologue"><expression>  This is the prologue of an instance of subSection III
+</expression>
+	</prologue>
+
+	<epilogue id="stringEpilogue"><expression>  This is the epilogue of an instance of subSection III;  What about a nice cup of bitArray? <param ref="bitArray1"/>
+</expression>
+	<parameters>
+		<item name="bitArray1" type="bitArray" length="8" pattern="--------" base="hex"/>
+	</parameters>
+	</epilogue>
+
+	<macros maxOccurs="5" minOccurs="5" averageOccurs="5" sigma="0">
+	
+	<!-- macro with a single constant parameter -->
+	<macro id="macroConstant" >
+<expression>   macro with a constant parameter: <param ref="constant1"/>
+</expression>
+	<parameters>
+		<item name="constant1" type="constant">
+			<value>constantX</value>
+			<value>constantY</value>
+			<value>constantZ</value>
+		</item>
+	</parameters>
+	</macro>
+
+	</macros>
+</subSection>
+</subSections>
+</section>
+
+
+
 </sections>
 </constraints>

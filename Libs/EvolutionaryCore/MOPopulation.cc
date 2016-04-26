@@ -130,10 +130,14 @@ void MOPopulation::age()
             throw Exception("Expected an individual of type 'multiobjective'.", LOCATION);
 
         // sets the heroes
-        if (individual->isAlive()) {
-            if (individual->getLevel() < (int)this->getParameters().getEliteCardinality()) {
+        if (individual->isAlive()) 
+	{
+            if (individual->getLevel() < (int)this->getParameters().getEliteCardinality()) 
+	    {
                 individual->setState(Individual::HERO);
-            } else {
+            } 
+	    else 
+	    {
                 individual->setState(Individual::ALIVE);
             }
         }
@@ -151,10 +155,14 @@ void MOPopulation::evaluateAndHandleClones()
     LOG_VERBOSE << "Evaluating population ..." << ends;
 
     // if this is the first evaluation after a recovery, we must keep prevLevels from the xml!!
-    if (m_firstRecovery) {
+    if (m_firstRecovery) 
+    {
         this->setFirstRecovery(false);
-    } else {
-        for (auto ind: m_individuals) {
+    } 
+    else 
+    {
+        for (auto ind: m_individuals) 
+	{
             // copy current levels to prevLevels
             ind->setPreviousLevel(ind->getLevel());
         }
@@ -196,9 +204,11 @@ void MOPopulation::commit()
 
     // find best individuals (Pareto front / level 0) and sort them by entropy
     Assert(m_individuals.size() > 0);
-    for (auto individual: m_individuals) {
+    for (auto individual: m_individuals) 
+    {
         // PATCH! at kickstart, all inds are @ level -1 (gx)
-        if (individual->getLevel() <= 0) {
+        if (individual->getLevel() <= 0) 
+	{
             ind.push_back(individual);
         }
     }
@@ -220,10 +230,12 @@ void MOPopulation::commit()
     ind.clear();   
     for (auto individual: m_individuals) {
         // PATCH!
-        if (individual->getLevel() == this->getMaxLevel() || individual->getLevel() < 0) {
+        if (individual->getLevel() == this->getMaxLevel() || individual->getLevel() < 0) 
+	{
             ind.push_back(individual);
         }
     }
+
     // TODO: sorting multi-objective individuals is kinda useless...
     std::sort(ind.begin(), ind.end(), [this] (MOIndividual* a, MOIndividual* b) {
         return compareScaledBestWorst(a, b);
@@ -300,29 +312,36 @@ void MOPopulation::slaughtering()
      */
     unsigned int liveInds = std::distance(liveBegin, m_individuals.end());
     unsigned int mu = this->getParameters().getMu();
-    if (liveInds > mu) {
+    if (liveInds > mu) 
+    {
         unsigned int individuals_to_remove = liveInds - mu;
         LOG_VERBOSE << "Removing " << individuals_to_remove << " individual(s)..." << ends;
         
         unsigned int first = std::distance(m_individuals.begin(), liveBegin);
         unsigned int last = m_individuals.size() - 1;
-        do {
+        do 
+	{
             int lastLevel = m_individuals[last]->getLevel();
             unsigned int levelSize = getLevelSize(lastLevel);
             Assert(levelSize > 0);
-            if (levelSize <= individuals_to_remove) {
+            if (levelSize <= individuals_to_remove) 
+	    {
                 // Wipe level
                 individuals_to_remove -= levelSize;
-                while (first <= last && m_individuals[last]->getLevel() == lastLevel) {
+                while (first <= last && m_individuals[last]->getLevel() == lastLevel) 
+		{
                     m_individuals[last]->setDeath(getGeneration());
                     --last;
                 }
-            } else {
+            }
+	    else 
+	    {
                 LOG_VERBOSE << "Removing " << individuals_to_remove << " leftovers from level " << lastLevel << ends;
                 
                 // select all individuals belonging to level lastLevel
                 vector<MOIndividual*> elements;
-                for (MOIndividual* individual: m_individuals) {
+                for (MOIndividual* individual: m_individuals) 
+		{
                     if (individual->getLevel() == lastLevel && individual->isAlive())
                         elements.push_back(individual);
                 }
@@ -337,7 +356,8 @@ void MOPopulation::slaughtering()
                 
                 Assert(selected.size() == individuals_to_remove);
                 individuals_to_remove = 0;
-                for (auto candidate: selected) {
+                for (auto candidate: selected) 
+		{
                     candidate->setDeath(getGeneration());
                 }
             }
@@ -377,13 +397,16 @@ bool MOPopulation::checkMaximumFitnessReached()
     const vector<double>& maxFitness = this->getParameters().getMaximumFitness();
     Assert(maxFitness.size() == getParameters().getFitnessParametersCount());
     
-    for (auto individual: m_individuals) {
+    for (auto individual: m_individuals) 
+    {
         // if there are such individuals, they must be in the first level
-        if (individual->getLevel() == 0) {
+        if (individual->getLevel() == 0) 
+	{
             const vector<double>& fitness = individual->getRawFitness().getValues();
             Assert(fitness.size() == getParameters().getFitnessParametersCount());
             
-            if (fitness >= maxFitness) {
+            if (fitness >= maxFitness) 
+	    {
                 LOG_INFO << "Reached maximum fitness (individual " <<  individual << ")"<< ends;
                 return true;
             }
@@ -406,33 +429,34 @@ void MOPopulation::updateSteadyStateGenerations()
         LOG_DEBUG << "MaxSteadyStateGenerations: " << this->getParameters().getMaximumSteadyStateGenerations() << ends;
         LOG_DEBUG << "SteadyStateGenerations: " << m_steadyStateGenerations << ends;
         
-        // if this is the first generation there cannot be a steady state
-        //if (this->generation == 0)
-        //    return false; 
-        // but the algorithm could stop for maximum time elapsed, see below; so condition this->generation > 0 is added above
-        
-        // TODO: 	this is probably wrong; for example, if new points are arriving into the Pareto front, the algorithm is far from
-        //		being in a stagnation condition.
-        bool steady = true;
-        for (auto individual: m_individuals) {
-            LOG_DEBUG << "Individual previous level: " << individual->getPreviousLevel() << " and current level: " << individual->getLevel() << ends;
+        // TODO:this is probably wrong; for example, if new points are arriving into the Pareto front, the algorithm is far from
+        //	being in a stagnation condition.
+	
+	// so, let's experiment with "the size of the Pareto front did not change"
+	unsigned int sizeOfPreviousPF = 0, sizeOfCurrentPF = 0;
+
+        for (auto individual: m_individuals) 
+	{
+            LOG_DEBUG 	<< "Individual previous level: " << individual->getPreviousLevel() 
+			<< " and current level: " << individual->getLevel() << ends;
             
-            if ((individual->getPreviousLevel() == 0) && (individual->getLevel() != 0)) {
-                // this individual was declassed
-                steady = false;
-                // we must restart the counter
-                m_steadyStateGenerations = 0;
-            }
+            if (individual->getPreviousLevel() == 0) sizeOfPreviousPF++;
+	    if (individual->getLevel() == 0) sizeOfCurrentPF++; 
         }
         
-        if (steady == true)
+        if (sizeOfCurrentPF == sizeOfPreviousPF)
         {
             m_steadyStateGenerations++;
-            LOG_INFO << "Stagnation: no individual has been declassed from the Pareto front for " 
+            LOG_INFO << "Stagnation: size of the Pareto front did not change for " 
             << m_steadyStateGenerations << " generations (stop set at " 
             << this->getParameters().getMaximumSteadyStateGenerations() << ")."
             << ends;
         }
+	else
+	{
+            m_steadyStateGenerations = 0;
+            LOG_INFO << "Stagnation: size of the Pareto front changed!" << ends; 
+	}
         
         LOG_DEBUG << "SteadyGenerations: " << m_steadyStateGenerations << ends;
     }
@@ -453,7 +477,8 @@ void MOPopulation::computeLevels()
      * Procedure ends when all individuals are classified.
      */
     
-    for (auto individual: m_individuals) {
+    for (auto individual: m_individuals) 
+    {
         // invalidates current level
         individual->setLevel(-1);
     }
@@ -467,24 +492,29 @@ void MOPopulation::computeLevels()
     bool end = false;
     unsigned int validated;
     
-    for (n = 0 , validated = 0; !end/* there are still individuals */; n++) {
+    for (n = 0 , validated = 0; !end/* there are still individuals */; n++) 
+    {
         end = true;
         LOG_INFO << "Computing level " << n << Progress(validated / ((double) m_individuals.size() + 1.0)) << ends;
         
-        for (auto it = begin; it != m_individuals.end(); ++it) {
+        for (auto it = begin; it != m_individuals.end(); ++it) 
+	{
             MOIndividual* individual = *it;
             bool found_cover = false;
             
             // computes only individuals with level invalidated
-            if (individual->getLevel() == -1) {
+            if (individual->getLevel() == -1) 
+	    {
                 end = false;
                 // considers the scaled fitness
-                for (auto it2 = begin; it2 != m_individuals.end(); ++it2) {
+                for (auto it2 = begin; it2 != m_individuals.end(); ++it2) 
+		{
                     MOIndividual* individual2 = *it2;
                     if (found_cover)
                         break;
                     
-                    if (individual != individual2 && ((int)individual2->getLevel() == n || individual2->getLevel() == -1)) {
+                    if (individual != individual2 && ((int)individual2->getLevel() == n || individual2->getLevel() == -1)) 
+		    {
                         /* we don't consider levels above this */
                         if (individual->getFitness().compareTo(individual2->getFitness()) < 0)
                         {
@@ -499,7 +529,8 @@ void MOPopulation::computeLevels()
                     // individual belongs to level n
                     individual->setLevel(n);
                     validated++;
-                    LOG_DEBUG << "Individual " << *individual << " with fitness " << individual->getFitness() << " belongs to level " << individual->getLevel() << ends;
+                    LOG_DEBUG 	<< "Individual " << *individual << " with fitness " << individual->getFitness() 
+				<< " belongs to level " << individual->getLevel() << ends;
                 }
             }
         }
@@ -515,30 +546,17 @@ void MOPopulation::computePerceivedStrength()
 {
     _STACK;
     
-    /*
-     * computes the current strength for all individuals
-     *
-     * For each individual i (i == population size - 1):
-     *   compare it with all individuals j > i
-     *   for each fitness parameter
-     *     an individual scores 3 points if its fitness parameter wins
-     *     the comparison, 1 point if it draws (1 point for each individual),
-     *     0 if it loses
-     *   the sum of all points gives the strenght of the individual
-     *
-     *   Strenght is used to sort individuals within levels
-     */
-    
-    // TODO: 	here the "strength" should be replaced by the "crowding distance"; basically, it's based on the fitness-space distance between
-    //		an individual and the two closest neighbours of the same level. Once the two closest individuals are found, the crowding
-    //		distance is the area of the rectangle whose two opposite vertices are the two closest individuals.
+    // here the "strength" is the "crowding distance"; basically, it's based on the fitness-space distance between
+    // an individual and the two closest neighbours of the same level. Once the two closest individuals are found, the crowding
+    // distance is the area of the rectangle whose two opposite vertices are the two closest individuals.
     
     LOG_INFO << "Computing crowding distance for all individuals..." << ends;
     
     // Zombies and dead individuals are out of it
     auto begin = regroupAndSkipNotAliveCandidates(m_individuals.begin(), m_individuals.end());
     
-    for (auto it = begin; it != m_individuals.end(); ++it) {
+    for (auto it = begin; it != m_individuals.end(); ++it) 
+    {
         MOIndividual* individual = *it;
         // initialize the vectors
         vector<double> distancesLeft, distancesRight; 
@@ -553,7 +571,8 @@ void MOPopulation::computePerceivedStrength()
         // so, FOR EACH OBJECTIVE, find the two closest points (one on each side of the objective), on the same front!
         // for each front, solutions at the limit of each objective are assigned an infinite value
         LOG_DEBUG << "Computing crowding distance for individual " << *individual << "..." << ends;
-        for (auto it2 = begin; it2 != m_individuals.end(); ++it2) {
+        for (auto it2 = begin; it2 != m_individuals.end(); ++it2) 
+	{
             MOIndividual* individual2 = *it2;
             if( individual != individual2 && individual->getLevel() == individual2->getLevel() )
             {
@@ -598,15 +617,17 @@ void MOPopulation::computePerceivedStrength()
         } // end for each other individual
         
         double hyperVolume = 1;
-        for (unsigned int objective = 0; 
-             objective < fitnessSize && hyperVolume < DBL_MAX; 
-        objective++) {
+        for (unsigned int objective = 0; objective < fitnessSize && hyperVolume < DBL_MAX; objective++) 
+	{
             if (distancesLeft[objective] == -1 || distancesRight[objective] == -1)
                 hyperVolume = DBL_MAX;
             else
                 hyperVolume *= (distancesLeft[objective] + distancesRight[objective]);
         }
-        LOG_DEBUG << "Hypervolume of crowding distance for individual " << *individual << " is " << hyperVolume << ends; 
+
+        LOG_DEBUG 	<< "Hypervolume of crowding distance for individual " << *individual 
+			<< " with fitness=" << individual->getRawFitness()
+			<< " is " << hyperVolume << ends; 
         
         // now, a couple of special cases: if the hyperVolume is negative, it's one of the individuals at the limit
         // so we superboost its crowding distance, it is at the edge of the front

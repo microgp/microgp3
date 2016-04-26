@@ -8,6 +8,7 @@
 #define HEADER_UGP3_LINEINFORMATION
 
 #include <string>
+#include <vector>
 
 namespace ugp3
 {
@@ -22,6 +23,9 @@ namespace ugp3
 		std::string macro;
 		std::string occurrence;
 		int referenceTo;
+		bool matched;
+
+		std::vector<std::string> macroParameters;
 
 		// constructor
 		/**
@@ -33,6 +37,9 @@ namespace ugp3
 		 * Creates empty instance of the class.
 		*/	
 		LineInformation();
+		/** 	Resets everything, except for the text
+		*/
+		void clearMacro();
 	};
 }
 

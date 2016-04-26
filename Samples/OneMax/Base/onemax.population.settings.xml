@@ -66,6 +66,7 @@
   
   <!-- evaluator parameters -->
   <evaluation>
+    <cacheSize value="100"/>
     <concurrentEvaluations value="1" />
     <removeTempFiles value="true" />
     <evaluatorPathName value="perl ./onemax.fitness-script.pl" />
@@ -75,10 +76,9 @@
   
   <!-- operator statistics -->
   <operators default="none">
-    <!-- 
-    <operator ref="twoPointCrossover"/> 
-    -->
     <operator ref="singleParameterAlterationMutation"/>
+    <operator ref="onePointCrossover"/>
+    <operator ref="twoPointCrossover"/> 
     <operator ref="onePointCrossover"/>
   </operators>
 </parameters>

@@ -103,9 +103,9 @@ void OnePointImpreciseCrossoverOperator::generate(
     // the cut point is the index of the first node of the second half of the slice
     unsigned int cutPoint1 = Random::nextUInteger(1, selectedSubGraph1->getSize() - 1);
 
-    // get the cut point on the second slice
+    // get the cut point on the second slice 
     unsigned int cutPoint2 = this->getValidCutPoint(*selectedSubGraph1, cutPoint1, *selectedSubGraph2);
-
+	
     this->swapSlices(
         *selectedSubGraph1, cutPoint1, selectedSubGraph1->getSize() - 1,
         *selectedSubGraph2, cutPoint2, selectedSubGraph2->getSize() - 1);

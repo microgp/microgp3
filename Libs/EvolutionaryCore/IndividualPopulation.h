@@ -149,12 +149,14 @@ public:
      * @returns Individual* A pointer to the new individual
      * @throws nothing. if an exception is thrown, the execution is aborted.
      */
-    std::unique_ptr<IndividualType> newRandomSpecificIndividual() const {
+    std::unique_ptr<IndividualType> newRandomSpecificIndividual() const 
+    {
         return std::unique_ptr<IndividualType>(
             new IndividualType(getGeneration(), Operator::NO_OPERATOR, std::vector<std::string>(), *this)
         );
     }
-    virtual unique_ptr<Individual> newRandomIndividual() const {
+    virtual unique_ptr<Individual> newRandomIndividual() const 
+    {
         return std::unique_ptr<Individual>(newRandomSpecificIndividual().release());
     }
     
@@ -162,12 +164,16 @@ public:
     
     virtual void mergeNewGeneration(const std::vector< CandidateSolution* >& newGeneration);
     
-    virtual void discardFitnessValues() {
-        for (auto ind: m_individuals) {
+    /*virtual*/ void discardFitnessValues(); 
+    /*
+    {
+        for (auto ind: m_individuals) 
+        {
             ind->getRawFitness().invalidate();
             ind->getFitness().invalidate();
         }
     }
+    */
     
     virtual void evaluateAndHandleClones();
     
@@ -177,20 +183,25 @@ public:
     
     virtual void selectNewZombifiableCandidates();
 
-    virtual void age() {
+    virtual void age() 
+    {
         promoteHeroesAndAge(m_individuals.begin(), m_individuals.end());
     }
     
-    virtual void handleZombies() {
-        for (auto ind: m_individuals) {
-            if (ind->isZombie() && !isZombifiable(ind)) {
+    virtual void handleZombies() 
+    {
+        for (auto ind: m_individuals) 
+	{
+            if (ind->isZombie() && !isZombifiable(ind)) 
+	    {
                 // Zombie not found in candidates for zombification
                 ind->setState(CandidateSolution::DEAD);
             }
         }
     }
     
-    virtual void removeDeadCandidates() {
+    virtual void removeDeadCandidates() 
+    {
         removeCorpses(m_individuals);
     }
     
@@ -204,10 +215,13 @@ public:
     virtual void dumpStatisticsHeader(std::ostream& output) const;
     virtual void dumpStatistics(std::ostream& output) const;
     
-    virtual double getAverageAge() const {
+    virtual double getAverageAge() const 
+    {
         return computeAverageAge(m_individuals.begin(), m_individuals.end());
     }
-    virtual std::vector< double > getAverageRawFitness() const {
+
+    virtual std::vector< double > getAverageRawFitness() const 
+    {
         return computeAverageRawFitness(m_individuals.begin(), m_individuals.end());
     }
     
@@ -216,6 +230,9 @@ public:
      * @returns double The average size of the population
      */
     double computeAverageIndividualSize() const;
+
+    // seed the population with individuals
+    void seeding(std::string fileName);
     
     virtual void dumpAllCandidates();
     

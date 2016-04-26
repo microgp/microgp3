@@ -26,6 +26,8 @@
 
 #include "ugp3_config.h"
 #include "Constraints.h"
+#include "RegexMatch.h"
+
 using namespace ugp3::constraints;
 
 
@@ -45,6 +47,30 @@ ExpressionElement::ExpressionElement(const std::string& characters)
 characters(new std::string(characters))
 { }
 
+const std::string ExpressionElement::getRegex() const
+{
+	if( this->parameter != nullptr )
+	{
+		// this ExpressionElement represents a parameter
+		return this->parameter->getRegex();
+	}
+	else if( this->characters != nullptr )
+	{
+		// it's just a string of characters
+		// replace all special characters with escaped versions 
+		std::string regex = RegexMatch::stringToRegex( *this->characters);
+		
+		return regex;
+		
+	}
+	else
+	{
+		LOG_ERROR << "There is an ExpressionElement instance that does not represent neither a parameter, nor a string of characters..." << std::ends;
+		return "";
+	}
+}
+
+/* // old getRegex() function
 const std::string ExpressionElement::getRegex() const
 {
 	if( this->parameter != nullptr )
@@ -113,3 +139,4 @@ const std::string ExpressionElement::getRegex() const
 		return "";
 	}
 }
+*/

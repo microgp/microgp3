@@ -97,5 +97,5 @@ void IntegerParameter::clone(Parameter*& outParameter, const string& name)
 const string IntegerParameter::getRegex() const
 {
 	// any integer can be matched by the following expression
-	return "[0-9]+";
+	return "([0-9]+)";
 }

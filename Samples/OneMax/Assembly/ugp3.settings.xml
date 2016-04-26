@@ -16,6 +16,6 @@
   </context>
   <context name="logging">
     <option name="std::cout" value="info; brief" />
-    <!-- <option name="debug.log" value="debug; brief" /> -->
+    <option name="debug.log" value="debug; brief" />
   </context>
 </settings>

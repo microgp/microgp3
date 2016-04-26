@@ -251,15 +251,15 @@ const string BitArrayParameter::getRegex() const
 	// depending on the base, this might assume different forms
 	if( this->base == Base::Binary )
 	{
-		return "[0|1]+";
+		return "([01]+)";
 	}
 	else if( this->base == Base::Octal )
 	{
-		return "[0-7]+";
+		return "([0-7]+)";
 	}
 	else if( this->base == Base::Hexadecimal )
 	{
-		return "[0-9|A-F|a-f]+";
+		return "([0-9A-Fa-f]+)";
 	}
 	else
 	{

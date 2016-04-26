@@ -76,14 +76,14 @@ void MicroGPMainWindow::setupTabPopulation()
 							 comboBox_PopulationType->rootModelIndex());
 		QStandardItem* firstItem = model->itemFromIndex(firstIndex);
 		firstItem->setSelectable(false);
-		firstItem->setData(Qt::lightGray , Qt::BackgroundRole); 
+		firstItem->setData(QColor(Qt::lightGray) , Qt::BackgroundRole); 
 		// -- selection type combo box
 		model = qobject_cast<QStandardItemModel*>(this->comboBox_IndividualSelection->model());
 		firstIndex = model->index(0, comboBox_IndividualSelection->modelColumn(), 
 					     comboBox_IndividualSelection->rootModelIndex());
 		firstItem = model->itemFromIndex(firstIndex);
 		firstItem->setSelectable(false);
-		firstItem->setData(Qt::lightGray , Qt::BackgroundRole); 
+		firstItem->setData(QColor(Qt::lightGray) , Qt::BackgroundRole); 
 
 		// - connect population type combo box to function that changes the frames according to the type of population
 		connect(this->comboBox_PopulationType, SIGNAL(currentIndexChanged(int)), this, SLOT(changePopulationSpecificFrame(int)));
@@ -111,6 +111,7 @@ void MicroGPMainWindow::loadPopulationFile()
 	if( !this->populationFile.isEmpty() )
 	{
 		// read xml and change all widgets' content 
+		// TODO I commented this because it was creating linking issues...
 		this->relaxedReadPopulationXml();
 	}	
 }
@@ -203,6 +204,7 @@ void MicroGPMainWindow::changePopulationSpecificFrame(int newIndex)
 // save current panel to file
 void MicroGPMainWindow::savePopulationFile()
 {
+#if defined(NOTDEFINED)
 	// preliminary checks
 	// is populationType set?
 	if( this->comboBox_PopulationType->currentIndex() == 0 )
@@ -434,7 +436,7 @@ void MicroGPMainWindow::savePopulationFile()
 	// evaluator
 	outStream << "\t<!-- " << this->label_IndividualSelector->toolTip() << " -->" << endl;
 	// first, the type
-	outStream << "\t<" << QString::fromStdString( ugp3::core::IndividualSelection::XML_NAME ) << " type=\"";
+	outStream << "\t<" << QString::fromStdString( ugp3::core::CandidateSelection::XML_NAME ) << " type=\"";
 	if( this->comboBox_IndividualSelection->currentIndex() == INDEX_SELECTION_TOURNAMENT )
 		outStream << QString::fromStdString( ugp3::core::TournamentSelectionWithFitnessHole::XML_SCHEMA_TYPE );
 	else if( this->comboBox_IndividualSelection->currentIndex() == INDEX_SELECTION_RANKING )
@@ -461,7 +463,7 @@ void MicroGPMainWindow::savePopulationFile()
 	// finally, the evolutionary operators!
 	// open operator statistics tag
 	outStream << "\t<!-- " << this->tableWidget_Operators->toolTip() << " -->" << endl;
-	outStream << "\t<" << QString::fromStdString( ugp3::core::Statistics<ugp3::core::GeneticOperator>::XML_NAME ) << ">" << endl;
+	//outStream << "\t<" << QString::fromStdString( ugp3::core::Statistics<ugp3::core::GeneticOperator>::XML_NAME ) << ">" << endl;
 
 	// adjust activation probabilities before starting
 	this->tableWidget_Operators->setCurrentItem(nullptr);
@@ -511,11 +513,13 @@ void MicroGPMainWindow::savePopulationFile()
 	
 	// end of output
 	outputPopulation.close();
+#endif
 
 }
 
 void MicroGPMainWindow::relaxedReadPopulationXml()
 {
+#if defined(NOTDEFINED)
 	// re-implement here all the ugp3::core::PopulationParameters::readXml method, but do not throw exceptions for missing elements;
 	// instead, just collect and print out some warnings while widget content is changed
 	QString warnings;
@@ -588,19 +592,18 @@ void MicroGPMainWindow::relaxedReadPopulationXml()
 			throw e;
 		    }
 		}
-		/*else if(elementName == ugp3::core::PopulationParameters::XML_CHILDELEMENT_ENNE)
-		{
-		    try
-		    {
-			this->setEnne(xml::Utility::attributeValueToUInt(*childElement, XML_ATTRIBUTE_VALUE));
-		    }
-		    catch(const exception& e)
-		    {
-			LOG_ERROR << "While parsing population data: " << e.what() << ends;
-			throw e;
-		    }
-		}
-		*/
+		//else if(elementName == ugp3::core::PopulationParameters::XML_CHILDELEMENT_ENNE)
+		//{
+		//    try
+		//    {
+		//	this->setEnne(xml::Utility::attributeValueToUInt(*childElement, XML_ATTRIBUTE_VALUE));
+		//    }
+		//    catch(const exception& e)
+		//    {
+		//	LOG_ERROR << "While parsing population data: " << e.what() << ends;
+		//	throw e;
+		//    }
+		//}
 		else if(elementName == ugp3::core::PopulationParameters::XML_CHILDELEMENT_INERTIA)
 		{
 		    try
@@ -770,6 +773,8 @@ void MicroGPMainWindow::relaxedReadPopulationXml()
 				this->tableWidget_Operators->removeRow(i);
 
 			// collect all data related to evolutionary operators
+			// TODO: this has been changed significantly since the introduction of DMAB
+			/*
 			const xml::Element* operatorElement = childElement->FirstChildElement();
 			int operatorIndex = 0;
 			while( operatorElement != nullptr )
@@ -811,13 +816,14 @@ void MicroGPMainWindow::relaxedReadPopulationXml()
 				operatorElement = operatorElement->NextSiblingElement();
 				operatorIndex++;
 			}
+			*/
 			
 			//cout << "About to normalize stuff..." << endl;
 			// normalize current value of the operators
 			this->adjustOperatorTableValues();
 
 		}
-		else if(elementName == ugp3::core::IndividualSelection::XML_NAME)
+		else if(elementName == ugp3::core::CandidateSelection::XML_NAME)
 		{
 			// remove all the labels and spinBoxes associated with the layout
 			QLayoutItem* child = nullptr;
@@ -829,7 +835,7 @@ void MicroGPMainWindow::relaxedReadPopulationXml()
 			
 			// check type and set comboBox accordingly
 			string type = xml::Utility::attributeValueToString(*childElement,
-                                                        ugp3::core::IndividualSelection::XML_ATTRIBUTE_TYPE);
+                                                        ugp3::core::CandidateSelection::XML_ATTRIBUTE_TYPE);
 			
 			if( type == ugp3::core::TournamentSelectionWithFitnessHole::XML_SCHEMA_TYPE )
 				this->comboBox_IndividualSelection->setCurrentIndex(INDEX_SELECTION_TOURNAMENT);
@@ -844,7 +850,7 @@ void MicroGPMainWindow::relaxedReadPopulationXml()
 
 			while( individualSelectionAttribute != nullptr )
 			{
-				if( ugp3::core::IndividualSelection::XML_ATTRIBUTE_TYPE.compare( individualSelectionAttribute->Name() ) != 0 )
+				if( ugp3::core::CandidateSelection::XML_ATTRIBUTE_TYPE.compare( individualSelectionAttribute->Name() ) != 0 )
 				{
 					// add one label
 					this->gridLayout_IndividualSelection->addWidget( 
@@ -891,6 +897,7 @@ void MicroGPMainWindow::relaxedReadPopulationXml()
 		childElement = childElement->NextSiblingElement();
 	    }
 	// also, parse the parts specific to population type
+#endif
 }
 
 // do some checks on the values whenever the tableWidget related to operators is changed

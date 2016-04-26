@@ -32,20 +32,20 @@
 #include "config.h"
 #endif
 
+//#include "CNode.h" // needed, since there are std::unique_ptr<CNode> declared
+#include "Constraints.h"
+#include "ConstrainedElement.h"
 #include "Debug.h"
+#include "Hashable.h"
 #include "IContainer.h"
 #include "IValidable.h"
-#include "ConstrainedElement.h"
 #include "IString.h"
-#include "Hashable.h"
-#include "Constraints.h"
 
 namespace ugp3
 {
     namespace ctgraph
     {
-        // forward declarations
-        class CNode;
+	class CNode;
 
         class NodeContainer : 
 			public IContainer<CNode>, 
@@ -66,8 +66,10 @@ namespace ugp3
 		virtual CNode& getPrologue() const;
 		virtual CNode& getEpilogue() const;
 
-		virtual void setPrologue(std::unique_ptr< ugp3::ctgraph::CNode > value);
-		virtual void setEpilogue(std::unique_ptr< ugp3::ctgraph::CNode > value);
+		virtual void setPrologue(std::unique_ptr< ugp3::ctgraph::CNode >& value);
+		virtual void setEpilogue(std::unique_ptr< ugp3::ctgraph::CNode >& value);
+		virtual void setPrologue(CNode* node);
+		virtual void setEpilogue(CNode* node);
 
 		void setAsParent(CNode* node, NodeContainer* newParent) const;
 

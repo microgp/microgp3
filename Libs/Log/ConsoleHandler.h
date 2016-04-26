@@ -134,6 +134,14 @@ public:
      * @throws Nothing. If an exception is thrown, the execution is aborted.
      */
     int getTerminalWidth() const;
+    
+    /** 
+     * Sets a new output stream for the class (e.g. an ostringstream). This function has been created as an attempt
+     * to re-use the logging classes in a GUI, without modifying the existing stuff.
+     * @param console The new ostream* the text will be sent to.
+     * @throws Nothing. If an exception is thrown, the execution is aborted.
+     */
+    void setConsole(std::ostream* console);
 
     /** Type of the schema to use with this kind of xml elements **/
     static const std::string XML_SCHEMA_TYPE;
@@ -169,6 +177,13 @@ inline bool ConsoleHandler::checkSmartWrap() const
 inline void ConsoleHandler::enableSmartWrap(bool value)
 {
     this->smartWrapEnabled = value;
+}
+
+inline void ConsoleHandler::setConsole(std::ostream* console)
+{
+	// TODO maybe make it throw an exception?
+	if( console != nullptr)
+		this->console = console;
 }
 
 inline bool ConsoleHandler::isTTY() const

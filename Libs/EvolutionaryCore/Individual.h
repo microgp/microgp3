@@ -119,7 +119,7 @@ public:
     
     ugp3::ctgraph::CGraphContainer& getGraphContainer() { return *m_graphContainer; }
     const ugp3::ctgraph::CGraphContainer& getGraphContainer() const { return *m_graphContainer; }
-    void setGraphContainer( std::unique_ptr<ugp3::ctgraph::CGraphContainer> graphContainer );
+    void setCGraphContainer( std::unique_ptr<ugp3::ctgraph::CGraphContainer>& graphContainer );
     
     virtual SpecificLineage<Individual>& getLineage() { return m_lineage; }
     virtual const SpecificLineage<Individual>& getLineage() const { return m_lineage; }

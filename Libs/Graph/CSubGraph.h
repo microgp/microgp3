@@ -133,8 +133,8 @@ public: // getters
 
 public: // NodeContainer interface
     virtual CNode*  getNode(const std::string& id) const;
-	virtual void    setPrologue(std::unique_ptr<CNode> value);
-	virtual void    setEpilogue(std::unique_ptr<CNode> value);
+    virtual void    setPrologue(std::unique_ptr<CNode>& value);
+    virtual void    setEpilogue(std::unique_ptr<CNode>& value);
 
 public: // IContainer interface
     virtual bool contains(const CNode& node) const;

@@ -16,11 +16,7 @@
 
 
 <epilogue id="globalEpilogue">
-<expression>This is the global epilogue: here, take an integer in [-10,100]: <param ref="integer1"/>
-</expression>
-<parameters>
-	<item name="integer1" type="integer" minimum="-10" maximum="100"/>
-</parameters>
+<expression>Comando iniziale</expression>
 </epilogue>
 
 <sections>
@@ -40,8 +36,8 @@
 </expression>
                 <parameters>
                   <item type="constant" ref="constant" name="bit">
-	<value>value1</value>
-	<value>value2</value>
+<value>value1</value>
+<value>value2</value>
               </item>
                 </parameters>
             </macro>

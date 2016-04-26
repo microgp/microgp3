@@ -65,7 +65,7 @@ protected: // virtual methods
     
     // Must rescale clones
     virtual void prepareForCommit();
-
+    
 public: // constructors and destructors
     EnhancedPopulation(const EvolutionaryAlgorithm& parent);
     EnhancedPopulation(

@@ -27,6 +27,7 @@
 /**
  * @file EvaluatorCommon.h
  * Class that provide evaluation caching and work queueing and dispatching using a thread pool.
+ * This file also contains the support class "CacheEntry"
  */
 
 #ifndef HEADER_UGP3_CORE_EVALUATORCOMMON
@@ -100,6 +101,7 @@ class EvaluatorCommon : public Evaluator
 {
 private:
     static const std::string XML_CHILDELEMENT_TOTALEVALUATIONS;
+    static const std::string XML_CHILDELEMENT_CACHESAVED;
     static const std::string XML_CHILDELEMENT_CACHE;
     static const std::string XML_CHILDELEMENT_CACHEENTRY;
     static const std::string XML_ATTRIBUTE_VALUE;
@@ -137,6 +139,10 @@ private:
     unsigned int m_actualEvaluationCount = 0;
     unsigned int m_duplicateRequestCount = 0;
     unsigned int m_cacheResolvedCount = 0;
+
+    /** An internal flag, that is used to decide whether the cache will be saved
+    */
+    bool m_cacheSaved;
     
     /**
      * Finds the entry of any clone of the given object.
@@ -182,6 +188,11 @@ public: // API for dispatchers
      * by the caller.
      */
     void cacheFitness(const std::string& code, const Fitness& fitness);
+
+    /**
+	Clears all values currently in the cache.
+    */
+    void clearCache();
     
 #ifdef UGP3_USE_LUA
     std::mutex& getCacheMutex() const { return m_cacheMutex; }

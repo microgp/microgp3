@@ -32,6 +32,8 @@
  * @see Population.instantiate.cc
  */
 
+#include <regex>
+
 #include "ugp3_config.h"
 #include "Population.h"
 #include "LineInformation.h"
@@ -52,6 +54,33 @@ using namespace ugp3;
 using namespace ugp3::log;
 using namespace ugp3::core;
 using namespace ugp3::ctgraph;
+
+// utility function, later used to split strings 
+//FIXME TODO create an appropriate static class? it bothers me to create a new class just for this...
+void tokenize(const string& str, vector<string>& tokens, const string& delimiters)
+{
+    // Skip delimiters at beginning.
+    string::size_type lastPos = str.find_first_not_of(delimiters, 0);
+    // Find first "non-delimiter".
+    string::size_type pos     = str.find_first_of(delimiters, lastPos);
+
+    while (string::npos != pos || string::npos != lastPos)
+    {
+        // Found a token, add it to the vector.
+        tokens.push_back(str.substr(lastPos, pos - lastPos));
+        // Skip delimiters.  Note the "not_of"
+        lastPos = str.find_first_not_of(delimiters, pos);
+        // Find next "non-delimiter"
+        pos = str.find_first_of(delimiters, lastPos);
+    }
+}
+
+// utility function, that is later used to sort macros
+bool sortMacros( pair<string, ugp3::constraints::Macro*> i, pair<string, ugp3::constraints::Macro*> j)
+{
+	return ( i.first.length() < j.first.length() );
+}
+
 
 Population::Population(
                       unique_ptr< PopulationParameters > parameters, unsigned int generation, const EvolutionaryAlgorithm& parent)
@@ -455,29 +484,17 @@ void Population::showStatistics(void) const
 }
 
 // ambitious function, aiming at recreating BORG v3
+// NOTE
+// I had to chang the following methods
+// 1) ::getRegex() in about every class derived from Constraints/Parameter and inside Constraints/Expression
+// 2) CGraphContainer::setPrologue() and CGraphContainer::setEpilogue()
+// 3) Individual::setCGraphContainer() has been added
+
+// FIXME does not manage outerLabel parameters
+// FIXME does not manage multiple occurrences of the same subsection, I think
+// FIXME maybe this should all be moved to IndividualPopulation, as we are dealing with individuals, only...
 CandidateSolution* Population::assimilate(std::string fileName, ugp3::constraints::Constraints* modifiedConstraints)
 {
-    /*
-     LOG_DEBUG << "Borg v3.0 :: file \"" << fileName << "\", prepare to be assimilated..." << ends;
-     
-     LOG_DEBUG << "This is just a series of trials..." << ends;
-     
-     string text = "This is text containing text! Text! Teeeeext!";
-     string regex = "([T|t][e]+xt)";
-     //string text = "bingo bongo   Bingo    Bongo bingo         Bongo";
-     //string regex = "\\s*([B|b]ingo)\\s+([B|b]ongo)\\s*";
-     vector<string> matches;	
-     
-     LOG_DEBUG << "Now calling RegexMatch..." << ends;
-     RegexMatch::regexMatch(text, regex, matches);
-     
-     LOG_DEBUG << "Results from RegexMatch (" << matches.size() << "):" << ends;
-     for(unsigned int i = 0; i < matches.size(); i++)
-     {
-     LOG_DEBUG << "Match[" << i << "]: \"" << matches[i] << "\"" << ends;
-}
-*/
-    
     // first of all, get the reference constraints; they will be later altered and returned in the pointer modifiedConstraints
     const ugp3::constraints::Constraints& constraints = this->getParameters().getConstraints();
     
@@ -549,17 +566,22 @@ CandidateSolution* Population::assimilate(std::string fileName, ugp3::constraint
             LOG_DEBUG 	<< "Label is \"" << textToAssimilate[l].label << "\", rest of the text is \""
             << textToAssimilate[l].text << "\"." << ends;
             
+	    // however, to match a label inside a string, you need a different regex
+	    string labelInString = ".*(" + textToAssimilate[l].label + ").*";
+                
             // search for the labels and note the corresponding lines?
             for(unsigned int l2 = 0; l2 < textToAssimilate.size(); l2++)
             {
                 vector<string> matches2;
-                
+		
                 if( l2 != l && 
-                    RegexMatch::regexMatch( textToAssimilate[l2].text, textToAssimilate[l].label, matches2 ) > 0 )
+                    RegexMatch::regexMatch( textToAssimilate[l2].text, labelInString/*textToAssimilate[l].label*/, matches2 ) > 0 )
                 {
                     textToAssimilate[l2].referenceTo = l;
                     LOG_DEBUG	<< "Line #" << l2 << " : \"" << textToAssimilate[l2].text 
-                    << "\" contains a reference to line #" << l << ends;
+                    << "\" contains a reference from line #" << l 
+		    << "\"" << textToAssimilate[l].text << "\""
+		    << ends;
                 }
 		
 		// TODO: send a warning if a label is not referenced anywhere?
@@ -584,7 +606,9 @@ CandidateSolution* Population::assimilate(std::string fileName, ugp3::constraint
     string globalPrologueRegex = constraints.getPrologue().getExpression().getRegex();
     string globalEpilogueRegex = constraints.getEpilogue().getExpression().getRegex();
 
-    // IMPORTANT NOTE: having a regex that ends with '\n' might be a huge issue for our matching algorithm; so, for the moment, the '\n' is replaced by '\0'
+    string globalProloguePath = constraints.getPrologue().getPath();
+    string globalEpiloguePath = constraints.getEpilogue().getPath();
+
     LOG_DEBUG << "Regular expression for the global prologue is: \"" << globalPrologueRegex << "\"" << ends;
     LOG_DEBUG << "Regular expression for the global epilogue is: \"" << globalEpilogueRegex << "\"" << ends;
 
@@ -592,7 +616,6 @@ CandidateSolution* Population::assimilate(std::string fileName, ugp3::constraint
     if( globalPrologueRegex.length() > 0 )
     {
 	// avoid issues with '\n'
-	if( globalPrologueRegex.back() == '\n' ) globalPrologueRegex.back() = '\0';
 
 	// TODO matching, starting from the top
     }
@@ -602,7 +625,6 @@ CandidateSolution* Population::assimilate(std::string fileName, ugp3::constraint
     if( globalEpilogueRegex.length() > 0 )
     {
 	// TODO matching, starting from the bottom
-	if( globalEpilogueRegex.back() == '\n' ) globalEpilogueRegex.back() = '\0';
     }
     else
 	LOG_DEBUG << "Global epilogue is empty, skipping matching..." << ends;
@@ -615,34 +637,556 @@ CandidateSolution* Population::assimilate(std::string fileName, ugp3::constraint
 	
 	unsigned int sectionBeginning = topLineNotMached;
 	unsigned int sectionEnd = bottomLineNotMatched; // TODO this could be modified, to look for the epilogue top-down
+	
+	// these two will be updated later, as section prologue and epilogue are matched
+	unsigned int subsectionsBeginning = sectionBeginning;
+	unsigned int subsectionsEnd = sectionEnd;
 		
 	string sectionPrologueRegex = section.getPrologue().getExpression().getRegex();
 	string sectionEpilogueRegex = section.getEpilogue().getExpression().getRegex();
+	
+	string sectionProloguePath = section.getPrologue().getPath();
+	string sectionEpiloguePath = section.getEpilogue().getPath();
 	
 	LOG_DEBUG << "Regex for section \"" << section.getId() << "\" prologue is: \"" << sectionPrologueRegex << "\"" << ends; 
 	LOG_DEBUG << "Regex for section \"" << section.getId() << "\" epilogue is: \"" << sectionEpilogueRegex << "\"" << ends; 
 	
 	if( sectionPrologueRegex.length() > 0 )
 	{
-		// first, try to match the prologue
-		if( RegexMatch::incrementalRollbackMatch( sectionPrologueRegex, textToAssimilate, sectionBeginning, sectionEnd, RegexMatch::topDown) == 0 )
+		// add some optional spaces at the beginning and at the end of the function
+		sectionPrologueRegex = "[\\s]*" + sectionPrologueRegex + "[\\s]*";
+		
+		unsigned int upperLimit = sectionBeginning;
+		unsigned int lowerLimit = sectionEnd;
+
+		// try to match the prologue
+		// note: subsectionsEnd is used here as a limit, and it will be modified by the function to its correct value
+		if( RegexMatch::incrementalRollbackMatch( sectionPrologueRegex, sectionProloguePath, textToAssimilate, upperLimit, lowerLimit, RegexMatch::topDown) )
 		{
-			LOG_DEBUG << "Section prologue not found." << ends;
+			LOG_DEBUG << "Section prologue found!" << ends;
+			
+			// modify the beginning of the subsections: they shall start after the end of the section prologue
+			subsectionsBeginning = lowerLimit + 1;
 		}
 		else
 		{
-			LOG_DEBUG << "Section prologue found!" << ends;
+			LOG_DEBUG << "Section prologue not found." << ends;
 		}
+	}
+	
+	// TODO now, this check is wrong, because even an empty regex is not empty; it contains [\\s]*[\\s]*
+	if( sectionEpilogueRegex.length() > 0 )
+	{
+		// add some optional spaces at the beginning and at the end of the function
+		sectionEpilogueRegex = "[\\s]*" + sectionEpilogueRegex + "[\\s]*";
+		unsigned int upperLimit = subsectionsBeginning;
+		unsigned int lowerLimit = sectionEnd;
+
+		// try to match the prologue
+		if( RegexMatch::incrementalRollbackMatch( sectionEpilogueRegex, sectionEpiloguePath, textToAssimilate, upperLimit, lowerLimit, RegexMatch::bottomUp) )
+		{
+			LOG_DEBUG << "Section epilogue found!" << ends;
+			
+			// note the point where the subsections might end
+			subsectionsEnd = upperLimit - 1;
+		}
+		else
+		{
+			LOG_DEBUG << "Section epilogue not found." << ends;
+		}
+	}
+	
+	// TODO check if we actually found both boundaries of the section; if not, it's BAD
+	unsigned int ssBeginning = subsectionsBeginning;
+	unsigned int ssEnd = subsectionsEnd;
+	
+	// and now, let's start with the subsections!
+	LOG_DEBUG << "Now looking for subsections between line #" << subsectionsBeginning << " and line #" << subsectionsEnd << ends;
+	for(unsigned int ss = 0; ss < section.getSubSectionCount(); ss++)
+	{
+		const ugp3::constraints::SubSection& subsection = section.getSubSection(ss);
+		
+		// check the possible occurrences of this subsection
+		unsigned int ssOccurrences = 0;
+
+		// TODO some subsections can appear multiple times! check if this is one of those, and eventually
+		//	bring back the counter (ss--) (maybe?!?)
+		unsigned int macrosBeginning = ssBeginning;
+		unsigned int macrosEnd = ssEnd;
+		
+		// first, try to match the prologue and the epilogue
+		string subsectionPrologueRegex = subsection.getPrologue().getExpression().getRegex();
+		string subsectionEpilogueRegex = subsection.getEpilogue().getExpression().getRegex();
+		
+		string subsectionProloguePath = subsection.getPrologue().getPath();
+		string subsectionEpiloguePath = subsection.getEpilogue().getPath();
+		
+		// check if the prologue/epilogue is empty, and try to match accordingly
+		if( subsectionPrologueRegex.length() > 0 )
+		{
+			subsectionPrologueRegex = "[\\s]*" + subsectionPrologueRegex + "[\\s]*";
+			unsigned int upperLimit = ssBeginning;
+			unsigned int lowerLimit = ssEnd;
+
+			if( RegexMatch::incrementalRollbackMatch( subsectionPrologueRegex, subsectionProloguePath, textToAssimilate, upperLimit, lowerLimit, RegexMatch::topDown) )
+			{
+				LOG_DEBUG << "Subsection prologue found!" << ends;
+				
+				// the boundary for macros will lower to the end of the subsection prologue
+				macrosBeginning = lowerLimit + 1;
+			} 
+			else LOG_DEBUG << "Subsection prologue not found!" << ends;
+		}
+		else LOG_DEBUG << "Empty subsection prologue, skipping..." << ends;
+
+		if( subsectionEpilogueRegex.length() > 0 )
+		{
+			subsectionEpilogueRegex = "[\\s]*" + subsectionEpilogueRegex + "[\\s]*";
+			unsigned int upperLimit = macrosBeginning;
+			unsigned int lowerLimit = ssEnd;
+
+			if( RegexMatch::incrementalRollbackMatch( subsectionEpilogueRegex, subsectionEpiloguePath, textToAssimilate, macrosBeginning, ssEnd, RegexMatch::topDown) )
+			{
+				LOG_DEBUG << "Subsection epilogue found!" << ends;
+				
+				// boundary for macros is raised
+				macrosEnd = upperLimit - 1;
+			}
+		}
+		else LOG_DEBUG << "Empty subsection epilogue, skipping..." << ends;
+		
+		// now, let's try to match the macros!
+		// first, create a regex vector for the macros themselves
+		vector< pair<string, ugp3::constraints::Macro*> > macrosRegex; 
+		for(unsigned int m = 0; m < subsection.getMacroCount(); m++)
+		{
+			ugp3::constraints::Macro* currentMacro = subsection.getMacro( subsection.getMacro(m).getId() );
+			string currentMacroRegex = currentMacro->getExpression().getRegex();
+			
+			macrosRegex.push_back( make_pair( currentMacroRegex, currentMacro) );
+		}
+		
+		// sort the macros by length
+		sort( macrosRegex.begin(), macrosRegex.end(), sortMacros );
+		
+		// LET THE MATCHING BEGIN! starting from the shortest macro, we try to match everything we can
+		// eventually overwriting previous matches (TODO find better solutions)
+		for(unsigned int m = 0; m < macrosRegex.size(); m++)
+		{
+			for(unsigned int l = macrosBeginning; l <= macrosEnd; l++)
+			{
+				unsigned int upperLimit = l;
+				unsigned int lowerLimit = macrosEnd;
+				if( RegexMatch::incrementalRollbackMatch( macrosRegex[m].first, macrosRegex[m].second->getPath(), textToAssimilate, upperLimit, lowerLimit, RegexMatch::topDown ) )
+				{
+					LOG_DEBUG 	<< "Found instance of macro \"" << macrosRegex[m].second->getId() 
+							<< "\", from line #" << upperLimit << " to line #" << lowerLimit 
+							<< ends;
+				}
+			}
+		} 
+		
 	}
 
     }
+
+    // and now, for the main act: BUILD AN INDIVIDUAL using the matched parts!
+    LOG_DEBUG << "Now building an individual..." << ends;
+    LOG_DEBUG << "Creating CGraphContainer..." << ends;
+
+    // this is debugging, and should probably be removed
+    unsigned int numberOfLinesMatched = 0;
+    for(unsigned int i = 0; i < textToAssimilate.size(); i++)
+	if( textToAssimilate[i].matched == true ) 
+		numberOfLinesMatched++;
+	else
+		LOG_DEBUG << "Line #" << i << " is unmatched:\"" << textToAssimilate[i].text << "\"" << ends;
+    LOG_DEBUG << "Lines matched: " << numberOfLinesMatched << " / " << textToAssimilate.size() << ends;
     
-    return nullptr;
+    unique_ptr<CGraphContainer> graphContainer( new CGraphContainer() );
+    graphContainer->setConstrain( constraints ); 
+    
+    // now, the bad part is, we have to immediately create the global prologue and epilogue, as
+    // there is no way to access them if they are not initialized to a value; so, existing nodes without tags!
+    unique_ptr<CNode> nodeGlobalPrologue( new CNode( *graphContainer ) );
+    unique_ptr<CNode> nodeGlobalEpilogue( new CNode( *graphContainer ) );
+    nodeGlobalPrologue->setConstrain( constraints.getPrologue() );
+    nodeGlobalEpilogue->setConstrain( constraints.getEpilogue() );
+    graphContainer->setPrologue( nodeGlobalPrologue );
+    graphContainer->setEpilogue( nodeGlobalEpilogue );
+
+    // some pointers that need to be defined here
+    //CNode* ssPrologueNode;
+    //CNode* ssEpilogueNode;
+    unique_ptr<CNode> ssPrologueNode;
+    unique_ptr<CNode> ssEpilogueNode;
+
+    // iterate over the text lines, checking for macros; global prologue and epilogue are compulsory, 
+    // so they should be added even if not found
+
+    // here are some references to the "current" stuff in this iteration
+    string currentSection = ""; // I am forced to use a macro, because all methods return const
+    string currentSubSection = "";
+    
+    CGraph* currentGraph = nullptr;
+    CSubGraph* currentSubGraph = nullptr;
+
+    for(int l = 0; l < textToAssimilate.size(); l++)
+    {
+	// first, read and parse the path
+	if( textToAssimilate[l].matched == true )
+	{
+		// split the path over '//'
+		vector<string> tokens;
+		tokenize( textToAssimilate[l].macro, tokens, "/" );
+		
+		LOG_DEBUG << "Line #" << l << " is matched!" << ends;
+		for(unsigned int t = 0; t < tokens.size(); t++)
+			LOG_DEBUG << "Token: \"" << tokens[t] << "\"" << ends;
+		
+		// tokens[0] is the name of the constraints;
+		// tokens[1] is the section (and it should always be there, except for global prologue and epilogue
+		// tokens[2] is the subsection (that is not there for section prologue and epilogue)
+		// tokens[3] is the macro itself
+		if( tokens.size() == 2 )
+		{
+			// global prologue or global epilogue
+			// not much to do here, since the node has already been created just tag it with the parameters 
+			// TODO
+		}
+		else 
+		{
+			// section prologue or section epilogue
+			// if the section is different from the current one, create a new section;
+			const ugp3::constraints::Section* currentSectionRef;
+
+			if( currentSection != tokens[1] )
+			{
+				currentSection = tokens[1];
+				LOG_DEBUG << "New section detected: \"" << currentSection << "\"" << ends;
+				
+				// find the reference to the section, by id; if it is not found, it's a huge problem!
+				currentSectionRef = constraints.getSection( currentSection );
+				if( currentSectionRef == nullptr )
+				{
+					LOG_ERROR 	<< "Section \"" << currentSection 
+							<< "\" not found during reconstruction of an individual. Aborting..." 
+							<< ends;
+					return nullptr;
+				}
+				
+				// so, if the current graph is not empty, push it back inside the graph container
+				if( currentGraph != nullptr )
+				{
+					unique_ptr<CGraph> cgPtr( currentGraph );
+					graphContainer->addCGraph( cgPtr  );
+				}
+
+				// re-initialize the graph pointer
+				currentGraph = new CGraph( *graphContainer );
+				currentGraph->setConstrain( *currentSectionRef );
+				if( currentGraph->getConstrain() == nullptr ) LOG_DEBUG << "What is happening here?!?!?" << ends;
+
+				// TODO also, double-check that the previous section already contains prologue and epilogue
+				// if not, add them; and do the same for the current subsection
+
+				// TODO is it really ok to build the graph here?
+				
+			}
+			else
+			{
+				// get a reference to the current section
+				currentSectionRef = constraints.getSection( currentSection );
+			}
+			
+			if( tokens.size() == 3 )
+			{
+				// now, this macro is either a section prologue or an epilogue
+				if( tokens[2] == currentSectionRef->getPrologue().getId() )
+				{
+					LOG_DEBUG << "Section prologue found!" << ends;
+					// TODO this is basically a cut/paste from the macro below, maybe
+					// 	it could be appropriate to create a function...
+					ugp3::constraints::Prologue& macroRef = currentSectionRef->getPrologue();
+					
+					LOG_DEBUG << "Creating node..." << ends;
+					//unique_ptr<CNode> node( new CNode( *currentGraph ) );
+					CNode* sPrologueNode = new CNode(*currentGraph);
+					sPrologueNode->setConstrain( macroRef );
+					
+					LOG_DEBUG << "Setting node " << sPrologueNode->getId() << " parameter values..." << ends;
+					for(	unsigned int p = 0; 
+						p < macroRef.getParameterCount() && p < textToAssimilate[l].macroParameters.size(); 
+						p++)
+					{
+						ugp3::constraints::Parameter& parameter = macroRef.getParameter(p);
+						sPrologueNode->addTag( parameter.getName(), textToAssimilate[l].macroParameters[p] ); 
+					}
+					
+					// FIXME missing the management of labels...
+					currentGraph->setPrologue( sPrologueNode );
+					//node.release();
+				}
+
+				if( tokens[2] == currentSectionRef->getEpilogue().getId() )
+				{
+					LOG_DEBUG << "Section epilogue found!" << ends;
+					// TODO this is basically a cut/paste from the macro below, maybe
+					// 	it could be appropriate to create a function...
+					ugp3::constraints::Epilogue& macroRef = currentSectionRef->getEpilogue();
+					
+					LOG_DEBUG << "Creating node..." << ends;
+					//unique_ptr<CNode> node( new CNode( *currentGraph ) );
+					CNode* sEpilogueNode = new CNode( *currentGraph );
+					sEpilogueNode->setConstrain( macroRef );
+					
+					LOG_DEBUG << "Setting node " << sEpilogueNode->getId() << " parameter values..." << ends;
+					for(	unsigned int p = 0; 
+						p < macroRef.getParameterCount() && p < textToAssimilate[l].macroParameters.size(); 
+						p++)
+					{
+						ugp3::constraints::Parameter& parameter = macroRef.getParameter(p);
+						sEpilogueNode->addTag( parameter.getName(), textToAssimilate[l].macroParameters[p] ); 
+					}
+
+					// FIXME missing the management of labels...
+					currentGraph->setEpilogue( sEpilogueNode );
+					//node.release();
+				}
+			}
+			else if( tokens.size() == 4 )
+			{
+				// TODO this check is WRONG, because there might be several instances of the same subsection...
+				// regular macro, or subsection prologue/epilogue
+				// check if the subsection is the same; if not, create a new subsection inside the currents section
+				const ugp3::constraints::SubSection* currentSubSectionRef;
+				if( tokens[2] != currentSubSection )
+				{
+					currentSubSection = tokens[2];
+					LOG_DEBUG << "New subsection detected: \"" << currentSubSection << "\"" << ends;
+					
+					// if the current subgraph is not empty, push it back inside the current graph
+					// before that, add the current ssEpilogueNode...if there is one
+					if( currentSubGraph != nullptr )
+					{
+						LOG_DEBUG << "Pushing back current SubGraph..." << ends;
+						
+						/*
+						currentSubGraph->addNode( *ssEpilogueNode );
+						currentSubGraph->getSlice().append( *ssEpilogueNode );
+						currentSubGraph->setEpilogue( currentSubGraph->getNode( ssEpilogueNode->getId() ) );
+						*/
+						// TODO as the setEpilogue() function releases the ssEpilogueNode unique_ptr,
+						// I should probably keep this in mind when using ssEpilogueNode again; it
+						// might make everything crash!
+						currentSubGraph->setEpilogue( ssEpilogueNode );
+						currentGraph->attachSubGraph( *currentSubGraph );
+					}
+
+					// reset the subgraph pointer
+					currentSubSectionRef = currentSectionRef->getSubSection( currentSubSection );
+					currentSubGraph = new CSubGraph( *graphContainer->getCGraph(currentSection) );
+					currentSubGraph->setConstrain( *currentSubSectionRef );
+					
+					// also, create the "untagged" nodes for prologue and epilogue
+					LOG_DEBUG << "Creating subsection prologue and epilogue..." << ends;
+					ssPrologueNode = unique_ptr<CNode>( new CNode( *currentSubGraph ) );
+					ssEpilogueNode = unique_ptr<CNode>( new CNode( *currentSubGraph ) );
+					ssPrologueNode->setConstrain( currentSubSectionRef->getPrologue() );
+					ssEpilogueNode->setConstrain( currentSubSectionRef->getEpilogue() );
+
+					// FIXME this part should be changed; probably it can work with the
+					//	 current CSubGraph::setPrologue() function...
+					/*
+					LOG_DEBUG << "Adding prologue node to the subgraph..." << ends;
+					currentSubGraph->addNode( *ssPrologueNode );
+					LOG_DEBUG << "Appending prologue node to the slice..." << ends;
+					currentSubGraph->getSlice().append( *ssPrologueNode );
+					LOG_DEBUG << "Setting prologue node reference as subgraph prologue..." << ends;
+					currentSubGraph->setPrologue( currentSubGraph->getNode( ssPrologueNode->getId() ) );
+					*/
+					
+					// ok, this is really interesting: the setPrologue function RELEASES the ssPrologueNode
+					// unique_ptr, so when I try to access ssPrologueNode in Population::assimilate()
+					// everything crashes, as the reference is no longer valid.
+					currentSubGraph->setPrologue( ssPrologueNode );
+
+					LOG_DEBUG 	<< "Created subsection prologue (attached) "
+							 << currentSubGraph->getPrologue().getId()
+							<< " and subsection epilogue (not attached yet) " 
+							<< ssEpilogueNode->getId()
+							<< ends; 
+					
+				}
+				else
+				{
+					//  or just get a reference to the old subsection
+					currentSubSectionRef = currentSectionRef->getSubSection( currentSubSection );
+				}
+				
+				// now, check if we need to create an epilogue/prologue
+				if( tokens[3] == currentSubSectionRef->getPrologue().getId() )
+				{
+					LOG_DEBUG << "Subsection prologue detected!" << ends;
+					// TODO tag stuff
+				}
+				else if( tokens[3] == currentSubSectionRef->getEpilogue().getId() )
+				{
+					LOG_DEBUG << "Subsection epilogue detected!" << ends;
+					// TODO tag stuff
+				}
+				else
+				{
+					LOG_DEBUG << "Regular macro \"" << tokens[3] << "\" detected!" << ends;
+
+					// so, it must be a regular macro! get the constraints for that macro	
+					ugp3::constraints::Macro* macroRef = currentSubSectionRef->getMacro( tokens[3] );
+					
+					if( macroRef == nullptr )
+					{
+						LOG_ERROR 	<< "Error: while assimilating an individual, macro \""
+								<< tokens[3] << "\" was not found in SubSection \""
+								<< currentSubSectionRef->getId() << "\". Aborting..."
+								<< ends;
+
+						return nullptr;
+					}
+					
+					// now, create a node!
+					CNode* node = new CNode( *currentSubGraph );
+					node->setConstrain( *macroRef );
+					LOG_DEBUG << "Created node " << *node << "..." << ends;
+					
+					// set parameters for the node, taken from macroParameters attribute
+					// inside the textToAssimilate array; however, in order to add the values
+					// it is compulsory to add tags, through the methods that the nodes inherit
+					// from the Taggable parent class
+					vector<ugp3::constraints::InnerLabelParameter*> labelParameters;
+					LOG_DEBUG << "Setting node parameter values..." << ends;
+					for(	unsigned int p = 0; 
+						p < macroRef->getParameterCount() /* && p < textToAssimilate[l].macroParameters.size() */; 
+						p++)
+					{
+						ugp3::constraints::Parameter& parameter = macroRef->getParameter(p);
+						
+						// if a parameter is a label parameter, keep it on the side and deal with it later
+						ugp3::constraints::InnerLabelParameter* innerLabelParameter = dynamic_cast<ugp3::constraints::InnerLabelParameter*>( &parameter );
+						if( innerLabelParameter == nullptr )
+						{
+							node->addTag( CNode::Escape + parameter.getName(), textToAssimilate[l].macroParameters[p] ); 
+						}
+						else
+						{
+							LOG_DEBUG << "Label parameter found!" << ends;
+							labelParameters.push_back( innerLabelParameter );
+						}
+					}
+					
+					// FIXME this part takes for granted that there is ONLY ONE inner/outer label parameter per macro
+					//	 which is of course totally false. referenceTo should be modified to a vector.
+					//	 additionally, there might be negative offsets; right now, the "unitialized" value
+					//	 for ::referenceTo is -1, and this is also wrong.
+
+					// now, labels are not parameters: if there are any labels, we should try to attach them
+					// so, first create an Edge
+					if( textToAssimilate[l].referenceTo != -1 )
+					{
+						LOG_DEBUG << "Adding an edge for parameter " << labelParameters[0]->getName() << ends;
+
+						tgraph::Edge* edge = new tgraph::Edge(*node);
+						ostringstream offsetValue;
+						offsetValue << (textToAssimilate[l].referenceTo - l);
+						// two tags are added to an edge: the name of the parameter it refers to, and the destination;
+						// the destination can be expressed in several ways, but here we are using an offset 
+						edge->addTag( tgraph::Edge::parameterTagName, labelParameters[0]->getName() ); 
+						edge->addTag( tgraph::Edge::offsetTagName, offsetValue.str() );
+						node->addEdge( *edge );
+						
+						LOG_DEBUG << "Offset value is \"" << offsetValue.str() << "\"" << ends;
+					}
+
+					// finally, push the node inside the current subgraph
+					currentSubGraph->addNode( *node );
+					// it also has to be appended to the slice, an internal class of the SubGraph...
+					currentSubGraph->getSlice().append( *node );
+					
+					LOG_DEBUG << "Node " << *node << " contains the following tags:" << ends;
+					for(unsigned int t = 0; t < node->getTagCount(); t++)
+					{
+						LOG_DEBUG << *node->getTag(t) << ends; 
+					}
+					// actually, this is the function used by OperatorToolbox...
+					//currentSubGraph->getSlice().spliceSlice(unique_ptr<Slice>(new Slice(std::move(newNode))), insertPoint);
+				}
+			} // end if tokens.size()
+		} // end if tokens.size() == 2
+		
+		// before iterating to the next line, skip all lines that are an instance of the same macro
+		while( 	l+1 < textToAssimilate.size() && // this line is first, so it doesn't crash on the following checks
+			textToAssimilate[l+1].macro.compare( textToAssimilate[l].macro ) == 0 &&
+			textToAssimilate[l+1].occurrence == textToAssimilate[l].occurrence)
+		{
+			l++;
+		}
+	}
+
+     } // end for
+    	
+     // TODO push back stuff that is still not pushed back (last subsection and last section)
+     LOG_DEBUG << "Adding last elements to the graph container..." << ends;
+     // add the current ssEpilogueNode to the current SubGraph
+     /*
+     currentSubGraph->addNode( *ssEpilogueNode );
+     currentSubGraph->getSlice().append( *ssEpilogueNode );
+     currentSubGraph->setEpilogue( currentSubGraph->getNode( ssEpilogueNode->getId() ) );
+     */
+     currentSubGraph->setEpilogue( ssEpilogueNode );
+
+     currentGraph->attachSubGraph( *currentSubGraph );
+     unique_ptr<CGraph> cgPtr ( currentGraph );
+     graphContainer->addCGraph( cgPtr );
+
+     // it's no longer the unique_ptr responsability to erase this pointers
+     // that, by the way, should have already been copied inside the graphContainer
+	
+     // check if there are still unmatched parts
+     vector<unsigned int> unmatchedLines;
+     for(unsigned int i = 0; i < textToAssimilate.size(); i++)
+     {
+	if( textToAssimilate[i].matched == false ) unmatchedLines.push_back( i );
+     }
+     LOG_DEBUG << "There are #" << unmatchedLines.size() << " unmatched lines that will be added to a modified constraints file." << ends;
+    
+     if( unmatchedLines.size() > 0 )
+     {
+	for(unsigned int i = 0; i < unmatchedLines.size(); i++)
+		LOG_DEBUG << "Unmatched line #" << i << ": \"" << textToAssimilate[ unmatchedLines[i] ].text << "\"" << endl;
+     }
+    
+     // TODO add unmatched parts to the constraints
+     
+     // create and return an individual with the graphContainer
+     // TODO 	with the new classes organization, the "superclass" for all individuals and groups is in fact "CandidateSolution";
+     //		so, it would make sense that the assimilate() method for Population would return "CandidateSolution*".
+     //		As far as I can tell, there are several possible solutions:
+     //		- re-implement the method in each class that inherits from Population, and return the appropriate type;
+     //		- use a switch with the type of population, to return the appropriate type of Individual;
+     //		- re-implement this at the level of IndividualPopulation;
+     EnhancedIndividual* individual = new EnhancedIndividual( *this ); 
+     individual->setCGraphContainer( graphContainer );
+	
+     // this is the point where everything explodes!
+     LOG_DEBUG << "Attaching floating edges..." << ends;
+     individual->getGraphContainer().attachFloatingEdges();
+    
+     return individual;
 }
+
 
 bool Population::checkMaximumFitnessReached()
 {
-    if (getBestCandidate() && getBestCandidate()->getRawFitness().getValues() >= getParameters().getMaximumFitness()) {
+    if (getBestCandidate() && getBestCandidate()->getRawFitness().getValues() >= getParameters().getMaximumFitness()) 
+    {
         LOG_INFO << "Reached maximum fitness: " << getBestCandidate()->getRawFitness() << ends;
         return true;
     }

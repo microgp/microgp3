@@ -104,5 +104,5 @@ double FloatParameter::getPosition(const string& value) const
 // get a regular expression representing a floating point
 const string FloatParameter::getRegex() const
 {
-	return "[-+]?[0-9]*\\.?[0-9]+.";
+	return "([-+]?[0-9]*\\.?[0-9]+.)";
 }

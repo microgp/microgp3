@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt"?>
+<constraints
+  xmlns="http://www.cad.polito.it/ugp3/schemas/constraints" 
+  id="One-Max" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+  <typeDefinitions>
+    <item name="minions" type="constant">
+<!-- minions from the classic edition -->
+	<value>minion_abomination</value>
+	<value>minion_abusive_sergeant</value>
+	<value>minion_acidic_swamp_ooze</value>
+	<value>minion_acolyte_of_pain</value>
+	<value>minion_alarm-o-bot</value>
+	<value>minion_alexstrasza</value>
+	<value>minion_amani_berserker</value>
+	<value>minion_ancient_brewmaster</value>
+	<value>minion_ancient_mage</value>
+	<value>minion_ancient_watcher</value>
+	<value>minion_angry_chicken</value>
+	<value>minion_arcane_golem</value>
+	<value>minion_archmage</value>
+	<value>minion_argent_commander</value>
+	<value>minion_argent_squire</value>
+	<value>minion_azure_drake</value>
+	<value>minion_baron_geddon</value>
+	<value>minion_big_game_hunter</value>
+	<value>minion_blood_knight</value>
+	<value>minion_bloodfen_raptor</value>
+	<value>minion_bloodmage_thalnos</value>
+	<value>minion_bloodsail_corsair</value>
+	<value>minion_bloodsail_raider</value>
+	<value>minion_bluegill_warrior</value>
+	<value>minion_booty_bay_bodyguard</value>
+	<value>minion_boulderfist_ogre</value>
+	<value>minion_cairne_bloodhoof</value>
+	<value>minion_captain_greenskin</value>
+	<value>minion_captains_parrot</value>
+	<value>minion_chillwind_yeti</value>
+	<value>minion_coldlight_oracle</value>
+	<value>minion_coldlight_seer</value>
+	<value>minion_core_hound</value>
+	<value>minion_crazed_alchemist</value>
+	<value>minion_cult_master</value>
+	<value>minion_dalaran_mage</value>
+	<value>minion_dark_iron_dwarf</value>
+	<value>minion_darkscale_healer</value>
+	<value>minion_deathwing</value>
+	<value>minion_defender_of_argus</value>
+	<value>minion_demolisher</value>
+	<value>minion_dire_wolf_alpha</value>
+	<value>minion_doomsayer</value>
+	<value>minion_dragonling_mechanic</value>
+	<value>minion_dread_corsair</value>
+	<value>minion_earthen_ring_farseer</value>
+	<value>minion_elite_tauren_chieftain</value>
+	<value>minion_elven_archer</value>
+	<value>minion_emperor_cobra</value>
+	<value>minion_faceless_manipulator</value>
+	<value>minion_faerie_dragon</value>
+	<value>minion_fen_creeper</value>
+	<value>minion_flesheating_ghoul</value>
+	<value>minion_frost_elemental</value>
+	<value>minion_frostwolf_grunt</value>
+	<value>minion_frostwolf_warlord</value>
+	<value>minion_gadgetzan_auctioneer</value>
+	<value>minion_gelbin_mekkatorque</value>
+	<value>minion_gnomish_inventor</value>
+	<value>minion_goldshire_footman</value>
+	<value>minion_grimscale_oracle</value>
+	<value>minion_gruul</value>
+	<value>minion_gurubashi_berserker</value>
+	<value>minion_harrison_jones</value>
+	<value>minion_harvest_golem</value>
+	<value>minion_hogger</value>
+	<value>minion_hungry_crab</value>
+	<value>minion_illidan_stormrage</value>
+	<value>minion_imp_master</value>
+	<value>minion_injured_blademaster</value>
+	<value>minion_ironbeak_owl</value>
+	<value>minion_ironforge_rifleman</value>
+	<value>minion_ironfur_grizzly</value>
+	<value>minion_jungle_panther</value>
+	<value>minion_king_mukla</value>
+	<value>minion_knife_juggler</value>
+	<value>minion_kobold_geomancer</value>
+	<value>minion_leeroy_jenkins</value>
+	<value>minion_leper_gnome</value>
+	<value>minion_lightwarden</value>
+	<value>minion_loot_hoarder</value>
+	<value>minion_lord_of_the_arena</value>
+	<value>minion_lorewalker_cho</value>
+	<value>minion_mad_bomber</value>
+	<value>minion_magma_rager</value>
+	<value>minion_malygos</value>
+	<value>minion_mana_addict</value>
+	<value>minion_mana_wraith</value>
+	<value>minion_master_swordsmith</value>
+	<value>minion_millhouse_manastorm</value>
+	<value>minion_mind_control_tech</value>
+	<value>minion_mogushan_warden</value>
+	<value>minion_molten_giant</value>
+	<value>minion_mountain_giant</value>
+	<value>minion_murloc_raider</value>
+	<value>minion_murloc_tidecaller</value>
+	<value>minion_murloc_tidehunter</value>
+	<value>minion_murloc_warleader</value>
+	<value>minion_nat_pagle</value>
+	<value>minion_nightblade</value>
+	<value>minion_novice_engineer</value>
+	<value>minion_nozdormu</value>
+	<value>minion_oasis_snapjaw</value>
+	<value>minion_ogre_magi</value>
+	<value>minion_old_murk-eye</value>
+	<value>minion_onyxia</value>
+	<value>minion_pint-sized_summoner</value>
+	<value>minion_priestess_of_elune</value>
+	<value>minion_questing_adventurer</value>
+	<value>minion_raging_worgen</value>
+	<value>minion_ragnaros_the_firelord</value>
+	<value>minion_raid_leader</value>
+	<value>minion_ravenholdt_assassin</value>
+	<value>minion_razorfen_hunter</value>
+	<value>minion_reckless_rocketeer</value>
+	<value>minion_river_crocolisk</value>
+	<value>minion_scarlet_crusader</value>
+	<value>minion_sea_giant</value>
+	<value>minion_secretkeeper</value>
+	<value>minion_senjin_shieldmasta</value>
+	<value>minion_shattered_sun_cleric</value>
+	<value>minion_shieldbearer</value>
+	<value>minion_silver_hand_knight</value>
+	<value>minion_silverback_patriarch</value>
+	<value>minion_silvermoon_guardian</value>
+	<value>minion_southsea_captain</value>
+	<value>minion_southsea_deckhand</value>
+	<value>minion_spellbreaker</value>
+	<value>minion_spiteful_smith</value>
+	<value>minion_stampeding_kodo</value>
+	<value>minion_stonetusk_boar</value>
+	<value>minion_stormpike_commando</value>
+	<value>minion_stormwind_champion</value>
+	<value>minion_stormwind_knight</value>
+	<value>minion_stranglethorn_tiger</value>
+	<value>minion_sunfury_protector</value>
+	<value>minion_sunwalker</value>
+	<value>minion_sylvanas_windrunner</value>
+	<value>minion_tauren_warrior</value>
+	<value>minion_the_beast</value>
+	<value>minion_the_black_knight</value>
+	<value>minion_thrallmar_farseer</value>
+	<value>minion_tinkmaster_overspark</value>
+	<value>minion_twilight_drake</value>
+	<value>minion_venture_co_mercenary</value>
+	<value>minion_violet_teacher</value>
+	<value>minion_voodoo_doctor</value>
+	<value>minion_war_golem</value>
+	<value>minion_wild_pyromancer</value>
+	<value>minion_windfury_harpy</value>
+	<value>minion_wisp</value>
+	<value>minion_wolfrider</value>
+	<value>minion_worgen_infiltrator</value>
+	<value>minion_young_dragonhawk</value>
+	<value>minion_young_priestess</value>
+	<value>minion_youthful_brewmaster</value>
+	<value>minion_ysera</value>
+	<value>minion_archmage_antonidas</value>
+	<value>minion_ethereal_arcanist</value>
+	<value>minion_kirin_tor_mage</value>
+	<value>minion_mana_wyrm</value>
+	<value>minion_sorcerers_apprentice</value>
+	<value>minion_water_elemental</value>
+<!-- minions from the naxxramas expansion -->
+	<value>minion_baron_rivendare</value>
+	<value>minion_dancing_swords</value>
+	<value>minion_deathlord</value>
+	<value>minion_echoing_ooze</value>
+	<value>minion_feugen</value>
+	<value>minion_haunted_creeper</value>
+	<value>minion_kelthuzad</value>
+	<value>minion_loatheb</value>
+	<value>minion_mad_scientist</value>
+	<value>minion_maexxna</value>
+	<value>minion_nerubian_egg</value>
+	<value>minion_shade_of_naxxramas</value>
+	<value>minion_sludge_belcher</value>
+	<value>minion_spectral_knight</value>
+	<value>minion_stalagg</value>
+	<value>minion_stoneskin_gargoyle</value>
+	<value>minion_undertaker</value>
+	<value>minion_unstable_ghoul</value>
+	<value>minion_wailing_soul</value>
+	<value>minion_zombie_chow</value>
+<!-- minions from the goblin vs gnomes expansion -->
+	<value>minion_annoy-o-tron</value>
+	<value>minion_antique_healbot</value>
+	<value>minion_arcane_nullifier_x-21</value>
+	<value>minion_blingtron_3000</value>
+	<value>minion_bomb_lobber</value>
+	<value>minion_burly_rockjaw_trogg</value>
+	<value>minion_clockwork_giant</value>
+	<value>minion_clockwork_gnome</value>
+	<value>minion_cogmaster</value>
+	<value>minion_dr_boom</value>
+	<value>minion_enhance-o_mechano</value>
+	<value>minion_explosive_sheep</value>
+	<value>minion_fel_reaver</value>
+	<value>minion_flying_machine</value>
+	<value>minion_foe_reaper_4000</value>
+	<value>minion_force-tank_max</value>
+	<value>minion_gazlowe</value>
+	<value>minion_gilblin_stalker</value>
+	<value>minion_gnomeregan_infantry</value>
+	<value>minion_gnomish_experimenter</value>
+	<value>minion_goblin_sapper</value>
+	<value>minion_hemet_nesingwary</value>
+	<value>minion_hobgoblin</value>
+	<value>minion_illuminator</value>
+	<value>minion_jeeves</value>
+	<value>minion_junkbot</value>
+	<value>minion_kezan_mystic</value>
+	<value>minion_lil_exorcist</value>
+	<value>minion_lost_tallstrider</value>
+	<value>minion_madder_bomber</value>
+	<value>minion_mechanical_yeti</value>
+	<value>minion_mechwarper</value>
+	<value>minion_mekgineer_thermaplugg</value>
+	<value>minion_micro_machine</value>
+	<value>minion_mimirons_head</value>
+	<value>minion_mini-mage</value>
+	<value>minion_mogor_the_ogre</value>
+	<value>minion_ogre_brute</value>
+	<value>minion_piloted_shredder</value>
+	<value>minion_piloted_sky_golem</value>
+	<value>minion_puddlestomper</value>
+	<value>minion_recombobulator</value>
+	<value>minion_salty_dog</value>
+	<value>minion_ships_cannon</value>
+	<value>minion_sneeds_old_shredder</value>
+	<value>minion_spider_tank</value>
+	<value>minion_stonesplinter_trogg</value>
+	<value>minion_target_dummy</value>
+	<value>minion_tinkertown_technician</value>
+	<value>minion_toshley</value>
+	<value>minion_troggzor_the_earthinator</value>
+	<value>minion_flame_leviathan</value>
+	<value>minion_goblin_blastmage</value>
+	<value>minion_snowchugger</value>
+	<value>minion_soot_spewer</value>
+	<value>minion_wee_spellstopper</value>
+<!-- minions from blackrock mountain adventure -->
+	<value>minion_blackwing_corruptor</value>
+	<value>minion_blackwing_technician</value>
+	<value>minion_chromaggus</value>
+	<value>minion_dragon_egg</value>
+	<value>minion_dragonkin_sorcerer</value>
+	<value>minion_drakonid_crusher</value>
+	<value>minion_emperor_thaurissan</value>
+	<value>minion_flamewaker</value>
+	<value>minion_grim_patron</value>
+	<value>minion_hungry_dragon</value>
+	<value>minion_majordomo_executus</value>
+	<value>minion_nefarian</value>
+	<value>minion_rend_blackhand</value>
+	<value>minion_volcanic_drake</value>
+<!-- minions from the grand tournament expansion -->
+	<value>minion_argent_horserider</value>
+	<value>minion_argent_watchman</value>
+	<value>minion_armored_warhorse</value>
+	<value>minion_bolf_ramshield</value>
+	<value>minion_boneguard_lieutenant</value>
+	<value>minion_captured_jormungar</value>
+	<value>minion_chillmaw</value>
+	<value>minion_clockwork_knight</value>
+	<value>minion_coliseum_manager</value>
+	<value>minion_crowd_favorite</value>
+	<value>minion_dragonhawk_rider</value>
+	<value>minion_evil_heckler</value>
+	<value>minion_eydis_darkbane</value>
+	<value>minion_fencing_coach</value>
+	<value>minion_fjola_lightbane</value>
+	<value>minion_flame_juggler</value>
+	<value>minion_frigid_snobold</value>
+	<value>minion_frost_giant</value>
+	<value>minion_gadgetzan_jouster</value>
+	<value>minion_garrison_commander</value>
+	<value>minion_gormok_the_impaler</value>
+	<value>minion_grand_crusader</value>
+	<value>minion_ice_rager</value>
+	<value>minion_icehowl</value>
+	<value>minion_injured_kvaldir</value>
+	<value>minion_justicar_trueheart</value>
+	<value>minion_kodorider</value>
+	<value>minion_kvaldir_raider</value>
+	<value>minion_lance_carrier</value>
+	<value>minion_lights_champion</value>
+	<value>minion_lowly_squire</value>
+	<value>minion_maiden_of_the_lake</value>
+	<value>minion_master_jouster</value>
+	<value>minion_master_of_ceremonies</value>
+	<value>minion_mogors_champion</value>
+	<value>minion_muklas_champion</value>
+	<value>minion_nexus-champion_saraad</value>
+	<value>minion_north_sea_kraken</value>
+	<value>minion_pit_fighter</value>
+	<value>minion_recruiter</value>
+	<value>minion_refreshment_vendor</value>
+	<value>minion_saboteur</value>
+	<value>minion_sideshow_spelleater</value>
+	<value>minion_silent_knight</value>
+	<value>minion_silver_hand_regent</value>
+	<value>minion_skycapn_kragg</value>
+	<value>minion_the_skeleton_knight</value>
+	<value>minion_tournament_medic</value>
+	<value>minion_twilight_guardian</value>
+	<value>minion_coldarra_drake</value>
+	<value>minion_dalaran_aspirant</value>
+	<value>minion_fallen_hero</value>
+	<value>minion_rhonin</value>
+	<value>minion_spellslinger</value>
+<!-- TODO finish filling in ALL possible minions (neutral+Mage) -->
+    </item>
+    <item name="spells" type="constant">
+<!-- spells + secrets from the classic edition -->
+	<value>secret_counterspell</value>
+	<value>secret_ice_barrier</value>
+	<value>secret_ice_block</value>
+	<value>secret_mirror_entity</value>
+	<value>secret_spellbender</value>
+	<value>secret_vaporize</value>
+	<value>spell_arcane_explosion</value>
+	<value>spell_arcane_intellect</value>
+	<value>spell_arcane_missiles</value>
+	<value>spell_blizzard</value>
+	<value>spell_cone_of_cold</value>
+	<value>spell_fireball</value>
+	<value>spell_flamestrike</value>
+	<value>spell_frost_nova</value>
+	<value>spell_frostbolt</value>
+	<value>spell_ice_lance</value>
+	<value>spell_mirror_image</value>
+	<value>spell_polymorph</value>
+	<value>spell_pyroblast</value>
+<!-- spells + secrets from the naxxramas adventure -->
+	<value>secret_duplicate</value>
+<!-- spells + secrets from the goblin vs gnomes expansion -->
+	<value>spell_echo_of_medivh</value>
+	<value>spell_flamecannon</value>
+	<value>spell_unstable_portal</value>
+<!-- spells + secrets from blackrock mountain -->
+	<value>spell_dragons_breath</value>
+<!-- spells + secrets from the grand tournament -->
+	<value>secret_effigy</value>
+	<value>spell_arcane_blast</value>
+	<value>spell_flame_lance</value>
+	<value>spell_polymorph_boar</value>
+<!-- TODO finish filling in ALL possible spells+secrets (Mage) -->
+    </item>
+
+  </typeDefinitions>
+  <commentFormat><value/></commentFormat>
+  <identifierFormat>n<value /></identifierFormat>
+  <labelFormat><value/>: </labelFormat>
+  <uniqueTagFormat><value /></uniqueTagFormat>
+  <prologue id="globalPrologue"/>
+  <epilogue id="globalEpilogue"/>
+  <sections>
+    <section id="deck" prologueEpilogueCompulsory="false">
+      <prologue id="deckPrologue">
+<expression>{
+  "cards": [
+</expression>
+</prologue>
+      <epilogue id="deckEpilogue">
+<expression>],
+  "name": "Evolutionary Deck",
+  "heroClass": "MAGE"
+}
+</expression>
+</epilogue>
+      <subSections>
+        <subSection id="main" maxOccurs="1" minOccurs="1" maxReferences="0">
+          <prologue id="subsectionPrologue"/>
+          <epilogue id="subsectionEpilogue"/>
+          <macros maxOccurs="30" minOccurs="30" averageOccurs="30" sigma="0">
+
+            <macro id="deckMinion" weight="1">
+              <expression>    "<param ref="oneMinion"/>",
+</expression>
+                <parameters>
+                  <item name="oneMinion" type="definedType" ref="minions"/>
+                </parameters>
+            </macro>
+
+            <macro id="deckSpell" weight="1">
+              <expression>    "<param ref="oneSpell"/>",
+</expression>
+                <parameters>
+                  <item name="oneSpell" type="definedType" ref="spells"/>
+                </parameters>
+            </macro>
+
+          </macros>
+        </subSection>
+      </subSections>
+    </section>
+  </sections>
+</constraints>

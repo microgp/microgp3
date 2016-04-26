@@ -26,6 +26,8 @@
 
 #include "ugp3_config.h"
 #include "Constraints.h"
+#include "RegexMatch.h"
+
 using namespace std;
 using namespace ugp3::constraints;
 
@@ -89,18 +91,19 @@ ConstantParameter::~ConstantParameter()
 // regular expression for a constant parameter
 const string ConstantParameter::getRegex() const
 {
-	// TODO: replace special characters in the constants
-	// our regular expression can be basically any of the following
-	string regex = "[";
-	regex += this->constants[0];
+	// our regular expression can be basically any of the possible constant values, with "|", such as:
+	// (value1|value2|value...|valueN)
+	// but each "value" must be a correct regex, with escaped characters
+	// the whole expression goes between (), since it will be used to catch the parameter's value
+	string resultingRegex = "(";
+	resultingRegex += RegexMatch::stringToRegex(this->constants[0]);
 
 	for(unsigned int i = 1; i < this->constants.size(); i++)
 	{
-		regex += "|";
-		regex += this->constants[i];
+		resultingRegex += "|";
+		resultingRegex += RegexMatch::stringToRegex(this->constants[i]);
 	}
-
-	regex += "]";
+	resultingRegex += ")";
 	
-	return regex;
+	return resultingRegex;
 }

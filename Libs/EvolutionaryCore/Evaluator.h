@@ -178,15 +178,13 @@ public:
 
 public: // Xml interface
 	virtual void writeXml(std::ostream& output) const;
-    virtual void writeInnerXml(std::ostream& output) const {};
+	virtual void writeInnerXml(std::ostream& output) const {};
 	virtual void readXml(const xml::Element& element);
 	virtual const std::string& getXmlName() const { return XML_NAME; }
 	
     static const std::string XML_NAME;
     static const std::string XML_ATTRIBUTE_TYPE;
     
-    // typedef std::pair<std::string, std::string> EnvironmentVariable;
-    //(!)20090825 std::vector<EnvironmentVariable> environmentVariables;
     void parseEnvironmentVariables(const xml::Element& element);
 
 public: // friend class, used for gui

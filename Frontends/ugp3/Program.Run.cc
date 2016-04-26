@@ -158,6 +158,9 @@ void Program::run()
     // Loads parameters and names of populations.
     const vector<string> populationParametersFiles = settings.getOption("evolution", Argument::Population).toList();
     const vector<string> populationNames = settings.getOption("evolution", "populationNames").toList();
+    const vector<string> populationSeedingFiles = settings.getOption("evolution", "populationSeedingFiles").toList();
+    LOG_DEBUG << "List of seeding files:" << ends;
+    for(unsigned int i = 0; i < populationSeedingFiles.size(); i++) LOG_DEBUG << populationSeedingFiles[i] << ends;
 
     // Loads an old saved execution to continue the evolution if necessary.
     const string& inputFile = settings.getOption("recovery", Argument::RecoveryInputAlgorithm).getValue();
@@ -246,7 +249,8 @@ void Program::run()
             if (i < populationNames.size())
             {
                 popName = populationNames[i];
-            } else
+            } 
+	    else
             {
                 ostringstream tmp;
                 tmp << "NAMELESS-" << i;
@@ -271,7 +275,9 @@ void Program::run()
                 unique_ptr<Population> population;
                 try
                 {
-                    LOG_INFO << "Adding population " << algorithm->getPopulationCount() << " \"" << popName << "\" from file \"" << populationParametersFiles[i] << "\"" << ends;
+                    LOG_INFO 	<< "Adding population " << algorithm->getPopulationCount() 
+				<< " \"" << popName << "\" from file \"" << populationParametersFiles[i] 
+				<< "\"" << ends;
                     population = Population::fromParametersFile(*algorithm, populationParametersFiles[i]);
                     population->setName(popName);
                 }
@@ -424,6 +430,15 @@ void Program::run()
 
         if (population.getGeneration() == 0) 
 	{
+	    // if some individuals to assimilate were specified, add them to the population before starting
+	    // the setup, that includes the random generation of individuals
+	    if( populationSeedingFiles[i].length() > 0 )
+	    {
+		LOG_INFO 	<< "Seeding the population with individuals listed in file \""
+				<< populationSeedingFiles[i] << "\""
+				<< "..." << ends;
+		population.seeding( populationSeedingFiles[i] );
+	    }
             population.setupPopulation();
         }
         
