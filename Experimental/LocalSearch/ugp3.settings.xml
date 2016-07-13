@@ -5,8 +5,10 @@
     <!-- <option name="randomSeed" value="42" /> -->
     <!-- For each population, its name and the file where the population parameters are defined. -->
     <option name ="populations">
-      <!-- <population name="P1" value="hs.population.settings.xml" seeding="toBeAssimilated.txt" /> -->
+      <population name="P1" value="hs.population.settings.xml" />
+      <!--
       <population name="P1" value="hs.population.settings.xml" seedingFile="toBeAssimilated.txt"/>
+      -->
     </option>
     <!-- The file where the statistics on the evolution are saved. -->
     <option name="statisticsPathName" value="statistics.csv" />

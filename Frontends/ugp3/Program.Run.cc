@@ -5,7 +5,7 @@
 | This file is part of MicroGP v3 (ugp3)                                |
 | http://ugp3.sourceforge.net/                                          |
 |                                                                       |
-| Copyright (c) 2002-2015 Giovanni Squillero                            |
+| Copyright (c) 2002-2016 Giovanni Squillero                            |
 |                                                                       |
 |-----------------------------------------------------------------------|
 |                                                                       |
@@ -158,10 +158,17 @@ void Program::run()
     // Loads parameters and names of populations.
     const vector<string> populationParametersFiles = settings.getOption("evolution", Argument::Population).toList();
     const vector<string> populationNames = settings.getOption("evolution", "populationNames").toList();
-    const vector<string> populationSeedingFiles = settings.getOption("evolution", "populationSeedingFiles").toList();
+    vector<string> populationSeedingFiles = settings.getOption("evolution", "populationSeedingFiles").toList();
     LOG_DEBUG << "List of seeding files:" << ends;
-    for(unsigned int i = 0; i < populationSeedingFiles.size(); i++) LOG_DEBUG << populationSeedingFiles[i] << ends;
-
+    for(unsigned int i = 0; i < populationSeedingFiles.size(); i++) 
+    {
+	// let's trim the strings, because if they are empty, they contain " "
+	populationSeedingFiles[i].erase(
+			std::find_if(populationSeedingFiles[i].rbegin(), populationSeedingFiles[i].rend(), 
+			std::not1(std::ptr_fun<int, int>(std::isspace))).base(), populationSeedingFiles[i].end()
+			);
+	LOG_DEBUG << "\"" << populationSeedingFiles[i] << "\""<< ends;
+    }
     // Loads an old saved execution to continue the evolution if necessary.
     const string& inputFile = settings.getOption("recovery", Argument::RecoveryInputAlgorithm).getValue();
     if (inputFile.empty() == false)

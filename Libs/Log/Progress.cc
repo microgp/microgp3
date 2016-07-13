@@ -16,6 +16,9 @@ Progress::Progress(double value)
 {
      if(this->progress < 0 || this->progress > 1)
     {
-        throw Exception("The progress parameter should be in [0, 1].", LOCATION);
+	std::string errorMessage = "The progress parameter should be in [0, 1]. It was ";
+	errorMessage += this->progress;
+	errorMessage += " instead.";
+        throw Exception(errorMessage, LOCATION);
     }
 }

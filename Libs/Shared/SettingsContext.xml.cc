@@ -5,7 +5,7 @@
 | This file is part of MicroGP v3 (ugp3)                                |
 | http://ugp3.sourceforge.net/                                          |
 |                                                                       |
-| Copyright (c) 2002-2015 Giovanni Squillero                            |
+| Copyright (c) 2002-2016 Giovanni Squillero                            |
 |                                                                       |
 |-----------------------------------------------------------------------|
 |                                                                       |
@@ -128,6 +128,18 @@ void SettingsContext::readXml(const xml::Element& element)
 													XML_ATTRIBUTE_SEEDINGFILE));
 			}
 		    } 
+		    else // there is no tag
+		    {
+			if(populationSeedingFiles->getValue().length() > 0) // some attributes of this kind have already been read
+			{
+				populationSeedingFiles->setValue(populationSeedingFiles->getValue() + ";" + " ");
+			}
+			else
+			{
+				// first population read
+				populationSeedingFiles->setValue(" ");
+			}
+		    }
 
                     populationsChildElement = populationsChildElement->NextSiblingElement();
                 }

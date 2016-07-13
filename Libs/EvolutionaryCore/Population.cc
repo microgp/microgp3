@@ -5,7 +5,7 @@
 | This file is part of MicroGP v3 (ugp3)                                |
 | http://ugp3.sourceforge.net/                                          |
 |                                                                       |
-| Copyright (c) 2002-2015 Giovanni Squillero                            |
+| Copyright (c) 2002-2016 Giovanni Squillero                            |
 |                                                                       |
 |-----------------------------------------------------------------------|
 |                                                                       |
@@ -551,6 +551,7 @@ CandidateSolution* Population::assimilate(std::string fileName, ugp3::constraint
     // look for labels in every line and match them LIKE A BOSS
     for(unsigned int l = 0; l < textToAssimilate.size(); l++)
     {
+	LOG_DEBUG << "I entered the first loop!" << ends;
         vector<string> matches;
         
         // every time a label is found
@@ -587,6 +588,7 @@ CandidateSolution* Population::assimilate(std::string fileName, ugp3::constraint
 		// TODO: send a warning if a label is not referenced anywhere?
             }
         } // if the string matches
+	LOG_DEBUG << "And I am now outside of the \"if\" condition!" << ends;
     }// for every line to assimilate
     
     // first, some debug: the new individual, with labels removed
