@@ -25,7 +25,7 @@
   <context name="logging">
     <!-- Only essential information on standard output -->
     <option name="std::cout" value="info; brief" />
-    <!-- <option name="debug.log" value="debug; brief" /> -->
+    <option name="debug.log" value="debug; brief" />
     <!-- <option name="verbose.log" value="verbose; extended" /> -->
   </context>
   

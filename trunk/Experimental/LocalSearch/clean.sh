@@ -12,3 +12,4 @@ rm -f BEST_P1.in
 rm -f debug.txt
 rm -f individualsToEvaluate.txt
 rm -f ugp3.pid
+rm -f localSearch_offspring_0
