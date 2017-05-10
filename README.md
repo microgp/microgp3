@@ -1,6 +1,6 @@
 # MicroGP v3
 
-![Status: Completed](https://img.shields.io/badge/status-completed-green.svg)
+![Status: Active](https://img.shields.io/badge/status-active-green.svg)
 [![License: GPL](https://img.shields.io/badge/license-gpl--3.0-green.svg)](https://opensource.org/licenses/GPL-3.0)
 ![Language: C++](https://img.shields.io/badge/language-go-blue.svg)
 
