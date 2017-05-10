@@ -1,5 +1,3 @@
--*-text-*-
-
 MicroGP has been devised in 2002 by Giovanni Squillero and
 subsequently developed thanks to the effort of Alessandro Aimo, Paolo
 Bernardi, Jany Belluz, Antonio Casaschi, Alberto Cerato, Fulvio Corno,
@@ -14,6 +12,6 @@ Sonza Reorda, Giovanni Squillero, Luca Sterpone, Alberto Tonda,
 Antonio Tomasiello, Giuseppe Trovato, Pier Paolo Ucchino, Gianni
 Zizzi, and Gianluca Zaniolo.
 
-The project is currently supervised by Giovanni Squillero [Politecnico 
+The project is supervised by Giovanni Squillero [Politecnico 
 di Torino, Italy]; and Alberto Tonda [Institut National de la Recherche 
 Agronomique, GMPA, France]

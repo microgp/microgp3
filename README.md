@@ -1,8 +1,10 @@
--*-text-*-
+# MicroGP v3
 
-http://ugp3.sf.net/
+![Status: Completed](https://img.shields.io/badge/status-completed-green.svg)
+[![License: GPL](https://img.shields.io/badge/license-gpl--3.0-green.svg)](https://opensource.org/licenses/GPL-3.0)
+![Language: C++](https://img.shields.io/badge/language-go-blue.svg)
 
-MicroGP (µGP, uGP, ugp, &micro;GP) is a versatile optimizer able to
+MicroGP (µGP, uGP, `ugp`, `&micro;GP`) is a versatile optimizer able to
 outperform both human experts and conventional heuristics in finding
 the optimal solution of hard problems. Given a task, it first fosters
 a set of random solutions, then iteratively refines and enhance
@@ -36,4 +38,4 @@ C++). MicroGP^3 is free software: it can be redistributed and modified
 under the terms of the GNU General Public License. Please, refer to
 http://ugp3.sf.net/ for download links and additional documentation.
 
-MicroGP is copyrighted (c) 2002-2016 by Giovanni Squillero
+MicroGP v3 is copyrighted (c) 2002-2016 by Giovanni Squillero
