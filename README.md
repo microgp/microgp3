@@ -2,7 +2,7 @@
 
 ![Status: Completed](https://img.shields.io/badge/status-completed-green.svg)
 [![License: GPL](https://img.shields.io/badge/license-gpl--3.0-green.svg)](https://opensource.org/licenses/GPL-3.0)
-![Language: C++](https://img.shields.io/badge/language-go-blue.svg)
+![Language: C++](https://img.shields.io/badge/language-C++-blue.svg)
 
 MicroGP (µGP, uGP, `ugp`, `&micro;GP`) is a versatile optimizer able to
 outperform both human experts and conventional heuristics in finding
