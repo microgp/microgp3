@@ -2,7 +2,7 @@
 # 	Written by Alessio Moscatello
 # 
 #	This file is part of MicroGP v3 (ugp3) 
-# 	http://ugp3.sourceforge.net/                 
+# 	https://github.com/squillero/microgp3        
 
 
 

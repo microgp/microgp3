@@ -3,7 +3,7 @@
 | SelfAdaptiveOperatorSelector.h |
 |                                                                       |
 | This file is part of MicroGP v3 (ugp3)                                |
-| http://ugp3.sourceforge.net/                                          |
+| https://github.com/squillero/microgp3                                 |
 |                                                                       |
 | Copyright (c) 2006-2016 Giovanni Squillero                            |
 |                                                                       |
