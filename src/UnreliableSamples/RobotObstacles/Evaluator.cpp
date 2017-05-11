@@ -2,7 +2,7 @@
 This evaluator simulatetes a simple robot that can rotate and move straight avoiding obstacles
 
   This file is part of MicroGP v3 (ugp3) 
-  Copyright (c) 2002-2016 Giovanni Squillero   
+  Copyright (c) 2006-2016 Giovanni Squillero   
 
   Written by
     Alessio Moscatello 	<alessiomosc@yahoo.it>

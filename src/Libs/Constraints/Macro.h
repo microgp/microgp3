@@ -5,7 +5,7 @@
 | This file is part of MicroGP v3 (ugp3)                                |
 | http://ugp3.sourceforge.net/                                          |
 |                                                                       |
-| Copyright (c) 2002-2016 Giovanni Squillero                            |
+| Copyright (c) 2006-2016 Giovanni Squillero                            |
 |                                                                       |
 |-----------------------------------------------------------------------|
 |                                                                       |

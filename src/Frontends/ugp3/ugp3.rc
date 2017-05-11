@@ -5,7 +5,7 @@
 // This file is part of MicroGP v3 (ugp3)                                /
 // http://ugp3.sourceforge.net/                                          /
 //                                                                       /
-// Copyright (c) 2002-2016 Giovanni Squillero                            /
+// Copyright (c) 2006-2016 Giovanni Squillero                            /
 //                                                                       /
 //////////////////////////////////////////////////////////////////////////
 //                                                                       /
@@ -56,7 +56,7 @@ BEGIN
         BLOCK "040904E4"
         BEGIN
             VALUE "FileDescription",  "MicroGP v3\000"
-            VALUE "LegalCopyright",   "Copyright (c) 2002-2016 by Giovanni Squillero\000"
+            VALUE "LegalCopyright",   "Copyright (c) 2006-2016 by Giovanni Squillero\000"
             VALUE "CompanyName",      "The MicroGP Collective\000"
             VALUE "InternalName",     "Camellia\000"
             VALUE "OriginalFilename", "UGP3.EXE\000"
