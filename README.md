@@ -13,6 +13,6 @@ MicroGP is an evolutionary algorithm, hence the acronym GP (genetic programming)
 This is MicroGP version 3, also known as MicroGP^3, ugp3 (due to typographic limitations) and MicroGP++ (being written in
 C++). 
 
-**Copyright © 2006-2016 Giovanni Squillero**
+**Copyright © 2006-2016 Giovanni Squillero.**
 
 MicroGP v3 is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License](http://www.gnu.org/licenses/) as published by the *Free Software Foundation*, either [version 3](https://opensource.org/licenses/GPL-3.0) of the License, or (at your option) any later version.
