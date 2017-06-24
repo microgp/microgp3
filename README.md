@@ -3,7 +3,7 @@ MicroGP v3
 
 [![License: GPL](https://img.shields.io/badge/license-gpl--3.0-green.svg)](https://opensource.org/licenses/GPL-3.0)
 ![Language: C++](https://img.shields.io/badge/language-C++-blue.svg)
-![ga](https://www.google-analytics.com/collect?v=1&t=pageview&tid=UA-28094298-5&cid=8d03e74d-a352-4fff-aa1f-9fbf213937d1&dp=https%3A%2F%2Fgithub.com%2Fsquillero%2Fugp3)
+![ga](https://www.google-analytics.com/collect?v=1&t=pageview&tid=UA-28094298-5&uid=007&dp=https%3A%2F%2Fgithub.com%2Fsquillero%2Fugp3)
 
 MicroGP (µGP, `&micro;GP`) is a versatile optimizer able to outperform both human experts and conventional heuristics in finding the optimal solution of hard problems. Given a task, it first fosters a set of random solutions, then iteratively refines and enhance them. Its heuristic algorithm uses the result of the evaluations, together with other internal information, to efficiently explore the search space, and eventually to produce the optimal solution. MicroGP has been devised in [2002](https://github.com/squillero/microgp2), and subsequently developed thanks to the effort of [several people](CONTRIBUTORS.md).
 
