@@ -28,6 +28,7 @@
 #define HEADER_UGP3_CORE_EVALUATOR
 
 
+#include <functional>
 #include <string>
 #include <mutex>
 #include <atomic>

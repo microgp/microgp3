@@ -37,6 +37,7 @@
 #include "CandidateSolution.h"
 #include "Random.h"
 
+#include <functional>
 #include <numeric>
 
 // forward declaration
