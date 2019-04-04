@@ -11,7 +11,7 @@ MicroGP original application was the creation of assembly-language programs for 
 MicroGP is an evolutionary algorithm, hence the acronym GP (genetic programming) in its name. A population of different solutions is considered in each step of the search process, and new individuals are generated through mechanisms that ape both sexual and asexual reproduction. New solutions inherit distinctive traits from existing ones, and may coalesce the good characteristics of different parents. Better solutions have a greater chance to reproduce and to succeed in the simulated struggle for existence.
 
 This is MicroGP version 3, also known as MicroGP³, MicroGP^3, ugp3 (due to typographic limitations) and MicroGP++ (being written in
-C++). The tool is discribed in the book *Evolutionary Optimization: the µGP toolkit*, doi [10.1007/978-0-387-09426-7](https://www.doi.org/10.1007/978-0-387-09426-7).
+C++). The tool is discribed in the book *Evolutionary Optimization: the µGP toolkit* (DOI:[10.1007/978-0-387-09426-7](https://www.doi.org/10.1007/978-0-387-09426-7)).
 
 **Copyright © 2006-2016 Giovanni Squillero.**
 
