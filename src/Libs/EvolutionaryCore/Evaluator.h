@@ -32,6 +32,7 @@
 #include <mutex>
 #include <atomic>
 #include <chrono>
+#include <functional>
 
 #include "XMLIFace.h"
 
