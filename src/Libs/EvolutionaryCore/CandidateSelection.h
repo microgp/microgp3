@@ -38,6 +38,7 @@
 #include "Random.h"
 
 #include <numeric>
+#include <functional>
 
 // forward declaration
 namespace Ui
