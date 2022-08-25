@@ -10,6 +10,7 @@
 * Fulvio Corno: Test & verification engineering (µGP v2)
 * Gianluca Cumani: Coding (µGP v1); case study: Test program generation (sparc ultra)
 * Davide Decicco: Case study: Test program generation (i8051)
+* Nikolaos Deligiannis: Test & verification engineering; maintenance (µGP v3)
 * Maria di Vincenzo: Case study: functional failing test generation (Core i7-950)
 * Sonia Drappero: Evolutionary core design (moea & group evolution); coding (µGP v3)
 * Paolo Ferretti: Case study: Test program generation (68hc11)
